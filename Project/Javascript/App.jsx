@@ -11,10 +11,11 @@ import M from "materialize-css"
 import "materialize-css/dist/css/materialize.min.css"
 
 /* ========= THE COMPONENTS ==================*/
+import {Data} from "./Data"
 import AppHeader from "./AppHeader"
 import AboutMe from "./AboutMe"
+import Projects from "./Projects"
 
-import {Data} from "./Data"
 
 // =====================================================================
 // ============              APP COMPONENTS        =====================
@@ -60,6 +61,18 @@ class App extends React.Component {
 							Data={Data.AboutMe[this.state.Language]} 
 						/>
 					</div>
+
+					<div id="Projects">
+						<Projects 
+							Data = {Data.Projects}
+							Language = {this.state.Language}
+						/>
+					</div>
+
+					<br />
+					<br />
+					<br />
+
 				</main>
 
 				<footer>

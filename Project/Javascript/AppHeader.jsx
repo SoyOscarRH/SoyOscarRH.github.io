@@ -40,7 +40,7 @@ export default class AppHeader extends React.Component {
 						<a href="" data-target="SideMenu" className="sidenav-trigger show-on-large">
 							<i className="material-icons white-text">menu</i>
 						</a>
-						<a href="/" className="right" style={{height: "100%"}}>
+						<a href="#AboutMe" className="right" style={{height: "100%"}}>
 							<img 
 								style={{width: '2.2rem', verticalAlign: "middle"}} 
 								src="Assets/LogoWhite.png"
