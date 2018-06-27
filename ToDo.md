@@ -1,2 +1,1 @@
-* Languajes
-* How to Navigate
+* Add loangin pages

@@ -87,6 +87,7 @@ import React from "react"
 		ManageYourCinema: {
 			Title: (<span> <b>Manage</b>Your<b>Cinema</b> </span>),
 			LinkToProject: "https://github.com/SoyOscarRH/ManageYourCinema",
+			Type: "Project",
 			Color: "teal",
 			English: (
 				<span>
@@ -112,8 +113,48 @@ import React from "react"
 			),
 			Topics: ["Javascript", "PHP", "MaterializeCSS", "MySQL", "jQuery"],
 		},
+		LCS: {
+			Title: (
+				<div>
+					<span className="hide-on-med-and-down">
+						<b>Longest</b>Common<b>Subsequence</b>
+					</span>
+
+					<span className="hide-on-large-only">
+						<b>L</b>C<b>S</b>
+					</span>
+				</div>
+			),
+			LinkToProject: "https://github.com/SoyOscarRH/LCS",
+			Type: "Project",
+			Color: "blue",
+			English: (
+				<span>
+					This is a webapp that can simulate the DP (dynamic programming) solution
+					for Longest Common Subsequence of any 2 strings step by step.
+
+					<br />
+					<br />
+
+					Using a DP-Table.
+				</span>
+			),
+			Spanish: (
+				<span>
+					Esta es una aplicación web que puede simular la solución DP (programación dinámica)
+					para la subsecuencia común más larga de cualquiera 2 cadenas paso por paso.
+
+					<br />
+					<br />
+
+					Esto se hace usando una tabla de memoria.
+				</span>
+			),
+			Topics: ["Javascript", "React", "MaterializeCSS", "DP", "Competitive Programming"],
+		},
 		BezierCurve: {
 			Title: (<span> <b>Bezier</b>Curves</span>),
+			Type: "Program",
 			LinkToProject: "https://github.com/SoyOscarRH/LearningJava/tree/master/ArtWithLines",
 			Color: "orange darken-3",
 			English: (

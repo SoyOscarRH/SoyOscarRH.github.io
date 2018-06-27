@@ -18,11 +18,12 @@ export default function Projects(props) {
 
 
 	let ProjectsCards = []
+	let ProgramsCards = []
 	
 	Object.entries(props.Data).forEach(
 		([Name, Data]) => {
 
-			ProjectsCards.push(
+			const Card = (
 				<div className="col s12 m6 l6" key={Name}>
 					<div className="card">
 						
@@ -65,6 +66,8 @@ export default function Projects(props) {
 				</div>
 			)
 
+			if (Data.Type === "Project") ProjectsCards.push(Card)
+			else ProgramsCards.push(Card)
 		}
 	)
 
@@ -83,6 +86,22 @@ export default function Projects(props) {
 
 				<div className="row">
 					{ProjectsCards}
+				</div>
+
+				<br />
+				<br />
+
+				<h4 className="blue-grey-text text-darken-4">
+					<b>
+						{props.Language === "English"? "Cool Programs": <div><b>Ideas </b>Interesantes </div>}
+					</b>
+				</h4>
+				
+				<br />
+				<br />
+
+				<div className="row">
+					{ProgramsCards}
 				</div>
 
 			</div>
