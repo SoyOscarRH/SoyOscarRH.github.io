@@ -12,7 +12,9 @@ import "materialize-css/dist/css/materialize.min.css"
 
 /* ========= THE COMPONENTS ==================*/
 import AppHeader from "./AppHeader"
+import AboutMe from "./AboutMe"
 
+import {Data} from "./Data"
 
 // =====================================================================
 // ============              APP COMPONENTS        =====================
@@ -25,6 +27,9 @@ class App extends React.Component {
           <AppHeader />
       </header>
       <main>
+        <div id="AboutMe">
+          <AboutMe Data={Data.AboutMe} />
+        </div>
         <br />
       </main>
         <br />
