@@ -3,11 +3,17 @@
 // =====================================================================
 import React from "react"
 
-const AboutMe = {
+
+// =====================================================================
+// ============                 ABOUT ME           =====================
+// =====================================================================
+const AboutMeSpanish = {
 	Contact: "Contacto",
+	SayHi: <span> Hola, <b>Soy Oscar</b> </span>,
+	ShowMyCV: "VER MI CURRICULUM",
 	Description: (
 		<span className="blue-grey-text text-darken-4">
-			Raro.
+			Nerd.
 
 			<br />
 
@@ -29,14 +35,58 @@ const AboutMe = {
 			<br />
 			
 			<span className="chip">Programación</span>
-			<span className="chip">Aprendiz</span>
 			<span className="chip">Matemáticas</span>
 			<span className="chip">Estudiante</span>
-			    
+				
 		</span>
 	),
 }
 
+const AboutMeEnglish = {
+	Contact: "Contact",
+	SayHi: <span>Hi, Im <b>Oscar</b></span>,
+	ShowMyCV: "SEE MY CURRICULUM",
+	Description: (
+		<span className="blue-grey-text text-darken-4">
+			Nerd.
+
+			<br />
+
+			Computer science, addicted to memes and the life in the library,
+			interested in competitive programming, even if I suck.
+			I believe that the web is the platform of the future.
+			Lover of pure mathematics, the more useless the better, economics
+			and philosophy.
+
+			<br />
+
+			Founder of CompilandoConocimiento.
+
+			<br />
+
+			World citizen.
+
+			<br />
+			<br />
+			
+			<span className="chip">Computer Science </span>
+			<span className="chip">Math             </span>
+			<span className="chip">Student          </span>
+				
+		</span>
+	),
+}
+
+
+
+
+
+
+
+
 export const Data = {
-	AboutMe: AboutMe,
+	AboutMe: {
+		Spanish: AboutMeSpanish,
+		English: AboutMeEnglish,
+	},
 }
