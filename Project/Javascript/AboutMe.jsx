@@ -27,7 +27,7 @@ export default class AppHeader extends React.Component {
 						</h5>
 						<br />
 						
-						<div className="hide-on-small-only" style={{fontWeight: "400"}}>
+						<div className="hide-on-small-only" style={{fontWeight: "200"}}>
 							<p style={{fontSize: "1.2rem"}}>
 								{this.props.Data.Description}
 							</p>
