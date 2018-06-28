@@ -31,24 +31,26 @@ export default class AppHeader extends React.Component {
 		}
 
 		const NavigationMenu = (
-			<nav className="blue-grey darken-3">
-				<div className="nav-wrapper z-depth-1">
-					<div className="container">
-						<div className="brand-logo white-text center" style={{fontSize: '1.3rem'}}>
-							<b>Soy</b>Oscar<b>RH</b>
+			<div className="navbar-fixed">
+				<nav className="blue-grey darken-3">
+					<div className="nav-wrapper z-depth-1">
+						<div className="container">
+							<div className="brand-logo white-text center" style={{fontSize: '1.3rem'}}>
+								<b>Soy</b>Oscar<b>RH</b>
+							</div>
+							<a href="" data-target="SideMenu" className="sidenav-trigger show-on-large">
+								<i className="material-icons white-text">menu</i>
+							</a>
+							<a href="#AboutMe" className="right" style={{height: "100%"}}>
+								<img 
+									style={{width: '2.2rem', verticalAlign: "middle"}} 
+									src="Assets/LogoWhite.png"
+								/>
+							</a>
 						</div>
-						<a href="" data-target="SideMenu" className="sidenav-trigger show-on-large">
-							<i className="material-icons white-text">menu</i>
-						</a>
-						<a href="#AboutMe" className="right" style={{height: "100%"}}>
-							<img 
-								style={{width: '2.2rem', verticalAlign: "middle"}} 
-								src="Assets/LogoWhite.png"
-							/>
-						</a>
 					</div>
-				</div>
-			</nav>
+				</nav>
+			</div>
 		)
 
 		const SideMenu = (

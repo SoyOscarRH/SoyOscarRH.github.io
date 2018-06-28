@@ -91,7 +91,8 @@ import React from "react"
 			Color: "teal",
 			English: (
 				<span>
-					This is a UNFINISHED mini project for a webapp that can control a cinema:
+					This is a UNFINISHED mini project for a web system (PHP as BackEnd)
+					that can control a cinema:
 					Creating users and managing them, selling candy and popcorn, an the movie tickets.
 
 					<br />
@@ -102,7 +103,8 @@ import React from "react"
 			),
 			Spanish: (
 				<span>
-					Mini proyecto INCOMPLETO para una aplicación web que puede controlar un cine:
+					Mini proyecto INCOMPLETO para una sistema web (PHP como BackEnd)
+					que puede controlar un cine:
 					Permite crear usuarios y administrárlos, vender dulces y palomitas de maíz, y las
 					entradas para el cine.
 					<br />
@@ -130,24 +132,29 @@ import React from "react"
 			Color: "blue",
 			English: (
 				<span>
-					This is a webapp that can simulate the DP (dynamic programming) solution
-					for Longest Common Subsequence of any 2 strings step by step.
+					This is a webapp made with React that can simulate the solution of the famous
+					problem of the Longest Common Subsequence of any 2 strings step by step.
+					This is done with a DP (dynamic programming) using a bottom-up aproach table.
 
 					<br />
 					<br />
 
-					Using a DP-Table.
+					All the code and documentation is in english, but all the text inside the app is
+					in spanish (my mother tongue).
+
 				</span>
 			),
 			Spanish: (
 				<span>
-					Esta es una aplicación web que puede simular la solución DP (programación dinámica)
-					para la subsecuencia común más larga de cualquiera 2 cadenas paso por paso.
+					Esta es una aplicación web creada con React que puede simular la solución del
+					famoso problema de la Subsecuencia común más larga de cualquiera 2 cadenas
+					paso por paso.
 
 					<br />
 					<br />
 
-					Esto se hace usando una tabla de memoria.
+					Todo el código fuente esta en inglés, pero todo el texto interno de la aplicación esta
+					en español.
 				</span>
 			),
 			Topics: ["Javascript", "React", "MaterializeCSS", "DP", "Competitive Programming"],

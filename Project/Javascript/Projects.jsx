@@ -71,37 +71,63 @@ export default function Projects(props) {
 		}
 	)
 
+	let ProjectsCardsWithRows = []
+	for (let i = 0; i < ProjectsCards.length; i += 2) {
+		const Card1 = ProjectsCards[i]
+		const Card2 = (i + 1 == ProjectsCards.length)? null : ProjectsCards[i+1]
+
+		ProjectsCardsWithRows.push(
+			<div className="row" key={i}>
+				{Card1}
+				{Card2}
+			</div>
+		)
+	}
+
+	let ProgramsCardsWithRows = []
+	for (let i = 0; i < ProgramsCards.length; i += 2) {
+		const Card1 = ProgramsCards[i]
+		const Card2 = (i + 1 == ProgramsCards.length)? null : ProgramsCards[i+1]
+
+		ProgramsCardsWithRows.push(
+			<div className="row" key={i}>
+				{Card1}
+				{Card2}
+			</div>
+		)
+	}
+
 	return (
 		<div className="row center-align">
 			<div className="col s10 offset-s1">
-
-				<h4 className="blue-grey-text text-darken-4">
+				
+				<br />
+				<br />
+				<h4 className="blue-grey-text text-darken-3">
 					<b>
 						{props.Language === "English"? "Projects": "Proyectos"}
 					</b>
 				</h4>
 				
 				<br />
-				<br />
 
-				<div className="row">
-					{ProjectsCards}
+				<div>
+					{ProjectsCardsWithRows}
 				</div>
 
 				<br />
 				<br />
 
-				<h4 className="blue-grey-text text-darken-4">
+				<h4 className="blue-grey-text text-darken-3">
 					<b>
 						{props.Language === "English"? "Cool Programs": <div><b>Ideas </b>Interesantes </div>}
 					</b>
 				</h4>
 				
 				<br />
-				<br />
 
-				<div className="row">
-					{ProgramsCards}
+				<div>
+					{ProgramsCardsWithRows}
 				</div>
 
 			</div>

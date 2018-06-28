@@ -24,6 +24,7 @@ export default function AboutMe(props) {
           <div className="col s10 offset-s1">
             <br />
             <br />
+            <br />
             <h5 className="blue-grey-text text-darken-4" style={{fontWeight: "440"}}>
               {props.Data.SayHi} <b>R</b>osas <b>H</b>ernandez
             </h5>
@@ -97,6 +98,8 @@ export default function AboutMe(props) {
       {/*=================================================*/}
       <div className="col s4 m4 l3 valign-wrapper">
         <div className="row">
+          <br />
+          <br />
           <br />
           <br />
           <br />
