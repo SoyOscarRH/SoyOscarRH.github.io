@@ -15,6 +15,7 @@ import {Data} from "./Data"
 import AppHeader from "./AppHeader"
 import AboutMe from "./AboutMe"
 import Projects from "./Projects"
+import Footer from "./Footer"
 
 
 // =====================================================================
@@ -76,6 +77,8 @@ class App extends React.Component {
 				</main>
 
 				<footer>
+					<Footer 
+					/>
 				</footer>
 
 			</React.Fragment>

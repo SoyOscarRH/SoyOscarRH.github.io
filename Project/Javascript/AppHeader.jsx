@@ -52,7 +52,7 @@ export default class AppHeader extends React.Component {
 				</nav>
 			</div>
 		)
-
+		
 		const SideMenu = (
 			<ul id="SideMenu" className="sidenav">
 				
