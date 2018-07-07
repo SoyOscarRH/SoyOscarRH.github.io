@@ -177,6 +177,28 @@ import React from "react"
 				</span>
 			),
 			Topics: ["Java", "Legacy", "Math", "Java Swing"],
+		},
+		AlphabetSoup: {
+			Title: (<span> <b>Alphabet</b>Soup</span>),
+			Type: "Project",
+			LinkToProject: "https://github.com/SoyOscarRH/AlphabetSoup",
+			Color: "pink lighten-1",
+			English: (
+				<span>
+					Simple game made with React to make people happy. Just for fun.
+
+					<br />
+
+					As in many projects, code is in english and text is in spanish.
+				</span>
+			),
+			Spanish: (
+				<span>
+					Un simple juego hecho con React para hacer a la gente feliz, solo
+					esta hecho por diversión.
+				</span>
+			),
+			Topics: ["Javascript", "React", "MaterializeCSS", "Sideproject"],
 		}
 	}
 
