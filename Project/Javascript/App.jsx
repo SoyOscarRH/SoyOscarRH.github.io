@@ -51,8 +51,9 @@ class App extends React.Component {
 				
 				<header>
 						<AppHeader
-							Languages = {[Language, NewLanguage]}
-							OnChangeLanguage={() => this.OnChangeLanguage()}
+							Languages        = {[Language, NewLanguage]}
+							OnChangeLanguage = {() => this.OnChangeLanguage()}
+							Data             = {Data.SideMenu[this.state.Language]} 
 						/>
 				</header>
 
@@ -65,7 +66,7 @@ class App extends React.Component {
 
 					<div id="Projects">
 						<Projects 
-							Data = {Data.Projects}
+							Data     = {Data.Projects}
 							Language = {this.state.Language}
 						/>
 					</div>

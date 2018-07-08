@@ -8,7 +8,6 @@ import React from "react"
 // ============                 ABOUT ME           =====================
 // =====================================================================
 	const AboutMeSpanish = {
-		Contact: "Contacto",
 		SayHi: <span> Hola, <b>Soy Oscar</b> </span>,
 		ShowMyCV: "VER MI CURRICULUM",
 		Description: (
@@ -43,7 +42,6 @@ import React from "react"
 	}
 
 	const AboutMeEnglish = {
-		Contact: "Contact",
 		SayHi: <span>Hi, Im <b>Oscar</b></span>,
 		ShowMyCV: "SEE MY CURRICULUM",
 		Description: (
@@ -77,13 +75,66 @@ import React from "react"
 		),
 	}
 
+// =====================================================================
+// ============                 SIDE BAR           =====================
+// =====================================================================
 
+	const SideMenuSpanish = {
+		SectionsTitle: "Secciones",
+		Sections: [
+			["AboutMe", "Sobre Mi"],
+			["Projects", "Proyectos"],
+		]
+	}
 
+	const SideMenuEnglish = {
+		SectionsTitle: "Sections",
+		Sections: [
+			["AboutMe", "About Me"],
+			["Projects", "Projects"],
+		]
+	}
 
 // =====================================================================
 // ============                 PROJECTS           =====================
 // =====================================================================
 	const Projects = {
+		TdeTiendita: {
+			Title: (<span> <b>T</b>de<b>Tiendita</b></span>),
+			Type: "Project",
+			LinkToProject: "https://github.com/SoyOscarRH/TdeTiendita",
+			Color: "deep-purple lighten-1",
+			English: (
+				<span>
+					This is a UNFINISHED mini project for a web system (Flask as BackEnd)
+					that can control the local store of my family.
+					<br />
+					<br />
+					It allow us to sell products using barcodes, sell by quantity and by price, also 
+					it allows us to edit products and add keyboard shorcuts.
+					<br />
+					<br />
+					All the code and documentation is in english, but all the text inside the app is
+					in spanish (my mother tongue).
+				</span>
+			),
+			Spanish: (
+				<span>
+					Mini proyecto INCOMPLETO para una sistema web (Flask como BackEnd)
+					que puede controlar la tienda de abarrotes de mi familia.
+					<br />
+					<br />
+					Permite vender productos usando un código de barras así como vender por cantidad
+					o por precio.
+					Manejar usuarios, editar productos y añadir atajos de teclado.
+					<br />
+					<br />
+					Todo el código fuente esta en inglés, pero todo el texto interno de la aplicación esta
+					en español.
+				</span>
+			),
+			Topics: ["javascript-React", "SPA", "Python-Flask", "MaterializeCSS", "MVP"],
+		},
 		ManageYourCinema: {
 			Title: (<span> <b>Manage</b>Your<b>Cinema</b> </span>),
 			LinkToProject: "https://github.com/SoyOscarRH/ManageYourCinema",
@@ -159,25 +210,6 @@ import React from "react"
 			),
 			Topics: ["Javascript", "React", "MaterializeCSS", "DP", "Competitive Programming"],
 		},
-		BezierCurve: {
-			Title: (<span> <b>Bezier</b>Curves</span>),
-			Type: "Program",
-			LinkToProject: "https://github.com/SoyOscarRH/LearningJava/tree/master/ArtWithLines",
-			Color: "orange darken-3",
-			English: (
-				<span>
-					A simple function that draws Bezier curves and some example of how to use it, and
-					the results you get by changing the paramaters.
-				</span>
-			),
-			Spanish: (
-				<span>
-					Una simple función que dibuja las Curvas de Bezier y algunos ejemplos de cómo usarlo,
-					y los resultados que obtienes al cambiar los parámetros.
-				</span>
-			),
-			Topics: ["Java", "Legacy", "Math", "Java Swing"],
-		},
 		AlphabetSoup: {
 			Title: (<span> <b>Alphabet</b>Soup</span>),
 			Type: "Project",
@@ -199,7 +231,26 @@ import React from "react"
 				</span>
 			),
 			Topics: ["Javascript", "React", "MaterializeCSS", "Sideproject"],
-		}
+		},
+		BezierCurve: {
+			Title: (<span> <b>Bezier</b>Curves</span>),
+			Type: "Program",
+			LinkToProject: "https://github.com/SoyOscarRH/LearningJava/tree/master/ArtWithLines",
+			Color: "orange darken-3",
+			English: (
+				<span>
+					A simple function that draws Bezier curves and some example of how to use it, and
+					the results you get by changing the paramaters.
+				</span>
+			),
+			Spanish: (
+				<span>
+					Una simple función que dibuja las Curvas de Bezier y algunos ejemplos de cómo usarlo,
+					y los resultados que obtienes al cambiar los parámetros.
+				</span>
+			),
+			Topics: ["Java", "Legacy", "Math", "Java Swing"],
+		},
 	}
 
 
@@ -209,4 +260,8 @@ export const Data = {
 		English: AboutMeEnglish,
 	},
 	Projects: Projects,
+	SideMenu: {
+		Spanish: SideMenuSpanish,
+		English: SideMenuEnglish,
+	}
 }

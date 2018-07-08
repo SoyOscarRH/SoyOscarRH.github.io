@@ -58,10 +58,30 @@ export default class AppHeader extends React.Component {
 				
 				<li className="center">
 					<br />
-					<h5 style={{fontWeight: 500}}>
+					<h5 style={{fontWeight: 500, fontSize: "2.1rem"}}>
 						<b>Soy</b>Oscar<b>RH</b>
 					</h5>
-					<br />
+				</li>
+				<br />
+				<li>
+					<div className="row">
+						<div className="col s8 offset-s2">
+							<div className="row">
+								<a target="_blank" href="https://github.com/SoyOscarRH">
+									<img className="col s3" src="Assets/github.png"/>
+								</a>
+								<a target="_blank" href="http://compilandoconocimiento.com/">
+									<img className="col s3" src="Assets/wordpress.png"/>
+								</a>
+								<a target="_blank" href="http://twitter.com/SoyOscarRH">
+									<img className="col s3" src="Assets/twitter.png"/>
+								</a>
+								<a target="_blank" href="https://telegram.me/SoyOscarRH">
+									<img className="col s3" src="Assets/telegram.png"/>
+								</a>
+							</div>
+						</div>
+					</div>
 				</li>
 
 				<li>
@@ -81,11 +101,18 @@ export default class AppHeader extends React.Component {
 				<li><div className="divider" /></li>
 
 				<li>
-					<a className="subheader">Subheader</a>
+					<a className="subheader">{this.props.Data.SectionsTitle}</a>
 				</li>
-				<li>
-					<a className="waves-effect" href="#!">Third Link With Waves</a>
-				</li>
+				{
+					this.props.Data.Sections.map( (Section) => (
+						<li>
+							<a className="waves-effect" href={`#${Section[0]}`}>
+								{Section[1]}
+							</a>
+						</li>
+					))
+				}
+				
 			</ul>
 		)
 

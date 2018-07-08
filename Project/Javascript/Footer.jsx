@@ -22,35 +22,26 @@ export default function Footer(props) {
 
     return (
         <footer className="page-footer blue-grey darken-3">
+            {
+            /*
             <div className="container">
                 <div className="row">
-
-                    {
-                        /*
                     <div className="col l6 s12">
                         <h5 className="white-text">About this</h5>
                         <p className="grey-text text-lighten-4">
                             This is 
                         </p>
                     </div>
-
                     <div className="col l4 offset-l2 s12">
-                        <h5 className="white-text">Links</h5>
-                        <ul>
-                        <li>
-                            <a className="grey-text text-lighten-3" href="https://github.com/SoyOscarRH">
-                                Github
-                            </a>
-                        </li>
-                        </ul>
                     </div>
-                        
-                        */
-                    }
-                    
-
                 </div>
             </div>
+            */
+            }
+            
+            <br />
+            <br />
+
             <div className="footer-copyright blue-grey darken-4">
                 <div className="container">
                     Made by Oscar Andrés Rosas. {DaysSince(new Date("03/23/1998"))} days alive
