@@ -53,6 +53,26 @@ export default class AppHeader extends React.Component {
 			</div>
 		)
 		
+		const Parts = []
+		Object.entries(this.props.Data).forEach( ([Key, Values]) => {
+			console.log(Values)
+			Parts.push(
+				<React.Fragment>
+					<li key={Key}>
+						<a className="subheader">{Values.Title}</a>
+					</li>
+					{Values.Links.map( (Link, Index) => (
+						<li key={`${Key} ${Index}`}>
+							<a className="waves-effect" href={`#${Link[1]}`}>
+								{Link[0]}
+							</a>
+						</li>
+					))}
+				</React.Fragment>
+			)
+		})
+
+
 		const SideMenu = (
 			<ul id="SideMenu" className="sidenav">
 				
@@ -63,6 +83,7 @@ export default class AppHeader extends React.Component {
 					</h5>
 				</li>
 				<br />
+
 				<li>
 					<div className="row">
 						<div className="col s8 offset-s2">
@@ -87,6 +108,7 @@ export default class AppHeader extends React.Component {
 				<li>
 					<a className="subheader center">Language</a>
 				</li>
+
 				<li className="container">
 					<div className="switch center">
 						<label>
@@ -97,22 +119,13 @@ export default class AppHeader extends React.Component {
 						</label>
 					</div>  
 				</li>
-
 				<li><div className="divider" /></li>
-
-				<li>
-					<a className="subheader">{this.props.Data.SectionsTitle}</a>
-				</li>
-				{
-					this.props.Data.Sections.map( (Section) => (
-						<li>
-							<a className="waves-effect" href={`#${Section[0]}`}>
-								{Section[1]}
-							</a>
-						</li>
-					))
-				}
-				
+				{Parts}
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
 			</ul>
 		)
 

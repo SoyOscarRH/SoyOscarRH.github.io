@@ -75,30 +75,56 @@ import React from "react"
 		),
 	}
 
-// =====================================================================
-// ============                 SIDE BAR           =====================
-// =====================================================================
 
-	const SideMenuSpanish = {
-		SectionsTitle: "Secciones",
-		Sections: [
-			["AboutMe", "Sobre Mi"],
-			["Projects", "Proyectos"],
-		]
-	}
-
-	const SideMenuEnglish = {
-		SectionsTitle: "Sections",
-		Sections: [
-			["AboutMe", "About Me"],
-			["Projects", "Projects"],
-		]
-	}
 
 // =====================================================================
 // ============                 PROJECTS           =====================
 // =====================================================================
 	const Projects = {
+		CompetitiveReference: {
+			Title: (<span> <b>Competitive</b>Reference</span>),
+			Type: "Project",
+			LinkToProject: "https://github.com/CompilandoConocimiento/Reference",
+			Color: "blue-grey darken-3",
+			English: (
+				<span>
+					This is all my personal implementations of the most famous and
+					useful competitive programming algorithms.
+
+					<br />
+					<br />
+
+					Most of the implementations are in C++, but you can also find them in
+					C and even in Python & Java.
+
+					<br />
+					<br />
+
+					Im also working on creating a Reference (Book & Website) so many more
+					people can benefit from it, and get further along in this awesome mind-sport.
+				</span>
+			),
+			Spanish: (
+				<span>
+					Recopilación de mis implementaciones personales de los más famosos y útiles
+					algoritmos de la programación competitiva.
+
+					<br />
+					<br />
+
+					La mayoría de las implementaciones están en C ++, pero también puedes encontrar
+					algunas en C e incluso en Python y Java.
+
+					<br />
+					<br />
+
+					También estoy trabajando en la creación de un "Refence" (libro y sitio web)
+					para que así más personas puedan beneficiarse de esto y avanzar más en este
+					increíble deporte mental.
+				</span>
+			),
+			Topics: ["C++", "Competitive Programming", "Book"],
+		},
 		TdeTiendita: {
 			Title: (<span> <b>T</b>de<b>Tiendita</b></span>),
 			Type: "Project",
@@ -133,7 +159,7 @@ import React from "react"
 					en español.
 				</span>
 			),
-			Topics: ["javascript-React", "SPA", "Python-Flask", "MaterializeCSS", "MVP"],
+			Topics: ["React", "SPA", "Python-Flask", "MaterializeCSS", "MVP"],
 		},
 		ManageYourCinema: {
 			Title: (<span> <b>Manage</b>Your<b>Cinema</b> </span>),
@@ -168,7 +194,8 @@ import React from "react"
 		},
 		LCS: {
 			Title: (
-				<div>
+				<React.Fragment>
+					&nbsp;
 					<span className="hide-on-med-and-down">
 						<b>Longest</b>Common<b>Subsequence</b>
 					</span>
@@ -176,7 +203,7 @@ import React from "react"
 					<span className="hide-on-large-only">
 						<b>L</b>C<b>S</b>
 					</span>
-				</div>
+				</React.Fragment>
 			),
 			LinkToProject: "https://github.com/SoyOscarRH/LCS",
 			Type: "Project",
@@ -252,6 +279,57 @@ import React from "react"
 			Topics: ["Java", "Legacy", "Math", "Java Swing"],
 		},
 	}
+
+// =====================================================================
+// ============                 SIDE BAR           =====================
+// =====================================================================
+
+	const ProjectsAndPrograms = [] 
+	Object.entries(Projects).forEach( ([Key, Values]) => {
+		ProjectsAndPrograms.push(
+			[<span>&nbsp;&nbsp;{Values.Title}</span>, Key, Values.Type]
+		)
+	})
+
+	const SideMenuSpanish = {
+		AboutMe: {
+			Title: "Personal",
+			Links: [
+				[<span>&nbsp;&nbsp;&nbsp;Sobre Mi</span>, "AboutMe"],
+				[<span>&nbsp;&nbsp;&nbsp;Curriculum</span>, "AboutMe"],
+			]
+		},
+		Projects: {
+			Title: "Proyectos",
+			Links: ProjectsAndPrograms.filter( e => e[2] === "Project")
+		},
+		Programs: {
+			Title: "Programas",
+			Links: ProjectsAndPrograms.filter( e => e[2] === "Program")
+		}
+	}
+
+	const SideMenuEnglish = {
+		AboutMe: {
+			Title: "Personal",
+			Links: [
+				[<span>&nbsp;&nbsp;&nbsp;About Me</span>, "AboutMe"],
+				[<span>&nbsp;&nbsp;&nbsp;Curriculum</span>, "AboutMe"],
+			]
+		},
+		Projects: {
+			Title: "Projects",
+			Links: ProjectsAndPrograms.filter( e => e[2] === "Project")
+		},
+		Programs: {
+			Title: "Programs",
+			Links: ProjectsAndPrograms.filter( e => e[2] === "Program")
+		}
+	}
+
+// =====================================================================
+// ============                EXPORT              =====================
+// =====================================================================
 
 
 export const Data = {
