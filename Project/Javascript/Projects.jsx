@@ -24,7 +24,7 @@ export default function Projects(props) {
 		([Name, Data]) => {
 
 			const Card = (
-				<div className="col s12 m6 l6" key={Name}>
+				<div className="col s12 m6 l6" key={Name} id={Name}>
 					<div className="card">
 						
 						<div className="card-image">

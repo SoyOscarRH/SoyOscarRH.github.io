@@ -55,20 +55,22 @@ export default class AppHeader extends React.Component {
 		
 		const Parts = []
 		Object.entries(this.props.Data).forEach( ([Key, Values]) => {
-			console.log(Values)
 			Parts.push(
-				<React.Fragment>
-					<li key={Key}>
-						<a className="subheader">{Values.Title}</a>
-					</li>
-					{Values.Links.map( (Link, Index) => (
+				<li key={Key}>
+					<a className="subheader">{Values.Title}</a>
+				</li>
+			)
+
+			Parts.push(
+				Values.Links.map( 
+					(Link, Index) => (
 						<li key={`${Key} ${Index}`}>
 							<a className="waves-effect" href={`#${Link[1]}`}>
 								{Link[0]}
 							</a>
 						</li>
-					))}
-				</React.Fragment>
+					)
+				)
 			)
 		})
 

@@ -125,6 +125,53 @@ import React from "react"
 			),
 			Topics: ["C++", "Competitive Programming", "Book"],
 		},
+		CompetitiveSolutions: {
+			Title: (<span> <b>Competitive</b>Solutions</span>),
+			Type: "Project",
+			LinkToProject: "https://github.com/CompilandoConocimiento/CompetitiveSolutions",
+			Color: "red",
+			English: (
+				<span>
+					This is a repository to store all the solutions for 
+					competitive programming problems on Judges online like
+					OmegaUp, Codeforces, SPOJ, UVa and many more.
+
+					<br />
+					<br />
+
+					Most of the solutions are in C++, because sincerely solving problems
+					of this kind in this language is awesome.
+
+					<br />
+					<br />
+
+					I work to keep my solutions as readable and clear as possible, but in
+					this project I can't promise anything. I am sorry.
+
+				</span>
+			),
+			Spanish: (
+				<span>
+					Este es un repositorio para guardar todas las soluciones para los
+					problemas de programación competitiva en jueces en línea como
+					OmegaUp, Codeforces, SPOJ, UVa y muchos más.
+
+					<br />
+					<br />
+
+					La mayoría de las soluciones están en C++, porque resolver
+					esa clase de problemas en este lenguaje es increíble.
+
+					<br />
+					<br />
+
+					Trabajo para mantener mis soluciones tan legibles y claras como
+					sea posible, pero en este proyecto no te puedo prometer nada.
+					Lo siento.
+				</span>
+			),
+			Topics: ["Competitive Programming", "Solutions", "Online Judges"],
+		},
 		TdeTiendita: {
 			Title: (<span> <b>T</b>de<b>Tiendita</b></span>),
 			Type: "Project",
@@ -249,12 +296,30 @@ import React from "react"
 					<br />
 
 					As in many projects, code is in english and text is in spanish.
+					<br />
+					<br />
+
+					You can choose beetwen many categories, see a visual help of the
+					words that you have not found yet, you can change
+					the grid size and even activate hints to find the words.
 				</span>
 			),
 			Spanish: (
 				<span>
 					Un simple juego hecho con React para hacer a la gente feliz, solo
 					esta hecho por diversión.
+					
+					<br />
+
+					Como muchos otros proyectos, el código fuente esta en ingles,
+					pero todo el texto el las palabras a buscar estan es español.
+
+					<br />
+					<br />
+
+					Puedes elegir entre varias categorías para elegir el tema
+					de las palabras, así como cambiar el tamaó del tablero y activar
+					pistas.
 				</span>
 			),
 			Topics: ["Javascript", "React", "MaterializeCSS", "Sideproject"],
@@ -268,15 +333,150 @@ import React from "react"
 				<span>
 					A simple function that draws Bezier curves and some example of how to use it, and
 					the results you get by changing the paramaters.
+
+					<br />
+					<br />
+
+					Also I have examples of many figures that you can create 
+					using this Curves, I assure you, they are beautiful.
+
 				</span>
 			),
 			Spanish: (
 				<span>
 					Una simple función que dibuja las Curvas de Bezier y algunos ejemplos de cómo usarlo,
 					y los resultados que obtienes al cambiar los parámetros.
+
+					<br />
+					<br />
+
+					También tengo ejemplos de muchas figuras que puedes crear
+					usando estas curvas, te lo aseguro, son hermosas.
+
 				</span>
 			),
 			Topics: ["Java", "Legacy", "Math", "Java Swing"],
+		},
+		CreatingWithLaTeX: {
+			Title: (<span> <b>Creating</b>With<b>LaTeX</b></span>),
+			Type: "Program",
+			LinkToProject: "https://github.com/SoyOscarRH/LearningJava/tree/master/CreatingWithLaTeX",
+			Color: "cyan accent-3",
+			English: (
+				<span>
+					This is where I put all the things that I need when working with LaTeX:
+					code to insert an image, make covers, insert tables.
+
+					<br />
+					<br />
+
+					Also, here I save a the header I use in almost all my files, which
+					have many math commands for easier and higher level equations as
+					\Cis, \UpperDerivate, \BigBrackets, \GenericField, etc...
+				</span>
+			),
+			Spanish: (
+				<span>
+					Aquí es donde pongo todas las cosas que necesito cuando trabajo
+					con LaTeX: código para insertar una imagen, hacer cubiertas,
+					insertar tablas.
+
+					<br />
+					<br />
+
+					Además, aquí guardo el encabezado que uso en casi todos mis archivos,
+					que tienen muchos comandos matemáticos para un manejo más fácil y
+					de mayor nivel como: 
+					\Cis, \UpperDerivate, \BigBrackets, \Generic Field, etc...
+				</span>
+			),
+			Topics: ["LaTeX", "Math", "Reference"],
+		},
+		RootFinder: {
+			Title: (<span> <b>Root</b>Finder</span>),
+			Type: "Program",
+			LinkToProject: "https://github.com/SoyOscarRH/LearningJava/tree/master/RootFinder",
+			Color: "pink lighten-2",
+			English: (
+				<span>
+					This is a simple program in Python (Python2 :v) to find
+					the n-roots of a complex number.
+
+					<br />
+					<br />
+
+					It works, but is ugly and ... it is on Python 2
+				</span>
+			),
+			Spanish: (
+				<span>
+					Este es un simple programa en Python (Python2 :v) para
+					encontrar las n-raíces de un número complejo.
+
+					<br />
+					<br />
+
+					Funciona y todo, pero es feo y ... esta en Python 2
+				</span>
+			),
+			Topics: ["Python3", "Math", "Complex Analysis"],
+		},
+		LinearRegression: {
+			Title: (<span> <b>Linear</b>Regression</span>),
+			Type: "Program",
+			LinkToProject: "https://github.com/CompilandoConocimiento/ThingsWithPython/tree/master/LinearRegression",
+			Color: "green lighten-1",
+			English: (
+				<span>
+					This is a program in Python using Matplotlib to calculate and graph the linear regression
+					over a data set. It algo give you the Pearson Coefficient
+				</span>
+			),
+			Spanish: (
+				<span>
+					Este es un programa en Python usando Matplotlib para calcular  y grafica la regresión lineal
+					sobre un conjunto de datos. Algo te da el coeficiente de Pearson
+				</span>
+			),
+			Topics: ["Python2", "Matplotlib", "LinearRegression"],
+		},
+		Fractals: {
+			Title: (<span><b>Fractals</b></span>),
+			Type: "Program",
+			LinkToProject: "https://github.com/CompilandoConocimiento/ThingsWithPython/tree/master/Fractals",
+			Color: "yellow accent-4",
+			English: (
+				<span>
+					This is a program in Python to graph a simple fractal, for now is only
+					the Sierpinkski Triangle
+				</span>
+			),
+			Spanish: (
+				<span>
+					Este es un programa en Python para graficar un simple fractal, por
+					ahora solo he implementado el triangulo de Sierpinkski
+				</span>
+			),
+			Topics: ["Python", "Turtle", "Fractals"],
+		},
+		PlayPoker: {
+			Title: (<span><b>Play</b>Poker</span>),
+			Type: "Program",
+			LinkToProject: "https://github.com/CompilandoConocimiento/ThingsWithPython/tree/master/PlayPoker",
+			Color: "indigo lighten-1",
+			English: (
+				<span>
+					This is a program in Python to "play poker", well, sort of, because I have never play
+					poker... Is just a weird school exercise.
+				</span>
+			),
+			Spanish: (
+				<span>
+					Este es un programa en Python para "jugar al póquer", bueno, más o menos,
+					porque nunca he jugado al póquer ... Es solo un ejercicio escolar extraño.
+				</span>
+			),
+			Topics: ["Python", "Weird", "MVP"],
 		},
 	}
 
@@ -287,7 +487,7 @@ import React from "react"
 	const ProjectsAndPrograms = [] 
 	Object.entries(Projects).forEach( ([Key, Values]) => {
 		ProjectsAndPrograms.push(
-			[<span>&nbsp;&nbsp;{Values.Title}</span>, Key, Values.Type]
+			[<span>&nbsp;&nbsp;{Key}</span>, Key, Values.Type]
 		)
 	})
 
