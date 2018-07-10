@@ -123,7 +123,10 @@ import React from "react"
 					increíble deporte mental.
 				</span>
 			),
-			Topics: ["C++", "Competitive Programming", "Book"],
+			Topics: {
+				English: ["C++", "Competitive Programming", "Book"],
+				Spanish: ["C++", "Programación Competitiva", "Libro"],
+			},
 		},
 		CompetitiveSolutions: {
 			Title: (<span> <b>Competitive</b>Solutions</span>),
@@ -170,7 +173,10 @@ import React from "react"
 					Lo siento.
 				</span>
 			),
-			Topics: ["Competitive Programming", "Solutions", "Online Judges"],
+			Topics: {
+				English: ["Competitive Programming", "Solutions", "Online Judges"],
+				Spanish: ["Programación Competitiva", "Soluciones", "Jueces en línea"],
+			},
 		},
 		TdeTiendita: {
 			Title: (<span> <b>T</b>de<b>Tiendita</b></span>),
@@ -206,7 +212,10 @@ import React from "react"
 					en español.
 				</span>
 			),
-			Topics: ["React", "SPA", "Python-Flask", "MaterializeCSS", "MVP"],
+			Topics: {
+				English: ["React", "SPA", "Python-Flask", "MaterializeCSS", "MVP"],
+				Spanish: ["React", "SPA", "Python-Flask", "MaterializeCSS", "MVP"],
+			},
 		},
 		ManageYourCinema: {
 			Title: (<span> <b>Manage</b>Your<b>Cinema</b> </span>),
@@ -216,8 +225,12 @@ import React from "react"
 			English: (
 				<span>
 					This is a UNFINISHED mini project for a web system (PHP as BackEnd)
-					that can control a cinema:
-					Creating users and managing them, selling candy and popcorn, an the movie tickets.
+					that can control a cinema
+					
+					<br />
+					<br />
+
+					Allows to create users and manage them, sell candy and popcorn, an the movie tickets.
 
 					<br />
 					<br />
@@ -229,15 +242,24 @@ import React from "react"
 				<span>
 					Mini proyecto INCOMPLETO para una sistema web (PHP como BackEnd)
 					que puede controlar un cine:
-					Permite crear usuarios y administrárlos, vender dulces y palomitas de maíz, y las
+					
+					<br />
+					<br />
+					
+					Permite crear usuarios y administrárlos, vender dulces y palomitas, y las
 					entradas para el cine.
+					
 					<br />
 					<br />
+					
 					Todo el código fuente esta en inglés, pero todo el texto interno de la aplicación esta
 					en español.
 				</span>
 			),
-			Topics: ["Javascript", "PHP", "MaterializeCSS", "MySQL", "jQuery"],
+			Topics: {
+				English: ["Javascript", "PHP", "MaterializeCSS", "MySQL", "jQuery"],
+				Spanish: ["Javascript", "PHP", "MaterializeCSS", "MySQL", "jQuery"],
+			},
 		},
 		LCS: {
 			Title: (
@@ -282,7 +304,10 @@ import React from "react"
 					en español.
 				</span>
 			),
-			Topics: ["Javascript", "React", "MaterializeCSS", "DP", "Competitive Programming"],
+			Topics: {
+				English: ["Javascript", "React", "MaterializeCSS", "DP", "Competitive Programming"],
+				Spanish: ["Javascript", "React", "MaterializeCSS", "DP", "Programación Competitiva"]
+			},
 		},
 		AlphabetSoup: {
 			Title: (<span> <b>Alphabet</b>Soup</span>),
@@ -322,7 +347,10 @@ import React from "react"
 					pistas.
 				</span>
 			),
-			Topics: ["Javascript", "React", "MaterializeCSS", "Sideproject"],
+			Topics: {
+				English: ["Javascript", "React", "MaterializeCSS", "Sideproject"],
+				Spanish: ["Javascript", "React", "MaterializeCSS", "Projecto Personal"]
+			},
 		},
 		BezierCurve: {
 			Title: (<span> <b>Bezier</b>Curves</span>),
@@ -355,7 +383,10 @@ import React from "react"
 
 				</span>
 			),
-			Topics: ["Java", "Legacy", "Math", "Java Swing"],
+			Topics: {
+				English: ["Java", "Math", "Java Swing"],
+				Spanish: ["Java", "Matemáticas", "Java Swing"],
+			},
 		},
 		CreatingWithLaTeX: {
 			Title: (<span> <b>Creating</b>With<b>LaTeX</b></span>),
@@ -390,7 +421,10 @@ import React from "react"
 					\Cis, \UpperDerivate, \BigBrackets, \Generic Field, etc...
 				</span>
 			),
-			Topics: ["LaTeX", "Math", "Reference"],
+			Topics: {
+				English: ["LaTeX", "Math", "Reference"],
+				Spanish: ["LaTeX", "Matemáticas", "Referencia"],
+			},
 		},
 		RootFinder: {
 			Title: (<span> <b>Root</b>Finder</span>),
@@ -419,7 +453,10 @@ import React from "react"
 					Funciona y todo, pero es feo y ... esta en Python 2
 				</span>
 			),
-			Topics: ["Python3", "Math", "Complex Analysis"],
+			Topics: {
+				English: ["Python3", "Math", "Complex Analysis"],
+				Spanish: ["Python3", "Matemáticas", "Análisis Complejo"],
+			},
 		},
 		LinearRegression: {
 			Title: (<span> <b>Linear</b>Regression</span>),
@@ -438,7 +475,10 @@ import React from "react"
 					sobre un conjunto de datos. Algo te da el coeficiente de Pearson
 				</span>
 			),
-			Topics: ["Python2", "Matplotlib", "LinearRegression"],
+			Topics: {
+				English: ["Python2", "Matplotlib", "LinearRegression"],
+				Spanish: ["Python2", "Matplotlib", "Regresión Líneal"],
+			},
 		},
 		Fractals: {
 			Title: (<span><b>Fractals</b></span>),
@@ -457,7 +497,10 @@ import React from "react"
 					ahora solo he implementado el triangulo de Sierpinkski
 				</span>
 			),
-			Topics: ["Python", "Turtle", "Fractals"],
+			Topics: {
+				English: ["Python", "Turtle", "Fractals"],
+				Spanish: ["Python", "Turtle", "Fractales"],
+			},
 		},
 		PlayPoker: {
 			Title: (<span><b>Play</b>Poker</span>),
@@ -476,56 +519,390 @@ import React from "react"
 					porque nunca he jugado al póquer ... Es solo un ejercicio escolar extraño.
 				</span>
 			),
-			Topics: ["Python", "Weird", "MVP"],
+			Topics: {
+				English: ["Python", "Weird", "MVP"],
+				Spanish: ["Python", "Raro", "MVP"],
+			},
 		},
 	}
+
+
+
+// =====================================================================
+// ============                 BOOKS              =====================
+// =====================================================================
+
+const AboutBooks = {
+	English: (
+		<div className="blue-grey-text text-darken-3" style={{textAlign: "justify"}}>
+			
+			<br />
+			<h6 style={{textAlign: "center"}}><b>Books, "Compilados" or Notes?</b></h6>
+			<br />
+
+			<span>
+				First of all, I have to admit that many of these texts have been written together with
+				a lot of people, people who without them I could not have gotten that far, thanks Alan,
+				Laura, Abbi, Leilan and all my teachers.
+
+				<br />
+				<br />
+
+				<b> So... What the hell are these texts? </ b>
+
+				<br />
+				<br />
+
+				The most immediate answer is that these texts (or "Compilados" as I like to tell them)
+				Are a compilation of theorems, ideas, examples and important concepts that we learned throughout
+				of time on each of the topics.
+
+				<br />
+				<br />
+
+				On a regular basis we will be updating these texts with everything new that we learn
+				trying to deepen in all these topics and close possible doubts in these pages.
+				These "Compilados" try to be as strict as possible, although we are human (and students)
+				and it is possible (and even probable) that we make small mistakes from time to time.
+				I hope you take these pages as a gift created by imperfect beings with hopes to make
+				the world a better place.
+			</span>
+		</div>
+	),
+	Spanish: (
+		<div className="blue-grey-text text-darken-3" style={{textAlign: "justify"}}>
+			
+			<br />
+			<h6 style={{textAlign: "center"}}><b>¿Libros, Compilados o Apuntes?</b></h6>
+			<br />
+
+			<span>
+				Antes que nada, tengo que admitir que muchos de estos textos los he escrito con conjunto con
+				un montón de gente, gente que sin ellos no podría haber llegado tan lejos, gracias Alan,
+				Laura, Abbi, Leilan y a todos mis profesores.
+
+				<br />
+				<br />
+
+				<b>Ahora si, ¿Qué demonios son estos textos?</b>
+
+				<br />
+				<br />
+
+				La respuesta mas inmediata es que estos texto (o compilado como a mí me gusta decirles)
+				son una recopilación de teoremas, ideas, ejemplos y conceptos importantes que aprendímos a lo largo
+				del tiempo sobre cada uno de los temas.
+				
+				<br />
+				<br />
+
+				De manera regular estaremos actualizando estos textos con todo aquello nuevo que aprendamos
+				intentando profundizar en todos estos temas y cerrar posibles dudas en estas páginas.
+				Estos Compilados intentamos ser lo más estrictos posible, aunque somos humanos (y estudiantes)
+				y es posible(e incluso probable) que cometamos pequeños errores de vez en cuando.
+				Espero que tomes estas páginas como un regalo creado por seres imperfectos pero con muchos
+				ánimos de hacer del mundo un lugar mejor, ahora si, abróchate los cinturones que esto acaba de
+				empezar.
+			</span>
+
+		</div>
+	),
+}
+
+
+const BooksData = {
+	AnalisisComplejo: {
+		Title: (<span> <b>Análisis</b> Complejo</span>),
+		LinkToProject: "https://github.com/CompilandoConocimiento/LibroAnalisisComplejo",
+		Color: "red lighten-1",
+		Intro: {
+			English: (
+				<span>
+					This is the book contains the bases of all the mathematics necessary for complex analysis,
+					we will talk about complex numbers, how to operate with them and the various forms that
+					we have to represent them.
+
+					<br />
+					<br />
+
+					We will see how we can extend the idea of the calculation on complex functions, we will see the
+					complex integrals and as they are often easier than "normal" ones.
+
+					<br />
+					<br />
+
+					We will see the residuals and the power series and how to simplify all the operations even more.
+					We will finally see Fourier, how to make his series, how to make his transform and how it is
+					that with solve differential equations is the simplest thing in the world.
+
+					<br />
+					<br />
+
+					This book is in Spanish only. Sorry :(
+				</span>
+			),
+			Spanish: (
+				<span>
+					Este es libro contiene las bases de toda la matemática necesaria para el análisis complejo,
+					hablaremos sobre los números complejos, como operar con ellos y las diversas formas que
+					tenemos de representarlos.
+
+					<br />
+					<br />
+
+					Veremos como podemos extender la idea del Cálculo sobre funciones complejas, veremos las
+					integrales complejas y como muchas veces resultan más faciles que las “normales”. 
+
+					<br />
+					<br />
+
+					Veremos los residuos y las series de potencias y como simplificar aun más todas las operaciones.
+					Veremos finalmente a gran Fourier, como hacer sus series y como hacer su transformada y como es
+					que con ella resolver ecuaciones diferenciales es de lo más sencillo del mundo
+				</span>
+			),
+		},
+		Topics: {
+			English: ["Complex Analysis and Calculus", "Fourier", "Complex Numbers"],
+			Spanish: ["Análisis y Cálculo Complejo", "Fourier", "Números Complejos"],
+		},
+		CoAuthors: "Ángel López Manríquez",
+		LinkToReadOnline: "https://github.com/CompilandoConocimiento/LibroAnalisisComplejo/blob/master/AnalisisComplejo.pdf",
+		LinkToDownload:"https://github.com/CompilandoConocimiento/LibroAnalisisComplejo/raw/master/AnalisisComplejo.pdf",
+	},
+	AnalisisComplejo: {
+		Title: (<span> <b>Análisis</b> Complejo</span>),
+		LinkToProject: "https://github.com/CompilandoConocimiento/LibroAnalisisComplejo",
+		Color: "red lighten-1",
+		Intro: {
+			English: (
+				<span>
+					This is the book contains the bases of all the mathematics necessary for complex analysis,
+					we talk about complex numbers, how to operate with them and the various forms that
+					we have to represent them.
+
+					<br />
+					<br />
+
+					We see how we can extend the idea of the calculation on complex functions, we will see the
+					complex integrals and as they are often easier than "normal" ones.
+					We see the residuals and the power series and how to simplify all these operations even more.
+
+					<br />
+					<br />
+
+					We finally see Fourier, how to make his series, how to make his transform and how it is
+					that with solve differential equations is the simplest thing in the world.
+
+					<br />
+					<br />
+
+					This book is in Spanish only. Sorry :(
+				</span>
+			),
+			Spanish: (
+				<span>
+					Este es libro contiene las bases de toda la matemática necesaria para el análisis complejo,
+					hablaremos sobre los números complejos, como operar con ellos y las diversas formas que
+					tenemos de representarlos.
+
+					<br />
+					<br />
+
+					Veremos como podemos extender la idea del Cálculo sobre funciones complejas, veremos las
+					integrales complejas y como muchas veces resultan más faciles que las “normales”. 
+					Veremos los residuos y las series de potencias y como simplificar aun más todas las operaciones.
+
+					<br />
+					<br />
+
+					Veremos finalmente a gran Fourier, como hacer sus series y como hacer su transformada y como es
+					que con ella resolver ecuaciones diferenciales es de lo más sencillo del mundo
+				</span>
+			),
+		},
+		Topics: {
+			Spanish: [
+				{
+					Name: "Números Complejos",
+					SubTopics: [
+						"Heaviside",
+						"Funciones Trigonometricos",
+						"Definición de i",
+						"Definición del Campo de los Complejos",
+					]
+				},
+				{
+					Name: "Aritmética Compleja",
+					SubTopics: [
+						"Operaciones Básicas",
+						"Elemento Identidad",
+						"Inverso Multiplicativo",
+						"Conjugado",
+						"Valor Absoluto",
+						"Producto Punto y Cruz",
+					]
+				},
+				{
+					Name: "Forma Polar",
+					SubTopics: [
+						"Forma Polar",
+						"Argumento de z",
+					]
+				},
+				{
+					Name: "Forma de Euler y Raíces",
+					SubTopics: [
+						"Forma de Euler",
+						"Identidad de Lagrange",
+						"Ley de Moivre",
+						"Raíces",
+					]
+				},
+				{
+					Name: "Funciones Complejas",
+					SubTopics: [
+						"Definición",
+						"Fn Hiperbolicas",
+						"Fn Trigonometricas",
+						"Límites",
+					]
+				},
+				{
+					Name: "Derivación",
+					SubTopics: [
+						"Funciones Analíticas",
+						"Continuidad",
+						"Ecuaciones de Cauchy-Riemann",
+						"Funciones Armónicas",
+					]
+				},
+				{
+					Name: "Integración",
+					SubTopics: [
+						"Teorema de la Deformación",
+						"Teorema de Cauchy-Goursat",
+						"Teorema de la Integral de Cauchy",
+						"Teorema de la Derivación",
+					]
+				},
+				{
+					Name: "Series Complejas",
+					SubTopics: [
+						"Serie Geométrica",
+						"Serie de Potencias",
+						"Serie de Taylor",
+						"Serie de Maclaurin",
+						"Serie de Laurent",
+						"Polos y Singularidades",
+					]
+				},
+				{
+					Name: "Residuos",
+					SubTopics: [
+						"Definición",
+						"Como encontrarlos",
+						"Teorema del Residuo de Cauchy",
+					]
+				},
+				{
+					Name: "Serie de Fourier",
+					SubTopics: [
+						"Teorema de Fourier",
+						"Coeficientes de Fourier",
+						"Serie Compleja",
+						"Aplicaciones",
+					]
+				},
+				{
+					Name: "Transformada de Fourier",
+					SubTopics: [
+						"Definición",
+						"Integral Compleja de Fourier",
+						"Transformadas por Definición",
+						"Transformadas de Derivadas",
+						"Transformadas de Desplazamientos",
+						"Teorema de la Simetría",
+						"Teorema de la Escalamiento",
+						"Teorema de la Modulación",
+						"Transformada Inversa",
+						"Convulución",
+						"Ecuaciones Diferenciales",
+					]
+				},
+			],
+			English: [
+
+			]
+		},
+		Tags: {
+			English: ["Complex Analysis and Calculus", "Fourier", "Complex Numbers"],
+			Spanish: ["Análisis y Cálculo Complejo", "Fourier", "Números Complejos"],
+		},
+		CoAuthors: "Ángel López Manríquez",
+		LinkToReadOnline: "https://github.com/CompilandoConocimiento/LibroAnalisisComplejo/blob/master/AnalisisComplejo.pdf",
+		LinkToDownload:"https://github.com/CompilandoConocimiento/LibroAnalisisComplejo/raw/master/AnalisisComplejo.pdf",
+	},
+}
+
+
+
+
+
+
 
 // =====================================================================
 // ============                 SIDE BAR           =====================
 // =====================================================================
 
-	const ProjectsAndPrograms = [] 
-	Object.entries(Projects).forEach( ([Key, Values]) => {
-		ProjectsAndPrograms.push(
-			[<span>&nbsp;&nbsp;{Key}</span>, Key, Values.Type]
-		)
-	})
+const ProjectsAndPrograms = [] 
+Object.entries(Projects).forEach( ([Key, Values]) => {
+	ProjectsAndPrograms.push(
+		[<span>&nbsp;&nbsp;{Key}</span>, Key, Values.Type]
+	)
+})
 
-	const SideMenuSpanish = {
-		AboutMe: {
-			Title: "Personal",
-			Links: [
-				[<span>&nbsp;&nbsp;&nbsp;Sobre Mi</span>, "AboutMe"],
-				[<span>&nbsp;&nbsp;&nbsp;Curriculum</span>, "AboutMe"],
-			]
-		},
-		Projects: {
-			Title: "Proyectos",
-			Links: ProjectsAndPrograms.filter( e => e[2] === "Project")
-		},
-		Programs: {
-			Title: "Programas",
-			Links: ProjectsAndPrograms.filter( e => e[2] === "Program")
-		}
+const SideMenuSpanish = {
+	AboutMe: {
+		Title: "Personal",
+		Links: [
+			[<span>&nbsp;&nbsp;&nbsp;Sobre Mi</span>, "AboutMe"],
+			[<span>&nbsp;&nbsp;&nbsp;Curriculum</span>, "AboutMe"],
+		]
+	},
+	Projects: {
+		Title: "Proyectos",
+		Links: ProjectsAndPrograms.filter( e => e[2] === "Project" )
+	},
+	Programs: {
+		Title: "Programas",
+		Links: ProjectsAndPrograms.filter( e => e[2] === "Program" )
 	}
+}
 
-	const SideMenuEnglish = {
-		AboutMe: {
-			Title: "Personal",
-			Links: [
-				[<span>&nbsp;&nbsp;&nbsp;About Me</span>, "AboutMe"],
-				[<span>&nbsp;&nbsp;&nbsp;Curriculum</span>, "AboutMe"],
-			]
-		},
-		Projects: {
-			Title: "Projects",
-			Links: ProjectsAndPrograms.filter( e => e[2] === "Project")
-		},
-		Programs: {
-			Title: "Programs",
-			Links: ProjectsAndPrograms.filter( e => e[2] === "Program")
-		}
+const SideMenuEnglish = {
+	AboutMe: {
+		Title: "Personal",
+		Links: [
+			[<span>&nbsp;&nbsp;&nbsp;About Me</span>, "AboutMe"],
+			[<span>&nbsp;&nbsp;&nbsp;Curriculum</span>, "AboutMe"],
+		]
+	},
+	Projects: {
+		Title: "Projects",
+		Links: ProjectsAndPrograms.filter( e => e[2] === "Project" )
+	},
+	Programs: {
+		Title: "Programs",
+		Links: ProjectsAndPrograms.filter( e => e[2] === "Program" )
 	}
+}
+
+
+
+
+
+
 
 // =====================================================================
 // ============                EXPORT              =====================
@@ -538,8 +915,13 @@ export const Data = {
 		English: AboutMeEnglish,
 	},
 	Projects: Projects,
+	Books: {
+		Books: BooksData,
+		AboutBooks,
+	},
 	SideMenu: {
 		Spanish: SideMenuSpanish,
 		English: SideMenuEnglish,
 	}
+
 }

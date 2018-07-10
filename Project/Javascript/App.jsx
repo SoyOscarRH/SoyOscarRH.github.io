@@ -15,6 +15,7 @@ import {Data} from "./Data"
 import AppHeader from "./AppHeader"
 import AboutMe from "./AboutMe"
 import Projects from "./Projects"
+import Books from "./Books"
 import Footer from "./Footer"
 
 
@@ -67,6 +68,13 @@ class App extends React.Component {
 					<div id="Projects">
 						<Projects 
 							Data     = {Data.Projects}
+							Language = {this.state.Language}
+						/>
+					</div>
+
+					<div id="Books">
+						<Books 
+							Data     = {Data.Books}
 							Language = {this.state.Language}
 						/>
 					</div>

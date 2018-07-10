@@ -55,7 +55,7 @@ export default function Projects(props) {
 							<br />
 
 							{
-								Data.Topics.map((Element) => {
+								Data.Topics[props.Language].map((Element) => {
 									return (<div key={Element} className="chip" style={{fontSize: '0.85rem'}}>{Element}</div>)
 								})
 							}
