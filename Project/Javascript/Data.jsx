@@ -584,7 +584,7 @@ const AboutBooks = {
 				<br />
 				<br />
 
-				<b>Ahora si, ¿Qué demonios son estos textos?</b>
+				<b>Ahora, ¿Qué demonios son estos textos?</b>
 
 				<br />
 				<br />
@@ -612,66 +612,14 @@ const AboutBooks = {
 
 const BooksData = {
 	AnalisisComplejo: {
-		Title: (<span> <b>Análisis</b> Complejo</span>),
-		LinkToProject: "https://github.com/CompilandoConocimiento/LibroAnalisisComplejo",
-		Color: "red lighten-1",
-		Intro: {
-			English: (
-				<span>
-					This is the book contains the bases of all the mathematics necessary for complex analysis,
-					we will talk about complex numbers, how to operate with them and the various forms that
-					we have to represent them.
-
-					<br />
-					<br />
-
-					We will see how we can extend the idea of the calculation on complex functions, we will see the
-					complex integrals and as they are often easier than "normal" ones.
-
-					<br />
-					<br />
-
-					We will see the residuals and the power series and how to simplify all the operations even more.
-					We will finally see Fourier, how to make his series, how to make his transform and how it is
-					that with solve differential equations is the simplest thing in the world.
-
-					<br />
-					<br />
-
-					This book is in Spanish only. Sorry :(
-				</span>
-			),
-			Spanish: (
-				<span>
-					Este es libro contiene las bases de toda la matemática necesaria para el análisis complejo,
-					hablaremos sobre los números complejos, como operar con ellos y las diversas formas que
-					tenemos de representarlos.
-
-					<br />
-					<br />
-
-					Veremos como podemos extender la idea del Cálculo sobre funciones complejas, veremos las
-					integrales complejas y como muchas veces resultan más faciles que las “normales”. 
-
-					<br />
-					<br />
-
-					Veremos los residuos y las series de potencias y como simplificar aun más todas las operaciones.
-					Veremos finalmente a gran Fourier, como hacer sus series y como hacer su transformada y como es
-					que con ella resolver ecuaciones diferenciales es de lo más sencillo del mundo
-				</span>
-			),
+		Title: {
+			English: <span><b>Complex</b> Analysis</span>,
+			Spanish: <span><b>Análisis</b> Complejo</span>,
 		},
-		Topics: {
-			English: ["Complex Analysis and Calculus", "Fourier", "Complex Numbers"],
-			Spanish: ["Análisis y Cálculo Complejo", "Fourier", "Números Complejos"],
+		SimpleTitle: {
+			English: "Complex Analysis",
+			Spanish: "Análisis Complejo",
 		},
-		CoAuthors: "Ángel López Manríquez",
-		LinkToReadOnline: "https://github.com/CompilandoConocimiento/LibroAnalisisComplejo/blob/master/AnalisisComplejo.pdf",
-		LinkToDownload:"https://github.com/CompilandoConocimiento/LibroAnalisisComplejo/raw/master/AnalisisComplejo.pdf",
-	},
-	AnalisisComplejo: {
-		Title: (<span> <b>Análisis</b> Complejo</span>),
 		LinkToProject: "https://github.com/CompilandoConocimiento/LibroAnalisisComplejo",
 		Color: "red lighten-1",
 		Intro: {
@@ -826,13 +774,119 @@ const BooksData = {
 						"Teorema de la Escalamiento",
 						"Teorema de la Modulación",
 						"Transformada Inversa",
-						"Convulución",
+						"Convolución",
 						"Ecuaciones Diferenciales",
 					]
 				},
 			],
 			English: [
-
+				{
+					Name: "Complex Numbers",
+					SubTopics: [
+						"Heaviside",
+						"Trigonometric functions",
+						"Definition of i",
+						"Definition of the Complex Field",
+					]
+				},
+				{
+					Name: "Complex Arithmetic",
+					SubTopics: [
+						"Basic operations",
+						"Identity Element",
+						"Inverse multiplicative",
+						"Conjugate",
+						"Absolute value",
+						"Point y Cross Product",
+					]
+				},
+				{
+					Name: "Polar Form",
+					SubTopics: [
+						"Polar Form",
+						"Argument of z",
+					]
+					},
+				{
+					Name: "Form of Euler and Roots",
+					SubTopics: [
+						"Form of Euler",
+						"Lagrange Identity",
+						"Law of Moivre",
+						"Estate",
+					]
+				},
+				{
+					Name: "Complex Functions",
+					SubTopics: [
+						"Definition",
+						"Hyperbolic Fn",
+						"Fn Trigonometric",
+						"Limits",
+					]
+				},
+				{
+					Name: "Derivation",
+					SubTopics: [
+						"Analytical functions",
+						"Continuity",
+						"Cauchy-Riemann equations",
+						"Harmonic functions",
+					]
+				},
+				{
+					Name: "Integration",
+					SubTopics: [
+						"Deformation Theorem",
+						"Cauchy-Goursat Theorem",
+						"Cauchy's Integral Theorem",
+						"Derivation Theorem",
+					]
+				},
+				{
+					Name: "Complex Series",
+					SubTopics: [
+						"Geometric Series",
+						"Power Series",
+						"Taylor series",
+						"Maclaurin Series",
+						"Laurent Series",
+						"Poles and Singularities",
+					]
+				},
+				{
+				Name: "Waste",
+					SubTopics: [
+						"Definition",
+						"How to find them",
+						"Cauchy Residue Theorem",
+					]
+				},
+				{
+					Name: "Fourier Series",
+					SubTopics: [
+						"Fourier's Theorem",
+						"Fourier coefficients",
+						"Complex Series",
+						"Applications",
+					]
+				},
+				{
+					Name: "Fourier Transform",
+					SubTopics: [
+						"Definition",
+						"Complex Fourier Integral",
+						"Transformed by Definition",
+						"Transformed Derivatives",
+						"Transfers of Transfers",
+						"Symmetry Theorem",
+						"Escalation Theorem",
+						"Modulation Theorem",
+						"Reverse Transform",
+						"Convolution",
+						"Differential equations",
+					]
+				},
 			]
 		},
 		Tags: {
@@ -842,6 +896,384 @@ const BooksData = {
 		CoAuthors: "Ángel López Manríquez",
 		LinkToReadOnline: "https://github.com/CompilandoConocimiento/LibroAnalisisComplejo/blob/master/AnalisisComplejo.pdf",
 		LinkToDownload:"https://github.com/CompilandoConocimiento/LibroAnalisisComplejo/raw/master/AnalisisComplejo.pdf",
+	},
+	TeoriaDeNumeros: {
+		Title: {
+			English: <span><b>Number</b> Theory</span>,
+			Spanish: <span><b>Teoría</b> de Números</span>,
+		},
+		SimpleTitle: {
+			English: "Number Theory",
+			Spanish: "Teoría de Números",
+		},
+		LinkToProject: "https://github.com/CompilandoConocimiento/LibroTeoriaDeNumeros",
+		Color: "green lighten-1",
+		Intro: {
+			English: (
+				<span>
+					Come on, you have to admit that this book has the coolest name in the world,
+					Here you will learn everything about the integers, their cousins and their mysteries.
+
+					<br />
+					<br />
+
+					Above all, this text focuses on divisibility, we will talk about Euclid's algorithms,
+					as well as the classical GCD, LCM, the diofantic equations, as well as the Phi function.
+
+					<br />
+					<br />
+
+					Finally we will see everything you need to know about congruences, how to use them to solve problems,
+					Modular Arithmetic and important Theorems such as Wilson's, Chinese Residual Theorem or one of Fermat's.
+
+					<br />
+					<br />
+
+					This book is in Spanish only. Sorry :(
+				</span>
+			),
+			Spanish: (
+				<span>
+					Vamos, tienes que admitir que esta materia tiene el nombre mas genial del mundo,
+					Aquí aprenderas todo sobre los enteros, los primos y sus misterios.
+
+					<br />
+					<br />
+
+					Sobretodo este texto se enfoca en la divisibilidad, hablaremos de los
+					algoritmos de Euclides, así como del clásico GCD, LCM, las ecuaciones
+					diofanticas, así como la función de Phi.
+
+					<br />
+					<br />
+
+					Finalmente veremos todo lo que necesitas saber de las congruencias, como
+					usarlas para resolver problemas, la Aritmética Modular y Teoremas importantes 
+					como el de Wilson, Teorema Chino del Residuo o alguno de Fermat.
+				</span>
+			),
+		},
+		Topics: {
+			Spanish: [
+				{
+					Name: "Enteros",
+					SubTopics: [
+						"Construcción de los Enteros",
+						"Operaciones con los Enteros",
+					]
+				},
+				{
+					Name: "Divisibilidad",
+					SubTopics: [
+						"Algoritmo de la División",
+						"Divisibilidad",
+						"Máximo Común Divisor",
+						"Algoritmo de Euclides",
+						"Mínimo Común Múltiplo",
+						"Ecuaciones Diofanticas",
+						"Función Phi de Euler",
+					]
+				},
+				{
+					Name: "Números Primos",
+					SubTopics: [
+						"Definición",
+						"Proposiciones Importantes",
+						"Teorema Fundamental de la Aritmética",
+						"Factorización",
+					]
+				},
+				{
+					Name: "Congruencias",
+					SubTopics: [
+						"Congruencias Módulo N",
+						"Aritmetica Modular",
+						"Teoremas Importantes",
+						"Teorema de Wilson",
+						"Teorema Chino del Residuo",
+						"Ecuaciones Modulares",
+					]
+				},
+				{
+					Name: "Polinomios",
+					SubTopics: [
+						"Cosas Básicas",
+					]
+				},
+			],
+			English: [
+				{
+					Name: "Integers",
+					SubTopics: [
+						"Construction of the Integers",
+						"Operations with the Integers",
+					]
+				},
+				{
+					Name: "Divisibility",
+					SubTopics: [
+						"Algorithm of the Division",
+						"Divisibility",
+						"Greatest common divisor",
+						"Algorithm of Euclid",
+						"Minimum Common Multiple",
+						"Diofantic equations",
+						"Phi function of Euler",
+					]
+				},
+				{
+					Name: "Prime Numbers",
+					SubTopics: [
+						"Definition",
+						"Important Proposals",
+						"The fundamental theorem of arithmetic",
+						"Factoring",
+					]
+				},
+				{
+					Name: "Congruences",
+					SubTopics: [
+						"Congruences Module N",
+						"Modular Arithmetic",
+						"Important Theorems",
+						"Wilson's Theorem",
+						"Chinese Theorem of the Residue",
+						"Modular equations",
+					]
+				},
+				{
+					Name: "Polynomials",
+					SubTopics: [
+						"Basic things",
+					]
+				},
+			]
+		},
+		Tags: {
+			English: ["Number Theory", "Divisibility", "Congruences"],
+			Spanish: ["Teoría de Número", "Divisibilidad", "Congruencias"],
+		},
+		CoAuthors: "",
+		LinkToReadOnline: "https://github.com/CompilandoConocimiento/LibroTeoriaDeNumeros/blob/master/TeoriaDeNumeros.pdf",
+		LinkToDownload:"https://github.com/CompilandoConocimiento/LibroTeoriaDeNumeros/raw/master/TeoriaDeNumeros.pdf",
+	},
+	MatematicasDiscretas: {
+		Title: {
+			English: <span><b>Discrete</b> Math</span>,
+			Spanish: <span><b>Matemáticas</b> Discretas</span>,
+		},
+		SimpleTitle: {
+			English: "Discrete Math",
+			Spanish: "Matemáticas Discretas",
+		},
+		LinkToProject: "https://github.com/CompilandoConocimiento/LibroMatematicasDiscretas",
+		Color: "blue lighten-1",
+		Intro: {
+			English: (
+				<span>
+					This book contains the bases of all the mathematics, at least a small introduction,
+					starting with Logic, induction and inferences.
+
+					<br />
+					<br />
+
+					It contains the bases of the most famous mathematical object and perhaps the most important of all,
+					sets, sets and sets, learn something Sets!
+
+					<br />
+					<br />
+
+					Finally we will learn about relations and functions, the real base of Calculus.
+
+					<br />
+					<br />
+
+					This book is in Spanish only. Sorry :(
+				</span>
+			),
+			Spanish: (
+				<span>
+					Este libro contiene las bases de todas las matemáticas, al menos una pequeña introducción,
+					comenzando con la Lógica. Inducción e inferencias.
+
+					<br />
+					<br />
+
+					Contiene las bases del objeto matemático más famoso y tal vez el más importante de todos,
+					conjuntos, conjuntos y conjuntos, ¡Aprende algo Conjunto!
+
+					<br />
+					<br />
+
+					Finalmente, aprenderemos sobre las relaciones y funciones, la base real de Cálculo.
+				</span>
+			),
+		},
+		Topics: {
+			Spanish: [
+				{
+					Name: "Lógica Matemática",
+					SubTopics: [
+						"Proposiciones",
+						"Conectores Lógicos",
+						"Equivalentes Lógicos",
+						"Leyes de Lógica",
+						"Inferencias Lógicas",
+					]
+				},
+				{
+					Name: "Cuantificadores Lógicos",
+					SubTopics: [
+						"Cuantificadores Y Sentencias Abiertas",
+						"Cuantificador Universal",
+						"Cuantificador Existencial",
+						"Leyes",
+					]
+				},
+				{
+					Name: "Conjuntos",
+					SubTopics: [
+						"Definición",
+						"¿Cómo definirlo?",
+						"Clasificación",
+						"Conjunto Vacío",
+						"Conjunto Universo",
+					]
+				},
+				{
+					Name: "Álgebra de Conjuntos",
+					SubTopics: [
+						"Equivalencia",
+						"Subconjunto",
+						"Intersección",
+						"Unión",
+						"Resta",
+						"Complemento",
+						"Producto Potencia",
+						"Producto Cartesiano",
+						"Leyes de Conjuntos",
+						"Cardinalidad y sus propiedades",
+					]
+				},
+				{
+					Name: "Relaciones",
+					SubTopics: [
+						"Definición",
+						"Dominio, Contradominio e Imágen",
+						"Relación Inversa",
+						"Relación Compuesta",
+						"Relación Identidad",
+						"Reflexiva, Simétrica y Transitiva",
+						"Relación Equivalencia",
+					]
+				},
+				{
+					Name: "Funciones",
+					SubTopics: [
+						"Definición",
+						"Dominio e Imágen",
+						"Inyectivas, Suprayectivas y Biyectivas",
+						"Función Inversa",
+						"Conjuntos Equipotentes",
+						"Cardinalidad",
+					]
+				},
+				{
+					Name: "Cosas Fueras de Lugar",
+					SubTopics: [
+						"Inducción",
+						"Grupos",
+						"Anillos",
+						"Campos",
+					]
+				},
+			],
+			English: [
+				{
+					Name: "Mathematical Logic",
+					SubTopics: [
+						"Propositions",
+						"Logical connectors",
+						"Logical Equivalents",
+						"Logic Laws",
+						"Logical Inferences",
+					]
+				},
+				{
+					Name: "Logical Quantifiers",
+					SubTopics: [
+						"Quantifiers and Open Sentences",
+						"Universal Quantifier",
+						"Existential Quantifier",
+						"Laws",
+					]
+				},
+				{
+					Name: "Sets",
+					SubTopics: [
+						"Definition",
+						"How to define it?",
+						"Classification",
+						"Empty Set",
+						"Universe Set",
+					]
+				},
+				{
+					Name: "Set Operations",
+					SubTopics: [
+						"Equivalence",
+						"Subset",
+						"Intersection",
+						"Union",
+						"Subtraction",
+						"Complement",
+						"Product Power",
+						"Cartesian product",
+						"Laws of Sets",
+						"Cardinality and its properties",
+					]
+				},
+				{
+					Name: "Relations",
+					SubTopics: [
+						"Definition",
+						"Domain, Condominium and Image",
+						"Inverse Relations",
+						"Composite Relations",
+						"Identity Relations",
+						"Reflective, Symmetric and Transitive",
+						"Equivalence Relation",
+					]
+				},
+				{
+					Name: "Functions",
+					SubTopics: [
+						"Definition",
+						"Domain and Image",
+						"Injectives, Suprayectives and Bijectives",
+						"Reverse Function",
+						"Equipotent Sets",
+						"Cardinality",
+					]
+				},
+				{
+					Name: "Thing out of Place",
+					SubTopics: [
+						"Induction",
+						"Groups",
+						"Rings",
+						"Fields",
+					]
+				},
+			]
+		},
+		Tags: {
+			English: ["Math", "Sets", "Functions", "Logics"],
+			Spanish: ["Matemáticas", "Conjuntos", "Funciones", "Lógica"],
+		},
+		CoAuthors: "",
+		LinkToReadOnline: "https://github.com/CompilandoConocimiento/LibroMatematicasDiscretas/blob/master/MatematicasDiscretas.pdf ",
+		LinkToDownload:"https://raw.githubusercontent.com/CompilandoConocimiento/LibroMatematicasDiscretas/master/MatematicasDiscretas.pdf",
 	},
 }
 
@@ -862,6 +1294,13 @@ Object.entries(Projects).forEach( ([Key, Values]) => {
 	)
 })
 
+const BooksNames = [] 
+Object.entries(BooksData).forEach( ([Key, Values]) => {
+	BooksNames.push(
+		[Values.SimpleTitle, Key]
+	)
+})
+
 const SideMenuSpanish = {
 	AboutMe: {
 		Title: "Personal",
@@ -877,6 +1316,10 @@ const SideMenuSpanish = {
 	Programs: {
 		Title: "Programas",
 		Links: ProjectsAndPrograms.filter( e => e[2] === "Program" )
+	},
+	Books: {
+		Title: "Libros",
+		Links: BooksNames.map( e => [<span>&nbsp;&nbsp;{e[0].Spanish}</span>, e[1]] )
 	}
 }
 
@@ -895,6 +1338,10 @@ const SideMenuEnglish = {
 	Programs: {
 		Title: "Programs",
 		Links: ProjectsAndPrograms.filter( e => e[2] === "Program" )
+	},
+	Books: {
+		Title: "Books",
+		Links: BooksNames.map( e => [<span>&nbsp;&nbsp;{e[0].English}</span>, e[1]] )
 	}
 }
 

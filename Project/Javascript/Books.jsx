@@ -32,7 +32,7 @@ export default function Books(props) {
 							
 							<img className="materialboxed" src={`Assets/Books/${Name}.png`} />
 							<span className="card-title blue-grey-text text-darken-4 valign-wrapper activator">
-								{Data.Title}
+								{Data.Title[props.Language]}
 							</span>
 							<a 
 								className    = {`tooltipped btn-floating btn-large halfway-fab waves-effect waves-light ${Data.Color}`}
@@ -103,7 +103,7 @@ export default function Books(props) {
 												</div>
 												<div className="collapsible-body">
 													<ul style={{fontSize: "0.8rem"}}>
-														{Element.SubTopics.map( (Item) => <li>{Item}</li> )}
+														{Element.SubTopics.map( (Item, Index) => <li key={`${Element.Name} ${Index}`}>{Item}</li> )}
 													</ul>
 												</div>
 											</li>	
