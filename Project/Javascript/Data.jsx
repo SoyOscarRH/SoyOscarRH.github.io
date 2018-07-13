@@ -343,7 +343,7 @@ import React from "react"
 					<br />
 
 					Puedes elegir entre varias categorías para elegir el tema
-					de las palabras, así como cambiar el tamaó del tablero y activar
+					de las palabras, así como cambiar el tamaño del tablero y activar
 					pistas.
 				</span>
 			),
@@ -466,13 +466,13 @@ import React from "react"
 			English: (
 				<span>
 					This is a program in Python using Matplotlib to calculate and graph the linear regression
-					over a data set. It algo give you the Pearson Coefficient
+					over a data set. It also give you the Pearson Coefficient
 				</span>
 			),
 			Spanish: (
 				<span>
 					Este es un programa en Python usando Matplotlib para calcular  y grafica la regresión lineal
-					sobre un conjunto de datos. Algo te da el coeficiente de Pearson
+					sobre un conjunto de datos. También te da el coeficiente de Pearson
 				</span>
 			),
 			Topics: {
