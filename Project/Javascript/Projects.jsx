@@ -23,6 +23,15 @@ export default function Projects(props) {
 	Object.entries(props.Data).forEach(
 		([Name, Data]) => {
 
+			console.log(Data.CheckOut)
+			const CheckOut = (Data.CheckOut == undefined || Data.CheckOut == "")? null: (
+				<div className="card-action">
+					<a className="activator" style={{cursor: "pointer"}} href={Data.CheckOut} target="_blank">
+						{props.Language === "English"? "Check out": "Velo tu mismo"}
+					</a>
+				</div>
+			)
+
 			const Card = (
 				<div className="col s12 m6 l6" key={Name} id={Name}>
 					<div className="card">
@@ -61,6 +70,8 @@ export default function Projects(props) {
 							}
 
 						</div>
+
+						{CheckOut}
 
 					</div>
 				</div>

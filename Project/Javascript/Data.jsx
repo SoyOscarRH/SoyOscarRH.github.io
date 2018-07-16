@@ -275,6 +275,7 @@ import React from "react"
 				</React.Fragment>
 			),
 			LinkToProject: "https://github.com/SoyOscarRH/LCS",
+			CheckOut: "https://soyoscarrh.github.io/LCS/",
 			Type: "Project",
 			Color: "blue",
 			English: (
@@ -313,6 +314,7 @@ import React from "react"
 			Title: (<span> <b>Alphabet</b>Soup</span>),
 			Type: "Project",
 			LinkToProject: "https://github.com/SoyOscarRH/AlphabetSoup",
+			CheckOut: "https://soyoscarrh.github.io/AlphabetSoup/",
 			Color: "pink lighten-1",
 			English: (
 				<span>
@@ -391,7 +393,7 @@ import React from "react"
 		CreatingWithLaTeX: {
 			Title: (<span> <b>Creating</b>With<b>LaTeX</b></span>),
 			Type: "Program",
-			LinkToProject: "https://github.com/SoyOscarRH/LearningJava/tree/master/CreatingWithLaTeX",
+			LinkToProject: "https://github.com/CompilandoConocimiento/CreatingWithLatex/",
 			Color: "cyan accent-3",
 			English: (
 				<span>
