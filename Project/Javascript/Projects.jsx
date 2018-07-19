@@ -23,7 +23,6 @@ export default function Projects(props) {
 	Object.entries(props.Data).forEach(
 		([Name, Data]) => {
 
-			console.log(Data.CheckOut)
 			const CheckOut = (Data.CheckOut == undefined || Data.CheckOut == "")? null: (
 				<div className="card-action">
 					<a className="activator" style={{cursor: "pointer"}} href={Data.CheckOut} target="_blank">
@@ -48,7 +47,7 @@ export default function Projects(props) {
 								data-position= "top"
 								data-tooltip = {props.Language === "English"? "See it in Github": "Ver el proyecto en Github"}
 								target       = "_blank">
-								<img src="Assets/githubMini.png"/>
+								<img src="Assets/Icons/githubMini.png"/>
 							</a>
 
 						</div>

@@ -42,6 +42,20 @@ class App extends React.Component {
 		})
 	}
 
+	componentDidMount() {
+		window.ChangeMessage = () => {
+			M.Toast.dismissAll()
+			this.OnChangeLanguage() 
+		}
+
+		const Message = this.state.Language == "English"? "¿Cambiar idioma?" : "Change language?"
+		const ChangeItem = `<button class="btn-flat toast-action" onClick=window.ChangeMessage()>${Message}</button>`
+		M.toast({
+			html: ChangeItem,
+			displayLength: 8000,
+		})
+	}
+
 	render () {
 
 		const Language = this.state.Language

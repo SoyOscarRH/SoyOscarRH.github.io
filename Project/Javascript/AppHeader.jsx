@@ -44,7 +44,7 @@ export default class AppHeader extends React.Component {
 							<a href="#AboutMe" className="right" style={{height: "100%"}}>
 								<img 
 									style={{width: '2.2rem', verticalAlign: "middle"}} 
-									src="Assets/LogoWhite.png"
+									src="Assets/Icons/LogoWhite.png"
 								/>
 							</a>
 						</div>
@@ -91,16 +91,16 @@ export default class AppHeader extends React.Component {
 						<div className="col s8 offset-s2">
 							<div className="row">
 								<a target="_blank" href="https://github.com/SoyOscarRH">
-									<img className="col s3" src="Assets/github.png"/>
+									<img className="col s3" src="Assets/Icons/github.png"/>
 								</a>
 								<a target="_blank" href="http://compilandoconocimiento.com/">
-									<img className="col s3" src="Assets/wordpress.png"/>
+									<img className="col s3" src="Assets/Icons/wordpress.png"/>
 								</a>
 								<a target="_blank" href="http://twitter.com/SoyOscarRH">
-									<img className="col s3" src="Assets/twitter.png"/>
+									<img className="col s3" src="Assets/Icons/twitter.png"/>
 								</a>
 								<a target="_blank" href="https://telegram.me/SoyOscarRH">
-									<img className="col s3" src="Assets/telegram.png"/>
+									<img className="col s3" src="Assets/Icons/telegram.png"/>
 								</a>
 							</div>
 						</div>

@@ -44,7 +44,7 @@ export default function Books(props) {
 										"Ver el proyecto y código fuente en Github"
 									}
 								target       = "_blank">
-								<img src="Assets/githubMini.png"/>
+								<img src="Assets/Icons/githubMini.png"/>
 							</a>
 
 						</div>
