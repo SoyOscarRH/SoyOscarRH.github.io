@@ -50,7 +50,7 @@ export default function AboutMe(props) {
         {/*=================================================*/}
         <div className="row">
           <div className="col s10 offset-s1">
-            <a className="waves-effect waves-light btn indigo lighten-2">
+            <a className="waves-effect waves-light btn indigo lighten-2" href="Resume.pdf" target="_blank">
               <span className="hide-on-med-and-up">
                 CURRICULUM
               </span>
