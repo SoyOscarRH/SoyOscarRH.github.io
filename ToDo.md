@@ -1,1 +1,1 @@
-* Add loangin pages
+* Add loading pages
