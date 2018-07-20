@@ -85,6 +85,7 @@ import React from "react"
 			Title: (<span> <b>Competitive</b>Reference</span>),
 			Type: "Project",
 			LinkToProject: "https://github.com/CompilandoConocimiento/Reference",
+			CheckOut: "https://compilandoconocimiento.github.io/Reference/",
 			Color: "blue-grey darken-3",
 			English: (
 				<span>
