@@ -114,36 +114,12 @@ export default function Books(props) {
 							</div>
 						</div>
 							
-
-
-
-
-
-						<div className="card-action hide-on-large-only">
-							<a className="activator" style={{cursor: "pointer"}}>
-								{props.Language === "English"? "TOPICS": "TEMARIO"}
-							</a>
-						</div>
-
-						<div className="card-action hide-on-large-only">
-							<a target="_blank" href={Data.LinkToReadOnline}>
-								{props.Language === "English"? "READ ONLINE": "LEE EN LÍNEA"}
-							</a>
-							<a target="_blank" href={Data.LinkToDownload}>
-								{props.Language === "English"? "DOWNLOAD": "DESCARGAR"}
-							</a>
-						</div>
-
-
-						<div className="card-action hide-on-med-and-down">
+						<div className="card-action">
 							<a className="activator" style={{cursor: "pointer"}}>
 								{props.Language === "English"? "TOPICS": "TEMARIO"}
 							</a>
 							<a target="_blank" href={Data.LinkToReadOnline}>
 								{props.Language === "English"? "READ ONLINE": "LEE EN LÍNEA"}
-							</a>
-							<a target="_blank" href={Data.LinkToDownload}>
-								{props.Language === "English"? "DOWNLOAD": "DESCARGAR"}
 							</a>
 						</div>
 
