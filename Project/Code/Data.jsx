@@ -17,9 +17,9 @@ import React from "react"
                 <br />
 
                 Computólogo, adicto a los memes y a la vida en la biblioteca,
-                interesado en la programación competitiva, aunque sea un asco.
+                muy interesado en la programación competitiva, aunque sea un asco.
                 Creo que la web es la plataforma del futuro.
-                Amante de la matemática pura, mientras mas inútil mejor, economía
+                Amante de la matemática pura, el machine learning, economía
                 y filosofía.
 
                 <br />
@@ -33,9 +33,9 @@ import React from "react"
                 <br />
                 <br />
                 
-                <span className="chip">Programación</span>
-                <span className="chip">Matemáticas</span>
-                <span className="chip">Estudiante</span>
+                <span className="chip">Amante de la computación</span>
+                <span className="chip">Siempre un estudiante</span>
+                <span className="chip">Amante de las matemáticas</span>
                     
             </span>
         ),
@@ -68,8 +68,8 @@ import React from "react"
                 <br />
                 
                 <span className="chip">Computer Science </span>
-                <span className="chip">Math             </span>
-                <span className="chip">Student          </span>
+                <span className="chip">Math enthusiast  </span>
+                <span className="chip">Always a student </span>
                     
             </span>
         ),
@@ -1760,20 +1760,21 @@ import React from "react"
             Intro: {
                 English: (
                     <span>
-                        This book contains the bases of all the mathematics, at least a small introduction,
-                        starting with Logic, induction and inferences.
-
+                        This book talks about databases, from several formal definitions, management systems
+                        and the operation and basic parts of the architecture of a database.
+                        
                         <br />
                         <br />
 
-                        It contains the bases of the most famous mathematical object and perhaps the most important of all,
-                        sets, sets and sets, learn something Sets!
-
+                        It also talks about the ideas that it is an entity, a relationship, which are the attributes
+                        and that is the extended system. We will see about the relational databases,
+                        primary and foreign keys.
+                        
                         <br />
                         <br />
-
-                        Finally we will learn about relations and functions, the real base of Calculus.
-
+    
+                        Finally we will see the bases of SQL
+    
                         <br />
                         <br />
 
@@ -1782,19 +1783,23 @@ import React from "react"
                 ),
                 Spanish: (
                     <span>
-                        Este libro contiene las bases de todas las matemáticas, al menos una pequeña introducción,
-                        comenzando con la Lógica. Inducción e inferencias.
+                        
+                        Este libro habla de bases de datos, desde varias definiciones formales, sistemas gestores 
+                        y el funcionamiento y partes basicas de la arquitectura de una base de datos.
 
                         <br />
                         <br />
 
-                        Contiene las bases del objeto matemático más famoso y tal vez el más importante de todos,
-                        conjuntos, conjuntos y conjuntos, ¡Aprende algo Conjunto!
+                        También habla de las ideas de que es una entidad, una relación, que son los atributos 
+                        y que es el sistema extendido. Veremos sobre las bases de datos relacionales, 
+                        llaves primarias y foráneas.
+                    
 
                         <br />
                         <br />
 
-                        Finalmente, aprenderemos sobre las relaciones y funciones, la base real de Cálculo.
+                        Finalmente veremos las bases de SQL
+
                     </span>
                 ),
             },
