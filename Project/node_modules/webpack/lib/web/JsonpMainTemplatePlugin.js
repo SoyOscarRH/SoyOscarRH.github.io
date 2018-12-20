@@ -154,15 +154,21 @@ class JsonpMainTemplatePlugin {
 						: "",
 					"script.charset = 'utf-8';",
 					`script.timeout = ${chunkLoadTimeout / 1000};`,
-					crossOriginLoading
-						? `script.crossOrigin = ${JSON.stringify(crossOriginLoading)};`
-						: "",
 					`if (${mainTemplate.requireFn}.nc) {`,
 					Template.indent(
 						`script.setAttribute("nonce", ${mainTemplate.requireFn}.nc);`
 					),
 					"}",
 					"script.src = jsonpScriptSrc(chunkId);",
+					crossOriginLoading
+						? Template.asString([
+								"if (script.src.indexOf(window.location.origin + '/') !== 0) {",
+								Template.indent(
+									`script.crossOrigin = ${JSON.stringify(crossOriginLoading)};`
+								),
+								"}"
+						  ])
+						: "",
 					"onScriptComplete = function (event) {",
 					Template.indent([
 						"// avoid mem leaks in IE.",
@@ -208,9 +214,6 @@ class JsonpMainTemplatePlugin {
 						? `link.type = ${JSON.stringify(jsonpScriptType)};`
 						: "",
 					"link.charset = 'utf-8';",
-					crossOriginLoading
-						? `link.crossOrigin = ${JSON.stringify(crossOriginLoading)};`
-						: "",
 					`if (${mainTemplate.requireFn}.nc) {`,
 					Template.indent(
 						`link.setAttribute("nonce", ${mainTemplate.requireFn}.nc);`
@@ -218,7 +221,16 @@ class JsonpMainTemplatePlugin {
 					"}",
 					'link.rel = "preload";',
 					'link.as = "script";',
-					"link.href = jsonpScriptSrc(chunkId);"
+					"link.href = jsonpScriptSrc(chunkId);",
+					crossOriginLoading
+						? Template.asString([
+								"if (link.href.indexOf(window.location.origin + '/') !== 0) {",
+								Template.indent(
+									`link.crossOrigin = ${JSON.stringify(crossOriginLoading)};`
+								),
+								"}"
+						  ])
+						: ""
 				]);
 			}
 		);
@@ -270,9 +282,8 @@ class JsonpMainTemplatePlugin {
 							"promises.push(installedChunkData[2] = promise);",
 							"",
 							"// start chunk loading",
-							"var head = document.getElementsByTagName('head')[0];",
 							mainTemplate.hooks.jsonpScript.call("", chunk, hash),
-							"head.appendChild(script);"
+							"document.head.appendChild(script);"
 						]),
 						"}"
 					]),
@@ -298,14 +309,13 @@ class JsonpMainTemplatePlugin {
 					"var chunkPreloadData = chunkPreloadMap[chunkId];",
 					"if(chunkPreloadData) {",
 					Template.indent([
-						"var head = document.getElementsByTagName('head')[0];",
 						"chunkPreloadData.forEach(function(chunkId) {",
 						Template.indent([
 							"if(installedChunks[chunkId] === undefined) {",
 							Template.indent([
 								"installedChunks[chunkId] = null;",
 								mainTemplate.hooks.linkPreload.call("", chunk, hash),
-								"head.appendChild(link);"
+								"document.head.appendChild(link);"
 							]),
 							"}"
 						]),
@@ -376,14 +386,13 @@ class JsonpMainTemplatePlugin {
 							withPrefetch
 								? Template.asString([
 										"// chunk prefetching for javascript",
-										"var head = document.getElementsByTagName('head')[0];",
 										"prefetchChunks.forEach(function(chunkId) {",
 										Template.indent([
 											"if(installedChunks[chunkId] === undefined) {",
 											Template.indent([
 												"installedChunks[chunkId] = null;",
 												mainTemplate.hooks.linkPrefetch.call("", chunk, hash),
-												"head.appendChild(link);"
+												"document.head.appendChild(link);"
 											]),
 											"}"
 										]),
@@ -544,15 +553,13 @@ class JsonpMainTemplatePlugin {
 					}
 				);
 				const runtimeSource = Template.getFunctionContent(
-					require("./JsonpMainTemplate.runtime.js")
+					require("./JsonpMainTemplate.runtime")
 				)
 					.replace(/\/\/\$semicolon/g, ";")
 					.replace(/\$require\$/g, mainTemplate.requireFn)
 					.replace(
 						/\$crossOriginLoading\$/g,
-						crossOriginLoading
-							? `script.crossOrigin = ${JSON.stringify(crossOriginLoading)}`
-							: ""
+						crossOriginLoading ? JSON.stringify(crossOriginLoading) : "null"
 					)
 					.replace(/\$hotMainFilename\$/g, currentHotUpdateMainFilename)
 					.replace(/\$hotChunkFilename\$/g, currentHotUpdateChunkFilename)
@@ -569,11 +576,7 @@ ${globalObject}[${JSON.stringify(hotUpdateFunction)}] = ${runtimeSource}`;
 		);
 		mainTemplate.hooks.hash.tap("JsonpMainTemplatePlugin", hash => {
 			hash.update("jsonp");
-			hash.update("5");
-			hash.update(`${mainTemplate.outputOptions.globalObject}`);
-			hash.update(`${mainTemplate.outputOptions.chunkFilename}`);
-			hash.update(`${mainTemplate.outputOptions.jsonpFunction}`);
-			hash.update(`${mainTemplate.outputOptions.hotUpdateFunction}`);
+			hash.update("6");
 		});
 	}
 }

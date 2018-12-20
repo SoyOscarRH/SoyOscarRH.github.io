@@ -1,32 +1,46 @@
 module.exports = {
-  entry:  __dirname + "/Code/App.jsx",
+  entry: __dirname + "/Code/App.tsx",
   output: {
       path: __dirname + '/Distribution',
-      filename: 'bundle.js',
+      publicPath: '/',
+      filename: 'bundle.js'
   },
   resolve: {
-      extensions: ['.js', '.jsx', '.css']
+      extensions: ['.tsx', '.ts', '.jsx', '.js', '.css', ]
   },
   module: {
-    rules: [
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: 'babel-loader'
-      },
-      {
-      test: /\.(png|jpg|gif)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {}  
-          }
-        ]
-      },
-      {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"]
-      },
-    ]
+      rules: [
+        {
+          test: /\.(js|jsx|tsx|ts)$/,
+          exclude: /node_modules/,
+          use: 'babel-loader'
+        },
+        {
+        test: /\.(png|jpg|gif)$/,
+          use: [
+            {
+              loader: 'file-loader',
+              options: {}  
+            }
+          ]
+        },
+        {
+          test: /\.css$/,
+          use: [
+            'style-loader',
+            {
+              loader: 'typings-for-css-modules-loader?&namedExport&camelCase',
+              options: {
+                modules: true,
+                camelCase: true,
+                namedExport: true,
+                localIdentName: "[name]_[local]_[hash:base64]",
+                sourceMap: true,
+                minimize: true
+              }
+            }
+          ]
+        }
+      ]
   }
-}
+};
