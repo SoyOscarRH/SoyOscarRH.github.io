@@ -1,16 +1,8 @@
-// ======================================================================
-// ============          WEB APP IN REACT           =====================
-// ======================================================================
-
-/* ========= BASIC REACT THINGS ===============*/
 import React from "react"
 import ReactDOM from "react-dom"
 
-/* ========= MATERIALIZCE CSS =================*/
 import M from "materialize-css"
-import "materialize-css/dist/css/materialize.min.css"
 
-/* ========= THE COMPONENTS ==================*/
 import {Data} from "./Data"
 import AppHeader from "./AppHeader"
 import AboutMe from "./AboutMe"
@@ -18,60 +10,50 @@ import Projects from "./Projects"
 import Books from "./Books"
 import Footer from "./Footer"
 
+class App extends React.Component<{}, {Language: "Spanish" | "English"}> {
 
-// =====================================================================
-// ============              APP COMPONENTS        =====================
-// =====================================================================
-class App extends React.Component<any, any> {
-
-	constructor(props) {
+	constructor(props: {}) {
 		super(props)
-		const Languages = ["Spanish", "English"]
-		
+
 		this.state = {
-			Language: Languages[Math.floor(Math.random() * Languages.length)],
+			Language: Math.random() < 0.5? "Spanish" : "English"
 		}
 	}
 
-	OnChangeLanguage () {
+	onChangeLanguage () {
 		this.setState((preState) => {
-			const NewLanguage = (preState.Language === "English")?
-			"Spanish" : "English"
-
-			return {Language: NewLanguage}
+			return {Language: (preState.Language === "English")? "Spanish" : "English"}
 		})
 	}
 
 	componentDidMount() {
-
-		//@ts-ignore
-		window.ChangeMessage = () => {
+		window['changeMessage'] = () => {
 			M.Toast.dismissAll()
-			this.OnChangeLanguage() 
+			this.onChangeLanguage() 
 		}
 
-		const Message = this.state.Language == "English"? "¿Cambiar idioma?" : "Change language?"
-		const ChangeItem = `<button class="btn-flat toast-action" onClick=window.ChangeMessage()>${Message}</button>`
+		const message = this.state.Language == "English"? "¿Cambiar idioma?" : "Change language?"
 		M.toast({
-			html: ChangeItem,
+			html: 
+				`<button 
+					class   = "btn-flat toast-action"
+					onClick = window.changeMessage()>
+					${message}
+				</button>`,
 			displayLength: 8000,
 		})
 	}
 
 	render () {
-
-		const Language = this.state.Language
-		const NewLanguage = (Language === "English")? "Spanish" : "English"
-
 		return (
 			<React.Fragment>
 				
 				<header>
-						<AppHeader
-							Languages        = {[Language, NewLanguage]}
-							OnChangeLanguage = {() => this.OnChangeLanguage()}
-							Data             = {Data.SideMenu[this.state.Language]} 
-						/>
+					<AppHeader
+						Language	     = {this.state.Language}
+						onChangeLanguage = {() => this.onChangeLanguage()}
+						Data             = {Data.SideMenu[this.state.Language]} 
+					/>
 				</header>
 
 				<main>
