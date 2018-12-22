@@ -10,14 +10,14 @@ const NavigationMenu: React.StatelessComponent<{}> = () => {
 						<b>Soy</b>Oscar<b>RH</b>
 					</div>
 
-					<a data-target="SideBarID" className="sidenav-trigger show-on-large">
+					<a data-target="SideBarID" className="sidenav-trigger show-on-large" style={{cursor: "pointer"}}>
 						<i className="material-icons white-text">menu</i>
 					</a>
 
 					<a 
 						onClick   = {() => window.scrollTo({top: 0, behavior: 'smooth'})} 
 						className = "right"
-						style     = {{height: "100%"}}>
+						style     = {{height: "100%", cursor: "pointer"}}>
 						<img style={{width: '2.2rem', verticalAlign: "middle"}} src="Assets/Icons/LogoWhite.png"/>
 					</a>
 
