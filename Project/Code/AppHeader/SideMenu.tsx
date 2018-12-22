@@ -43,14 +43,15 @@ const SideMenuData: SideMenu = {
         English: { Title: "Projects",  Links: ProjectsNames },
     },
     Programs: {
-        Spanish: { Title: "Programas", Links: ProgramsNames },
-        English: { Title: "Programs",  Links: ProgramsNames },
+        Spanish: { Title: "Ideas Interesantes", Links: ProgramsNames },
+        English: { Title: "Cool Programs",  Links: ProgramsNames },
     },
     Books: {
         Spanish: { Title: "Libros", Links: BooksNames.map( Element => [Element[0].Spanish, Element[1]] as Link ) },
         English: { Title: "Books",  Links: BooksNames.map( Element => [Element[0].English, Element[1]] as Link ) },
     }
 }
+
 
 const LinksToSocialMedia: React.StatelessComponent<{}> = () => (
     <div className="row">

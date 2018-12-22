@@ -150,8 +150,8 @@ const ProjectsAndProgramsData: Projects = {
             </span>
         ),
         Topics: {
-            English: ["React", "SPA", "Python-Flask", "MaterializeCSS", "MVP"],
-            Spanish: ["React", "SPA", "Python-Flask", "MaterializeCSS", "MVP"],
+            English: ["React", "SPA", "Python-Flask", "MVP", "MaterializeCSS"],
+            Spanish: ["React", "SPA", "Python-Flask", "MVP", "MaterializeCSS"],
         },
     },
     ManageYourCinema: {

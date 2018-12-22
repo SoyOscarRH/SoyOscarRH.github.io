@@ -16,21 +16,27 @@ const BottomPart = {borderCollapse: "collapse" as "collapse", display: "grid", g
 function CreateACard(ProjectName: string, Project: Project, Language: "English" | "Spanish") {
 	return (
 		<div className={Styles.GridElement} key={ProjectName} id={ProjectName}>
-			<div className="card" style={CardStyle}>
+			<div className="card hoverable" style={CardStyle}>
 				
 				<div className="card-image">
-					
-					<img className="materialboxed" src={`Assets/Projects/${ProjectName}.png`} />
+
+					<img 
+						className="materialboxed lazy" 
+						data-src  = {`Assets/Projects/${ProjectName}.png`}
+						src       = {"Assets/Blank.png"}
+					/>
+
 					<span className="card-title blue-grey-text text-darken-4">
 						{Project.Title}
 					</span>
 					
 					<a 
-						className    = {`tooltipped btn-floating btn-large halfway-fab ${Project.Color}`}
-						href         = {Project.LinkToProject}
-						data-position= "top"
-						data-tooltip = {Language === "English"? "See it in Github": "Ver el proyecto en Github"}
-						target       = "_blank">
+						className     = {`tooltipped btn-floating btn-large halfway-fab ${Project.Color}`}
+						href          = {Project.LinkToProject}
+						style         = {{padding: "3px 4px 4px 4px"}}
+						data-position = "top"
+						data-tooltip  = {Language === "English"? "See it in Github": "Ver el proyecto en Github"}
+						target        = "_blank">
 						<img src="Assets/Icons/githubMini.png"/>
 					</a>
 
@@ -69,11 +75,6 @@ function CreateACard(ProjectName: string, Project: Project, Language: "English" 
 }
 
 
-
-
-
-
-
 function CardsByType(Projects: ProjectsInterface, Language: "Spanish" | "English", Type: "Project" | "Program") {
 	return Object.entries(Projects)
 		.filter( ([_, Project])    => Project.Type === Type)
@@ -93,40 +94,29 @@ export default function Projects(props: ProjectsProps) {
 	const ProjectsCards = CardsByType(props.Projects, props.Language, "Project")
 	const ProgramsCards = CardsByType(props.Projects, props.Language, "Program")
 
+	const ProjectsTitle = props.Language === "English"? "Projects": "Proyectos"
+	const ProgramsTitle = props.Language === "English"? "Cool Programs": <div><b>Ideas </b>Interesantes </div>
+
 	return (
-		<div className="row center-align">
-			<div className="col s10 offset-s1">
-				
-				<br />
-				<br />
-				<h4 className="blue-grey-text text-darken-3">
-					<b>
-						{props.Language === "English"? "Projects": "Proyectos"}
-					</b>
-				</h4>
-				
-				<br />
+		<div className="center-align" style={{padding: "2rem"}}>
 
-				<div className={Styles.Grid}>
-					{ProjectsCards}
-				</div>
+			<h4 className="blue-grey-text text-darken-3"><b>{ProjectsTitle}</b></h4>
+			<br />
 
-				<br />
-				<br />
-
-				<h4 className="blue-grey-text text-darken-3">
-					<b>
-						{props.Language === "English"? "Cool Programs": <div><b>Ideas </b>Interesantes </div>}
-					</b>
-				</h4>
-				
-				<br />
-
-				<div className={Styles.Grid}>
-					{ProgramsCards}
-				</div>
-
+			<div className={Styles.Grid}>
+				{ProjectsCards}
 			</div>
+
+			<br />
+			<br />
+
+			<h4 className="blue-grey-text text-darken-3"><b>{ProgramsTitle}</b></h4>
+			<br />
+
+			<div className={Styles.Grid}>
+				{ProgramsCards}
+			</div>
+
 		</div>
 	)
 }
