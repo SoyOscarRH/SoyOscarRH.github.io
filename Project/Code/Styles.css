@@ -1,0 +1,17 @@
+.Grid {
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-column-gap: 1.25rem;
+    grid-row-gap: 1.25rem;
+}
+
+.GridElement {
+    grid-column: auto;
+    height: 100%;
+}
+
+@media only screen and (min-width: 750px) {
+    .Grid {
+        grid-template-columns: 1fr 1fr; 
+    }
+}

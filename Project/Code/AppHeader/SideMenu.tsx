@@ -79,10 +79,9 @@ interface NameLogoProps {
 }
 
 const NameLogo: React.StatelessComponent<NameLogoProps> = (props: NameLogoProps) => {
-
     const someStyle = {color: props.accentColor}
     return (
-        <h5 style={{fontWeight: 500, fontSize: "2.1rem", margin: "2.5rem", color: props.baseColor, fontFamily: 'Source Sans Pro'}}>
+        <h5 style={{fontWeight: 300, fontSize: "2.3rem", margin: "2.5rem", color: props.baseColor, fontFamily: 'Roboto Mono'}}>
             <b style={someStyle}>Soy</b>Oscar<b style={someStyle}>RH</b>
         </h5>
     )
@@ -104,18 +103,15 @@ const SideMenu: React.StatelessComponent<SideMenuProps> = (props: SideMenuProps)
         <ul id="SideBarID" className="sidenav">
                     
             <li className="center">
-                <NameLogo baseColor="#2e4045" accentColor="#5e3c58" />
+                <NameLogo baseColor="#1f3c88" accentColor="#070d59" />
             </li>
 
             <li>
                 <LinksToSocialMedia />
             </li>
 
-            <li>
-                <a className="subheader center">{languageTitle}</a>
-            </li>
-
             <li className="container">
+                <a className="subheader center">{languageTitle}</a>
                 <div className="switch center">
                     <label>
                         {otherLanguage}
@@ -132,6 +128,14 @@ const SideMenu: React.StatelessComponent<SideMenuProps> = (props: SideMenuProps)
                 Object.entries(SideMenuData).map( Element => {
                     const sectionName = Element[0], SideElementSection = Element[1][props.Language]
 
+                    let data = ["art_track", "grey"]
+                    if (sectionName === "AboutMe")  data = ["account_circle", "grey"]
+                    if (sectionName === "Projects") data = ["dashboard", "green"]
+                    if (sectionName === "Programs") data = ["description", "teal"]
+                    if (sectionName === "Books")    data = ["book", "purple"]
+
+                    const styleClass = {display: "block", margin: "0 0 0 0.5rem", fontSize: "1.25rem", opacity: 0.9}
+
                     return (
                         <React.Fragment key={`Type ${sectionName}`}>
                             <li>
@@ -144,7 +148,11 @@ const SideMenu: React.StatelessComponent<SideMenuProps> = (props: SideMenuProps)
                                 (Link: [string, string]) => (
                                     <li key={`Link ${Link[1]} ${Link[0]}`}>
                                         <a className="waves-effect" href={`#${Link[1]}`}>
-                                            &nbsp; &nbsp; {Link[0]}
+                                            <i className={"tiny material-icons " + data[1] + "-text text-darken-2"} style={styleClass}>
+                                                {data[0]}
+                                            </i>
+                                            &nbsp;
+                                            {Link[0]}
                                         </a>
                                     </li>
                                 )

@@ -4,11 +4,15 @@ import ReactDOM from "react-dom"
 import M from "materialize-css"
 
 import {Data} from "./Data"
+
+import {AboutMe as AboutMeData} from "./PageData"
+import {ProjectsAndPrograms as ProjectsAndProgramsData} from "./PageData"
+
 import AppHeader from "./AppHeader"
-import AboutMe from "./AboutMe"
-import Projects from "./Projects"
-import Books from "./Books"
-import Footer from "./Footer"
+import AboutMe   from "./AboutMe"
+import Projects  from "./Projects"
+import Books     from "./Books"
+import Footer    from "./Footer"
 
 class App extends React.Component<{}, {Language: "Spanish" | "English"}> {
 
@@ -58,16 +62,11 @@ class App extends React.Component<{}, {Language: "Spanish" | "English"}> {
 
 				<main>
 					<div id="AboutMe">
-						<AboutMe 
-							Data={Data.AboutMe[this.state.Language]} 
-						/>
+						<AboutMe AboutMe={AboutMeData[this.state.Language]} />
 					</div>
 
 					<div id="Projects">
-						<Projects 
-							Data     = {Data.Projects}
-							Language = {this.state.Language}
-						/>
+						<Projects Projects={ProjectsAndProgramsData} Language={this.state.Language} />
 					</div>
 
 					<div id="Books">

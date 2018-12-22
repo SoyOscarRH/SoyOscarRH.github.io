@@ -1,6 +1,6 @@
 import React from "react"
 
-interface AboutMe {
+export interface AboutMe {
     SayHi: JSX.Element,
     ShowMyCV: string,
     Description: JSX.Element
@@ -32,7 +32,7 @@ const AboutMeSpanish: AboutMe = {
             <br />
             <br />
             
-            <span className="chip">Amante de la computación</span>
+            <span className="chip">Computólogo</span>
             <span className="chip">Siempre un estudiante</span>
             <span className="chip">Amante de las matemáticas</span>
                 
@@ -49,10 +49,10 @@ const AboutMeEnglish: AboutMe = {
 
             <br />
 
-            Computer scientist, addicted to memes and the life in the library,
-            interested in competitive programming, even if I suck.
+            Computer scientist, engineer, addicted to memes, becoming the better version of myself.
+            Interested in competitive programming, even if I suck at it.
             I believe that the web is the platform of the future.
-            Lover of pure mathematics, the more useless the better, economics
+            Lover of pure mathematics, the more useless the better, economics, machine learning
             and philosophy.
 
             <br />
@@ -68,7 +68,7 @@ const AboutMeEnglish: AboutMe = {
             
             <span className="chip">Computer Science </span>
             <span className="chip">Math enthusiast  </span>
-            <span className="chip">Always a student </span>
+            <span className="chip">Learner          </span>
                 
         </span>
     ),

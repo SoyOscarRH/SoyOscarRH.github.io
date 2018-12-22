@@ -1,7 +1,7 @@
 import React from "react"
 import {LanguageOption} from "./index"
 
-interface Project {
+export interface Project {
     Title: JSX.Element,
     Type: "Project" | "Program",
     LinkToProject: string, 
@@ -12,7 +12,7 @@ interface Project {
     Topics: LanguageOption<Array<string>>,
 }
 
-interface Projects {
+export interface Projects {
     [key: string]: Project,
 }
 
