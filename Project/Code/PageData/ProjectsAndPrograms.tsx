@@ -32,12 +32,12 @@ const ProjectsAndProgramsData: Projects = {
                 <br />
 
                 Most of the implementations are in C++, but you can also find them in
-                C and even in Python & Java.
+                C and even in Python and Java.
 
                 <br />
                 <br />
 
-                Im also working on creating a Reference (Book & Website) so many more
+                I'm also working on creating a Reference (Book & Website) so many more
                 people can benefit from it, and get further along in this awesome mind-sport.
             </span>
         ),
@@ -61,8 +61,8 @@ const ProjectsAndProgramsData: Projects = {
             </span>
         ),
         Topics: {
-            English: ["C++", "Competitive Programming", "Book"],
-            Spanish: ["C++", "Programación Competitiva", "Libro"],
+            English: ["Competitive Programming", "C++", "Webapp", "React", "Typescript", "Book",],
+            Spanish: ["Programación Competitiva", "C++", "Webapp", "React", "Typescript", "Libro",],
         },
     },
     CompetitiveSolutions: {
@@ -85,8 +85,8 @@ const ProjectsAndProgramsData: Projects = {
                 <br />
                 <br />
 
-                I work to keep my solutions as readable and clear as possible, but in
-                this project I can't promise anything. I am sorry.
+                I work to keep my solutions as readable and clear as possible, but 
+                (do to the nature of this sport) in this project I can't promise anything. I am sorry. :(
 
             </span>
         ),
@@ -106,85 +106,49 @@ const ProjectsAndProgramsData: Projects = {
                 <br />
 
                 Trabajo para mantener mis soluciones tan legibles y claras como
-                sea posible, pero en este proyecto no te puedo prometer nada.
-                Lo siento.
+                sea posible, pero (debido a la naturaleza del deporte) en este
+                proyecto no te puedo prometer nada. Lo siento. :(
             </span>
         ),
         Topics: {
-            English: ["Competitive Programming", "Solutions", "Online Judges"],
-            Spanish: ["Programación Competitiva", "Soluciones", "Jueces en línea"],
+            English: ["C++", "Competitive Programming", "Solutions", "Online Judges"],
+            Spanish: ["C++", "Programación Competitiva", "Soluciones", "Jueces en línea"],
         },
     },
-    TdeTiendita: {
-        Title: (<span> <b>T</b>de<b>Tiendita</b></span>),
+    DIYCompiler: {
+        Title: (<span> <b>DUY</b> Compiler</span>),
+        LinkToProject: "https://github.com/SoyOscarRH/Compiler",
         Type: "Project",
-        LinkToProject: "https://github.com/SoyOscarRH/TdeTiendita",
-        Color: "deep-purple lighten-1",
+        CheckOut: "https://compilandoconocimiento.github.io/Compiler/#/grammars",
+        Color: "orange",
         English: (
             <span>
-                This is a UNFINISHED mini project for a web system (Flask as BackEnd)
-                that can control the local store of my family.
+               This was a school project for my Compiler class.
+
                 <br />
                 <br />
-                It allow us to sell products using barcodes, sell by quantity and by price, also 
-                it allows us to edit products and add keyboard shorcuts.
+
+                It allows you to create tokens, automatas and grammars; and with them a lexical and syntactical analyzer.
+                This have been the most ambitious project I have participated on; also, I did not do this alone, but with
+                the help of Alan Ontiveros and Laura Lopez, my classroom partners and friends.
+
                 <br />
                 <br />
-                All the code and documentation is in english, but all the text inside the app is
-                in spanish (my mother tongue).
+                All the code and documentation is in English, but all the text inside the app is
+                in Spanish (my mother tongue).
             </span>
         ),
         Spanish: (
             <span>
-                Mini proyecto INCOMPLETO para una sistema web (Flask como BackEnd)
-                que puede controlar la tienda de abarrotes de mi familia.
-                <br />
-                <br />
-                Permite vender productos usando un código de barras así como vender por cantidad
-                o por precio.
-                Manejar usuarios, editar productos y añadir atajos de teclado.
-                <br />
-                <br />
-                Todo el código fuente esta en inglés, pero todo el texto interno de la aplicación esta
-                en español.
-            </span>
-        ),
-        Topics: {
-            English: ["React", "SPA", "Python-Flask", "MVP", "MaterializeCSS"],
-            Spanish: ["React", "SPA", "Python-Flask", "MVP", "MaterializeCSS"],
-        },
-    },
-    ManageYourCinema: {
-        Title: (<span> <b>Manage</b>Your<b>Cinema</b> </span>),
-        LinkToProject: "https://github.com/SoyOscarRH/ManageYourCinema",
-        Type: "Project",
-        Color: "teal",
-        English: (
-            <span>
-                This is a UNFINISHED mini project for a web system (PHP as BackEnd)
-                that can control a cinema
-                
-                <br />
-                <br />
-
-                Allows to create users and manage them, sell candy and popcorn, an the movie tickets.
-
-                <br />
-                <br />
-                All the code and documentation is in english, but all the text inside the app is
-                in spanish (my mother tongue).
-            </span>
-        ),
-        Spanish: (
-            <span>
-                Mini proyecto INCOMPLETO para una sistema web (PHP como BackEnd)
-                que puede controlar un cine:
+                Esto fue un proyecto para mi clase de Compiladores. 
                 
                 <br />
                 <br />
                 
-                Permite crear usuarios y administrárlos, vender dulces y palomitas, y las
-                entradas para el cine.
+                Permite la creación de tokens, autómatas y gramáticas; y con ellas crear un analizador
+                sintáctico y semántico. Este ha sido el proyecto más ambicioso en el que he participado;
+                eso si, no he hecho este proyecto solo, sino con la ayuda de Alan Ontivieros y Laura Lopez, mis 
+                compañeros de clase y amigos.
                 
                 <br />
                 <br />
@@ -194,142 +158,13 @@ const ProjectsAndProgramsData: Projects = {
             </span>
         ),
         Topics: {
-            English: ["Javascript", "PHP", "MaterializeCSS", "MySQL", "jQuery"],
-            Spanish: ["Javascript", "PHP", "MaterializeCSS", "MySQL", "jQuery"],
-        },
-    },
-    LCS: {
-        Title: (
-            <React.Fragment>
-                &nbsp;
-                <span className="hide-on-med-and-down">
-                    <b>Longest</b>Common<b>Subsequence</b>
-                </span>
-
-                <span className="hide-on-large-only">
-                    <b>L</b>C<b>S</b>
-                </span>
-            </React.Fragment>
-        ),
-        LinkToProject: "https://github.com/SoyOscarRH/LCS",
-        CheckOut: "https://soyoscarrh.github.io/LCS/",
-        Type: "Project",
-        Color: "blue",
-        English: (
-            <span>
-                This is a webapp made with React that can simulate the solution of the famous
-                problem of the Longest Common Subsequence of any 2 strings step by step.
-                This is done with a DP (dynamic programming) using a bottom-up aproach table.
-
-                <br />
-                <br />
-
-                All the code and documentation is in english, but all the text inside the app is
-                in spanish (my mother tongue).
-
-            </span>
-        ),
-        Spanish: (
-            <span>
-                Esta es una aplicación web creada con React que puede simular la solución del
-                famoso problema de la Subsecuencia común más larga de cualquiera 2 cadenas
-                paso por paso.
-
-                <br />
-                <br />
-
-                Todo el código fuente esta en inglés, pero todo el texto interno de la aplicación esta
-                en español.
-            </span>
-        ),
-        Topics: {
-            English: ["Javascript", "React", "MaterializeCSS", "DP", "Competitive Programming"],
-            Spanish: ["Javascript", "React", "MaterializeCSS", "DP", "Programación Competitiva"]
-        },
-    },
-    AlphabetSoup: {
-        Title: (<span> <b>Alphabet</b>Soup</span>),
-        Type: "Project",
-        LinkToProject: "https://github.com/SoyOscarRH/AlphabetSoup",
-        CheckOut: "https://soyoscarrh.github.io/AlphabetSoup/",
-        Color: "pink lighten-1",
-        English: (
-            <span>
-                Simple game made with React to make people happy. Just for fun.
-
-                <br />
-
-                As in many projects, code is in english and text is in spanish.
-                <br />
-                <br />
-
-                You can choose beetwen many categories, see a visual help of the
-                words that you have not found yet, you can change
-                the grid size and even activate hints to find the words.
-            </span>
-        ),
-        Spanish: (
-            <span>
-                Un simple juego hecho con React para hacer a la gente feliz, solo
-                esta hecho por diversión.
-                
-                <br />
-
-                Como muchos otros proyectos, el código fuente esta en ingles,
-                pero todo el texto el las palabras a buscar estan es español.
-
-                <br />
-                <br />
-
-                Puedes elegir entre varias categorías para elegir el tema
-                de las palabras, así como cambiar el tamaño del tablero y activar
-                pistas.
-            </span>
-        ),
-        Topics: {
-            English: ["Javascript", "React", "MaterializeCSS", "Sideproject"],
-            Spanish: ["Javascript", "React", "MaterializeCSS", "Projecto Personal"]
-        },
-    },
-    BezierCurve: {
-        Title: (<span> <b>Bezier</b>Curves</span>),
-        Type: "Program",
-        LinkToProject: "https://github.com/SoyOscarRH/LearningJava/tree/master/ArtWithLines",
-        Color: "orange darken-3",
-        English: (
-            <span>
-                A simple function that draws Bezier curves and some example of how to use it, and
-                the results you get by changing the paramaters.
-
-                <br />
-                <br />
-
-                Also I have examples of many figures that you can create 
-                using this Curves, I assure you, they are beautiful.
-
-            </span>
-        ),
-        Spanish: (
-            <span>
-                Una simple función que dibuja las Curvas de Bezier y algunos ejemplos de cómo usarlo,
-                y los resultados que obtienes al cambiar los parámetros.
-
-                <br />
-                <br />
-
-                También tengo ejemplos de muchas figuras que puedes crear
-                usando estas curvas, te lo aseguro, son hermosas.
-
-            </span>
-        ),
-        Topics: {
-            English: ["Java", "Math", "Java Swing"],
-            Spanish: ["Java", "Matemáticas", "Java Swing"],
+            English: ["MaterializeCSS", "React", "Typescript", "Class project", "SPA", ],
+            Spanish: ["MaterializeCSS", "React", "Typescript", "Projecto de clase", "SPA", ],
         },
     },
     CreatingWithLaTeX: {
         Title: (<span> <b>Creating</b>With<b>LaTeX</b></span>),
-        Type: "Program",
+        Type: "Project",
         LinkToProject: "https://github.com/CompilandoConocimiento/CreatingWithLatex/",
         Color: "cyan accent-3",
         English: (
@@ -365,6 +200,222 @@ const ProjectsAndProgramsData: Projects = {
             Spanish: ["LaTeX", "Matemáticas", "Referencia"],
         },
     },
+    TdeTiendita: {
+        Title: (<span> <b>T</b>de<b>Tiendita</b></span>),
+        Type: "Project",
+        LinkToProject: "https://github.com/SoyOscarRH/TdeTiendita",
+        Color: "deep-purple lighten-1",
+        English: (
+            <span>
+                This is a minimum viable product for a web system 
+                that can control the local store of my family.
+                <br />
+                <br />
+                It allow us to sell products using barcodes, sell by quantity and by price, also 
+                it allows us to edit products and uses keyboard shorcuts.
+
+                <br />
+                It allow to have differents types fo users.
+                <br />
+                <br />
+                All the code and documentation is in english, but all the text inside the app is
+                in spanish (my mother tongue).
+            </span>
+        ),
+        Spanish: (
+            <span>
+                Este es el mínimo producto viable para una sistema web
+                que puede controlar la tienda de abarrotes de mi familia.
+                <br />
+                <br />
+                Permite vender productos usando un código de barras así como vender por cantidad
+                o por precio, manejar usuarios, editar productos y añadir atajos de teclado.
+                <br />
+                <br />
+                Todo el código fuente esta en inglés, pero todo el texto interno de la aplicación esta
+                en español.
+            </span>
+        ),
+        Topics: {
+            English: ["SPA", "MVP", "MaterializeCSS", "React", "Python-Flask", "MySQL"],
+            Spanish: ["SPA", "MVP", "MaterializeCSS", "React", "Python-Flask", "MySQL"],
+        },
+    },
+    ManageYourCinema: {
+        Title: (<span> <b>Manage</b>Your<b>Cinema</b> </span>),
+        LinkToProject: "https://github.com/SoyOscarRH/ManageYourCinema",
+        Type: "Project",
+        Color: "teal",
+        English: (
+            <span>
+                This is a UNFINISHED mini project for a web system
+                that can control a cinema (candy shop and tickets)
+                
+                <br />
+                <br />
+
+                It allows to create users and manage them, sell candy and popcorn, an the movie tickets.
+
+                <br />
+                <br />
+                All the code and documentation is in english, but all the text inside the app is
+                in spanish (my mother tongue).
+            </span>
+        ),
+        Spanish: (
+            <span>
+                Mini proyecto INCOMPLETO para una sistema web
+                que puede controlar un cine (venta de dulces y boletos)
+                
+                <br />
+                <br />
+                
+                Permite crear usuarios y administrárlos, vender dulces y palomitas, y las
+                entradas para el cine.
+                
+                <br />
+                <br />
+                
+                Todo el código fuente esta en inglés, pero todo el texto interno de la aplicación esta
+                en español.
+            </span>
+        ),
+        Topics: {
+            English: ["MaterializeCSS", "jQuery", "PHP", "MySQL", ],
+            Spanish: ["MaterializeCSS", "jQuery", "PHP", "MySQL", ],
+        },
+    },
+    Binary: {
+        Title: (<span> <b>Binary</b>Conversions</span>),
+        LinkToProject: "https://github.com/CompilandoConocimiento/Binary",
+        Type: "Project",
+        CheckOut: "https://compilandoconocimiento.github.io/Binary/#/FromBinarytoComplement2/",
+        Color: "green",
+        English: (
+            <span>
+                This was a simple project for fun to really understand floating-point numbers / arithmetic and
+                binary conversions (complement-1 and complement 2).
+
+                <br />
+                <br />
+
+                It allows you to transform a binary number to decimal and backwards, the basic ideas for represent negative
+                integers (complement 1, complement 2 and partial representation) and IEEE floating-point.
+
+                <br />
+                <br />
+                All the code and documentation is in English, but all the text inside the app is
+                in Spanish (my mother tongue).
+            </span>
+        ),
+        Spanish: (
+            <span>
+                Este fue un proyecto pequeño para ayudarme a comprender realmente los números de punto flotante  y su
+                aritmética y las conversiones binarias (complemento 1 y complemento 2).
+                
+                <br />
+                <br />
+
+                Le permite transformar un número binario a decimal y al réves, las ideas básicas para representar
+                a los negativos (complemento 1, complemento 2 y la representación parcial) y sobre el punto flotante 
+                de la IEEE.
+                
+                <br />
+                <br />
+                
+                Todo el código fuente esta en inglés, pero todo el texto interno de la aplicación esta
+                en español.
+            </span>
+        ),
+        Topics: {
+            English: ["MaterializeCSS", "React", "One Nih project", "SPA", "One night project"],
+            Spanish: ["MaterializeCSS", "React", "Projecto de clase", "SPA", "Projecto de una noche"],
+        },
+    },
+    LCS: {
+        Title: (
+            <React.Fragment>
+                &nbsp;
+                <span className="hide-on-med-and-down">
+                    <b>Longest</b>Common<b>Subsequence</b>
+                </span>
+
+                <span className="hide-on-large-only">
+                    <b>L</b>C<b>S</b>
+                </span>
+            </React.Fragment>
+        ),
+        LinkToProject: "https://github.com/SoyOscarRH/LCS",
+        CheckOut: "https://soyoscarrh.github.io/LCS/",
+        Type: "Project",
+        Color: "blue",
+        English: (
+            <span>
+                This is a webapp that can simulate the solution of the famous
+                problem of the Longest Common Subsequence of any 2 strings step by step.
+                This is solve using DP (dynamic programming) using a bottom-up aproach table.
+
+                <br />
+                <br />
+
+                All the code and documentation is in english, but all the text inside the app is
+                in spanish (my mother tongue).
+            </span>
+        ),
+        Spanish: (
+            <span>
+                Esta es una aplicación web para aprender React, este juego puede simular la solución del
+                famoso problema de la Subsecuencia común más larga de cualquiera 2 cadenas
+                paso por paso.
+
+                <br />
+                <br />
+
+                Todo el código fuente esta en inglés, pero todo el texto interno de la aplicación esta
+                en español.
+            </span>
+        ),
+        Topics: {
+            English: ["Javascript", "React", "MaterializeCSS", "DP", "Competitive Programming", "One night project"],
+            Spanish: ["Javascript", "React", "MaterializeCSS", "DP", "Programación Competitiva", "Projecto de una noche"]
+        },
+    },
+    BezierCurve: {
+        Title: (<span> <b>Bezier</b>Curves</span>),
+        Type: "Program",
+        LinkToProject: "https://github.com/SoyOscarRH/LearningJava/tree/master/ArtWithLines",
+        Color: "orange darken-3",
+        English: (
+            <span>
+                A simple function that draws Bezier curves and some example of how to use it, and
+                the results you get by changing the paramaters.
+
+                <br />
+                <br />
+
+                Also I have examples of many figures that you can create 
+                using this curves, I assure you, they are beautiful.
+
+            </span>
+        ),
+        Spanish: (
+            <span>
+                Una simple función que dibuja las curvas de Bezier y algunos ejemplos de cómo usarlo,
+                y los resultados que obtienes al cambiar los parámetros.
+
+                <br />
+                <br />
+
+                También tengo ejemplos de muchas figuras que puedes crear
+                usando estas curvas, te lo aseguro, son hermosas.
+
+            </span>
+        ),
+        Topics: {
+            English: ["Java", "Math", "Java Swing"],
+            Spanish: ["Java", "Matemáticas", "Java Swing"],
+        },
+    },
     RootFinder: {
         Title: (<span> <b>Root</b>Finder</span>),
         Type: "Program",
@@ -372,24 +423,24 @@ const ProjectsAndProgramsData: Projects = {
         Color: "pink lighten-2",
         English: (
             <span>
-                This is a simple program in Python (Python2 :v) to find
+                This is a simple program in Python to find
                 the n-roots of a complex number.
 
                 <br />
                 <br />
 
-                It works, but is ugly and ... it is on Python 2
+                It works, but is ugly and ... it is on Python 2.
             </span>
         ),
         Spanish: (
             <span>
-                Este es un simple programa en Python (Python2 :v) para
+                Este es un simple programa en Python para
                 encontrar las n-raíces de un número complejo.
 
                 <br />
                 <br />
 
-                Funciona y todo, pero es feo y ... esta en Python 2
+                Funciona y todo, pero es feo y ... esta en Python 2.
             </span>
         ),
         Topics: {
@@ -405,13 +456,13 @@ const ProjectsAndProgramsData: Projects = {
         English: (
             <span>
                 This is a program in Python using Matplotlib to calculate and graph the linear regression
-                over a data set. It also give you the Pearson Coefficient
+                over a data set. It also give you the Pearson Coefficient.
             </span>
         ),
         Spanish: (
             <span>
                 Este es un programa en Python usando Matplotlib para calcular  y grafica la regresión lineal
-                sobre un conjunto de datos. También te da el coeficiente de Pearson
+                sobre un conjunto de datos. También te da el coeficiente de Pearson.
             </span>
         ),
         Topics: {
@@ -427,18 +478,62 @@ const ProjectsAndProgramsData: Projects = {
         English: (
             <span>
                 This is a program in Python to graph a simple fractal, for now is only
-                the Sierpinkski Triangle
+                the Sierpinkski triangle.
             </span>
         ),
         Spanish: (
             <span>
                 Este es un programa en Python para graficar un simple fractal, por
-                ahora solo he implementado el triangulo de Sierpinkski
+                ahora solo he implementado el triangulo de Sierpinkski.
             </span>
         ),
         Topics: {
             English: ["Python", "Turtle", "Fractals"],
             Spanish: ["Python", "Turtle", "Fractales"],
+        },
+    },
+    AlphabetSoup: {
+        Title: (<span> <b>Alphabet</b>Soup</span>),
+        Type: "Program",
+        LinkToProject: "https://github.com/SoyOscarRH/AlphabetSoup",
+        CheckOut: "https://soyoscarrh.github.io/AlphabetSoup/",
+        Color: "pink lighten-1",
+        English: (
+            <span>
+                Simple game made to learn React, this game is just to make people happy. Just for fun.
+
+                <br />
+
+                As in many projects, code is in english and text is in spanish.
+                <br />
+                <br />
+
+                You can choose beetwen many categories, see a visual help of the
+                words that you have not found yet, you can change
+                the grid size and even activate hints to find the words.
+            </span>
+        ),
+        Spanish: (
+            <span>
+                Un simple juego hecho con React para hacer a la gente feliz, solo
+                esta hecho por diversión.
+                
+                <br />
+
+                Como muchos otros proyectos, el código fuente esta en ingles,
+                pero todo el texto el las palabras a buscar estan es español.
+
+                <br />
+                <br />
+
+                Puedes elegir entre varias categorías para elegir el tema
+                de las palabras, así como cambiar el tamaño del tablero y activar
+                pistas.
+            </span>
+        ),
+        Topics: {
+            English: ["Javascript", "React", "MaterializeCSS", "One night project"],
+            Spanish: ["Javascript", "React", "MaterializeCSS", "Projecto de una noche"]
         },
     },
     PlayPoker: {

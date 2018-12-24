@@ -35,7 +35,7 @@ export default function Projects(props: ProjectsProps) {
 	const ProgramsTitle = props.Language === "English"? "Cool Programs": <div><b>Ideas </b>Interesantes </div>
 
 	return (
-		<div className="center-align" style={{padding: "2rem"}}>
+		<div className={"center-align " + Styles.Container}>
 
 			<h4 className="blue-grey-text text-darken-3"><b>{ProjectsTitle}</b></h4>
 			<br />
