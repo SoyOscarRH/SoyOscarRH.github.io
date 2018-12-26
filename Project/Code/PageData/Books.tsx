@@ -78,16 +78,16 @@ export const AboutBooksData: LanguageOption<JSX.Element> = {
                 <br />
                 <br />
 
-                La respuesta mas inmediata es que estos texto (o compilado como a mí me gusta decirles)
-                son una recopilación de teoremas, ideas, ejemplos y conceptos importantes que aprendímos a lo largo
-                del tiempo sobre cada uno de los temas.
+                La respuesta más inmediata es que estos textos (o compilado como a mí me gusta decirles) son
+                una recopilación de teoremas, ideas, ejemplos y conceptos importantes que aprendimos a lo
+                largo del tiempo sobre cada uno de los temas.
                 
                 <br />
                 <br />
 
                 De manera regular estaremos actualizando estos textos con todo aquello nuevo que aprendamos
                 intentando profundizar en todos estos temas y cerrar posibles dudas en estas páginas.
-                Estos Compilados intentamos ser lo más estrictos posible, aunque somos humanos (y estudiantes)
+                Estos Compilados intentamos ser lo más estrictos posible, aúnque somos humanos (y estudiantes)
                 y es posible(e incluso probable) que cometamos pequeños errores de vez en cuando.
                 Espero que tomes estas páginas como un regalo creado por seres imperfectos pero con muchos
                 ánimos de hacer del mundo un lugar mejor, ahora si, abróchate los cinturones que esto acaba de
@@ -379,18 +379,17 @@ export const BooksData: Books = {
                     <br />
                     <br />
 
-                    Finally with this understanding of linear algebra we can talk of 
+                    Finally, with this understanding of linear algebra we can talk of 
                     one of the most amazing applications of the theory: <b>Numerical Analysis</b>.
 
                     <br />
                     <br />
 
-                    We will talk about how to solve Ax = b using LU decomposition, and 
-                    Cholesky decomposition.
+                    We will talk about how to solve Ax = b using LU decomposition, and Cholesky decomposition.
                     <br />
 
-                    Also we will try to aproximate the solution using Least Squares,
-                    and QR Decomposition (HouseHolder, Gram-Schimidt, Givens).
+                    Also, we will try to approximate the solution using the Least Squares, and QR
+                    Decomposition (HouseHolder, Gram-Schimidt, Givens).
 
                     <br />
                     <br />
@@ -685,7 +684,7 @@ export const BooksData: Books = {
                     <br />
                     <br />
 
-                    We finally see Fourier, how to make his series, how to make his transform and how it is
+                    We Finally, see Fourier, how to make his series, how to make his transform and how it is
                     that with solve differential equations is the simplest thing in the world.
 
                     <br />
@@ -704,8 +703,8 @@ export const BooksData: Books = {
                     <br />
 
                     Veremos como podemos extender la idea del Cálculo sobre funciones complejas, veremos las
-                    integrales complejas y como muchas veces resultan más faciles que las “normales”. 
-                    Veremos los residuos y las series de potencias y como simplificar aun más todas las operaciones.
+                    integrales complejas y como muchas veces resultan más fáciles que las “normales”. 
+                    Veremos los residuos y las series de potencias y como simplificar aún más todas las operaciones.
 
                     <br />
                     <br />
@@ -986,7 +985,7 @@ export const BooksData: Books = {
             ),
             Spanish: (
                 <span>
-                    Vamos, tienes que admitir que esta materia tiene el nombre mas genial del mundo,
+                    Vamos, tienes que admitir que esta materia tiene el nombre más genial del mundo,
                     Aquí aprenderas todo sobre los enteros, los primos y sus misterios.
 
                     <br />
@@ -994,12 +993,12 @@ export const BooksData: Books = {
 
                     Sobretodo este texto se enfoca en la divisibilidad, hablaremos de los
                     algoritmos de Euclides, así como del clásico GCD, LCM, las ecuaciones
-                    diofanticas, así como la función de Phi.
+                    diofánticas, así como la función de Phi.
 
                     <br />
                     <br />
 
-                    Además tambien veremos ideas muy importantes que he usado casi todos los días
+                    Además también veremos ideas muy importantes que he usado casi todos los días
                     en programación competitiva.
 
                     <br />
@@ -1028,7 +1027,7 @@ export const BooksData: Books = {
                         "Máximo Común Divisor",
                         "Algoritmo de Euclides",
                         "Mínimo Común Múltiplo",
-                        "Ecuaciones Diofanticas",
+                        "Ecuaciones diofánticas",
                         "Función Phi de Euler",
                     ]
                 },
@@ -1372,17 +1371,17 @@ export const BooksData: Books = {
             Spanish: (
                 <span>
                     Este libro contiene algunos temas de Análisis Numérico. He separado este tema en dos partes,
-                    todo lo que tiene que ver con Álgebra Lineal esta en su libro, todo lo demás esta aquí.
+                    todo lo que tiene que ver con Álgebra Lineal está en su libro, todo lo demás está aquí.
 
                     <br />
                     <br />
 
-                    Hablamos de la bases de como encontrar raíces usando métodos númericos como
+                    Hablamos de la bases de como encontrar raíces usando métodos numéricos como
                     el de Newton, Secante, Bisección y sus generalizaciones.
                     <br />
                     <br />
 
-                    Finalmente, aprendemos un poco sobre interpolacion y como es que podemos aproximar una función
+                    Finalmente, aprendemos un poco sobre interpolación y como es que podemos aproximar una función
                     con solo un poco de información.
                 </span>
             ),
@@ -1506,7 +1505,7 @@ export const BooksData: Books = {
                 <span>
                     
                     Este libro habla de bases de datos, desde varias definiciones formales, sistemas gestores 
-                    y el funcionamiento y partes basicas de la arquitectura de una base de datos.
+                    y el funcionamiento y partes básicas de la arquitectura de una base de datos.
 
                     <br />
                     <br />
@@ -1519,7 +1518,7 @@ export const BooksData: Books = {
                     <br />
                     <br />
 
-                    Finalmente veremos las bases de SQL
+                    Finalmente veremos las bases de SQL.
 
                 </span>
             ),

@@ -153,13 +153,13 @@ const ProjectsAndProgramsData: Projects = {
                 <br />
                 <br />
                 
-                Todo el código fuente esta en inglés, pero todo el texto interno de la aplicación esta
+                Todo el código fuente está en inglés, pero todo el texto interno de la aplicación está
                 en español.
             </span>
         ),
         Topics: {
             English: ["MaterializeCSS", "React", "Typescript", "Class project", "SPA", ],
-            Spanish: ["MaterializeCSS", "React", "Typescript", "Projecto de clase", "SPA", ],
+            Spanish: ["MaterializeCSS", "React", "Typescript", "proyecto de clase", "SPA", ],
         },
     },
     Binary: {
@@ -193,20 +193,20 @@ const ProjectsAndProgramsData: Projects = {
                 <br />
                 <br />
 
-                Le permite transformar un número binario a decimal y al réves, las ideas básicas para representar
+                Le permite transformar un número binario a decimal y al revés, las ideas básicas para representar
                 a los negativos (complemento 1, complemento 2 y la representación parcial) y sobre el punto flotante 
                 de la IEEE.
                 
                 <br />
                 <br />
                 
-                Todo el código fuente esta en inglés, pero todo el texto interno de la aplicación esta
+                Todo el código fuente está en inglés, pero todo el texto interno de la aplicación está
                 en español.
             </span>
         ),
         Topics: {
             English: ["MaterializeCSS", "React", "One Night project", "SPA", "One night project"],
-            Spanish: ["MaterializeCSS", "React", "Projecto de clase", "SPA", "Projecto de una noche"],
+            Spanish: ["MaterializeCSS", "React", "proyecto de clase", "SPA", "proyecto de una noche"],
         },
     },
     OrganizeAnEvent: {
@@ -234,16 +234,15 @@ const ProjectsAndProgramsData: Projects = {
         ),
         Spanish: (
             <span>
-                Este es el mínimo producto viable para una sistema web
-                que pueda controlar un sistema para ceremonias académicas.
+                Este es el mínimo producto viable para un sistema web
+                que pueda controlar una ceremonia académica.
                 <br />
                 <br />
-                Permite pasar asitencia usando códigos de barras y QR dentro de la aplicación.
-                También nos permite crear PDF con las estadísticas del evento y enviar
-                las invitaciones por email.
+                Permite pasar asistencia usando códigos de barras y QR dentro de la aplicación. 
+                También nos permite crear PDF con las estadísticas del evento y enviar las invitaciones por email.
                 <br />
                 <br />
-                Todo el código fuente esta en inglés, pero todo el texto interno de la aplicación esta
+                Todo el código fuente está en inglés, pero todo el texto interno de la aplicación está
                 en español.
             </span>
         ),
@@ -275,19 +274,19 @@ const ProjectsAndProgramsData: Projects = {
         ),
         Spanish: (
             <span>
-                Mini proyecto INCOMPLETO para una sistema web
+                Mini proyecto INCOMPLETO para un sistema web
                 que puede controlar un cine (venta de dulces y boletos)
                 
                 <br />
                 <br />
                 
-                Permite crear usuarios y administrárlos, vender dulces y palomitas, y las
+                Permite crear usuarios y administrarlos, vender dulces y palomitas, y las
                 entradas para el cine.
                 
                 <br />
                 <br />
                 
-                Todo el código fuente esta en inglés, pero todo el texto interno de la aplicación esta
+                Todo el código fuente está en inglés, pero todo el texto interno de la aplicación está
                 en español.
             </span>
         ),
@@ -320,7 +319,7 @@ const ProjectsAndProgramsData: Projects = {
         ),
         Spanish: (
             <span>
-                Este es el mínimo producto viable para una sistema web
+                Este es el mínimo producto viable para un sistema web
                 que puede controlar la tienda de abarrotes de mi familia.
                 <br />
                 <br />
@@ -328,7 +327,7 @@ const ProjectsAndProgramsData: Projects = {
                 o por precio, manejar usuarios, editar productos y añadir atajos de teclado.
                 <br />
                 <br />
-                Todo el código fuente esta en inglés, pero todo el texto interno de la aplicación esta
+                Todo el código fuente está en inglés, pero todo el texto interno de la aplicación está
                 en español.
             </span>
         ),
@@ -407,20 +406,20 @@ const ProjectsAndProgramsData: Projects = {
         ),
         Spanish: (
             <span>
-                Esta es una aplicación web para aprender React, este juego puede simular la solución del
+                Una aplicación web para aprender React, este juego puede simular la solución del
                 famoso problema de la Subsecuencia común más larga de cualquiera 2 cadenas
                 paso por paso.
 
                 <br />
                 <br />
 
-                Todo el código fuente esta en inglés, pero todo el texto interno de la aplicación esta
+                Todo el código fuente está en inglés, pero todo el texto interno de la aplicación está
                 en español.
             </span>
         ),
         Topics: {
             English: ["Javascript", "React", "MaterializeCSS", "DP", "Competitive Programming", "One night project"],
-            Spanish: ["Javascript", "React", "MaterializeCSS", "DP", "Programación Competitiva", "Projecto de una noche"]
+            Spanish: ["Javascript", "React", "MaterializeCSS", "DP", "Programación Competitiva", "proyecto de una noche"]
         },
     },
     BezierCurve: {
@@ -450,7 +449,7 @@ const ProjectsAndProgramsData: Projects = {
                 <br />
 
                 También tengo ejemplos de muchas figuras que puedes crear
-                usando estas curvas, te lo aseguro, son hermosas.
+                usando estás curvas, te lo aseguro, son hermosas.
 
             </span>
         ),
@@ -494,13 +493,13 @@ const ProjectsAndProgramsData: Projects = {
         ),
         Spanish: (
             <span>
-                Este es un programa en Python usando Matplotlib para calcular  y grafica la regresión lineal
+                Este es un programa en Python usando Matplotlib para calcular  y gráfica la regresión lineal
                 sobre un conjunto de datos. También te da el coeficiente de Pearson.
             </span>
         ),
         Topics: {
             English: ["LinearRegression", "Statistics", "Python2", "Matplotlib", ],
-            Spanish: ["Regresión Lineal", "Estadística", "Python2", "Matplotlib",],
+            Spanish: ["Regresión Lineal", "estádística", "Python2", "Matplotlib",],
         },
     },
     RootFinder: {
@@ -527,7 +526,7 @@ const ProjectsAndProgramsData: Projects = {
                 <br />
                 <br />
 
-                Funciona y todo, pero es feo y ... esta en Python 2.
+                Funciona y todo, pero es feo y ... está en Python 2.
             </span>
         ),
         Topics: {
@@ -562,19 +561,19 @@ const ProjectsAndProgramsData: Projects = {
                 
                 <br />
 
-                En este projecto tanto el código como el texto esta en inglés.
+                En este proyecto tanto el código como el texto está en inglés.
 
                 <br />
                 <br />
 
                La primera app muestra una lista infinita (generada aleatoriamente)
                de posibles nombres para Startups, los nombres se generan usando las palabras
-               más comúnes del idioma inglés. Además hice una app que muestra platillos en una lista.
+               más comunes del idioma inglés. Además hice una app que muestra platillos en una lista.
             </span>
         ),
         Topics: {
             English: ["One night project", "Google Development Group", "Flutter", "Dart", ],
-            Spanish: ["Projecto de una noche", "Google Development Group", "Flutter", "Dart", ]
+            Spanish: ["proyecto de una noche", "Google Development Group", "Flutter", "Dart", ]
         },
     },
     AlphabetSoup: {
@@ -601,12 +600,12 @@ const ProjectsAndProgramsData: Projects = {
         Spanish: (
             <span>
                 Una sopa de letras hecho con React para hacer a la gente feliz, solo
-                esta hecho por diversión.
+                está hecho por diversión.
                 
                 <br />
 
-                Como muchos otros proyectos, el código fuente esta en ingles,
-                pero todo el texto el las palabras a buscar estan es español.
+                Como muchos otros proyectos, el código fuente está en ingles,
+                pero todo el texto el las palabras a buscar están es español.
 
                 <br />
                 <br />
@@ -618,7 +617,7 @@ const ProjectsAndProgramsData: Projects = {
         ),
         Topics: {
             English: ["Javascript", "React", "MaterializeCSS", "One night project"],
-            Spanish: ["Javascript", "React", "MaterializeCSS", "Projecto de una noche"]
+            Spanish: ["Javascript", "React", "MaterializeCSS", "proyecto de una noche"]
         },
     },
     PlayPoker: {
@@ -640,7 +639,7 @@ const ProjectsAndProgramsData: Projects = {
         ),
         Topics: {
             English: ["Weird project", "Sketch", "Python", ],
-            Spanish: ["Un projecto raro", "Sketch", "Python", ],
+            Spanish: ["Un proyecto raro", "Sketch", "Python", ],
         },
     },
 }

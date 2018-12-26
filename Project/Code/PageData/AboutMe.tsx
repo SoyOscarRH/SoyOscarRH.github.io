@@ -75,8 +75,8 @@ const AboutMeEnglish: AboutMe = {
 }
 
 const AboutMeData = {
-    Spanish: AboutMeEnglish, 
-    English: AboutMeSpanish
+    English: AboutMeEnglish, 
+    Spanish: AboutMeSpanish
 }
 
 export default AboutMeData
