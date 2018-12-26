@@ -162,129 +162,6 @@ const ProjectsAndProgramsData: Projects = {
             Spanish: ["MaterializeCSS", "React", "Typescript", "Projecto de clase", "SPA", ],
         },
     },
-    CreatingWithLaTeX: {
-        Title: (<span> <b>Creating</b>With<b>LaTeX</b></span>),
-        Type: "Project",
-        LinkToProject: "https://github.com/CompilandoConocimiento/CreatingWithLatex/",
-        Color: "cyan accent-3",
-        English: (
-            <span>
-                This is where I put all the things that I need when working with LaTeX:
-                code to insert an image, make covers, insert tables.
-
-                <br />
-                <br />
-
-                Also, here I save a the header I use in almost all my files, which
-                have many math commands for easier and higher level equations as
-                \Cis, \UpperDerivate, \BigBrackets, \GenericField, etc...
-            </span>
-        ),
-        Spanish: (
-            <span>
-                Aquí es donde pongo todas las cosas que necesito cuando trabajo
-                con LaTeX: código para insertar una imagen, hacer cubiertas,
-                insertar tablas.
-
-                <br />
-                <br />
-
-                Además, aquí guardo el encabezado que uso en casi todos mis archivos,
-                que tienen muchos comandos matemáticos para un manejo más fácil y
-                de mayor nivel como: 
-                \Cis, \UpperDerivate, \BigBrackets, \Generic Field, etc...
-            </span>
-        ),
-        Topics: {
-            English: ["LaTeX", "Math", "Reference"],
-            Spanish: ["LaTeX", "Matemáticas", "Referencia"],
-        },
-    },
-    TdeTiendita: {
-        Title: (<span> <b>T</b>de<b>Tiendita</b></span>),
-        Type: "Project",
-        LinkToProject: "https://github.com/SoyOscarRH/TdeTiendita",
-        Color: "deep-purple lighten-1",
-        English: (
-            <span>
-                This is a minimum viable product for a web system 
-                that can control the local store of my family.
-                <br />
-                <br />
-                It allow us to sell products using barcodes, sell by quantity and by price, also 
-                it allows us to edit products and uses keyboard shorcuts.
-
-                <br />
-                It allow to have differents types fo users.
-                <br />
-                <br />
-                All the code and documentation is in english, but all the text inside the app is
-                in spanish (my mother tongue).
-            </span>
-        ),
-        Spanish: (
-            <span>
-                Este es el mínimo producto viable para una sistema web
-                que puede controlar la tienda de abarrotes de mi familia.
-                <br />
-                <br />
-                Permite vender productos usando un código de barras así como vender por cantidad
-                o por precio, manejar usuarios, editar productos y añadir atajos de teclado.
-                <br />
-                <br />
-                Todo el código fuente esta en inglés, pero todo el texto interno de la aplicación esta
-                en español.
-            </span>
-        ),
-        Topics: {
-            English: ["SPA", "MVP", "MaterializeCSS", "React", "Python-Flask", "MySQL"],
-            Spanish: ["SPA", "MVP", "MaterializeCSS", "React", "Python-Flask", "MySQL"],
-        },
-    },
-    ManageYourCinema: {
-        Title: (<span> <b>Manage</b>Your<b>Cinema</b> </span>),
-        LinkToProject: "https://github.com/SoyOscarRH/ManageYourCinema",
-        Type: "Project",
-        Color: "teal",
-        English: (
-            <span>
-                This is a UNFINISHED mini project for a web system
-                that can control a cinema (candy shop and tickets)
-                
-                <br />
-                <br />
-
-                It allows to create users and manage them, sell candy and popcorn, an the movie tickets.
-
-                <br />
-                <br />
-                All the code and documentation is in english, but all the text inside the app is
-                in spanish (my mother tongue).
-            </span>
-        ),
-        Spanish: (
-            <span>
-                Mini proyecto INCOMPLETO para una sistema web
-                que puede controlar un cine (venta de dulces y boletos)
-                
-                <br />
-                <br />
-                
-                Permite crear usuarios y administrárlos, vender dulces y palomitas, y las
-                entradas para el cine.
-                
-                <br />
-                <br />
-                
-                Todo el código fuente esta en inglés, pero todo el texto interno de la aplicación esta
-                en español.
-            </span>
-        ),
-        Topics: {
-            English: ["MaterializeCSS", "jQuery", "PHP", "MySQL", ],
-            Spanish: ["MaterializeCSS", "jQuery", "PHP", "MySQL", ],
-        },
-    },
     Binary: {
         Title: (<span> <b>Binary</b>Conversions</span>),
         LinkToProject: "https://github.com/CompilandoConocimiento/Binary",
@@ -330,6 +207,172 @@ const ProjectsAndProgramsData: Projects = {
         Topics: {
             English: ["MaterializeCSS", "React", "One Nih project", "SPA", "One night project"],
             Spanish: ["MaterializeCSS", "React", "Projecto de clase", "SPA", "Projecto de una noche"],
+        },
+    },
+    OrganizeAnEvent: {
+        Title: (<span> <b>Organize</b>An<b>Event</b></span>),
+        Type: "Project",
+        LinkToProject: "https://github.com/SoyOscarRH/OrganizeAnEvent",
+        Color: "yellow darken-2",
+        English: (
+            <span>
+                This is a minimum viable product for a web system 
+                to control assistance and documents to an academic ceremony.
+                <br />
+                <br />
+                It allows us to pass assistance using bar codes and QR inside the web app.
+                Also, it allows us to get the statistics of the event (in PDF) and to send the invitations
+                through email.
+
+                <br />
+                It allow to have differents types fo users (normal and admins).
+                <br />
+                <br />
+                All the code and documentation is in english, but all the text inside the app is
+                in spanish (my mother tongue).
+            </span>
+        ),
+        Spanish: (
+            <span>
+                Este es el mínimo producto viable para una sistema web
+                que pueda controlar un sistema para ceremonias académicas.
+                <br />
+                <br />
+                Permite pasar asitencia usando códigos de barras y QR dentro de la aplicación.
+                También nos permite crear PDF con las estadísticas del evento y enviar
+                las invitaciones por email.
+                <br />
+                <br />
+                Todo el código fuente esta en inglés, pero todo el texto interno de la aplicación esta
+                en español.
+            </span>
+        ),
+        Topics: {
+            English: ["MVP", "CRUD", "MaterializeCSS", "React", "Typescript", "PHP", "MySQL",],
+            Spanish: ["MVP", "Altas Bajas Cambios", "MaterializeCSS", "React", "Typescript", "PHP", "MySQL",],
+        },
+    },
+    TdeTiendita: {
+        Title: (<span> <b>T</b>de<b>Tiendita</b></span>),
+        Type: "Project",
+        LinkToProject: "https://github.com/SoyOscarRH/TdeTiendita",
+        Color: "deep-purple lighten-1",
+        English: (
+            <span>
+                This is a minimum viable product for a web system 
+                that can control the local store of my family.
+                <br />
+                <br />
+                It allow us to sell products using barcodes, sell by quantity and by price, also 
+                it allows us to edit products and uses keyboard shorcuts.
+
+                <br />
+                It allow to have differents types fo users.
+                <br />
+                <br />
+                All the code and documentation is in english, but all the text inside the app is
+                in spanish (my mother tongue).
+            </span>
+        ),
+        Spanish: (
+            <span>
+                Este es el mínimo producto viable para una sistema web
+                que puede controlar la tienda de abarrotes de mi familia.
+                <br />
+                <br />
+                Permite vender productos usando un código de barras así como vender por cantidad
+                o por precio, manejar usuarios, editar productos y añadir atajos de teclado.
+                <br />
+                <br />
+                Todo el código fuente esta en inglés, pero todo el texto interno de la aplicación esta
+                en español.
+            </span>
+        ),
+        Topics: {
+            English: ["SPA", "MVP", "CRUD", "MaterializeCSS", "React", "Python-Flask", "MySQL"],
+            Spanish: ["SPA", "MVP", "Altas Bajas Cambios", "MaterializeCSS", "React", "Python-Flask", "MySQL"],
+        },
+    },
+    ManageYourCinema: {
+        Title: (<span> <b>Manage</b>Your<b>Cinema</b> </span>),
+        LinkToProject: "https://github.com/SoyOscarRH/ManageYourCinema",
+        Type: "Project",
+        Color: "teal",
+        English: (
+            <span>
+                This is a UNFINISHED mini project for a web system
+                that can control a cinema (candy shop and tickets)
+                
+                <br />
+                <br />
+
+                It allows to create users and manage them, sell candy and popcorn, an the movie tickets.
+
+                <br />
+                <br />
+                All the code and documentation is in english, but all the text inside the app is
+                in spanish (my mother tongue).
+            </span>
+        ),
+        Spanish: (
+            <span>
+                Mini proyecto INCOMPLETO para una sistema web
+                que puede controlar un cine (venta de dulces y boletos)
+                
+                <br />
+                <br />
+                
+                Permite crear usuarios y administrárlos, vender dulces y palomitas, y las
+                entradas para el cine.
+                
+                <br />
+                <br />
+                
+                Todo el código fuente esta en inglés, pero todo el texto interno de la aplicación esta
+                en español.
+            </span>
+        ),
+        Topics: {
+            English: ["CRUD", "MaterializeCSS", "jQuery", "PHP", "MySQL", ],
+            Spanish: ["Altas Bajas Cambios", "MaterializeCSS", "jQuery", "PHP", "MySQL", ],
+        },
+    },
+    CreatingWithLaTeX: {
+        Title: (<span> <b>Creating</b>With<b>LaTeX</b></span>),
+        Type: "Project",
+        LinkToProject: "https://github.com/CompilandoConocimiento/CreatingWithLatex/",
+        Color: "cyan accent-3",
+        English: (
+            <span>
+                This is where I put all the things that I need when working with LaTeX:
+                code to insert an image, make covers, insert tables.
+
+                <br />
+                <br />
+
+                Also, here I save a the header I use in almost all my files, which
+                have many math commands for easier and higher level equations as
+                \Cis, \UpperDerivate, \BigBrackets, \GenericField, etc...
+            </span>
+        ),
+        Spanish: (
+            <span>
+                Aquí es donde pongo todas las cosas que necesito cuando trabajo
+                con LaTeX: código para insertar una imagen, hacer cubiertas,
+                insertar tablas.
+
+                <br />
+                <br />
+
+                Además, aquí guardo el encabezado que uso en casi todos mis archivos,
+                que tienen muchos comandos matemáticos para un manejo más fácil y
+                de mayor nivel como: 
+                \Cis, \UpperDerivate, \BigBrackets, \Generic Field, etc...
+            </span>
+        ),
+        Topics: {
+            English: ["LaTeX", "Math", "Reference"],
+            Spanish: ["LaTeX", "Matemáticas", "Referencia"],
         },
     },
     LCS: {
@@ -416,6 +459,50 @@ const ProjectsAndProgramsData: Projects = {
             Spanish: ["Java", "Matemáticas", "Java Swing"],
         },
     },
+    Fractals: {
+        Title: (<span><b>Fractals</b></span>),
+        Type: "Program",
+        LinkToProject: "https://github.com/CompilandoConocimiento/ThingsWithPython/tree/master/Fractals",
+        Color: "yellow accent-4",
+        English: (
+            <span>
+                This is a program in Python to graph a simple fractal, for now is only
+                the Sierpinkski triangle.
+            </span>
+        ),
+        Spanish: (
+            <span>
+                Este es un programa en Python para graficar un simple fractal, por
+                ahora solo he implementado el triangulo de Sierpinkski.
+            </span>
+        ),
+        Topics: {
+            English: ["Python", "Turtle", "Fractals"],
+            Spanish: ["Python", "Turtle", "Fractales"],
+        },
+    },
+    LinearRegression: {
+        Title: (<span> <b>Linear</b>Regression</span>),
+        Type: "Program",
+        LinkToProject: "https://github.com/CompilandoConocimiento/ThingsWithPython/tree/master/LinearRegression",
+        Color: "green lighten-1",
+        English: (
+            <span>
+                This is a program in Python using Matplotlib to calculate and graph the linear regression
+                over a data set. It also give you the Pearson Coefficient.
+            </span>
+        ),
+        Spanish: (
+            <span>
+                Este es un programa en Python usando Matplotlib para calcular  y grafica la regresión lineal
+                sobre un conjunto de datos. También te da el coeficiente de Pearson.
+            </span>
+        ),
+        Topics: {
+            English: ["Python2", "Matplotlib", "LinearRegression"],
+            Spanish: ["Python2", "Matplotlib", "Regresión Líneal"],
+        },
+    },
     RootFinder: {
         Title: (<span> <b>Root</b>Finder</span>),
         Type: "Program",
@@ -448,48 +535,46 @@ const ProjectsAndProgramsData: Projects = {
             Spanish: ["Python3", "Matemáticas", "Análisis Complejo"],
         },
     },
-    LinearRegression: {
-        Title: (<span> <b>Linear</b>Regression</span>),
+    LearningFlutter: {
+        Title: (<span> <b>Learning</b>Flutter</span>),
         Type: "Program",
-        LinkToProject: "https://github.com/CompilandoConocimiento/ThingsWithPython/tree/master/LinearRegression",
-        Color: "green lighten-1",
+        LinkToProject: "https://github.com/SoyOscarRH/LearningFlutter",
+        Color: "grey darken-2",
         English: (
             <span>
-                This is a program in Python using Matplotlib to calculate and graph the linear regression
-                over a data set. It also give you the Pearson Coefficient.
+                Simple apps that I made in a Google Development Group boot camp
+                designed to learn the Flutter SDK.
+                <br />
+
+                Code and text is in English.
+                <br />
+                <br />
+
+                The first app show an infinite random generated list of Startups
+                made by using the most commons words in English and an option to
+                save them. Also, I made an app that show many dishes in a list.
             </span>
         ),
         Spanish: (
             <span>
-                Este es un programa en Python usando Matplotlib para calcular  y grafica la regresión lineal
-                sobre un conjunto de datos. También te da el coeficiente de Pearson.
+                Conjunto de apps que hice durante un boot camp en un Google Development Group
+                diseñado para aprender Flutter.
+                
+                <br />
+
+                En este projecto tanto el código como el texto esta en inglés.
+
+                <br />
+                <br />
+
+               La primera app muestra una lista infinita (generada aleatoriamente)
+               de posibles nombres para Startups, los nombres se generan usando las palabras
+               más comúnes del idioma inglés. Además hice una app que muestra platillos en una lista.
             </span>
         ),
         Topics: {
-            English: ["Python2", "Matplotlib", "LinearRegression"],
-            Spanish: ["Python2", "Matplotlib", "Regresión Líneal"],
-        },
-    },
-    Fractals: {
-        Title: (<span><b>Fractals</b></span>),
-        Type: "Program",
-        LinkToProject: "https://github.com/CompilandoConocimiento/ThingsWithPython/tree/master/Fractals",
-        Color: "yellow accent-4",
-        English: (
-            <span>
-                This is a program in Python to graph a simple fractal, for now is only
-                the Sierpinkski triangle.
-            </span>
-        ),
-        Spanish: (
-            <span>
-                Este es un programa en Python para graficar un simple fractal, por
-                ahora solo he implementado el triangulo de Sierpinkski.
-            </span>
-        ),
-        Topics: {
-            English: ["Python", "Turtle", "Fractals"],
-            Spanish: ["Python", "Turtle", "Fractales"],
+            English: ["Flutter", "Dart", "GDG", "One night project"],
+            Spanish: ["Flutter", "Dart", "GDG", "Projecto de una noche"]
         },
     },
     AlphabetSoup: {
