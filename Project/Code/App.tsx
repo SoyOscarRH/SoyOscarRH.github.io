@@ -3,10 +3,10 @@ import ReactDOM from "react-dom"
 
 import M from "materialize-css"
 
-import {Data} from "./Data"
-
+import {SideMenu as SideMenuData} from "./PageData"
 import {AboutMe as AboutMeData} from "./PageData"
 import {ProjectsAndPrograms as ProjectsAndProgramsData} from "./PageData"
+import {Books as BooksData, AboutBooks as AboutBooksData} from "./PageData"
 
 import AppHeader from "./AppHeader"
 import AboutMe   from "./AboutMe"
@@ -56,7 +56,7 @@ class App extends React.Component<{}, {Language: "Spanish" | "English"}> {
 					<AppHeader
 						Language	     = {this.state.Language}
 						onChangeLanguage = {() => this.onChangeLanguage()}
-						Data             = {Data.SideMenu[this.state.Language]} 
+						Data             = {SideMenuData[this.state.Language]} 
 					/>
 				</header>
 
@@ -70,10 +70,7 @@ class App extends React.Component<{}, {Language: "Spanish" | "English"}> {
 					</div>
 
 					<div id="Books">
-						<Books 
-							Data     = {Data.Books}
-							Language = {this.state.Language}
-						/>
+						<Books Books={BooksData} AboutBooks={AboutBooksData} Language={this.state.Language}/>
 					</div>
 
 					<br />

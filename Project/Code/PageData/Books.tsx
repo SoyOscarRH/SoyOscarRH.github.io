@@ -6,7 +6,7 @@ interface Topic {
     SubTopics: Array<string>
 }
 
-interface Book {
+export interface Book {
     Title: LanguageOption<JSX.Element>,
     SimpleTitle: LanguageOption<string>,
     LinkToProject: string,
@@ -19,7 +19,7 @@ interface Book {
     LinkToDownload: string,
 }
 
-interface Books { [key: string]: Book }
+export interface Books { [key: string]: Book }
 
 export const AboutBooksData: LanguageOption<JSX.Element> = {
     English: (

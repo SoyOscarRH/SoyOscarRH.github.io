@@ -2,14 +2,14 @@ import React from "react"
 import M from "materialize-css"
 
 import {Projects as ProjectsInterface} from "./PageData/ProjectsAndPrograms"
-import Card from "./Card"
+import {ProjectCard} from "./Card"
 
 import * as Styles from "./Styles.css"
 
 function CardsByType(Projects: ProjectsInterface, Language: "Spanish" | "English", Type: "Project" | "Program") {
 	return Object.entries(Projects)
 		.filter( ([_, Project])    => Project.Type === Type)
-	   	.map( ([Name, Project])    => Card(Name, Project, Language) )
+	   	.map( ([Name, Project])    => ProjectCard(Name, Project, Language) )
 }
 
 

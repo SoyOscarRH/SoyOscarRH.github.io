@@ -205,7 +205,7 @@ const ProjectsAndProgramsData: Projects = {
             </span>
         ),
         Topics: {
-            English: ["MaterializeCSS", "React", "One Nih project", "SPA", "One night project"],
+            English: ["MaterializeCSS", "React", "One Night project", "SPA", "One night project"],
             Spanish: ["MaterializeCSS", "React", "Projecto de clase", "SPA", "Projecto de una noche"],
         },
     },
@@ -252,47 +252,6 @@ const ProjectsAndProgramsData: Projects = {
             Spanish: ["MVP", "Altas Bajas Cambios", "MaterializeCSS", "React", "Typescript", "PHP", "MySQL",],
         },
     },
-    TdeTiendita: {
-        Title: (<span> <b>T</b>de<b>Tiendita</b></span>),
-        Type: "Project",
-        LinkToProject: "https://github.com/SoyOscarRH/TdeTiendita",
-        Color: "deep-purple lighten-1",
-        English: (
-            <span>
-                This is a minimum viable product for a web system 
-                that can control the local store of my family.
-                <br />
-                <br />
-                It allow us to sell products using barcodes, sell by quantity and by price, also 
-                it allows us to edit products and uses keyboard shorcuts.
-
-                <br />
-                It allow to have differents types fo users.
-                <br />
-                <br />
-                All the code and documentation is in english, but all the text inside the app is
-                in spanish (my mother tongue).
-            </span>
-        ),
-        Spanish: (
-            <span>
-                Este es el mínimo producto viable para una sistema web
-                que puede controlar la tienda de abarrotes de mi familia.
-                <br />
-                <br />
-                Permite vender productos usando un código de barras así como vender por cantidad
-                o por precio, manejar usuarios, editar productos y añadir atajos de teclado.
-                <br />
-                <br />
-                Todo el código fuente esta en inglés, pero todo el texto interno de la aplicación esta
-                en español.
-            </span>
-        ),
-        Topics: {
-            English: ["SPA", "MVP", "CRUD", "MaterializeCSS", "React", "Python-Flask", "MySQL"],
-            Spanish: ["SPA", "MVP", "Altas Bajas Cambios", "MaterializeCSS", "React", "Python-Flask", "MySQL"],
-        },
-    },
     ManageYourCinema: {
         Title: (<span> <b>Manage</b>Your<b>Cinema</b> </span>),
         LinkToProject: "https://github.com/SoyOscarRH/ManageYourCinema",
@@ -335,6 +294,47 @@ const ProjectsAndProgramsData: Projects = {
         Topics: {
             English: ["CRUD", "MaterializeCSS", "jQuery", "PHP", "MySQL", ],
             Spanish: ["Altas Bajas Cambios", "MaterializeCSS", "jQuery", "PHP", "MySQL", ],
+        },
+    },
+    TdeTiendita: {
+        Title: (<span> <b>T</b>de<b>Tiendita</b></span>),
+        Type: "Project",
+        LinkToProject: "https://github.com/SoyOscarRH/TdeTiendita",
+        Color: "deep-purple lighten-1",
+        English: (
+            <span>
+                This is a minimum viable product for a web system 
+                that can control the local store of my family.
+                <br />
+                <br />
+                It allow us to sell products using barcodes, sell by quantity and by price, also 
+                it allows us to edit products and uses keyboard shorcuts.
+
+                <br />
+                It allow to have differents types fo users.
+                <br />
+                <br />
+                All the code and documentation is in english, but all the text inside the app is
+                in spanish (my mother tongue).
+            </span>
+        ),
+        Spanish: (
+            <span>
+                Este es el mínimo producto viable para una sistema web
+                que puede controlar la tienda de abarrotes de mi familia.
+                <br />
+                <br />
+                Permite vender productos usando un código de barras así como vender por cantidad
+                o por precio, manejar usuarios, editar productos y añadir atajos de teclado.
+                <br />
+                <br />
+                Todo el código fuente esta en inglés, pero todo el texto interno de la aplicación esta
+                en español.
+            </span>
+        ),
+        Topics: {
+            English: ["SPA", "MVP", "CRUD", "MaterializeCSS", "React", "Python-Flask", "MySQL"],
+            Spanish: ["SPA", "MVP", "Altas Bajas Cambios", "MaterializeCSS", "React", "Python-Flask", "MySQL"],
         },
     },
     CreatingWithLaTeX: {
