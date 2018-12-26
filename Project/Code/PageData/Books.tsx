@@ -114,7 +114,7 @@ export const BooksData: Books = {
             English: (
                 <span>
                     When I was a little boy the only topics I dislike in math where the
-                    ones that have something to do with Probability.
+                    ones that have something to do with probability.
 
                     But then I decided to make this book, with this book I learned all 
                     the amazing things about this topic.
@@ -123,16 +123,23 @@ export const BooksData: Books = {
                     <br />
 
                     This book starts with the basic, the concept of probability and of an event,
-                    the idea of conditional probability and Bayes theorem
+                    the idea of conditional probability and Bayes theorem.
+
+                    <br />
+                    <br />
+
+                    Then we will explore the idea of a random variable, of the mean, the variance, moments.
 
                     <br />
                     <br />
                     
-                    Above all, this text focuses on distributions, discrete and continuous and
+                    Above all, this text focuses on distributions (discrete and continuous
+                    like Bernoulli, Binomial, Geometric, Hypergeometric, Uniform, Exponential, Gamma, Normal) and
                     this is the kind of book that demonstrate all the statements that it presents.
 
                     <br />
                     <br />
+
 
                     This book is in Spanish only. Sorry :(
                 </span>
@@ -140,7 +147,7 @@ export const BooksData: Books = {
             Spanish: (
                 <span>
                     Cuando era pequeño, los únicos temas que no me gustaban en matemáticas eran
-                    los que tienen algo que ver con Probabilidad.
+                    los que tienen algo que ver con probabilidad.
 
                     Pero luego decidí hacer este libro, con este libro aprendí todo
                     las cosas increíbles sobre este tema.
@@ -153,9 +160,16 @@ export const BooksData: Books = {
 
                     <br />
                     <br />
+                    
+                    Después exploraremos la idea de una variable aleatoria, de la esperanza, la varianza, covarianza 
+                    y los momentos.
 
-                    Sobre todo, este texto se centra en las distribuciones, discretas y continuas
-                    este es el tipo de libro que demuestra todas las proposiciones que presenta.
+                    <br />
+                    <br />
+
+                    Sobre todo, este texto se centra en las distribuciones (discretas y continuas
+                    como: Bernoulli, Binomial, Geométrica, Hipergeométrica, Uniforme, Exponencial, 
+                    Gamma, Normal) este es el tipo de libro que demuestra todas las proposiciones que presenta.
 
                 </span>
             ),
@@ -327,8 +341,8 @@ export const BooksData: Books = {
             ],
         },
         Tags: {
-            English: ["Probability", "Distributions", "Demostraciones"],
-            Spanish: ["Probabilidad", "Distribuciones", "Proofs"],
+            English: ["Probability", "Distributions", "Proofs"],
+            Spanish: ["Probabilidad", "Distribuciones", "Demostraciones"],
         },
         CoAuthors: "Leticia Cañedo",
         LinkToReadOnline: "https://compilandoconocimiento.github.io/LibroProbabilidad/LibroProbabilidadYEstadistica.pdf",
@@ -336,8 +350,8 @@ export const BooksData: Books = {
     },
     LibroAlgebraLineal: {
         Title: {
-            English: <span><b>Lineal</b> Algebra</span>,
-            Spanish: <span><b>Álgebra</b> Lineal</span>,
+            English: <span><b>Lineal</b> Algebra and <b>Numeric</b> Analysis </span>,
+            Spanish: <span><b>Álgebra</b> Lineal y <b>Análisis</b> Numérico</span>,
         },
         SimpleTitle: {
             English: "Lineal Algebra",
@@ -365,8 +379,18 @@ export const BooksData: Books = {
                     <br />
                     <br />
 
-                    Now with all this mathematical armament we can see more crazy things
-                    as determinants or normalization.
+                    Finally with this understanding of linear algebra we can talk of 
+                    one of the most amazing applications of the theory: <b>Numerical Analysis</b>.
+
+                    <br />
+                    <br />
+
+                    We will talk about how to solve Ax = b using LU decomposition, and 
+                    Cholesky decomposition.
+                    <br />
+
+                    Also we will try to aproximate the solution using Least Squares,
+                    and QR Decomposition (HouseHolder, Gram-Schimidt, Givens).
 
                     <br />
                     <br />
@@ -392,8 +416,18 @@ export const BooksData: Books = {
                     <br />
                     <br />
 
-                    Ahora con todo este armamento matemático podemos ver cosas más locas
-                    como los determinantes o normalización.
+                    Finalmente con todo el conocimiento que hemos adquirido podemos 
+                    hablar de una de las aplicaciones más importantes de la teoría: <b>Análisis Numérico</b>.
+
+                    <br />
+                    <br />
+
+                    Hablaremos de como resolver Ax = b usando la Factorización LU,
+                    y de Cholesky.
+                    <br />
+
+                    También de como aproximar la solución usando Mínimos Cuadrados
+                    y la Factorización QR (HouseHolder, Gram-Schimidt, Givens).
                 </span>
             ),
         },
@@ -427,6 +461,17 @@ export const BooksData: Books = {
                         "Generadores",
                         "Dependencia Lineal",
                         "Bases",
+                    ]
+                },
+                {
+                    Name: "Producto Interno",
+                    SubTopics: [
+                        "Definición",
+                        "Longitud",
+                        "Ortogonalidad",
+                        "Proyección y Ortogonales",
+                        "Dependencia Lineal",
+                        "Descomposición",
                     ]
                 },
                 {
@@ -469,6 +514,30 @@ export const BooksData: Books = {
                         "Propiedades",
                         "Cofactor",
                         "Adjunta",
+                        "Normas Vectoriales",
+                        "Normas Matriciales",
+                    ]
+                },
+                {
+                    Name: "Análisis Numérico: Solucionar Ax = b",
+                    SubTopics: [
+                        "Factorización LU",
+                        "Factorización con Pivote",
+                        "Factorización de Cholesky",
+                        "Matrices definidas positivas",
+                        "Analisis del Error (Condición de una matriz)",
+                    ]
+                },
+                {
+                    Name: "Análisis Numérico: Aproximar Ax = b",
+                    SubTopics: [
+                        "Mínimos Cuadradados",
+                        "Ecuaciones Normales",
+                        "PseudoInversa",
+                        "Factorización QR",
+                        "HouseHolder: Reflexiones",
+                        "Gram-Schimidt: Ortogonalizar",
+                        "Givens: Rotaciones",
                     ]
                 },
             ],
@@ -501,6 +570,17 @@ export const BooksData: Books = {
                         "Generators",
                         "Linear dependence",
                         "Bases",
+                    ]
+                },
+                {
+                    Name: "Inner Product",
+                    SubTopics: [
+                        "Definition",
+                        "Length",
+                        "Orthogonality",
+                        "Projections and Orthogonal",
+                        "Linear dependence",
+                        "Decomposition",
                     ]
                 },
                 {
@@ -543,13 +623,35 @@ export const BooksData: Books = {
                         "Properties",
                         "Cofactor",
                         "Attached",
+                        "Vectors norms",
+                        "Matrix norms",
+                    ]
+                },
+                {
+                    Name: "Numerical Analysis: Solve Ax = b",
+                    SubTopics: [
+                        "LU Decomposition",
+                        "Cholesky Decomposition",
+                        "Positive defined matrices",
+                        "Error Analysis (Condition of a matrix)",
+                    ]
+                },
+                {
+                    Name: "Numerical Analysis: Approximate Ax = b",
+                    SubTopics: [
+                        "Least Squares",
+                        "Normal Equations",
+                        "QR Decomposition",
+                        "HouseHolder: Reflections",
+                        "Gram-Schmidt: Orthogonalize",
+                        "Givens: Rotations",
                     ]
                 },
             ],
         },
         Tags: {
-            English: ["Matrix", "Vectorial Spaces", "Lineal Transformations", "Gauss-Jordan"],
-            Spanish: ["Matrix", "Espacio Vectorial", "Transformaciones Lineales", "Gauss-Jordan"]
+            English: ["Matrixs", "Vectorial Spaces", "Lineal Transformations", "Numerical Analysis"],
+            Spanish: ["Matrices", "Espacios Vectoriales", "Transformaciones Lineales", "Análisis Numérico"]
         },
         CoAuthors: "",
         LinkToReadOnline: "https://compilandoconocimiento.github.io/LibroAlgebraLineal/LibroAlgebraLineal.pdf",
@@ -838,8 +940,8 @@ export const BooksData: Books = {
             Spanish: ["Análisis y Cálculo Complejo", "Fourier", "Números Complejos"],
         },
         CoAuthors: "Ángel López Manríquez",
-        LinkToReadOnline: "https://CompilandoConocimiento.github.io/LibroAnalisisComplejo/LibroAnalisisComplejo",
-        LinkToDownload:"https://CompilandoConocimiento.github.io/LibroAnalisisComplejo/LibroAnalisisComplejo",
+        LinkToReadOnline: "https://CompilandoConocimiento.github.io/LibroAnalisisComplejo/LibroAnalisisComplejo.pdf",
+        LinkToDownload:"https://CompilandoConocimiento.github.io/LibroAnalisisComplejo/LibroAnalisisComplejo.pdf",
     },
     LibroTeoriaDeNumeros: {
         Title: {
@@ -861,13 +963,13 @@ export const BooksData: Books = {
                     <br />
                     <br />
 
-                    Above all, this text focuses on divisibility, we will talk about Euclid's algorithms,
-                    as well as the classical GCD, LCM, the diofantic equations, as well as the Phi function.
+                    Above all, this text focuses on divisibility, we will talk about Euclid's algorithms, 
+                    as well as the classical GCD, LCM, the Diophantine equations, as well as the Phi function.
 
                     <br />
                     <br />
 
-                    Finally we will see everything you need to know about congruences, how to use them to solve problems,
+                    Finally, we will see everything you need to know about congruence, how to use them to solve problems, 
                     Modular Arithmetic and important Theorems such as Wilson's, Chinese Residual Theorem or one of Fermat's.
 
                     <br />
@@ -1034,12 +1136,12 @@ export const BooksData: Books = {
                     <br />
 
                     It contains the bases of the most famous mathematical object and perhaps the most important of all,
-                    sets, sets and sets, learn something Sets!
+                    sets, sets and sets, learn something sets!
 
                     <br />
                     <br />
 
-                    Finally we will learn about relations and functions, the real base of Calculus.
+                    Finally, we will learn about relations and functions, the real base of Calculus.
 
                     <br />
                     <br />
@@ -1056,7 +1158,7 @@ export const BooksData: Books = {
                     <br />
 
                     Contiene las bases del objeto matemático más famoso y tal vez el más importante de todos,
-                    conjuntos, conjuntos y conjuntos, ¡Aprende algo Conjunto!
+                    conjuntos, conjuntos y conjuntos, ¡Aprende algo conjunto!
 
                     <br />
                     <br />
@@ -1231,6 +1333,140 @@ export const BooksData: Books = {
         LinkToReadOnline: "https://CompilandoConocimiento.github.io/LibroMatematicasDiscretas/LibroMatematicasDiscretas.pdf",
         LinkToDownload:"https://CompilandoConocimiento.github.io/LibroMatematicasDiscretas/LibroMatematicasDiscretas.pdf",
     },
+    LibroAnalisisNumerico: {
+        Title: {
+            English: <span><b>Numerical</b> Analysis</span>,
+            Spanish: <span><b>Análisis</b> Numérico</span>,
+        },
+        SimpleTitle: {
+            English: "Numerical Analysis",
+            Spanish: "Análisis Numérico",
+        },
+        LinkToProject: "https://github.com/CompilandoConocimiento/LibroAnalisisNumerico",
+        Color: "grey darken-1",
+        Intro: {
+            English: (
+                <span>
+                    This book contains some topics of Numerical Analysis.
+                    I have separated this topic into 2 books, all the theory that
+                    includes Linear Algebra are in the book in Linear Algebra, all else are here.
+
+                    <br />
+                    <br />
+
+                    It contains the basics ideas for finding roots using numerical methods as
+                    Newton, Secant, Bisection; and their generalizations.
+
+                    <br />
+                    <br />
+
+                    Finally, we will learn about interpolation, or how to "approximate" a function
+                    with just some information about it.
+
+                    <br />
+                    <br />
+
+                    This book is in Spanish only. Sorry :(
+                </span>
+            ),
+            Spanish: (
+                <span>
+                    Este libro contiene algunos temas de Análisis Numérico. He separado este tema en dos partes,
+                    todo lo que tiene que ver con Álgebra Lineal esta en su libro, todo lo demás esta aquí.
+
+                    <br />
+                    <br />
+
+                    Hablamos de la bases de como encontrar raíces usando métodos númericos como
+                    el de Newton, Secante, Bisección y sus generalizaciones.
+                    <br />
+                    <br />
+
+                    Finalmente, aprendemos un poco sobre interpolacion y como es que podemos aproximar una función
+                    con solo un poco de información.
+                </span>
+            ),
+        },
+        Topics: {
+            Spanish: [
+                {
+                    Name: "Raíces de Funciones",
+                    SubTopics: [
+                        "Tolerancia",
+                        "Bisección",
+                        "Punto Fijo",
+                        "Newton",
+                        "Secante",
+                        "Regla Falsa",
+                    ]
+                },
+                {
+                    Name: "Aproximar Sistemas de Ecuaciones NO lineales",
+                    SubTopics: [
+                        "Ideas generales",
+                    ]
+                },
+                {
+                    Name: "Interpolantes",
+                    SubTopics: [
+                        "Interpolante Lineal",
+                        "Interpolante de Grado N",
+                        "Interpolante de Lagrange",
+                        "Interpolante de Newton",
+                        "Interpolante de Hermite",
+                    ]
+                },
+                {
+                    Name: "Optimización",
+                    SubTopics: [
+                        "Ideas generales",
+                    ]
+                },
+            ],
+            English: [
+                {
+                    Name: "Roots of Functions",
+                    SubTopics: [
+                        "Tolerance",
+                        "Bisection",
+                        "Fixed Point",
+                        "Newton",
+                        "Drying",
+                        "False Rule",
+                    ]
+                },
+                {
+                    Name: "Approximate Systems of Nonlinear Equations",
+                    SubTopics: [
+                        "General ideas",
+                    ]
+                },
+                {
+                    Name: "Interpolants",
+                    SubTopics: [
+                        "Linear Interpolant",
+                        "Grade N Interpolant",
+                        "Lagrange's Interpolant",
+                        "Newton's Interpolant",
+                        "Hermite's Interpolant",
+                    ]
+                },
+                {
+                    Name: "Optimization",
+                    SubTopics: [
+                        "General ideas",
+                    ]
+                },
+            ]
+        },
+        Tags: {
+            English: ["Math", "Roots", "Newton", "Interpolants", "Optimization"],
+            Spanish: ["Matemáticas", "Raíces", "Newton", "Interpolantes", "Optimización"],
+        },
+        CoAuthors: "",
+        LinkToReadOnline: "https://CompilandoConocimiento.github.io/LibroAnalisisNumerico/LibroAnalisisNumerico.pdf",
+        LinkToDownload:"https://CompilandoConocimiento.github.io/LibroAnalisisNumerico/LibroAnalisisNumerico.pdf",
+    },
     LibroBasesDeDatos: {
         Title: {
             English: <span><b>Data</b> Bases</span>,
@@ -1258,7 +1494,7 @@ export const BooksData: Books = {
                     <br />
                     <br />
 
-                    Finally we will see the bases of SQL
+                    Finally, we will see the bases of SQL.
 
                     <br />
                     <br />

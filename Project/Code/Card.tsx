@@ -122,7 +122,7 @@ export function ProjectCard(ProjectName: string, Project: Project, Language: "En
 				
 				<div className="card-content left-align" style={{padding: "16px"}}>
 					<br />
-					<p className="blue-grey-text text-darken-3">
+					<p className="blue-grey-text text-darken-3" style={{padding: "0.6rem", textAlign: "justify"}}>
 						{Project[Language]}
 					</p>
 				</div>
@@ -164,7 +164,7 @@ export function BookCard(BookName: string, Book: Book, Language: "English" | "Sp
 				<div className="card-content left-align" style={{padding: "16px"}}>
 					<br />
 					
-					<p className="blue-grey-text text-darken-3">
+					<p className="blue-grey-text text-darken-3" style={{padding: "0.6rem", textAlign: "justify"}}>
 						{Book.Intro[Language]}
 					</p>
 

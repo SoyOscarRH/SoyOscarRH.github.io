@@ -170,7 +170,7 @@ const ProjectsAndProgramsData: Projects = {
         Color: "green",
         English: (
             <span>
-                This was a simple project for fun to really understand floating-point numbers / arithmetic and
+                This was a project just for fun to really understand floating-point numbers / arithmetic and
                 binary conversions (complement-1 and complement 2).
 
                 <br />
@@ -430,7 +430,7 @@ const ProjectsAndProgramsData: Projects = {
         Color: "orange darken-3",
         English: (
             <span>
-                A simple function that draws Bezier curves and some example of how to use it, and
+                A function that draws Bezier curves and some example of how to use it, and
                 the results you get by changing the paramaters.
 
                 <br />
@@ -443,7 +443,7 @@ const ProjectsAndProgramsData: Projects = {
         ),
         Spanish: (
             <span>
-                Una simple función que dibuja las curvas de Bezier y algunos ejemplos de cómo usarlo,
+                Una función que dibuja las curvas de Bezier y algunos ejemplos de cómo usarlo,
                 y los resultados que obtienes al cambiar los parámetros.
 
                 <br />
@@ -455,8 +455,8 @@ const ProjectsAndProgramsData: Projects = {
             </span>
         ),
         Topics: {
-            English: ["Java", "Math", "Java Swing"],
-            Spanish: ["Java", "Matemáticas", "Java Swing"],
+            English: ["Math", "Bezier", "Java Swing"],
+            Spanish: ["Matemáticas", "Bezier", "Java Swing"],
         },
     },
     Fractals: {
@@ -466,19 +466,19 @@ const ProjectsAndProgramsData: Projects = {
         Color: "yellow accent-4",
         English: (
             <span>
-                This is a program in Python to graph a simple fractal, for now is only
+                This is a program in Python to graph fractals, for now is only
                 the Sierpinkski triangle.
             </span>
         ),
         Spanish: (
             <span>
-                Este es un programa en Python para graficar un simple fractal, por
+                Este es un programa en Python para graficar fractales, por
                 ahora solo he implementado el triangulo de Sierpinkski.
             </span>
         ),
         Topics: {
-            English: ["Python", "Turtle", "Fractals"],
-            Spanish: ["Python", "Turtle", "Fractales"],
+            English: ["Fractals", "Sierpinkski", "Python", "Turtle", ],
+            Spanish: ["Fractales", "Sierpinkski", "Python", "Turtle", ],
         },
     },
     LinearRegression: {
@@ -499,14 +499,14 @@ const ProjectsAndProgramsData: Projects = {
             </span>
         ),
         Topics: {
-            English: ["Python2", "Matplotlib", "LinearRegression"],
-            Spanish: ["Python2", "Matplotlib", "Regresión Líneal"],
+            English: ["LinearRegression", "Statistics", "Python2", "Matplotlib", ],
+            Spanish: ["Regresión Lineal", "Estadística", "Python2", "Matplotlib",],
         },
     },
     RootFinder: {
         Title: (<span> <b>Root</b>Finder</span>),
         Type: "Program",
-        LinkToProject: "https://github.com/SoyOscarRH/LearningJava/tree/master/RootFinder",
+        LinkToProject: "https://github.com/CompilandoConocimiento/ThingsWithPython/tree/master/RootFinder",
         Color: "pink lighten-2",
         English: (
             <span>
@@ -521,7 +521,7 @@ const ProjectsAndProgramsData: Projects = {
         ),
         Spanish: (
             <span>
-                Este es un simple programa en Python para
+                Este es un programa en Python para
                 encontrar las n-raíces de un número complejo.
 
                 <br />
@@ -531,8 +531,8 @@ const ProjectsAndProgramsData: Projects = {
             </span>
         ),
         Topics: {
-            English: ["Python3", "Math", "Complex Analysis"],
-            Spanish: ["Python3", "Matemáticas", "Análisis Complejo"],
+            English: ["Math", "Complex Analysis", "Python2", ],
+            Spanish: ["Matemáticas", "Análisis Complejo", "Python2", ],
         },
     },
     LearningFlutter: {
@@ -557,7 +557,7 @@ const ProjectsAndProgramsData: Projects = {
         ),
         Spanish: (
             <span>
-                Conjunto de apps que hice durante un boot camp en un Google Development Group
+                Conjunto de apps que hice durante un boot camp de un Google Development Group
                 diseñado para aprender Flutter.
                 
                 <br />
@@ -573,8 +573,8 @@ const ProjectsAndProgramsData: Projects = {
             </span>
         ),
         Topics: {
-            English: ["Flutter", "Dart", "GDG", "One night project"],
-            Spanish: ["Flutter", "Dart", "GDG", "Projecto de una noche"]
+            English: ["One night project", "Google Development Group", "Flutter", "Dart", ],
+            Spanish: ["Projecto de una noche", "Google Development Group", "Flutter", "Dart", ]
         },
     },
     AlphabetSoup: {
@@ -585,7 +585,7 @@ const ProjectsAndProgramsData: Projects = {
         Color: "pink lighten-1",
         English: (
             <span>
-                Simple game made to learn React, this game is just to make people happy. Just for fun.
+                Game made to learn React, this game is just to make people happy. Just for fun.
 
                 <br />
 
@@ -600,7 +600,7 @@ const ProjectsAndProgramsData: Projects = {
         ),
         Spanish: (
             <span>
-                Un simple juego hecho con React para hacer a la gente feliz, solo
+                Una sopa de letras hecho con React para hacer a la gente feliz, solo
                 esta hecho por diversión.
                 
                 <br />
@@ -639,8 +639,8 @@ const ProjectsAndProgramsData: Projects = {
             </span>
         ),
         Topics: {
-            English: ["Python", "Weird", "MVP"],
-            Spanish: ["Python", "Raro", "MVP"],
+            English: ["Weird project", "Sketch", "Python", ],
+            Spanish: ["Un projecto raro", "Sketch", "Python", ],
         },
     },
 }
