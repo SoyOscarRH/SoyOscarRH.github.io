@@ -20,7 +20,7 @@ class App extends React.Component<{}, {Language: "Spanish" | "English"}> {
 		super(props)
 
 		this.state = {
-			Language: Math.random() < 0.5? "Spanish" : "English"
+			Language: "English"
 		}
 	}
 
