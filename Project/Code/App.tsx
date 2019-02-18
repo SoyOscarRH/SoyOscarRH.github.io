@@ -3,7 +3,6 @@ import ReactDOM from "react-dom"
 
 import M from "materialize-css"
 
-import { SideMenu as SideMenuData } from "./PageData"
 import { AboutMe as AboutMeData } from "./PageData"
 import { ProjectsAndPrograms as ProjectsAndProgramsData } from "./PageData"
 import { Books as BooksData, AboutBooks as AboutBooksData } from "./PageData"
@@ -15,21 +14,25 @@ import Books from "./Books"
 import Footer from "./Footer"
 
 type LanguageType = "Spanish" | "English"
-type LanguageFunction = (language: LanguageType) => void
+type LanguageFunction = () => void
 
-export const LanguageContext = React.createContext<[LanguageType, LanguageFunction]>(["English", () => {}])
+export const LanguageContext = React.createContext<
+  [LanguageType, LanguageFunction]
+>(["English", () => {}])
 
 const App: FunctionComponent = () => {
   const [language, setLanguage] = useState<LanguageType>("English")
-  const changeLanguage = () => setLanguage(language === "English" ? "Spanish" : "English")
+  const changeLanguage = () => {
+    M.Toast.dismissAll()
+    const newLanguage = language === "English" ? "Spanish" : "English"
+    setLanguage(newLanguage)
+  }
 
   useEffect(() => {
-    window["changeMessage"] = () => {
-      M.Toast.dismissAll()
-      changeLanguage()
-    }
+    window["changeMessage"] = changeLanguage
     M.toast({
-      html: `<button 
+      html: `
+        <button 
 					class   = "btn-flat toast-action"
 					onClick = window.changeMessage()>
 					${language == "English" ? "¿Cambiar idioma?" : "Change language?"}
@@ -41,11 +44,7 @@ const App: FunctionComponent = () => {
   return (
     <LanguageContext.Provider value={[language, changeLanguage]}>
       <header>
-        <AppHeader
-          Language={language}
-          onChangeLanguage={changeLanguage}
-          Data={SideMenuData[language]}
-        />
+        <AppHeader />
       </header>
       <main>
         <div id="AboutMe">
