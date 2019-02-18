@@ -1,4 +1,4 @@
-import React from "react"
+import React, {FunctionComponent, useState, useEffect} from "react"
 import ReactDOM from "react-dom"
 
 import M from "materialize-css"
@@ -14,79 +14,61 @@ import Projects  from "./Projects"
 import Books     from "./Books"
 import Footer    from "./Footer"
 
-class App extends React.Component<{}, {Language: "Spanish" | "English"}> {
+type LanguageType = "Spanish" | "English"
+export const LanguageContext = React.createContext<LanguageType>('English');
 
-	constructor(props: {}) {
-		super(props)
+const App: FunctionComponent = () => {
+	const [language, setLanguage] = useState<LanguageType>("English");
 
-		this.state = {
-			Language: "English"
-		}
+	const changeLanguage = () => {
+		setLanguage((language === "English")? "Spanish" : "English")
 	}
 
-	onChangeLanguage () {
-		this.setState((preState) => {
-			return {Language: (preState.Language === "English")? "Spanish" : "English"}
-		})
-	}
-
-	componentDidMount() {
+	useEffect(() => {
 		window['changeMessage'] = () => {
 			M.Toast.dismissAll()
-			this.onChangeLanguage() 
+			changeLanguage() 
 		}
-
-		const message = this.state.Language == "English"? "¿Cambiar idioma?" : "Change language?"
 		M.toast({
 			html: 
 				`<button 
 					class   = "btn-flat toast-action"
 					onClick = window.changeMessage()>
-					${message}
+					${language == "English"? "¿Cambiar idioma?" : "Change language?"}
 				</button>`,
 			displayLength: 8000,
 		})
-	}
+	}, []);
 
-	render () {
-		return (
-			<React.Fragment>
-				
-				<header>
-					<AppHeader
-						Language	     = {this.state.Language}
-						onChangeLanguage = {() => this.onChangeLanguage()}
-						Data             = {SideMenuData[this.state.Language]} 
-					/>
-				</header>
+	return (
+		<LanguageContext.Provider value={language}>
+			<header>
+				<AppHeader
+					Language	     = {language}
+					onChangeLanguage = {changeLanguage}
+					Data             = {SideMenuData[language]} 
+				/>
+			</header>
+			<main>
+				<div id="AboutMe">
+					<AboutMe AboutMe={AboutMeData[language]} />
+				</div>
+				<div id="Projects">
+					<Projects Projects={ProjectsAndProgramsData} Language={language} />
+				</div>
+				<div id="Books">
+					<Books Books={BooksData} AboutBooks={AboutBooksData} Language={language}/>
+				</div>
+				<br />
+				<br />
+				<br />
+			</main>
+			<footer>
+				<Footer />
+			</footer>
+		</LanguageContext.Provider>
+	)
 
-				<main>
-					<div id="AboutMe">
-						<AboutMe AboutMe={AboutMeData[this.state.Language]} />
-					</div>
-
-					<div id="Projects">
-						<Projects Projects={ProjectsAndProgramsData} Language={this.state.Language} />
-					</div>
-
-					<div id="Books">
-						<Books Books={BooksData} AboutBooks={AboutBooksData} Language={this.state.Language}/>
-					</div>
-
-					<br />
-					<br />
-					<br />
-
-				</main>
-
-				<footer>
-					<Footer 
-					/>
-				</footer>
-
-			</React.Fragment>
-		)
-	}
 }
 
 ReactDOM.render(<App />, document.getElementById("ReactApp"))
