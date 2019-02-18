@@ -1,21 +1,12 @@
-import React from "react"
+import React, { FunctionComponent } from "react"
 import {AboutMe as AboutMeInterface} from "./PageData/AboutMe"
-
-const PhotoSection: React.StatelessComponent<{}> = () => (
-  <div className="row">
-    <br /><br /><br />
-    <br /><br /><br />
-    <img className="col s11 m9 l11" src="Assets/Profile.png" />
-  </div>
-)
 
 interface TextSectionProps {
   AboutMe: AboutMeInterface,
 }
 
-const TextSection: React.StatelessComponent<TextSectionProps> = (props) => (
+const TextSection: FunctionComponent<TextSectionProps> = props => (
   <React.Fragment>
-    
     <h5 className="blue-grey-text text-darken-4" style={{fontWeight: 440}}>
       {props.AboutMe.SayHi} <b>R</b>osas <b>H</b>ernandez
     </h5>
@@ -35,11 +26,18 @@ const TextSection: React.StatelessComponent<TextSectionProps> = (props) => (
       <span className="hide-on-med-and-up"> CURRICULUM               </span>
       <span className="hide-on-small-only"> {props.AboutMe.ShowMyCV} </span>
     </a>
-
   </React.Fragment>
 )
 
-const AboutMe: React.StatelessComponent<{AboutMe: AboutMeInterface}> = (props) => (
+const PhotoSection: FunctionComponent = () => (
+  <div className="row">
+    <br /><br /><br />
+    <br /><br /><br />
+    <img className="col s11 m9 l11" src="Assets/Profile.png" />
+  </div>
+)
+
+const AboutMe: FunctionComponent<{AboutMe: AboutMeInterface}> = (props) => (
   <div className="teal lighten-5 z-depth-1 row">
     
     <div className="col s8 m8 l9" style={{padding: "2% 1% 4% 5%"}}>
