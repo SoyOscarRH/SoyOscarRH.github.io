@@ -6,16 +6,21 @@ import React, {
 } from "react"
 import M from "materialize-css"
 
+import { LanguageContext, LanguageType, LanguageFunction } from "../App"
 import NavigationMenu from "./NavigationMenu"
 import SideMenu from "./SideMenu"
-import { LanguageContext } from "../App"
+
+export const LanguageHeaderContext = React.createContext<
+  [LanguageType, LanguageFunction]
+>(["English", () => {}])
 
 const AppHeader: FunctionComponent = () => {
   const [language, setLanguage] = useContext(LanguageContext)
   const [SidenavMaterialCSS, setSideNav] = useState<M.Sidenav | null>(null)
-  const setLanguageAndCloseSidenav = () => {
-    setLanguage()
+
+  const setLanguageAndCloseSidenav = (newLanguage: LanguageType) => {
     setTimeout(() => SidenavMaterialCSS && SidenavMaterialCSS.close(), 500)
+    setLanguage(newLanguage)
   }
 
   useEffect(() => {
@@ -24,13 +29,10 @@ const AppHeader: FunctionComponent = () => {
   }, [])
 
   return (
-    <React.Fragment>
+    <LanguageHeaderContext.Provider value={[language, setLanguageAndCloseSidenav]}>
       <NavigationMenu />
-      <SideMenu
-        manageChangeLanguage={setLanguageAndCloseSidenav}
-        Language={language}
-      />
-    </React.Fragment>
+      <SideMenu />
+    </LanguageHeaderContext.Provider>
   )
 }
 

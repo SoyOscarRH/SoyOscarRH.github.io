@@ -13,18 +13,18 @@ import Projects from "./Projects"
 import Books from "./Books"
 import Footer from "./Footer"
 
-type LanguageType = "Spanish" | "English"
-type LanguageFunction = () => void
+export type LanguageType = "Spanish" | "English"
+export type LanguageFunction = (newLanguage: LanguageType) => void
 
 export const LanguageContext = React.createContext<
   [LanguageType, LanguageFunction]
->(["English", () => {}])
+>(["English", (_) => {}])
 
 const App: FunctionComponent = () => {
   const [language, setLanguage] = useState<LanguageType>("English")
-  const changeLanguage = () => {
+
+  const changeLanguage = (newLanguage: LanguageType) => {
     M.Toast.dismissAll()
-    const newLanguage = language === "English" ? "Spanish" : "English"
     setLanguage(newLanguage)
   }
 
