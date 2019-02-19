@@ -13,36 +13,39 @@ import Projects from "./Projects"
 import Books from "./Books"
 import Footer from "./Footer"
 
-export type LanguageType = "Spanish" | "English"
-export type LanguageFunction = (newLanguage: LanguageType) => void
+export type languages = "Spanish" | "English"
+export type toogleLanguages = () => void
 
 export const LanguageContext = React.createContext<
-  [LanguageType, LanguageFunction]
->(["English", (_) => {}])
+  [languages, toogleLanguages]
+>(["English", () => {}])
 
 const App: FunctionComponent = () => {
-  const [language, setLanguage] = useState<LanguageType>("English")
+  const [language, setLanguage] = useState<languages>("English")
 
-  const changeLanguage = (newLanguage: LanguageType) => {
+  const toggleLanguageAndDismissToasts = () => {
     M.Toast.dismissAll()
+    const newLanguage = language === "English" ? "Spanish" : "English"
     setLanguage(newLanguage)
   }
 
   useEffect(() => {
-    window["changeMessage"] = changeLanguage
+    window["changeMessage"] = toggleLanguageAndDismissToasts
     M.toast({
       html: `
         <button 
 					class   = "btn-flat toast-action"
 					onClick = window.changeMessage()>
-					${language == "English" ? "¿Cambiar idioma?" : "Change language?"}
+					${language === "English" ? "¿Cambiar idioma?" : "Change language?"}
 				</button>`,
       displayLength: 8000,
     })
   }, [])
 
   return (
-    <LanguageContext.Provider value={[language, changeLanguage]}>
+    <LanguageContext.Provider
+      value={[language, toggleLanguageAndDismissToasts]}
+    >
       <header>
         <AppHeader />
       </header>

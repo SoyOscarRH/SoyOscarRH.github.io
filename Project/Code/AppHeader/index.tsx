@@ -6,30 +6,33 @@ import React, {
 } from "react"
 import M from "materialize-css"
 
-import { LanguageContext, LanguageType, LanguageFunction } from "../App"
+import { LanguageContext, languages, toogleLanguages } from "../App"
 import NavigationMenu from "./NavigationMenu"
 import SideMenu from "./SideMenu"
 
 export const LanguageHeaderContext = React.createContext<
-  [LanguageType, LanguageFunction]
+  [languages, toogleLanguages]
 >(["English", () => {}])
 
 const AppHeader: FunctionComponent = () => {
-  const [language, setLanguage] = useContext(LanguageContext)
+  const [language, toggleLanguage] = useContext(LanguageContext)
   const [SidenavMaterialCSS, setSideNav] = useState<M.Sidenav | null>(null)
 
-  const setLanguageAndCloseSidenav = (newLanguage: LanguageType) => {
+  const toggleLanguageAndCloseSidenav = () => {
     setTimeout(() => SidenavMaterialCSS && SidenavMaterialCSS.close(), 500)
-    setLanguage(newLanguage)
+    toggleLanguage()
   }
 
   useEffect(() => {
-    const elementNode = document.getElementById("SideBarID")!
-    setSideNav(M.Sidenav.init(elementNode, { draggable: true, edge: "left" }))
+    const elementNode = document.getElementById("SideBarID")
+    if (elementNode)
+      setSideNav(M.Sidenav.init(elementNode, { draggable: true, edge: "left" }))
   }, [])
 
   return (
-    <LanguageHeaderContext.Provider value={[language, setLanguageAndCloseSidenav]}>
+    <LanguageHeaderContext.Provider
+      value={[language, toggleLanguageAndCloseSidenav]}
+    >
       <NavigationMenu />
       <SideMenu />
     </LanguageHeaderContext.Provider>
