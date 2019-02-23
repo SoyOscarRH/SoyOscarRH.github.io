@@ -1,5 +1,5 @@
-import { ProjectsAndPrograms, Books } from "../../PageData"
-import { languages } from "../../App"
+import { ProjectsAndPrograms, Books } from "../PageData"
+import { languages } from "../App"
 
 type linkName = string
 type linkURL = string

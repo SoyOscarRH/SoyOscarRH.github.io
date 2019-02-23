@@ -1,8 +1,8 @@
 import React, { FunctionComponent, useContext } from "react"
-import { LanguageHeaderContext } from "../../AppHeader"
-import {SidenavMaterialCSSContext} from "../../AppHeader"
+import { LanguageHeaderContext } from "../AppHeader"
+import {SidenavMaterialCSSContext} from "../AppHeader"
 
-import getSections, { Section } from "./SideMenuData"
+import getSections, { Section } from "../PageData/SideMenuData"
 
 const LinksToSocialMedia: React.FunctionComponent = () => (
   <div className="row">
