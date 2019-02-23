@@ -14,6 +14,10 @@ export const LanguageHeaderContext = React.createContext<
   [languages, toogleLanguages]
 >(["English", () => {}])
 
+export const SidenavMaterialCSSContext = React.createContext<M.Sidenav | null>(
+  null
+)
+
 const AppHeader: FunctionComponent = () => {
   const [language, toggleLanguage] = useContext(LanguageContext)
   const [SidenavMaterialCSS, setSideNav] = useState<M.Sidenav | null>(null)
@@ -22,7 +26,10 @@ const AppHeader: FunctionComponent = () => {
     setTimeout(() => SidenavMaterialCSS && SidenavMaterialCSS.close(), 500)
     toggleLanguage()
   }
-
+  const languageContext = [language, toggleLanguageAndCloseSidenav] as [
+    languages,
+    () => void
+  ]
   useEffect(() => {
     const elementNode = document.getElementById("SideBarID")
     if (elementNode)
@@ -30,11 +37,11 @@ const AppHeader: FunctionComponent = () => {
   }, [])
 
   return (
-    <LanguageHeaderContext.Provider
-      value={[language, toggleLanguageAndCloseSidenav]}
-    >
-      <NavigationMenu />
-      <SideMenu />
+    <LanguageHeaderContext.Provider value={languageContext}>
+      <SidenavMaterialCSSContext.Provider value={SidenavMaterialCSS}>
+        <NavigationMenu />
+        <SideMenu />
+      </SidenavMaterialCSSContext.Provider>
     </LanguageHeaderContext.Provider>
   )
 }

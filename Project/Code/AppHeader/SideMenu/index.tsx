@@ -1,7 +1,8 @@
 import React, { FunctionComponent, useContext } from "react"
 import { LanguageHeaderContext } from "../../AppHeader"
+import {SidenavMaterialCSSContext} from "../../AppHeader"
 
-import { SideMenuData } from "./MoreSimpleData"
+import getSections, { Section } from "./SideMenuData"
 
 const LinksToSocialMedia: React.FunctionComponent = () => (
   <div className="row">
@@ -46,6 +47,10 @@ const SoyOscarRHLogo: FunctionComponent<{
 
 const ToggleLanguage: FunctionComponent = () => {
   const [language, toggleLanguage] = useContext(LanguageHeaderContext)
+  const index = language === "English" ? 0 : 1
+  const englishLanguageName = ["English", "Inglés"][index]
+  const spanishLanguageName = ["Spanish", "Español"][index]
+
   return (
     <React.Fragment>
       <a className="subheader center">
@@ -53,14 +58,14 @@ const ToggleLanguage: FunctionComponent = () => {
       </a>
       <div className="switch center">
         <label>
-          {language === "English" ? "English" : "Inglés"}
+          {spanishLanguageName}
           <input
             type="checkbox"
             onChange={toggleLanguage}
             checked={language === "English"}
           />
           <span className="lever" />
-          {language === "English" ? "Spanish" : "Español"}
+          {englishLanguageName}
         </label>
       </div>
     </React.Fragment>
@@ -69,16 +74,13 @@ const ToggleLanguage: FunctionComponent = () => {
 
 const SideMenuSection: FunctionComponent<{
   sectionName: string
-  Section: any
+  Section: Section
 }> = ({ sectionName, Section }) => {
+  const [iconName, iconColor] = Section.Icon
+  const iconClasses = `tiny material-icons ${iconColor}-text text-darken-2`
 
-  console.log(Section)
-
-  let data = ["art_track", "grey"]
-  if (sectionName === "AboutMe") data = ["account_circle", "grey"]
-  if (sectionName === "Projects") data = ["dashboard", "green"]
-  if (sectionName === "Programs") data = ["description", "teal"]
-  if (sectionName === "Books") data = ["book", "purple"]
+  const SidenavMaterialCSS = useContext(SidenavMaterialCSSContext)
+  const closeSideMenu = () => SidenavMaterialCSS && SidenavMaterialCSS.close()
 
   const styleClass = {
     display: "block",
@@ -87,41 +89,38 @@ const SideMenuSection: FunctionComponent<{
     opacity: 0.9,
   }
 
+  const SectionRows = Section.Links.map(([name, link]) => (
+    <li key={name}>
+      <a className="waves-effect" href={`#${link}`} onClick={closeSideMenu}>
+        <i className={iconClasses} style={styleClass}>
+          {iconName}
+        </i>
+        &nbsp;
+        {name}
+      </a>
+    </li>
+  ))
+
   return (
     <React.Fragment key={`Type ${sectionName}`}>
       <li>
         <a className="subheader">{Section.Title}</a>
       </li>
-
-      {Section.Links.map((Link: [string, string]) => (
-        <li key={`Link ${Link[1]} ${Link[0]}`}>
-          <a className="waves-effect" href={`#${Link[1]}`}>
-            <i
-              className={
-                "tiny material-icons " + data[1] + "-text text-darken-2"
-              }
-              style={styleClass}
-            >
-              {data[0]}
-            </i>
-            &nbsp;
-            {Link[0]}
-          </a>
-        </li>
-      ))}
+      {SectionRows}
     </React.Fragment>
   )
 }
 
 const SideMenu: FunctionComponent = () => {
-  const [language, ] = useContext(LanguageHeaderContext)
+  const [language] = useContext(LanguageHeaderContext)
+  const Sections = getSections(language)
 
-  const SideMenuSections = Object.entries(SideMenuData).map(
+  const SideMenuSections = Object.entries(Sections).map(
     ([sectionName, SectionData]) => (
       <SideMenuSection
         key={sectionName}
         sectionName={sectionName}
-        Section={SectionData[language]}
+        Section={SectionData}
       />
     )
   )
