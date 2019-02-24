@@ -14,6 +14,8 @@ interface BooksProps {
 }
 export default function Books(props: BooksProps) {
 
+	return null
+
 	document.addEventListener('DOMContentLoaded', function() {
 		const ElementsBoxes = document.querySelectorAll('.materialboxed')
 		const Collapsibles = document.querySelectorAll('.collapsible')

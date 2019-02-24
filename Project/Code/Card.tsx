@@ -2,69 +2,122 @@ import React, { FunctionComponent, useContext } from "react"
 import { Project } from "./PageData/Projects"
 import { Program } from "./PageData/Programs"
 import { Book } from "./PageData/Books"
-
 import { LanguageContext } from "./App"
 
 import * as Styles from "./Styles.css"
 
-const CardActionStyle = { marginBottom: "0.1rem", cursor: "pointer" }
-const CardStyle = {
-  height: "100%",
-  display: "grid",
-  gridTemplateRows: "min-content auto min-content",
+interface CardInfo {
+  name: string
+  Element: Project | Program
 }
-const BottomPart = {
-  borderCollapse: "collapse" as "collapse",
-  display: "grid",
-  gridTemplateRows: "auto auto",
+
+// @ts-ignore Just ignore the default value
+const CardInfoContext = React.createContext<CardInfo>(null)
+
+export const ProjectProgramCard: FunctionComponent<CardInfo> = props => {
+  const [language] = useContext(LanguageContext)
+  const { CheckOut: checkoutLink } = props.Element
+  const checkOutStyle = props.Element.CheckOut
+    ? { marginBottom: "0.1rem", cursor: "pointer" }
+    : { display: "none" }
+
+  return (
+    <CardInfoContext.Provider value={props}>
+      <div className={Styles.GridElement}>
+        <div className={"card hoverable " + Styles.CardStyle}>
+          <div className="card-image">
+            <ImageIcon />
+          </div>
+
+          <div className="card-content left-align" style={{ padding: "16px" }}>
+            <br />
+            <p className={"blue-grey-text text-darken-3" + Styles.textStyle}>
+              {props.Element[language]}
+            </p>
+          </div>
+
+          <div className={Styles.BottomPart}>
+            <ShowTags tags={props.Element.Topics[language]} />
+
+            <div className="card-action" style={checkOutStyle}>
+              <a className="activator" href={checkoutLink} target="_blank">
+                {language === "English" ? "Check out" : "Velo tu mismo"}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </CardInfoContext.Provider>
+  )
 }
-const TagsPart = {
-  margin: "16px",
-  marginTop: "0rem",
-  textAlign: "left" as "left",
+
+const ImageIcon: FunctionComponent = () => {
+  const [language] = useContext(LanguageContext)
+  const index = language === "English" ? 0 : 1
+
+  const { name, Element } = useContext(CardInfoContext)
+  const { Color: color, LinkToProject: link, Title: title } = Element
+  const tooltipped = ["See it in Github", "Ver el proyecto en Github"][index]
+
+  return (
+    <React.Fragment>
+      <img
+        className="materialboxed lazy"
+        data-src={`Assets/Projects/${name}.png`}
+        src={"Assets/Blank.png"}
+      />
+      <span className="card-title blue-grey-text text-darken-4">{title}</span>
+      <a
+        className={"tooltipped btn-floating btn-large halfway-fab " + color}
+        href={link}
+        style={{ padding: "3.5px 4px 4px 4px" }}
+        data-position="top"
+        data-tooltip={tooltipped}
+        target="_blank"
+      >
+        <img src="Assets/Icons/githubMini.png" />
+      </a>
+    </React.Fragment>
+  )
+}
+
+const ShowTags: FunctionComponent<{ tags: Array<string> }> = ({ tags }) => (
+  <div className={Styles.tagsPart}>
+    {tags.map(tag => (
+      <div key={tag} className="chip" style={{ fontSize: "0.8rem" }}>
+        {tag}
+      </div>
+    ))}
+  </div>
+)
+
+/*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+
+interface ListInCardProps {
+  Language: "Spanish" | "English"
+  Topics: Array<Topic>
 }
 
 interface Topic {
   Name: string
   SubTopics: Array<string>
-}
-
-interface ImageIconProps {
-  imageName: string
-  title: string | JSX.Element
-  linkToProject: string
-  color: string
-  tooltip: string
-}
-
-const ImageIcon: React.StatelessComponent<ImageIconProps> = props => (
-  <React.Fragment>
-    <img
-      className="materialboxed lazy"
-      data-src={props.imageName}
-      src={"Assets/Blank.png"}
-    />
-
-    <span className="card-title blue-grey-text text-darken-4">
-      {props.title}
-    </span>
-
-    <a
-      className={`tooltipped btn-floating btn-large halfway-fab ${props.color}`}
-      href={props.linkToProject}
-      style={{ padding: "3.5px 4px 4px 4px" }}
-      data-position="top"
-      data-tooltip={props.tooltip}
-      target="_blank"
-    >
-      <img src="Assets/Icons/githubMini.png" />
-    </a>
-  </React.Fragment>
-)
-
-interface ListInCardProps {
-  Language: "Spanish" | "English"
-  Topics: Array<Topic>
 }
 
 const ListInCard: React.StatelessComponent<ListInCardProps> = props => (
@@ -99,65 +152,7 @@ const ListInCard: React.StatelessComponent<ListInCardProps> = props => (
   </React.Fragment>
 )
 
-const ShowTags: React.StatelessComponent<{ tags: Array<string> }> = props => (
-  <div style={TagsPart}>
-    {props.tags.map(tag => (
-      <div key={tag} className="chip" style={{ fontSize: "0.85rem" }}>
-        {tag}
-      </div>
-    ))}
-  </div>
-)
-
-export const ProjectProgramCard: FunctionComponent<{
-  name: string
-  Element: Project | Program
-}> = props => {
-  const [language] = useContext(LanguageContext)
-  return (
-    <div className={Styles.GridElement}>
-      <div className="card hoverable" style={CardStyle}>
-        <div className="card-image">
-          <ImageIcon
-            imageName={`Assets/Projects/${props.name}.png`}
-            title={props.Element.Title}
-            linkToProject={props.Element.LinkToProject}
-            color={props.Element.Color}
-            tooltip={
-              language === "English"
-                ? "See it in Github"
-                : "Ver el proyecto en Github"
-            }
-          />
-        </div>
-
-        <div className="card-content left-align" style={{ padding: "16px" }}>
-          <br />
-          <p
-            className="blue-grey-text text-darken-3"
-            style={{ padding: "0.6rem", textAlign: "justify" }}
-          >
-            {props.Element[language]}
-          </p>
-        </div>
-
-        <div style={BottomPart}>
-          <ShowTags tags={props.Element.Topics[language]} />
-
-          <div
-            className="card-action"
-            style={props.Element.CheckOut ? CardActionStyle : { display: "none" }}
-          >
-            <a className="activator" href={props.Element.CheckOut} target="_blank">
-              {language === "English" ? "Check out" : "Velo tu mismo"}
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
-
+/*
 export function BookCard(
   BookName: string,
   Book: Book,
@@ -165,13 +160,13 @@ export function BookCard(
 ) {
   return (
     <div className={Styles.GridElement} key={BookName} id={BookName}>
-      <div className="card hoverable" style={CardStyle}>
+      <div className="card hoverable" + Styles.CardStyle}>
         <div className="card-reveal blue-grey-text text-darken-3">
           <ListInCard Language={Language} Topics={Book.Topics[Language]} />
         </div>
 
         <div className="card-image">
-          <ImageIcon
+          <ImageIcon {...props}
             imageName={`Assets/Books/${BookName}.png`}
             title={Book.Title[Language]}
             linkToProject={Book.LinkToProject}
@@ -208,10 +203,10 @@ export function BookCard(
           ) : null}
         </div>
 
-        <div style={BottomPart}>
+        <div className={Styles.BottomPart}>
           <ShowTags tags={Book.Tags[Language]} />
 
-          <div className="card-action" style={CardActionStyle}>
+          <div className="card-action" style={Styles.CardActionStyle}>
             <a className="activator" style={{ cursor: "pointer" }}>
               {Language === "English" ? "TOPICS" : "TEMARIO"}
             </a>
@@ -224,3 +219,5 @@ export function BookCard(
     </div>
   )
 }
+
+*/

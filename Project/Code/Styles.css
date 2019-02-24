@@ -10,11 +10,33 @@
     height: 100%;
 }
 
-
 .Container {
     padding: 1rem;
 }
 
+.CardStyle {
+  height: 100%;
+  display: "grid";
+  grid-template-rows: "min-content auto min-content";
+}
+
+.BottomPart {
+  border-collapse: "collapse";
+  display: "grid";
+  grid-template-rows: "auto auto";
+}
+
+.TagsPart {
+  margin: 16px;
+  margin-top: 0rem;
+  text-align: "left";
+  font-size: 0.15rem;
+}
+
+.TextStyle { 
+    padding: 0.6rem; 
+    text-align: "justify";
+}
 
 @media (min-width: 750px) {
     .Grid {
