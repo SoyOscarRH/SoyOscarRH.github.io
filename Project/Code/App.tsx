@@ -49,24 +49,23 @@ const App: FunctionComponent = () => {
       <header>
         <AppHeader />
       </header>
+
       <main>
-        <div id="AboutMe">
+        <section id="AboutMe">
           <AboutMe AboutMe={AboutMeData[language]} />
-        </div>
-        <div id="Projects">
+        </section>
+        <section id="Projects">
           <Projects Projects={ProjectsAndProgramsData} Language={language} />
-        </div>
-        <div id="Books">
+        </section>
+        <section id="Books">
           <Books
             Books={BooksData}
             AboutBooks={AboutBooksData}
             Language={language}
           />
-        </div>
-        <br />
-        <br />
-        <br />
+        </section>
       </main>
+
       <footer>
         <Footer />
       </footer>

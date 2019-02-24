@@ -1,4 +1,4 @@
-import { ProjectsAndPrograms, Books } from "../PageData"
+import { ProjectsAndPrograms, Books, Projects } from "../PageData"
 import { languages } from "../App"
 
 type linkName = string
@@ -16,13 +16,15 @@ export interface Sections {
 }
 
 const getSections = (language: languages) => {
-  const BooksNames: Array<Link> = []
-  const ProjectsNames: Array<Link> = []
-  const ProgramsNames: Array<Link> = []
-
-  Object.entries(Books).forEach(([name, data]) =>
-    BooksNames.push([data.SimpleTitle[language], name])
+  const BooksNames: Array<Link> = Object.entries(Books).map(
+    ([nameForLink, data]) => [data.SimpleTitle[language], nameForLink] as Link
   )
+
+  const ProjectsNames: Array<Link> = Object.keys(Projects).map(
+    nameForLink => [nameForLink, nameForLink] as Link
+  )
+
+  const ProgramsNames: Array<Link> = []
 
   Object.entries(ProjectsAndPrograms).forEach(([name, data]) => {
     switch (data.Type) {
@@ -49,17 +51,17 @@ const getSections = (language: languages) => {
     Projects: {
       Title: ["Projects", "Proyectos"][index],
       Links: ProjectsNames,
-      Icon: ["dashboard", "green"]
+      Icon: ["dashboard", "green"],
     },
     Programs: {
       Title: ["Cool Ideas", "Ideas Interesantes"][index],
       Links: ProgramsNames,
-      Icon: ["description", "teal"]
+      Icon: ["description", "teal"],
     },
     Books: {
       Title: ["Books", "Libros"][index],
       Links: BooksNames,
-      Icon: ["book", "purple"]
+      Icon: ["book", "purple"],
     },
   }
 

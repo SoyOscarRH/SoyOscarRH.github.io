@@ -1,8 +1,70 @@
 import React, { FunctionComponent, useContext } from "react"
-import { LanguageHeaderContext } from "../AppHeader"
-import {SidenavMaterialCSSContext} from "../AppHeader"
+import { LanguageHeaderContext, SidenavMaterialCSSContext } from "../AppHeader"
 
 import getSections, { Section } from "../PageData/SideMenuData"
+
+const SideMenu: FunctionComponent = () => {
+  const [language] = useContext(LanguageHeaderContext)
+  const Sections = getSections(language)
+
+  const SideMenuSections = Object.entries(Sections).map(
+    ([sectionName, SectionData]) => (
+      <SideMenuSection
+        key={sectionName}
+        sectionName={sectionName}
+        Section={SectionData}
+      />
+    )
+  )
+
+  return (
+    <ul id="SideBarID" className="sidenav">
+      <li className="center">
+        <SoyOscarRHLogo baseColor={"#1f3c88"} accentColor={"#070d59"} />
+      </li>
+
+      <li>
+        <LinksToSocialMedia />
+      </li>
+
+      <li className="container">
+        <ToggleLanguage />
+      </li>
+
+      <li>
+        <div className="divider" />
+      </li>
+
+      {SideMenuSections}
+
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+    </ul>
+  )
+}
+
+const SoyOscarRHLogo: FunctionComponent<{
+  baseColor: string
+  accentColor: string
+}> = ({ accentColor, baseColor }) => {
+  const someStyle = { color: accentColor }
+  return (
+    <h5
+      style={{
+        fontWeight: 300,
+        fontSize: "2.3rem",
+        margin: "2.5rem",
+        color: baseColor,
+        fontFamily: "Roboto Mono",
+      }}
+    >
+      <b style={someStyle}>Soy</b>Oscar<b style={someStyle}>RH</b>
+    </h5>
+  )
+}
 
 const LinksToSocialMedia: React.FunctionComponent = () => (
   <div className="row">
@@ -24,26 +86,6 @@ const LinksToSocialMedia: React.FunctionComponent = () => (
     </div>
   </div>
 )
-
-const SoyOscarRHLogo: FunctionComponent<{
-  baseColor: string
-  accentColor: string
-}> = ({ accentColor, baseColor }) => {
-  const someStyle = { color: accentColor }
-  return (
-    <h5
-      style={{
-        fontWeight: 300,
-        fontSize: "2.3rem",
-        margin: "2.5rem",
-        color: baseColor,
-        fontFamily: "Roboto Mono",
-      }}
-    >
-      <b style={someStyle}>Soy</b>Oscar<b style={someStyle}>RH</b>
-    </h5>
-  )
-}
 
 const ToggleLanguage: FunctionComponent = () => {
   const [language, toggleLanguage] = useContext(LanguageHeaderContext)
@@ -108,49 +150,6 @@ const SideMenuSection: FunctionComponent<{
       </li>
       {SectionRows}
     </React.Fragment>
-  )
-}
-
-const SideMenu: FunctionComponent = () => {
-  const [language] = useContext(LanguageHeaderContext)
-  const Sections = getSections(language)
-
-  const SideMenuSections = Object.entries(Sections).map(
-    ([sectionName, SectionData]) => (
-      <SideMenuSection
-        key={sectionName}
-        sectionName={sectionName}
-        Section={SectionData}
-      />
-    )
-  )
-
-  return (
-    <ul id="SideBarID" className="sidenav">
-      <li className="center">
-        <SoyOscarRHLogo baseColor={"#1f3c88"} accentColor={"#070d59"} />
-      </li>
-
-      <li>
-        <LinksToSocialMedia />
-      </li>
-
-      <li className="container">
-        <ToggleLanguage />
-      </li>
-
-      <li>
-        <div className="divider" />
-      </li>
-
-      {SideMenuSections}
-
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-    </ul>
   )
 }
 
