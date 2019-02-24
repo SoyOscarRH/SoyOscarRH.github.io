@@ -1,8 +1,9 @@
 import React, { FunctionComponent, useContext } from "react"
-import { Project } from "./PageData/Projects"
-import { Program } from "./PageData/Programs"
-import { Book } from "./PageData/Books"
-import { LanguageContext } from "./App"
+
+import { LanguageContext } from "../App"
+import { Project } from "../PageData/Projects"
+import { Program } from "../PageData/Programs"
+import { Book } from "../PageData/Books"
 
 import * as Styles from "./Styles.css"
 
@@ -17,7 +18,6 @@ const CardInfoContext = React.createContext<CardInfo>(null)
 
 export const Card: FunctionComponent<CardInfo> = props => {
   const [language] = useContext(LanguageContext)
-  const index = language === "English" ? 0 : 1
 
   let link: string | undefined = ""
   let coauthors: Array<string> = []
@@ -31,13 +31,10 @@ export const Card: FunctionComponent<CardInfo> = props => {
   } else {
     const Book = props.Element as Book
     link = Book.LinkToReadOnline
-    if (Book.CoAuthors) coauthors = [Book.CoAuthors]
+    coauthors = Book.CoAuthors
     text = Book.Intro[language]
     topics = Book.Topics[language]
   }
-
-  // from <div className="card-reveal blue-grey-text text-darken-3">
-  // to <div className="card-reveal">
 
   const cardActionsStyle = link
     ? { marginBottom: "0.1rem", cursor: "pointer" }
@@ -45,7 +42,7 @@ export const Card: FunctionComponent<CardInfo> = props => {
 
   return (
     <CardInfoContext.Provider value={props}>
-      <div className={Styles.GridElement} id={name}>
+      <div className={Styles.GridElement} id={props.name}>
         <div className={"card hoverable " + Styles.CardStyle}>
           <div className="card-reveal blue-grey-text text-darken-3">
             <ListInCard Topics={topics} />
@@ -56,25 +53,7 @@ export const Card: FunctionComponent<CardInfo> = props => {
           </div>
 
           <div className="card-content left-align" style={{ padding: "16px" }}>
-            <br />
-            <p className={"blue-grey-text text-darken-3" + Styles.textStyle}>
-              {text}
-            </p>
-            {coauthors != [] ? (
-              <React.Fragment>
-                <br />
-                <span className="blue-grey-text text-darken-3">
-                  {
-                    [
-                      "Created in collaboration with: ",
-                      "Creado en colaboración con: ",
-                    ][index]
-                  }
-                  {coauthors}
-                </span>
-                <br />
-              </React.Fragment>
-            ) : null}
+            <CardText text={text} coauthors={coauthors} />
           </div>
 
           <div className={Styles.BottomPart}>
@@ -87,6 +66,34 @@ export const Card: FunctionComponent<CardInfo> = props => {
         </div>
       </div>
     </CardInfoContext.Provider>
+  )
+}
+
+const CardText: FunctionComponent<{
+  text: JSX.Element
+  coauthors: string[]
+}> = props => {
+  const [language] = useContext(LanguageContext)
+  const index = language === "English" ? 0 : 1
+
+  const coauthors =
+    props.coauthors.length > 0 ? (
+      <React.Fragment>
+        <br />
+        <span className="blue-grey-text text-darken-3">
+          {["Created with: ", "Creado junto con: "][index]}
+          {props.coauthors.join(", ")}
+        </span>
+        <br />
+      </React.Fragment>
+    ) : null
+
+  return (
+    <div className={"blue-grey-text text-darken-3 " + Styles.textStyle}>
+      <br />
+      <p>{props.text}</p>
+      {coauthors}
+    </div>
   )
 }
 
@@ -110,7 +117,7 @@ const CardActions: FunctionComponent<{
     )
   else
     return (
-      <a className="activator" href={props.link} target="_blank">
+      <a href={props.link} target="_blank">
         {["Check out", "Velo tu mismo"][index]}
       </a>
     )
@@ -124,7 +131,7 @@ const ImageIcon: FunctionComponent = () => {
   const { Color: color, LinkToProject: link, Title: title } = Element
   const tooltipped = ["See it in Github", "Ver el proyecto en Github"][index]
 
-  const folder = type === "Book"? "Books" : "Projects" 
+  const folder = type === "Book" ? "Books" : "Projects"
 
   return (
     <React.Fragment>
@@ -134,8 +141,7 @@ const ImageIcon: FunctionComponent = () => {
         src={"Assets/Blank.png"}
       />
       <span className="card-title blue-grey-text text-darken-4">
-        {
-          type === "Book"? title[language] : title}
+        {type === "Book" ? title[language] : title}
       </span>
       <a
         className={"tooltipped btn-floating btn-large halfway-fab " + color}
@@ -187,13 +193,13 @@ const ListInCard: React.StatelessComponent<{
       <div>
         <ul className="collapsible popout left-align">
           {props.Topics.map((Topic, index) => (
-            <li key={`${index} Collapsible`}>
+            <li key={index}>
               <div className="collapsible-header">{Topic.Name}</div>
 
               <div className="collapsible-body">
                 <ul style={{ fontSize: "0.8rem" }} className="browser-default">
                   {Topic.SubTopics.map((item, subindex) => (
-                    <li key={`${Topic.Name} ${subindex}`}>{item}</li>
+                    <li key={subindex}>{item}</li>
                   ))}
                 </ul>
               </div>

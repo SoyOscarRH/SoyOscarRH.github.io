@@ -5,7 +5,7 @@ import { LanguageOption, LanguageContext } from "./App"
 import { BooksI } from "./PageData/Books"
 import Card from "./Card"
 
-import * as Styles from "./Styles.css"
+import * as Styles from "./Card/Styles.css"
 
 interface BooksDataI {
   Books: BooksI

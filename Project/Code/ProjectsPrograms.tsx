@@ -7,7 +7,8 @@ import Card from "./Card"
 
 import { LanguageContext } from "./App"
 
-import * as Styles from "./Styles.css"
+import * as Styles from "./Card/Styles.css"
+
 
 const ProjectsProgramsSection: FunctionComponent<{
   Projects: ProjectsI

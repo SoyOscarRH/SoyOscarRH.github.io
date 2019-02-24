@@ -14,7 +14,7 @@ export interface Book {
   Intro: LanguageOption<JSX.Element>
   Topics: LanguageOption<Array<Topic>>
   Tags: LanguageOption<Array<string>>
-  CoAuthors?: string
+  CoAuthors: Array<string>
   LinkToReadOnline: string
   LinkToDownload: string
 }
@@ -319,7 +319,7 @@ export const BooksData: BooksI = {
       English: ["Probability", "Distributions", "Proofs"],
       Spanish: ["Probabilidad", "Distribuciones", "Demostraciones"],
     },
-    CoAuthors: "Leticia Cañedo",
+    CoAuthors: ["Leticia Cañedo"],
     LinkToReadOnline:
       "https://compilandoconocimiento.github.io/LibroProbabilidad/LibroProbabilidadYEstadistica.pdf",
     LinkToDownload:
@@ -635,7 +635,7 @@ export const BooksData: BooksI = {
         "Análisis Numérico",
       ],
     },
-    CoAuthors: "",
+    CoAuthors: [],
     LinkToReadOnline:
       "https://compilandoconocimiento.github.io/LibroAlgebraLineal/LibroAlgebraLineal.pdf",
     LinkToDownload:
@@ -920,7 +920,7 @@ export const BooksData: BooksI = {
       English: ["Complex Analysis and Calculus", "Fourier", "Complex Numbers"],
       Spanish: ["Análisis y Cálculo Complejo", "Fourier", "Números Complejos"],
     },
-    CoAuthors: "Ángel López Manríquez",
+    CoAuthors: ["Ángel López Manríquez"],
     LinkToReadOnline:
       "https://CompilandoConocimiento.github.io/LibroAnalisisComplejo/LibroAnalisisComplejo.pdf",
     LinkToDownload:
@@ -1091,7 +1091,7 @@ export const BooksData: BooksI = {
       English: ["Number Theory", "Divisibility", "Congruences"],
       Spanish: ["Teoría de Números", "Divisibilidad", "Congruencias"],
     },
-    CoAuthors: "",
+    CoAuthors: [],
     LinkToReadOnline:
       "https://CompilandoConocimiento.github.io/LibroTeoriaDeNumeros/LibroTeoriaDeNumeros.pdf",
     LinkToDownload:
@@ -1305,7 +1305,7 @@ export const BooksData: BooksI = {
       English: ["Math", "Sets", "Functions", "Logics"],
       Spanish: ["Matemáticas", "Conjuntos", "Funciones", "Lógica"],
     },
-    CoAuthors: "",
+    CoAuthors: [],
     LinkToReadOnline:
       "https://CompilandoConocimiento.github.io/LibroMatematicasDiscretas/LibroMatematicasDiscretas.pdf",
     LinkToDownload:
@@ -1440,7 +1440,7 @@ export const BooksData: BooksI = {
         "Optimización",
       ],
     },
-    CoAuthors: "",
+    CoAuthors: [],
     LinkToReadOnline:
       "https://CompilandoConocimiento.github.io/LibroAnalisisNumerico/LibroAnalisisNumerico.pdf",
     LinkToDownload:
@@ -1586,7 +1586,7 @@ export const BooksData: BooksI = {
       English: ["BD", "Entity-Relationship", "Relational", "MySQL"],
       Spanish: ["Entidad Relación", "Relacional", "MySQL"],
     },
-    CoAuthors: "",
+    CoAuthors: [],
     LinkToReadOnline:
       "https://CompilandoConocimiento.github.io/LibroBasesDeDatos/LibroBasesDeDatos.pdf",
     LinkToDownload:
