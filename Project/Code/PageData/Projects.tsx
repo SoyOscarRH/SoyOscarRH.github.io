@@ -8,7 +8,7 @@ export interface Project {
   Color: string
   English: JSX.Element
   Spanish: JSX.Element
-  Topics: LanguageOption<Array<string>>
+  Tags: LanguageOption<Array<string>>
 }
 
 export interface ProjectsI {
@@ -56,7 +56,7 @@ const Projects: ProjectsI = {
         en este increíble deporte mental.
       </span>
     ),
-    Topics: {
+    Tags: {
       English: [
         "Competitive Programming",
         "C++",
@@ -116,7 +116,7 @@ const Projects: ProjectsI = {
         te puedo prometer nada. Lo siento. :(
       </span>
     ),
-    Topics: {
+    Tags: {
       English: ["C++", "Competitive Programming", "Solutions", "Online Judges"],
       Spanish: [
         "C++",
@@ -168,7 +168,7 @@ const Projects: ProjectsI = {
         aplicación está en español.
       </span>
     ),
-    Topics: {
+    Tags: {
       English: [
         "MaterializeCSS",
         "React",
@@ -228,7 +228,7 @@ const Projects: ProjectsI = {
         aplicación está en español.
       </span>
     ),
-    Topics: {
+    Tags: {
       English: [
         "MaterializeCSS",
         "React",
@@ -286,7 +286,7 @@ const Projects: ProjectsI = {
         aplicación está en español.
       </span>
     ),
-    Topics: {
+    Tags: {
       English: [
         "MVP",
         "CRUD",
@@ -344,7 +344,7 @@ const Projects: ProjectsI = {
         aplicación está en español.
       </span>
     ),
-    Topics: {
+    Tags: {
       English: ["CRUD", "MaterializeCSS", "jQuery", "PHP", "MySQL"],
       Spanish: [
         "Altas Bajas Cambios",
@@ -395,7 +395,7 @@ const Projects: ProjectsI = {
         aplicación está en español.
       </span>
     ),
-    Topics: {
+    Tags: {
       English: [
         "SPA",
         "MVP",
@@ -450,7 +450,7 @@ const Projects: ProjectsI = {
         etc...
       </span>
     ),
-    Topics: {
+    Tags: {
       English: ["LaTeX", "Math", "Reference"],
       Spanish: ["LaTeX", "Matemáticas", "Referencia"],
     },
@@ -492,7 +492,7 @@ const Projects: ProjectsI = {
         aplicación está en español.
       </span>
     ),
-    Topics: {
+    Tags: {
       English: [
         "Javascript",
         "React",

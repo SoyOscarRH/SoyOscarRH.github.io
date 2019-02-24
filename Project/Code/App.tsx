@@ -67,7 +67,6 @@ const App: FunctionComponent = () => {
           <Books
             Books={BooksData}
             AboutBooks={AboutBooksData}
-            Language={language}
           />
         </section>
       </main>

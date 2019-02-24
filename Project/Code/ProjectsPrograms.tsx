@@ -3,28 +3,11 @@ import M from "materialize-css"
 
 import { ProjectsI } from "./PageData/Projects"
 import { ProgramsI } from "./PageData/Programs"
-import { ProjectProgramCard } from "./Card"
+import Card from "./Card"
+
 import { LanguageContext } from "./App"
 
 import * as Styles from "./Styles.css"
-
-const ShowCards: FunctionComponent<{
-  title: string
-  Elements: ProjectsI | ProgramsI
-}> = props => (
-  <React.Fragment>
-    <h4 className="blue-grey-text text-darken-3">
-      <b>{props.title}</b>
-    </h4>
-    <br />
-
-    <div className={Styles.Grid}>
-      {Object.entries(props.Elements).map(([name, Element]) => (
-        <ProjectProgramCard key={name} name={name} Element={Element} />
-      ))}
-    </div>
-  </React.Fragment>
-)
 
 const ProjectsProgramsSection: FunctionComponent<{
   Projects: ProjectsI
@@ -53,5 +36,23 @@ const ProjectsProgramsSection: FunctionComponent<{
     </div>
   )
 }
+
+const ShowCards: FunctionComponent<{
+  title: string
+  Elements: ProjectsI | ProgramsI
+}> = props => (
+  <React.Fragment>
+    <h4 className="blue-grey-text text-darken-3">
+      <b>{props.title}</b>
+    </h4>
+    <br />
+
+    <div className={Styles.Grid}>
+      {Object.entries(props.Elements).map(([name, Element]) => (
+        <Card key={name} name={name} Element={Element} type={"ProjectProgram"} />
+      ))}
+    </div>
+  </React.Fragment>
+)
 
 export default ProjectsProgramsSection

@@ -1,5 +1,5 @@
 import React from "react"
-import { LanguageOption } from "./index"
+import { LanguageOption } from "../App"
 
 export interface Program {
   Title: JSX.Element
@@ -8,7 +8,7 @@ export interface Program {
   Color: string
   English: JSX.Element
   Spanish: JSX.Element
-  Topics: LanguageOption<Array<string>>
+  Tags: LanguageOption<Array<string>>
 }
 
 export interface ProgramsI {
@@ -46,7 +46,7 @@ const Programs: ProgramsI = {
         curvas, te lo aseguro, son hermosas.
       </span>
     ),
-    Topics: {
+    Tags: {
       English: ["Math", "Bezier", "Java Swing"],
       Spanish: ["Matemáticas", "Bezier", "Java Swing"],
     },
@@ -72,7 +72,7 @@ const Programs: ProgramsI = {
         implementado el triangulo de Sierpinkski.
       </span>
     ),
-    Topics: {
+    Tags: {
       English: ["Fractals", "Sierpinkski", "Python", "Turtle"],
       Spanish: ["Fractales", "Sierpinkski", "Python", "Turtle"],
     },
@@ -101,7 +101,7 @@ const Programs: ProgramsI = {
         coeficiente de Pearson.
       </span>
     ),
-    Topics: {
+    Tags: {
       English: ["LinearRegression", "Statistics", "Python2", "Matplotlib"],
       Spanish: ["Regresión Lineal", "estádística", "Python2", "Matplotlib"],
     },
@@ -134,7 +134,7 @@ const Programs: ProgramsI = {
         Funciona y todo, pero es feo y ... está en Python 2.
       </span>
     ),
-    Topics: {
+    Tags: {
       English: ["Math", "Complex Analysis", "Python2"],
       Spanish: ["Matemáticas", "Análisis Complejo", "Python2"],
     },
@@ -175,7 +175,7 @@ const Programs: ProgramsI = {
         platillos en una lista.
       </span>
     ),
-    Topics: {
+    Tags: {
       English: [
         "One night project",
         "Google Development Group",
@@ -226,7 +226,7 @@ const Programs: ProgramsI = {
         palabras, así como cambiar el tamaño del tablero y activar pistas.
       </span>
     ),
-    Topics: {
+    Tags: {
       English: ["Javascript", "React", "MaterializeCSS", "One night project"],
       Spanish: [
         "Javascript",
@@ -258,7 +258,7 @@ const Programs: ProgramsI = {
         extraño.
       </span>
     ),
-    Topics: {
+    Tags: {
       English: ["Weird project", "Sketch", "Python"],
       Spanish: ["Un proyecto raro", "Sketch", "Python"],
     },
