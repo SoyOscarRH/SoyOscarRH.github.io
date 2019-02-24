@@ -1,6 +1,9 @@
-import React, {FunctionComponent} from "react"
+import React, { FunctionComponent } from "react"
+import { navigateTo } from "../AppHeader"
 
 const NavigationMenu: FunctionComponent = () => {
+  const goToTop = () => navigateTo(document.getElementById("start"))
+
   return (
     <div className="navbar-fixed z-depth-1">
       <nav className="blue-grey darken-4 white-text center">
@@ -18,7 +21,7 @@ const NavigationMenu: FunctionComponent = () => {
           </a>
 
           <a
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            onClick={goToTop}
             className="right"
             style={{ height: "100%", cursor: "pointer" }}
           >

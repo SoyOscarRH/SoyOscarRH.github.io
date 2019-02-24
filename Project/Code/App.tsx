@@ -56,7 +56,7 @@ const App: FunctionComponent = () => {
         <AppHeader />
       </header>
 
-      <main>
+      <main id="start">
         <section id="AboutMe">
           <AboutMe AboutMe={AboutMeData[language]} />
         </section>

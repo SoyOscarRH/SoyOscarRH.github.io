@@ -18,6 +18,15 @@ export const SidenavMaterialCSSContext = React.createContext<M.Sidenav | null>(
   null
 )
 
+export const navigateTo = (element: HTMLElement | null) => {
+  if (!element) return 
+
+  element.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  })
+}
+
 const AppHeader: FunctionComponent = () => {
   const [language, toggleLanguage] = useContext(LanguageContext)
   const [SidenavMaterialCSS, setSideNav] = useState<M.Sidenav | null>(null)

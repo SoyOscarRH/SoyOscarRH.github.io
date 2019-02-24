@@ -1,5 +1,9 @@
 import React, { FunctionComponent, useContext } from "react"
-import { LanguageHeaderContext, SidenavMaterialCSSContext } from "../AppHeader"
+import {
+  LanguageHeaderContext,
+  SidenavMaterialCSSContext,
+  navigateTo,
+} from "../AppHeader"
 
 import getSections, { Section } from "../PageData/SideMenuData"
 
@@ -131,17 +135,24 @@ const SideMenuSection: FunctionComponent<{
     opacity: 0.9,
   }
 
-  const SectionRows = Section.Links.map(([name, link]) => (
-    <li key={name}>
-      <a className="waves-effect" href={`#${link}`} onClick={closeSideMenu}>
-        <i className={iconClasses} style={styleClass}>
-          {iconName}
-        </i>
-        &nbsp;
-        {name}
-      </a>
-    </li>
-  ))
+  const SectionRows = Section.Links.map(([name, link]) => {
+    const onClick = () => {
+      closeSideMenu()
+      navigateTo(document.getElementById(link))
+    }
+
+    return (
+      <li key={name}>
+        <a className="waves-effect" onClick={onClick}>
+          <i className={iconClasses} style={styleClass}>
+            {iconName}
+          </i>
+          &nbsp;
+          {name}
+        </a>
+      </li>
+    )
+  })
 
   return (
     <React.Fragment key={`Type ${sectionName}`}>
