@@ -3,7 +3,6 @@ import { LanguageOption } from "./index"
 
 export interface Program {
   Title: JSX.Element
-  Type: "Project" | "Program"
   LinkToProject: string
   CheckOut?: string
   Color: string
@@ -16,7 +15,7 @@ export interface ProgramsI {
   [key: string]: Program
 }
 
-const ProjectsAndProgramsData: ProgramsI = {
+const Programs: ProgramsI = {
   BezierCurve: {
     Title: (
       <span>
@@ -24,7 +23,6 @@ const ProjectsAndProgramsData: ProgramsI = {
         <b>Bezier</b>Curves
       </span>
     ),
-    Type: "Program",
     LinkToProject:
       "https://github.com/SoyOscarRH/LearningJava/tree/master/ArtWithLines",
     Color: "orange darken-3",
@@ -59,7 +57,6 @@ const ProjectsAndProgramsData: ProgramsI = {
         <b>Fractals</b>
       </span>
     ),
-    Type: "Program",
     LinkToProject:
       "https://github.com/CompilandoConocimiento/ThingsWithPython/tree/master/Fractals",
     Color: "yellow accent-4",
@@ -87,7 +84,6 @@ const ProjectsAndProgramsData: ProgramsI = {
         <b>Linear</b>Regression
       </span>
     ),
-    Type: "Program",
     LinkToProject:
       "https://github.com/CompilandoConocimiento/ThingsWithPython/tree/master/LinearRegression",
     Color: "green lighten-1",
@@ -117,7 +113,6 @@ const ProjectsAndProgramsData: ProgramsI = {
         <b>Root</b>Finder
       </span>
     ),
-    Type: "Program",
     LinkToProject:
       "https://github.com/CompilandoConocimiento/ThingsWithPython/tree/master/RootFinder",
     Color: "pink lighten-2",
@@ -151,7 +146,6 @@ const ProjectsAndProgramsData: ProgramsI = {
         <b>Learning</b>Flutter
       </span>
     ),
-    Type: "Program",
     LinkToProject: "https://github.com/SoyOscarRH/LearningFlutter",
     Color: "grey darken-2",
     English: (
@@ -203,7 +197,6 @@ const ProjectsAndProgramsData: ProgramsI = {
         <b>Alphabet</b>Soup
       </span>
     ),
-    Type: "Program",
     LinkToProject: "https://github.com/SoyOscarRH/AlphabetSoup",
     CheckOut: "https://soyoscarrh.github.io/AlphabetSoup/",
     Color: "pink lighten-1",
@@ -249,7 +242,6 @@ const ProjectsAndProgramsData: ProgramsI = {
         <b>Play</b>Poker
       </span>
     ),
-    Type: "Program",
     LinkToProject:
       "https://github.com/CompilandoConocimiento/ThingsWithPython/tree/master/PlayPoker",
     Color: "indigo lighten-1",
@@ -273,4 +265,4 @@ const ProjectsAndProgramsData: ProgramsI = {
   },
 }
 
-export default ProjectsAndProgramsData
+export default Programs

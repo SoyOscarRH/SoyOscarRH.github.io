@@ -1,4 +1,6 @@
-import { ProjectsAndPrograms, Books, Projects } from "../PageData"
+import { Books } from "../PageData"
+import Projects from "../PageData/Projects"
+import Programs from "../PageData/Programs"
 import { languages } from "../App"
 
 type linkName = string
@@ -24,18 +26,9 @@ const getSections = (language: languages) => {
     nameForLink => [nameForLink, nameForLink] as Link
   )
 
-  const ProgramsNames: Array<Link> = []
-
-  Object.entries(ProjectsAndPrograms).forEach(([name, data]) => {
-    switch (data.Type) {
-      case "Project":
-        ProjectsNames.push([name, name])
-        break
-      case "Program":
-        ProgramsNames.push([name, name])
-        break
-    }
-  })
+  const ProgramsNames: Array<Link> = Object.keys(Programs).map(
+    nameForLink => [nameForLink, nameForLink] as Link
+  )
 
   const index = language === "English" ? 0 : 1
 

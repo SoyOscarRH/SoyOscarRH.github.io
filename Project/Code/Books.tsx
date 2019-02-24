@@ -2,7 +2,7 @@ import React from "react"
 import M from "materialize-css"
 
 import {Books as BooksInterfaces} from "./PageData/Books"
-import {LanguageOption} from "./PageData"
+import {LanguageOption} from "./App"
 import {BookCard} from "./Card"
 
 import * as Styles from "./Styles.css"

@@ -3,18 +3,24 @@ import ReactDOM from "react-dom"
 
 import M from "materialize-css"
 
-import { AboutMe as AboutMeData } from "./PageData"
-import { ProjectsAndPrograms as ProjectsAndProgramsData } from "./PageData"
+import AboutMeData from "./PageData/AboutMe"
+import ProjectsData from "./PageData/Projects"
+import ProgramsData from "./PageData/Programs"
 import { Books as BooksData, AboutBooks as AboutBooksData } from "./PageData"
 
 import AppHeader from "./AppHeader"
 import AboutMe from "./AboutMe"
-import Projects from "./Projects"
+import ProjectsPrograms from "./ProjectsPrograms"
 import Books from "./Books"
 import Footer from "./Footer"
 
 export type languages = "Spanish" | "English"
 export type toogleLanguages = () => void
+
+export interface LanguageOption<T> {
+  English: T, 
+  Spanish: T
+}
 
 export const LanguageContext = React.createContext<
   [languages, toogleLanguages]
@@ -55,7 +61,7 @@ const App: FunctionComponent = () => {
           <AboutMe AboutMe={AboutMeData[language]} />
         </section>
         <section id="Projects">
-          <Projects Projects={ProjectsAndProgramsData} Language={language} />
+          <ProjectsPrograms Projects={ProjectsData} Programs={ProgramsData} />
         </section>
         <section id="Books">
           <Books
