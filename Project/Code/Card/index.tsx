@@ -10,7 +10,7 @@ import * as Styles from "./Styles.css"
 interface CardInfo {
   name: string
   Element: Project | Program | Book
-  type: "ProjectProgram" | "Book"
+  type: "Project" | "Program" | "Book"
 }
 
 // @ts-ignore Just ignore the default value
@@ -24,7 +24,7 @@ export const Card: FunctionComponent<CardInfo> = props => {
   let text = <span />
   let topics: Array<Topic> = []
 
-  if (props.type === "ProjectProgram") {
+  if (props.type === "Project" || props.type === "Program") {
     const ProjectProgram = props.Element as Project | Program
     link = ProjectProgram.CheckOut
     text = ProjectProgram[language]
@@ -98,7 +98,7 @@ const CardText: FunctionComponent<{
 }
 
 const CardActions: FunctionComponent<{
-  type: "Book" | "ProjectProgram"
+  type: "Book" | "Project" | "Program"
   link: string | undefined
 }> = props => {
   const [language] = useContext(LanguageContext)
@@ -133,6 +133,11 @@ const ImageIcon: FunctionComponent = () => {
 
   const folder = type === "Book" ? "Books" : "Projects"
 
+  let icon = ""
+  if (type === "Book") icon = "book"
+  else if (type === "Project") icon = "dashboard"
+  else if (type === "Program") icon = "description"
+
   return (
     <React.Fragment>
       <img
@@ -140,7 +145,9 @@ const ImageIcon: FunctionComponent = () => {
         data-src={`Assets/${folder}/${name}.png`}
         src={"Assets/Blank.png"}
       />
-      <span className="card-title blue-grey-text text-darken-4">
+      <span className="card-title blue-grey-text text-darken-4 valign-wrapper">
+        <i className="material-icons" style={{fontSize: "1.5rem"}}>{icon}</i>
+        &nbsp;
         {type === "Book" ? title[language] : title}
       </span>
       <a

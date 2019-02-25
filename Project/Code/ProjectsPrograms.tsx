@@ -30,16 +30,17 @@ const ProjectsProgramsSection: FunctionComponent<{
 
   return (
     <div className={`center-align ${Styles.Container}`}>
-      <ShowCards title={ProjectsTitle} Elements={props.Projects} />
+      <ShowCards title={ProjectsTitle} Elements={props.Projects} type={"Project"} />
       <br />
       <br />
-      <ShowCards title={ProgramsTitle} Elements={props.Programs} />
+      <ShowCards title={ProgramsTitle} Elements={props.Programs} type={"Program"} />
     </div>
   )
 }
 
 const ShowCards: FunctionComponent<{
   title: string
+  type: "Book" | "Program" | "Project"
   Elements: ProjectsI | ProgramsI
 }> = props => (
   <React.Fragment>
@@ -50,7 +51,7 @@ const ShowCards: FunctionComponent<{
 
     <div className={Styles.Grid}>
       {Object.entries(props.Elements).map(([name, Element]) => (
-        <Card key={name} name={name} Element={Element} type={"ProjectProgram"} />
+        <Card key={name} name={name} Element={Element} type={props.type} />
       ))}
     </div>
   </React.Fragment>
