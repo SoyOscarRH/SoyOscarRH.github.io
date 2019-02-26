@@ -17,8 +17,7 @@ export default function Footer() {
 
       <div className="footer-copyright blue-grey darken-4">
         <div className="container">
-          Made by Oscar Andrés Rosas Hernandez.{" "}
-          {daysSince(new Date("03/23/1998"))} days alive
+          Made by Oscar Andrés Rosas Hernandez. {daysSince(new Date("03/23/1998"))} days alive
         </div>
       </div>
     </footer>

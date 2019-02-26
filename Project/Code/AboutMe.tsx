@@ -23,10 +23,7 @@ const TextSection: FunctionComponent<{ AboutMe: AboutMeI }> = props => (
       <p style={{ fontSize: "1.15rem" }}>{props.AboutMe.Description}</p>
     </div>
 
-    <p
-      className="hide-on-med-and-up"
-      style={{ fontWeight: 400, fontSize: "1rem" }}
-    >
+    <p className="hide-on-med-and-up" style={{ fontWeight: 400, fontSize: "1rem" }}>
       {props.AboutMe.Description}
     </p>
 

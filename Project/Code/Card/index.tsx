@@ -146,7 +146,9 @@ const ImageIcon: FunctionComponent = () => {
         src={"Assets/Blank.png"}
       />
       <span className="card-title blue-grey-text text-darken-4 valign-wrapper">
-        <i className="material-icons" style={{fontSize: "1.5rem"}}>{icon}</i>
+        <i className="material-icons" style={{ fontSize: "1.5rem" }}>
+          {icon}
+        </i>
         &nbsp;
         {type === "Book" ? title[language] : title}
       </span>

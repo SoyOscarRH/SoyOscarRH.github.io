@@ -25,10 +25,7 @@ export interface BooksI {
 
 export const AboutBooksData: LanguageOption<JSX.Element> = {
   English: (
-    <div
-      className="blue-grey-text text-darken-3"
-      style={{ textAlign: "justify" }}
-    >
+    <div className="blue-grey-text text-darken-3" style={{ textAlign: "justify" }}>
       <br />
       <h6 style={{ textAlign: "center" }}>
         <b>Books, "Compilados" or Notes?</b>
@@ -36,35 +33,29 @@ export const AboutBooksData: LanguageOption<JSX.Element> = {
       <br />
 
       <span>
-        First of all, I have to admit that many of these texts have been written
-        together with a lot of people, people who without them I could not have
-        gotten that far, thanks Alan, Laura, Abbi, Leilan and all my teachers.
+        First of all, I have to admit that many of these texts have been written together with a lot
+        of people, people who without them I could not have gotten that far, thanks Alan, Laura,
+        Abbi, Leilan and all my teachers.
         <br />
         <br />
         <b> So... What the hell are these texts? </b>
         <br />
         <br />
-        The most immediate answer is that these texts (or "Compilados" as I like
-        to tell them) Are a compilation of theorems, ideas, examples and
-        important concepts that we learned throughout of time on each of the
-        topics.
+        The most immediate answer is that these texts (or "Compilados" as I like to tell them) Are a
+        compilation of theorems, ideas, examples and important concepts that we learned throughout
+        of time on each of the topics.
         <br />
         <br />
-        On a regular basis we will be updating these texts with everything new
-        that we learn trying to deepen in all these topics and close possible
-        doubts in these pages. These "Compilados" try to be as strict as
-        possible, although we are human (and students) and it is possible (and
-        even probable) that we make small mistakes from time to time. I hope you
-        take these pages as a gift created by imperfect beings with hopes to
-        make the world a better place.
+        On a regular basis we will be updating these texts with everything new that we learn trying
+        to deepen in all these topics and close possible doubts in these pages. These "Compilados"
+        try to be as strict as possible, although we are human (and students) and it is possible
+        (and even probable) that we make small mistakes from time to time. I hope you take these
+        pages as a gift created by imperfect beings with hopes to make the world a better place.
       </span>
     </div>
   ),
   Spanish: (
-    <div
-      className="blue-grey-text text-darken-3"
-      style={{ textAlign: "justify" }}
-    >
+    <div className="blue-grey-text text-darken-3" style={{ textAlign: "justify" }}>
       <br />
       <h6 style={{ textAlign: "center" }}>
         <b>¿Libros, Compilados o Apuntes?</b>
@@ -72,29 +63,26 @@ export const AboutBooksData: LanguageOption<JSX.Element> = {
       <br />
 
       <span>
-        Antes que nada, tengo que admitir que muchos de estos textos los he
-        escrito con conjunto con un montón de gente, gente que sin ellos no
-        podría haber llegado tan lejos, gracias Alan, Laura, Abbi, Leilan y a
-        todos mis profesores.
+        Antes que nada, tengo que admitir que muchos de estos textos los he escrito con conjunto con
+        un montón de gente, gente que sin ellos no podría haber llegado tan lejos, gracias Alan,
+        Laura, Abbi, Leilan y a todos mis profesores.
         <br />
         <br />
         <b>Ahora, ¿Qué demonios son estos textos?</b>
         <br />
         <br />
-        La respuesta más inmediata es que estos textos (o compilado como a mí me
-        gusta decirles) son una recopilación de teoremas, ideas, ejemplos y
-        conceptos importantes que aprendimos a lo largo del tiempo sobre cada
-        uno de los temas.
+        La respuesta más inmediata es que estos textos (o compilado como a mí me gusta decirles) son
+        una recopilación de teoremas, ideas, ejemplos y conceptos importantes que aprendimos a lo
+        largo del tiempo sobre cada uno de los temas.
         <br />
         <br />
-        De manera regular estaremos actualizando estos textos con todo aquello
-        nuevo que aprendamos intentando profundizar en todos estos temas y
-        cerrar posibles dudas en estas páginas. Estos Compilados intentamos ser
-        lo más estrictos posible, aúnque somos humanos (y estudiantes) y es
-        posible(e incluso probable) que cometamos pequeños errores de vez en
-        cuando. Espero que tomes estas páginas como un regalo creado por seres
-        imperfectos pero con muchos ánimos de hacer del mundo un lugar mejor,
-        ahora si, abróchate los cinturones que esto acaba de empezar.
+        De manera regular estaremos actualizando estos textos con todo aquello nuevo que aprendamos
+        intentando profundizar en todos estos temas y cerrar posibles dudas en estas páginas. Estos
+        Compilados intentamos ser lo más estrictos posible, aúnque somos humanos (y estudiantes) y
+        es posible(e incluso probable) que cometamos pequeños errores de vez en cuando. Espero que
+        tomes estas páginas como un regalo creado por seres imperfectos pero con muchos ánimos de
+        hacer del mundo un lugar mejor, ahora si, abróchate los cinturones que esto acaba de
+        empezar.
       </span>
     </div>
   ),
@@ -118,30 +106,26 @@ export const BooksData: BooksI = {
       English: "Probability",
       Spanish: "Probabilidad",
     },
-    LinkToProject:
-      "https://github.com/CompilandoConocimiento/LibroProbabilidad",
+    LinkToProject: "https://github.com/CompilandoConocimiento/LibroProbabilidad",
     Color: "orange lighten-1",
     Intro: {
       English: (
         <span>
-          When I was a little boy the only topics I dislike in math where the
-          ones that have something to do with probability. But then I decided to
-          make this book, with this book I learned all the amazing things about
-          this topic.
+          When I was a little boy the only topics I dislike in math where the ones that have
+          something to do with probability. But then I decided to make this book, with this book I
+          learned all the amazing things about this topic.
           <br />
           <br />
-          This book starts with the basic, the concept of probability and of an
-          event, the idea of conditional probability and Bayes theorem.
+          This book starts with the basic, the concept of probability and of an event, the idea of
+          conditional probability and Bayes theorem.
           <br />
           <br />
-          Then we will explore the idea of a random variable, of the mean, the
-          variance, moments.
+          Then we will explore the idea of a random variable, of the mean, the variance, moments.
           <br />
           <br />
-          Above all, this text focuses on distributions (discrete and continuous
-          like Bernoulli, Binomial, Geometric, Hypergeometric, Uniform,
-          Exponential, Gamma, Normal) and this is the kind of book that
-          demonstrate all the statements that it presents.
+          Above all, this text focuses on distributions (discrete and continuous like Bernoulli,
+          Binomial, Geometric, Hypergeometric, Uniform, Exponential, Gamma, Normal) and this is the
+          kind of book that demonstrate all the statements that it presents.
           <br />
           <br />
           This book is in Spanish only. Sorry :(
@@ -149,24 +133,22 @@ export const BooksData: BooksI = {
       ),
       Spanish: (
         <span>
-          Cuando era pequeño, los únicos temas que no me gustaban en matemáticas
-          eran los que tienen algo que ver con probabilidad. Pero luego decidí
-          hacer este libro, con este libro aprendí todo las cosas increíbles
-          sobre este tema.
+          Cuando era pequeño, los únicos temas que no me gustaban en matemáticas eran los que tienen
+          algo que ver con probabilidad. Pero luego decidí hacer este libro, con este libro aprendí
+          todo las cosas increíbles sobre este tema.
           <br />
           <br />
-          Este libro comienza con lo básico, el concepto de probabilidad y de un
-          evento, la idea de la probabilidad condicional y el Teorema de Bayes.
+          Este libro comienza con lo básico, el concepto de probabilidad y de un evento, la idea de
+          la probabilidad condicional y el Teorema de Bayes.
           <br />
           <br />
-          Después exploraremos la idea de una variable aleatoria, de la
-          esperanza, la varianza, covarianza y los momentos.
+          Después exploraremos la idea de una variable aleatoria, de la esperanza, la varianza,
+          covarianza y los momentos.
           <br />
           <br />
-          Sobre todo, este texto se centra en las distribuciones (discretas y
-          continuas como: Bernoulli, Binomial, Geométrica, Hipergeométrica,
-          Uniforme, Exponencial, Gamma, Normal) este es el tipo de libro que
-          demuestra todas las proposiciones que presenta.
+          Sobre todo, este texto se centra en las distribuciones (discretas y continuas como:
+          Bernoulli, Binomial, Geométrica, Hipergeométrica, Uniforme, Exponencial, Gamma, Normal)
+          este es el tipo de libro que demuestra todas las proposiciones que presenta.
         </span>
       ),
     },
@@ -178,11 +160,7 @@ export const BooksData: BooksI = {
         },
         {
           Name: "Probabilidad",
-          SubTopics: [
-            "Probabilidad básica",
-            "Propiedades",
-            "Probabilidad Condicional",
-          ],
+          SubTopics: ["Probabilidad básica", "Propiedades", "Probabilidad Condicional"],
         },
         {
           Name: "Eventos Independientes",
@@ -218,10 +196,7 @@ export const BooksData: BooksI = {
         },
         {
           Name: "Hardcore",
-          SubTopics: [
-            "Teorema Central del Límite",
-            "Teorema Central de Chebyshue",
-          ],
+          SubTopics: ["Teorema Central del Límite", "Teorema Central de Chebyshue"],
         },
         {
           Name: "Probabilidad Conjunta",
@@ -251,11 +226,7 @@ export const BooksData: BooksI = {
         },
         {
           Name: "Probability",
-          SubTopics: [
-            "Basic probability",
-            "Properties",
-            "Conditional Probability",
-          ],
+          SubTopics: ["Basic probability", "Properties", "Conditional Probability"],
         },
         {
           Name: "Independent Events",
@@ -342,34 +313,29 @@ export const BooksData: BooksI = {
       English: "Lineal Algebra",
       Spanish: "Álgebra Lineal",
     },
-    LinkToProject:
-      "https://github.com/CompilandoConocimiento/LibroAlgebraLineal",
+    LinkToProject: "https://github.com/CompilandoConocimiento/LibroAlgebraLineal",
     Color: "purple lighten-1",
     Intro: {
       English: (
         <span>
-          This is the book contains the bases of the entire branch of
-          mathematics called linear algebra. We will first see the idea of
-          matrices and the operations that we can do with them without giving
-          much sense to what are the matrices.
+          This is the book contains the bases of the entire branch of mathematics called linear
+          algebra. We will first see the idea of matrices and the operations that we can do with
+          them without giving much sense to what are the matrices.
           <br />
           <br />
-          Then we will see the idea of a vector space, of subspaces and of its
-          properties and ways of representing its elements, the vectors. We will
-          see about linear transformations, a few rare functions but that they
-          reveal to us the true nature of the matrices.
+          Then we will see the idea of a vector space, of subspaces and of its properties and ways
+          of representing its elements, the vectors. We will see about linear transformations, a few
+          rare functions but that they reveal to us the true nature of the matrices.
           <br />
           <br />
-          Finally, with this understanding of linear algebra we can talk of one
-          of the most amazing applications of the theory:{" "}
-          <b>Numerical Analysis</b>.
+          Finally, with this understanding of linear algebra we can talk of one of the most amazing
+          applications of the theory: <b>Numerical Analysis</b>.
           <br />
           <br />
-          We will talk about how to solve Ax = b using LU decomposition, and
-          Cholesky decomposition.
+          We will talk about how to solve Ax = b using LU decomposition, and Cholesky decomposition.
           <br />
-          Also, we will try to approximate the solution using the Least Squares,
-          and QR Decomposition (HouseHolder, Gram-Schimidt, Givens).
+          Also, we will try to approximate the solution using the Least Squares, and QR
+          Decomposition (HouseHolder, Gram-Schimidt, Givens).
           <br />
           <br />
           This book is in Spanish only. Sorry :(
@@ -377,29 +343,25 @@ export const BooksData: BooksI = {
       ),
       Spanish: (
         <span>
-          Este es libro contiene las bases de toda la rama de las matemáticas
-          denominada álgebra lineal. Veremos primero la idea de las matrices y
-          de las operaciones que podemos hacer con ellas sin darles mucho
-          sentido a que son las matrices.
+          Este es libro contiene las bases de toda la rama de las matemáticas denominada álgebra
+          lineal. Veremos primero la idea de las matrices y de las operaciones que podemos hacer con
+          ellas sin darles mucho sentido a que son las matrices.
           <br />
           <br />
-          Después veremos la idea de un espacio vectorial, de los subespacios y
-          de sus propiedades y de formas de representar sus elementos, los
-          vectores. Veremos sobre las transformaciones lineales, unas funciones
-          medio raras pero que nos desvelan la verdadera naturaleza de las
+          Después veremos la idea de un espacio vectorial, de los subespacios y de sus propiedades y
+          de formas de representar sus elementos, los vectores. Veremos sobre las transformaciones
+          lineales, unas funciones medio raras pero que nos desvelan la verdadera naturaleza de las
           matrices.
           <br />
           <br />
-          Finalmente con todo el conocimiento que hemos adquirido podemos hablar
-          de una de las aplicaciones más importantes de la teoría:{" "}
-          <b>Análisis Numérico</b>.
+          Finalmente con todo el conocimiento que hemos adquirido podemos hablar de una de las
+          aplicaciones más importantes de la teoría: <b>Análisis Numérico</b>.
           <br />
           <br />
-          Hablaremos de como resolver Ax = b usando la Factorización LU, y de
-          Cholesky.
+          Hablaremos de como resolver Ax = b usando la Factorización LU, y de Cholesky.
           <br />
-          También de como aproximar la solución usando Mínimos Cuadrados y la
-          Factorización QR (HouseHolder, Gram-Schimidt, Givens).
+          También de como aproximar la solución usando Mínimos Cuadrados y la Factorización QR
+          (HouseHolder, Gram-Schimidt, Givens).
         </span>
       ),
     },
@@ -407,12 +369,7 @@ export const BooksData: BooksI = {
       Spanish: [
         {
           Name: "Intro a Matrices",
-          SubTopics: [
-            "Definición",
-            "Simbología",
-            "Clasificación",
-            "Matrices Diagonales",
-          ],
+          SubTopics: ["Definición", "Simbología", "Clasificación", "Matrices Diagonales"],
         },
         {
           Name: "Álgebra Matricial",
@@ -448,13 +405,7 @@ export const BooksData: BooksI = {
         },
         {
           Name: "Transformaciones Lineales",
-          SubTopics: [
-            "Definición",
-            "Kernel",
-            "Rango",
-            "Proyecciones",
-            "Invariantes",
-          ],
+          SubTopics: ["Definición", "Kernel", "Rango", "Proyecciones", "Invariantes"],
         },
         {
           Name: "Transformaciones y Matrices",
@@ -516,12 +467,7 @@ export const BooksData: BooksI = {
       English: [
         {
           Name: "Introduction to Matrices",
-          SubTopics: [
-            "Definition",
-            "Symbology",
-            "Classification",
-            "Diagonal Matrices",
-          ],
+          SubTopics: ["Definition", "Symbology", "Classification", "Diagonal Matrices"],
         },
         {
           Name: "Matrix Algebra",
@@ -557,13 +503,7 @@ export const BooksData: BooksI = {
         },
         {
           Name: "Linear Transformations",
-          SubTopics: [
-            "Definition",
-            "Kernel",
-            "Rank",
-            "Projections",
-            "Invariant",
-          ],
+          SubTopics: ["Definition", "Kernel", "Rank", "Projections", "Invariant"],
         },
         {
           Name: "Transformations and Matrices",
@@ -622,12 +562,7 @@ export const BooksData: BooksI = {
       ],
     },
     Tags: {
-      English: [
-        "Matrixs",
-        "Vectorial Spaces",
-        "Lineal Transformations",
-        "Numerical Analysis",
-      ],
+      English: ["Matrixs", "Vectorial Spaces", "Lineal Transformations", "Numerical Analysis"],
       Spanish: [
         "Matrices",
         "Espacios Vectoriales",
@@ -658,26 +593,23 @@ export const BooksData: BooksI = {
       English: "Complex Analysis",
       Spanish: "Análisis Complejo",
     },
-    LinkToProject:
-      "https://github.com/CompilandoConocimiento/LibroAnalisisComplejo",
+    LinkToProject: "https://github.com/CompilandoConocimiento/LibroAnalisisComplejo",
     Color: "red lighten-1",
     Intro: {
       English: (
         <span>
-          This is the book contains the bases of all the mathematics necessary
-          for complex analysis, we talk about complex numbers, how to operate
-          with them and the various forms that we have to represent them.
+          This is the book contains the bases of all the mathematics necessary for complex analysis,
+          we talk about complex numbers, how to operate with them and the various forms that we have
+          to represent them.
           <br />
           <br />
-          We see how we can extend the idea of the calculation on complex
-          functions, we will see the complex integrals and as they are often
-          easier than "normal" ones. We see the residuals and the power series
-          and how to simplify all these operations even more.
+          We see how we can extend the idea of the calculation on complex functions, we will see the
+          complex integrals and as they are often easier than "normal" ones. We see the residuals
+          and the power series and how to simplify all these operations even more.
           <br />
           <br />
-          We Finally, see Fourier, how to make his series, how to make his
-          transform and how it is that with solve differential equations is the
-          simplest thing in the world.
+          We Finally, see Fourier, how to make his series, how to make his transform and how it is
+          that with solve differential equations is the simplest thing in the world.
           <br />
           <br />
           This book is in Spanish only. Sorry :(
@@ -685,20 +617,18 @@ export const BooksData: BooksI = {
       ),
       Spanish: (
         <span>
-          Este es libro contiene las bases de toda la matemática necesaria para
-          el análisis complejo, hablaremos sobre los números complejos, como
-          operar con ellos y las diversas formas que tenemos de representarlos.
+          Este es libro contiene las bases de toda la matemática necesaria para el análisis
+          complejo, hablaremos sobre los números complejos, como operar con ellos y las diversas
+          formas que tenemos de representarlos.
           <br />
           <br />
-          Veremos como podemos extender la idea del Cálculo sobre funciones
-          complejas, veremos las integrales complejas y como muchas veces
-          resultan más fáciles que las “normales”. Veremos los residuos y las
-          series de potencias y como simplificar aún más todas las operaciones.
+          Veremos como podemos extender la idea del Cálculo sobre funciones complejas, veremos las
+          integrales complejas y como muchas veces resultan más fáciles que las “normales”. Veremos
+          los residuos y las series de potencias y como simplificar aún más todas las operaciones.
           <br />
           <br />
-          Veremos finalmente a gran Fourier, como hacer sus series y como hacer
-          su transformada y como es que con ella resolver ecuaciones
-          diferenciales es de lo más sencillo del mundo
+          Veremos finalmente a gran Fourier, como hacer sus series y como hacer su transformada y
+          como es que con ella resolver ecuaciones diferenciales es de lo más sencillo del mundo
         </span>
       ),
     },
@@ -730,21 +660,11 @@ export const BooksData: BooksI = {
         },
         {
           Name: "Forma de Euler y Raíces",
-          SubTopics: [
-            "Forma de Euler",
-            "Identidad de Lagrange",
-            "Ley de Moivre",
-            "Raíces",
-          ],
+          SubTopics: ["Forma de Euler", "Identidad de Lagrange", "Ley de Moivre", "Raíces"],
         },
         {
           Name: "Funciones Complejas",
-          SubTopics: [
-            "Definición",
-            "Fn Hiperbolicas",
-            "Fn Trigonometricas",
-            "Límites",
-          ],
+          SubTopics: ["Definición", "Fn Hiperbolicas", "Fn Trigonometricas", "Límites"],
         },
         {
           Name: "Derivación",
@@ -777,11 +697,7 @@ export const BooksData: BooksI = {
         },
         {
           Name: "Residuos",
-          SubTopics: [
-            "Definición",
-            "Como encontrarlos",
-            "Teorema del Residuo de Cauchy",
-          ],
+          SubTopics: ["Definición", "Como encontrarlos", "Teorema del Residuo de Cauchy"],
         },
         {
           Name: "Serie de Fourier",
@@ -836,21 +752,11 @@ export const BooksData: BooksI = {
         },
         {
           Name: "Form of Euler and Roots",
-          SubTopics: [
-            "Form of Euler",
-            "Lagrange Identity",
-            "Law of Moivre",
-            "Estate",
-          ],
+          SubTopics: ["Form of Euler", "Lagrange Identity", "Law of Moivre", "Estate"],
         },
         {
           Name: "Complex Functions",
-          SubTopics: [
-            "Definition",
-            "Hyperbolic Fn",
-            "Fn Trigonometric",
-            "Limits",
-          ],
+          SubTopics: ["Definition", "Hyperbolic Fn", "Fn Trigonometric", "Limits"],
         },
         {
           Name: "Derivation",
@@ -883,11 +789,7 @@ export const BooksData: BooksI = {
         },
         {
           Name: "Waste",
-          SubTopics: [
-            "Definition",
-            "How to find them",
-            "Cauchy Residue Theorem",
-          ],
+          SubTopics: ["Definition", "How to find them", "Cauchy Residue Theorem"],
         },
         {
           Name: "Fourier Series",
@@ -943,30 +845,26 @@ export const BooksData: BooksI = {
       English: "Number Theory",
       Spanish: "Teoría de Números",
     },
-    LinkToProject:
-      "https://github.com/CompilandoConocimiento/LibroTeoriaDeNumeros",
+    LinkToProject: "https://github.com/CompilandoConocimiento/LibroTeoriaDeNumeros",
     Color: "green lighten-1",
     Intro: {
       English: (
         <span>
-          Come on, you have to admit that this book has the coolest name in the
-          world, Here you will learn everything about the integers, their
-          cousins and their mysteries.
+          Come on, you have to admit that this book has the coolest name in the world, Here you will
+          learn everything about the integers, their cousins and their mysteries.
           <br />
           <br />
-          Above all, this text focuses on divisibility, we will talk about
-          Euclid's algorithms, as well as the classical GCD, LCM, the
-          Diophantine equations, as well as the Phi function.
+          Above all, this text focuses on divisibility, we will talk about Euclid's algorithms, as
+          well as the classical GCD, LCM, the Diophantine equations, as well as the Phi function.
           <br />
           <br />
-          Finally, we will see everything you need to know about congruence, how
-          to use them to solve problems, Modular Arithmetic and important
-          Theorems such as Wilson's, Chinese Residual Theorem or one of
-          Fermat's.
+          Finally, we will see everything you need to know about congruence, how to use them to
+          solve problems, Modular Arithmetic and important Theorems such as Wilson's, Chinese
+          Residual Theorem or one of Fermat's.
           <br />
           <br />
-          We also see many important ideas that I have used almost every day in
-          competitive programming.
+          We also see many important ideas that I have used almost every day in competitive
+          programming.
           <br />
           <br />
           This book is in Spanish only. Sorry :(
@@ -974,24 +872,22 @@ export const BooksData: BooksI = {
       ),
       Spanish: (
         <span>
-          Vamos, tienes que admitir que esta materia tiene el nombre más genial
-          del mundo, Aquí aprenderas todo sobre los enteros, los primos y sus
-          misterios.
+          Vamos, tienes que admitir que esta materia tiene el nombre más genial del mundo, Aquí
+          aprenderas todo sobre los enteros, los primos y sus misterios.
           <br />
           <br />
-          Sobretodo este texto se enfoca en la divisibilidad, hablaremos de los
-          algoritmos de Euclides, así como del clásico GCD, LCM, las ecuaciones
-          diofánticas, así como la función de Phi.
+          Sobretodo este texto se enfoca en la divisibilidad, hablaremos de los algoritmos de
+          Euclides, así como del clásico GCD, LCM, las ecuaciones diofánticas, así como la función
+          de Phi.
           <br />
           <br />
-          Además también veremos ideas muy importantes que he usado casi todos
-          los días en programación competitiva.
+          Además también veremos ideas muy importantes que he usado casi todos los días en
+          programación competitiva.
           <br />
           <br />
-          Finalmente veremos todo lo que necesitas saber de las congruencias,
-          como usarlas para resolver problemas, la Aritmética Modular y Teoremas
-          importantes como el de Wilson, Teorema Chino del Residuo o alguno de
-          Fermat.
+          Finalmente veremos todo lo que necesitas saber de las congruencias, como usarlas para
+          resolver problemas, la Aritmética Modular y Teoremas importantes como el de Wilson,
+          Teorema Chino del Residuo o alguno de Fermat.
         </span>
       ),
     },
@@ -999,10 +895,7 @@ export const BooksData: BooksI = {
       Spanish: [
         {
           Name: "Enteros",
-          SubTopics: [
-            "Construcción de los Enteros",
-            "Operaciones con los Enteros",
-          ],
+          SubTopics: ["Construcción de los Enteros", "Operaciones con los Enteros"],
         },
         {
           Name: "Divisibilidad",
@@ -1044,10 +937,7 @@ export const BooksData: BooksI = {
       English: [
         {
           Name: "Integers",
-          SubTopics: [
-            "Construction of the Integers",
-            "Operations with the Integers",
-          ],
+          SubTopics: ["Construction of the Integers", "Operations with the Integers"],
         },
         {
           Name: "Divisibility",
@@ -1114,23 +1004,20 @@ export const BooksData: BooksI = {
       English: "Discrete Math",
       Spanish: "Matemáticas Discretas",
     },
-    LinkToProject:
-      "https://github.com/CompilandoConocimiento/LibroMatematicasDiscretas",
+    LinkToProject: "https://github.com/CompilandoConocimiento/LibroMatematicasDiscretas",
     Color: "blue lighten-1",
     Intro: {
       English: (
         <span>
-          This book contains the bases of all the mathematics, at least a small
-          introduction, starting with Logic, induction and inferences.
+          This book contains the bases of all the mathematics, at least a small introduction,
+          starting with Logic, induction and inferences.
           <br />
           <br />
-          It contains the bases of the most famous mathematical object and
-          perhaps the most important of all, sets, sets and sets, learn
-          something sets!
+          It contains the bases of the most famous mathematical object and perhaps the most
+          important of all, sets, sets and sets, learn something sets!
           <br />
           <br />
-          Finally, we will learn about relations and functions, the real base of
-          Calculus.
+          Finally, we will learn about relations and functions, the real base of Calculus.
           <br />
           <br />
           This book is in Spanish only. Sorry :(
@@ -1138,18 +1025,15 @@ export const BooksData: BooksI = {
       ),
       Spanish: (
         <span>
-          Este libro contiene las bases de todas las matemáticas, al menos una
-          pequeña introducción, comenzando con la Lógica. Inducción e
-          inferencias.
+          Este libro contiene las bases de todas las matemáticas, al menos una pequeña introducción,
+          comenzando con la Lógica. Inducción e inferencias.
           <br />
           <br />
-          Contiene las bases del objeto matemático más famoso y tal vez el más
-          importante de todos, conjuntos, conjuntos y conjuntos, ¡Aprende algo
-          conjunto!
+          Contiene las bases del objeto matemático más famoso y tal vez el más importante de todos,
+          conjuntos, conjuntos y conjuntos, ¡Aprende algo conjunto!
           <br />
           <br />
-          Finalmente, aprenderemos sobre las relaciones y funciones, la base
-          real de Cálculo.
+          Finalmente, aprenderemos sobre las relaciones y funciones, la base real de Cálculo.
         </span>
       ),
     },
@@ -1328,23 +1212,22 @@ export const BooksData: BooksI = {
       English: "Numerical Analysis",
       Spanish: "Análisis Numérico",
     },
-    LinkToProject:
-      "https://github.com/CompilandoConocimiento/LibroAnalisisNumerico",
+    LinkToProject: "https://github.com/CompilandoConocimiento/LibroAnalisisNumerico",
     Color: "grey darken-1",
     Intro: {
       English: (
         <span>
-          This book contains some topics of Numerical Analysis. I have separated
-          this topic into 2 books, all the theory that includes Linear Algebra
-          are in the book in Linear Algebra, all else are here.
+          This book contains some topics of Numerical Analysis. I have separated this topic into 2
+          books, all the theory that includes Linear Algebra are in the book in Linear Algebra, all
+          else are here.
           <br />
           <br />
-          It contains the basics ideas for finding roots using numerical methods
-          as Newton, Secant, Bisection; and their generalizations.
+          It contains the basics ideas for finding roots using numerical methods as Newton, Secant,
+          Bisection; and their generalizations.
           <br />
           <br />
-          Finally, we will learn about interpolation, or how to "approximate" a
-          function with just some information about it.
+          Finally, we will learn about interpolation, or how to "approximate" a function with just
+          some information about it.
           <br />
           <br />
           This book is in Spanish only. Sorry :(
@@ -1352,17 +1235,17 @@ export const BooksData: BooksI = {
       ),
       Spanish: (
         <span>
-          Este libro contiene algunos temas de Análisis Numérico. He separado
-          este tema en dos partes, todo lo que tiene que ver con Álgebra Lineal
-          está en su libro, todo lo demás está aquí.
+          Este libro contiene algunos temas de Análisis Numérico. He separado este tema en dos
+          partes, todo lo que tiene que ver con Álgebra Lineal está en su libro, todo lo demás está
+          aquí.
           <br />
           <br />
-          Hablamos de la bases de como encontrar raíces usando métodos numéricos
-          como el de Newton, Secante, Bisección y sus generalizaciones.
+          Hablamos de la bases de como encontrar raíces usando métodos numéricos como el de Newton,
+          Secante, Bisección y sus generalizaciones.
           <br />
           <br />
-          Finalmente, aprendemos un poco sobre interpolación y como es que
-          podemos aproximar una función con solo un poco de información.
+          Finalmente, aprendemos un poco sobre interpolación y como es que podemos aproximar una
+          función con solo un poco de información.
         </span>
       ),
     },
@@ -1370,14 +1253,7 @@ export const BooksData: BooksI = {
       Spanish: [
         {
           Name: "Raíces de Funciones",
-          SubTopics: [
-            "Tolerancia",
-            "Bisección",
-            "Punto Fijo",
-            "Newton",
-            "Secante",
-            "Regla Falsa",
-          ],
+          SubTopics: ["Tolerancia", "Bisección", "Punto Fijo", "Newton", "Secante", "Regla Falsa"],
         },
         {
           Name: "Aproximar Sistemas de Ecuaciones NO lineales",
@@ -1401,14 +1277,7 @@ export const BooksData: BooksI = {
       English: [
         {
           Name: "Roots of Functions",
-          SubTopics: [
-            "Tolerance",
-            "Bisection",
-            "Fixed Point",
-            "Newton",
-            "Drying",
-            "False Rule",
-          ],
+          SubTopics: ["Tolerance", "Bisection", "Fixed Point", "Newton", "Drying", "False Rule"],
         },
         {
           Name: "Approximate Systems of Nonlinear Equations",
@@ -1432,13 +1301,7 @@ export const BooksData: BooksI = {
     },
     Tags: {
       English: ["Math", "Roots", "Newton", "Interpolants", "Optimization"],
-      Spanish: [
-        "Matemáticas",
-        "Raíces",
-        "Newton",
-        "Interpolantes",
-        "Optimización",
-      ],
+      Spanish: ["Matemáticas", "Raíces", "Newton", "Interpolantes", "Optimización"],
     },
     CoAuthors: [],
     LinkToReadOnline:
@@ -1463,20 +1326,18 @@ export const BooksData: BooksI = {
       English: "Data Bases",
       Spanish: "Bases de Datos",
     },
-    LinkToProject:
-      "https://github.com/CompilandoConocimiento/LibroBasesDeDatos",
+    LinkToProject: "https://github.com/CompilandoConocimiento/LibroBasesDeDatos",
     Color: "yellow darken-2",
     Intro: {
       English: (
         <span>
-          This book talks about databases, from several formal definitions,
-          management systems and the operation and basic parts of the
-          architecture of a database.
+          This book talks about databases, from several formal definitions, management systems and
+          the operation and basic parts of the architecture of a database.
           <br />
           <br />
-          It also talks about the ideas that it is an entity, a relationship,
-          which are the attributes and that is the extended system. We will see
-          about the relational databases, primary and foreign keys.
+          It also talks about the ideas that it is an entity, a relationship, which are the
+          attributes and that is the extended system. We will see about the relational databases,
+          primary and foreign keys.
           <br />
           <br />
           Finally, we will see the bases of SQL.
@@ -1487,14 +1348,13 @@ export const BooksData: BooksI = {
       ),
       Spanish: (
         <span>
-          Este libro habla de bases de datos, desde varias definiciones
-          formales, sistemas gestores y el funcionamiento y partes básicas de la
-          arquitectura de una base de datos.
+          Este libro habla de bases de datos, desde varias definiciones formales, sistemas gestores
+          y el funcionamiento y partes básicas de la arquitectura de una base de datos.
           <br />
           <br />
-          También habla de las ideas de que es una entidad, una relación, que
-          son los atributos y que es el sistema extendido. Veremos sobre las
-          bases de datos relacionales, llaves primarias y foráneas.
+          También habla de las ideas de que es una entidad, una relación, que son los atributos y
+          que es el sistema extendido. Veremos sobre las bases de datos relacionales, llaves
+          primarias y foráneas.
           <br />
           <br />
           Finalmente veremos las bases de SQL.
@@ -1517,12 +1377,7 @@ export const BooksData: BooksI = {
         },
         {
           Name: "Entidad-Relación",
-          SubTopics: [
-            "Entidades",
-            "Relaciones",
-            "Atributos",
-            "Sistema extendido",
-          ],
+          SubTopics: ["Entidades", "Relaciones", "Atributos", "Sistema extendido"],
         },
         {
           Name: "Relacional",
@@ -1535,13 +1390,7 @@ export const BooksData: BooksI = {
         },
         {
           Name: "SQL",
-          SubTopics: [
-            "Queries",
-            "Views",
-            "Procedimientos",
-            "Locks",
-            "Insertar información",
-          ],
+          SubTopics: ["Queries", "Views", "Procedimientos", "Locks", "Insertar información"],
         },
       ],
       English: [
@@ -1572,13 +1421,7 @@ export const BooksData: BooksI = {
         },
         {
           Name: "SQL",
-          SubTopics: [
-            "Queries",
-            "Views",
-            "Procedures",
-            "Locks",
-            "Insert information",
-          ],
+          SubTopics: ["Queries", "Views", "Procedures", "Locks", "Insert information"],
         },
       ],
     },

@@ -19,11 +19,10 @@ const AboutMe: LanguageOption<AboutMeI> = {
       <span className="blue-grey-text text-darken-4">
         Nerd.
         <br />
-        Computer scientist, engineer, addicted to memes, becoming the better
-        version of myself. Interested in competitive programming, even if I suck
-        at it. I believe that the web is the platform of the future. Lover of
-        pure mathematics, the more useless the better, economics, machine
-        learning and philosophy.
+        Computer scientist, engineer, addicted to memes, becoming the better version of myself.
+        Interested in competitive programming, even if I suck at it. I believe that the web is the
+        platform of the future. Lover of pure mathematics, the more useless the better, economics,
+        machine learning and philosophy.
         <br />
         Founder of CompilandoConocimiento.
         <br />
@@ -48,10 +47,9 @@ const AboutMe: LanguageOption<AboutMeI> = {
       <span className="blue-grey-text text-darken-4">
         Nerd.
         <br />
-        Computólogo, adicto a los memes y a la vida en la biblioteca, muy
-        interesado en la programación competitiva, aunque sea un asco. Creo que
-        la web es la plataforma del futuro. Amante de la matemática pura, el
-        machine learning, economía y filosofía.
+        Computólogo, adicto a los memes y a la vida en la biblioteca, muy interesado en la
+        programación competitiva, aunque sea un asco. Creo que la web es la plataforma del futuro.
+        Amante de la matemática pura, el machine learning, economía y filosofía.
         <br />
         Fundador de CompilandoConocimiento.
         <br />

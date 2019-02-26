@@ -36,10 +36,7 @@ const getSections = (language: languages) => {
     AboutMe: {
       Title: "Personal",
       Icon: ["account_circle", "grey"],
-      Links: [
-        [["About Me", "Sobre Mi"][index], "AboutMe"],
-        ["Curriculum", "AboutMe"],
-      ],
+      Links: [[["About Me", "Sobre Mi"][index], "AboutMe"], ["Curriculum", "AboutMe"]],
     },
     Projects: {
       Title: ["Projects", "Proyectos"][index],

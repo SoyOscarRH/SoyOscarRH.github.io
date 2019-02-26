@@ -1,29 +1,23 @@
-import React, {
-  FunctionComponent,
-  useContext,
-  useState,
-  useEffect,
-} from "react"
+import React, { FunctionComponent, useContext, useState, useEffect } from "react"
 import M from "materialize-css"
 
 import { LanguageContext, languages, toogleLanguages } from "../App"
 import NavigationMenu from "./NavigationMenu"
 import SideMenu from "./SideMenu"
 
-export const LanguageHeaderContext = React.createContext<
-  [languages, toogleLanguages]
->(["English", () => {}])
+export const LanguageHeaderContext = React.createContext<[languages, toogleLanguages]>([
+  "English",
+  () => {},
+])
 
-export const SidenavMaterialCSSContext = React.createContext<M.Sidenav | null>(
-  null
-)
+export const SidenavMaterialCSSContext = React.createContext<M.Sidenav | null>(null)
 
 export const navigateTo = (element: HTMLElement | null) => {
-  if (!element) return 
+  if (!element) return
 
   element.scrollIntoView({
-    behavior: 'smooth',
-    block: 'start'
+    behavior: "smooth",
+    block: "start",
   })
 }
 
@@ -35,14 +29,10 @@ const AppHeader: FunctionComponent = () => {
     setTimeout(() => SidenavMaterialCSS && SidenavMaterialCSS.close(), 500)
     toggleLanguage()
   }
-  const languageContext = [language, toggleLanguageAndCloseSidenav] as [
-    languages,
-    () => void
-  ]
+  const languageContext = [language, toggleLanguageAndCloseSidenav] as [languages, () => void]
   useEffect(() => {
     const elementNode = document.getElementById("SideBarID")
-    if (elementNode)
-      setSideNav(M.Sidenav.init(elementNode, { draggable: true, edge: "left" }))
+    if (elementNode) setSideNav(M.Sidenav.init(elementNode, { draggable: true, edge: "left" }))
   }, [])
 
   return (

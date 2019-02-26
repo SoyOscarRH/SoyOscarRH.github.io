@@ -20,11 +20,7 @@ const NavigationMenu: FunctionComponent = () => {
             <i className="material-icons white-text">menu</i>
           </a>
 
-          <a
-            onClick={goToTop}
-            className="right"
-            style={{ height: "100%", cursor: "pointer" }}
-          >
+          <a onClick={goToTop} className="right" style={{ height: "100%", cursor: "pointer" }}>
             <img
               style={{ width: "2.2rem", verticalAlign: "middle" }}
               src="Assets/Icons/LogoWhite.png"

@@ -1,9 +1,5 @@
 import React, { FunctionComponent, useContext } from "react"
-import {
-  LanguageHeaderContext,
-  SidenavMaterialCSSContext,
-  navigateTo,
-} from "../AppHeader"
+import { LanguageHeaderContext, SidenavMaterialCSSContext, navigateTo } from "../AppHeader"
 
 import getSections, { Section } from "../PageData/SideMenuData"
 
@@ -11,15 +7,9 @@ const SideMenu: FunctionComponent = () => {
   const [language] = useContext(LanguageHeaderContext)
   const Sections = getSections(language)
 
-  const SideMenuSections = Object.entries(Sections).map(
-    ([sectionName, SectionData]) => (
-      <SideMenuSection
-        key={sectionName}
-        sectionName={sectionName}
-        Section={SectionData}
-      />
-    )
-  )
+  const SideMenuSections = Object.entries(Sections).map(([sectionName, SectionData]) => (
+    <SideMenuSection key={sectionName} sectionName={sectionName} Section={SectionData} />
+  ))
 
   return (
     <ul id="SideBarID" className="sidenav">
@@ -99,17 +89,11 @@ const ToggleLanguage: FunctionComponent = () => {
 
   return (
     <React.Fragment>
-      <a className="subheader center">
-        {language === "English" ? "Language" : "Lenguaje"}
-      </a>
+      <a className="subheader center">{language === "English" ? "Language" : "Lenguaje"}</a>
       <div className="switch center">
         <label>
           {spanishLanguageName}
-          <input
-            type="checkbox"
-            onChange={toggleLanguage}
-            checked={language === "English"}
-          />
+          <input type="checkbox" onChange={toggleLanguage} checked={language === "English"} />
           <span className="lever" />
           {englishLanguageName}
         </label>

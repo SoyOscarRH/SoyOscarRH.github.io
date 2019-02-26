@@ -18,13 +18,14 @@ export type languages = "Spanish" | "English"
 export type toogleLanguages = () => void
 
 export interface LanguageOption<T> {
-  English: T, 
+  English: T
   Spanish: T
 }
 
-export const LanguageContext = React.createContext<
-  [languages, toogleLanguages]
->(["English", () => {}])
+export const LanguageContext = React.createContext<[languages, toogleLanguages]>([
+  "English",
+  () => {},
+])
 
 const App: FunctionComponent = () => {
   const [language, setLanguage] = useState<languages>("English")
@@ -49,9 +50,7 @@ const App: FunctionComponent = () => {
   }, [])
 
   return (
-    <LanguageContext.Provider
-      value={[language, toggleLanguageAndDismissToasts]}
-    >
+    <LanguageContext.Provider value={[language, toggleLanguageAndDismissToasts]}>
       <header>
         <AppHeader />
       </header>
@@ -64,10 +63,7 @@ const App: FunctionComponent = () => {
           <ProjectsPrograms Projects={ProjectsData} Programs={ProgramsData} />
         </section>
         <section id="Books">
-          <Books
-            Books={BooksData}
-            AboutBooks={AboutBooksData}
-          />
+          <Books Books={BooksData} AboutBooks={AboutBooksData} />
         </section>
       </main>
 
