@@ -31,7 +31,7 @@
 		"@babel/preset-react": "^7.0.0",
 		"@babel/preset-typescript": "^7.3.3",
 		"@types/materialize-css": "^1.0.6",
-		"@types/react": "^16.8.6",
+		"@types/react": "^16.8.7",
 		"@types/react-dom": "^16.8.2",
 		"babel-loader": "^8.0.5",
 		"css-loader": "^0.28.11",
@@ -44,7 +44,7 @@
 	},
 	"dependencies": {
 		"materialize-css": "^1.0.0",
-		"react": "^16.8.3",
-		"react-dom": "^16.8.3"
+		"react": "^16.8.4",
+		"react-dom": "^16.8.4"
 	}
 }
