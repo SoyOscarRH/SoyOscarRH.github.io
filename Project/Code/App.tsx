@@ -47,7 +47,6 @@ const App: FunctionComponent = () => {
 				</button>`,
       displayLength: 8000,
     })
-    alert(language)
   }, [])
 
   return (
