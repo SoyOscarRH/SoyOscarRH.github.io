@@ -1,7 +1,7 @@
 import { Books } from "../PageData"
 import Projects from "../PageData/Projects"
 import Programs from "../PageData/Programs"
-import { languages } from "../App"
+import { Language } from "../Helpers/Language"
 
 type linkName = string
 type linkURL = string
@@ -17,9 +17,11 @@ export interface Sections {
   [key: string]: Section
 }
 
-const getSections = (language: languages) => {
+const getSections = (language: Language) => {
+  const { name, index } = language
+
   const BooksNames: Array<Link> = Object.entries(Books).map(
-    ([nameForLink, data]) => [data.SimpleTitle[language], nameForLink] as Link
+    ([nameForLink, data]) => [data.SimpleTitle[name], nameForLink] as Link
   )
 
   const ProjectsNames: Array<Link> = Object.keys(Projects).map(
@@ -29,8 +31,6 @@ const getSections = (language: languages) => {
   const ProgramsNames: Array<Link> = Object.keys(Programs).map(
     nameForLink => [nameForLink, nameForLink] as Link
   )
-
-  const index = language === "English" ? 0 : 1
 
   const SideMenuData: Sections = {
     AboutMe: {

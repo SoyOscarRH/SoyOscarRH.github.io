@@ -1,10 +1,11 @@
 import React, { FunctionComponent, useContext } from "react"
-import { LanguageHeaderContext, SidenavMaterialCSSContext, navigateTo } from "../AppHeader"
+import { SidenavMaterialCSSContext, navigateTo } from "../AppHeader"
+import { LanguageContext, ToggleLanguageContext } from "../Helpers/Language"
 
 import getSections, { Section } from "../PageData/SideMenuData"
 
 const SideMenu: FunctionComponent = () => {
-  const [language] = useContext(LanguageHeaderContext)
+  const language = useContext(LanguageContext)
   const Sections = getSections(language)
 
   const SideMenuSections = Object.entries(Sections).map(([sectionName, SectionData]) => (
@@ -44,18 +45,18 @@ const SoyOscarRHLogo: FunctionComponent<{
   baseColor: string
   accentColor: string
 }> = ({ accentColor, baseColor }) => {
-  const someStyle = { color: accentColor }
+  const accentStyle = { color: accentColor }
+  const SoyOscarRHLogoStyle = {
+    fontWeight: 300,
+    fontSize: "2.3rem",
+    margin: "2.5rem",
+    color: baseColor,
+    fontFamily: "Roboto Mono",
+  }
+
   return (
-    <h5
-      style={{
-        fontWeight: 300,
-        fontSize: "2.3rem",
-        margin: "2.5rem",
-        color: baseColor,
-        fontFamily: "Roboto Mono",
-      }}
-    >
-      <b style={someStyle}>Soy</b>Oscar<b style={someStyle}>RH</b>
+    <h5 style={SoyOscarRHLogoStyle}>
+      <b style={accentStyle}>Soy</b>Oscar<b style={accentStyle}>RH</b>
     </h5>
   )
 }
@@ -64,16 +65,16 @@ const LinksToSocialMedia: React.FunctionComponent = () => (
   <div className="row">
     <div className="col s8 offset-s2">
       <div className="row">
-        <a target="_blank" href="https://github.com/SoyOscarRH">
+        <a target="_blank" rel="noopener noreferrer" href="https://github.com/SoyOscarRH">
           <img className="col s3" src="Assets/Icons/github.png" />
         </a>
-        <a target="_blank" href="http://compilandoconocimiento.com/">
+        <a target="_blank" rel="noopener noreferrer" href="http://compilandoconocimiento.com/">
           <img className="col s3" src="Assets/Icons/wordpress.png" />
         </a>
-        <a target="_blank" href="http://twitter.com/SoyOscarRH">
+        <a target="_blank" rel="noopener noreferrer" href="http://twitter.com/SoyOscarRH">
           <img className="col s3" src="Assets/Icons/twitter.png" />
         </a>
-        <a target="_blank" href="https://telegram.me/SoyOscarRH">
+        <a target="_blank" rel="noopener noreferrer" href="https://telegram.me/SoyOscarRH">
           <img className="col s3" src="Assets/Icons/telegram.png" />
         </a>
       </div>
@@ -82,20 +83,18 @@ const LinksToSocialMedia: React.FunctionComponent = () => (
 )
 
 const ToggleLanguage: FunctionComponent = () => {
-  const [language, toggleLanguage] = useContext(LanguageHeaderContext)
-  const index = language === "English" ? 0 : 1
-  const englishLanguageName = ["English", "Inglés"][index]
-  const spanishLanguageName = ["Spanish", "Español"][index]
+  const { name, index } = useContext(LanguageContext)
+  const toggle = useContext(ToggleLanguageContext)
 
   return (
     <React.Fragment>
-      <a className="subheader center">{language === "English" ? "Language" : "Lenguaje"}</a>
+      <a className="subheader center">{["Language", "Lenguaje"][index]}</a>
       <div className="switch center">
         <label>
-          {spanishLanguageName}
-          <input type="checkbox" onChange={toggleLanguage} checked={language === "English"} />
+          {["English", "Inglés"][index]}
+          <input type="checkbox" onChange={toggle} checked={name === "English"} />
           <span className="lever" />
-          {englishLanguageName}
+          {["Spanish", "Español"][index]}
         </label>
       </div>
     </React.Fragment>

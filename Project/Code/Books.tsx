@@ -1,7 +1,7 @@
 import React, { FunctionComponent, useContext, useEffect } from "react"
 import M from "materialize-css"
 
-import { LanguageOption, LanguageContext } from "./App"
+import { LanguageOption, LanguageContext } from "./Helpers/Language"
 import { BooksI } from "./PageData/Books"
 import Card from "./Card"
 
@@ -13,8 +13,7 @@ interface BooksDataI {
 }
 
 const Books: FunctionComponent<BooksDataI> = ({ Books, AboutBooks }) => {
-  const [language] = useContext(LanguageContext)
-  const index = language === "English" ? 0 : 1
+  const { name, index } = useContext(LanguageContext)
 
   useEffect(() => {
     const ElementsBoxes = document.querySelectorAll(".materialboxed")
@@ -37,7 +36,7 @@ const Books: FunctionComponent<BooksDataI> = ({ Books, AboutBooks }) => {
       <h4 className="blue-grey-text text-darken-3">
         <b>{BooksTitle}</b>
       </h4>
-      <div>{AboutBooks[language]}</div>
+      <div>{AboutBooks[name]}</div>
 
       <br />
       <br />

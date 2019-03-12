@@ -5,7 +5,7 @@ import { ProjectsI } from "./PageData/Projects"
 import { ProgramsI } from "./PageData/Programs"
 import Card from "./Card"
 
-import { LanguageContext } from "./App"
+import { LanguageContext } from "./Helpers/Language"
 
 import * as Styles from "./Card/Styles.css"
 
@@ -13,8 +13,7 @@ const ProjectsProgramsSection: FunctionComponent<{
   Projects: ProjectsI
   Programs: ProgramsI
 }> = props => {
-  const [language] = useContext(LanguageContext)
-  const index = language === "English" ? 0 : 1
+  const { index } = useContext(LanguageContext)
 
   useEffect(() => {
     const materialBoxes = document.querySelectorAll(".materialboxed")

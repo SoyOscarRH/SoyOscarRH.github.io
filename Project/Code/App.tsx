@@ -1,7 +1,10 @@
-import React, { FunctionComponent, useState, useEffect } from "react"
+import React, { FunctionComponent, useEffect, useReducer } from "react"
 import ReactDOM from "react-dom"
 
 import M from "materialize-css"
+
+import { LanguageContext, ToggleLanguageContext } from "./Helpers/Language"
+import { Language, defaultLanguage, getNewLanguage } from "./Helpers/Language"
 
 import AboutMeData from "./PageData/AboutMe"
 import ProjectsData from "./PageData/Projects"
@@ -14,50 +17,52 @@ import ProjectsPrograms from "./ProjectsPrograms"
 import Books from "./Books"
 import Footer from "./Footer"
 
-export type languages = "Spanish" | "English"
-export type toogleLanguages = () => void
-
-export interface LanguageOption<T> {
-  English: T
-  Spanish: T
+interface Action {
+  type: "toggle"
 }
 
-export const LanguageContext = React.createContext<[languages, toogleLanguages]>([
-  "English",
-  () => {},
-])
-
-const App: FunctionComponent = () => {
-  const [language, setLanguage] = useState<languages>("English")
-
-  const toggleLanguageAndDismissToasts = () => {
+const ShowToastToChangeLanguage = (dispatch: (action: Action) => void) => {
+  // [WTF]! If someone know a better way tell me :c
+  window["changeMessage"] = () => {
     M.Toast.dismissAll()
-    const newLanguage = language === "English" ? "Spanish" : "English"
-    setLanguage(newLanguage)
+    dispatch({ type: "toggle" })
   }
 
-  useEffect(() => {
-    window["changeMessage"] = toggleLanguageAndDismissToasts
-    M.toast({
-      html: `
-        <button 
-					class   = "btn-flat toast-action"
-					onClick = window.changeMessage()>
-					${language === "English" ? "¿Cambiar idioma?" : "Change language?"}
-				</button>`,
-      displayLength: 8000,
-    })
-  }, [])
+  M.toast({
+    html: `
+    <button 
+      class   = "btn-flat toast-action"
+      onClick = window.changeMessage()>
+      ${["¿Cambiar idioma?", "Change language?"][defaultLanguage.index]}
+    </button>`,
+    displayLength: 8000,
+  })
+}
+
+const reducer = (language: Language, action: Action) => {
+  switch (action.type) {
+    case "toggle":
+      return getNewLanguage(language)
+    default:
+      throw new Error()
+  }
+}
+
+const App: FunctionComponent = () => {
+  const [language, dispatch] = useReducer(reducer, defaultLanguage)
+  useEffect(() => ShowToastToChangeLanguage(dispatch), [])
 
   return (
-    <LanguageContext.Provider value={[language, toggleLanguageAndDismissToasts]}>
-      <header>
-        <AppHeader />
-      </header>
+    <LanguageContext.Provider value={language}>
+      <ToggleLanguageContext.Provider value={() => dispatch({ type: "toggle" })}>
+        <header>
+          <AppHeader />
+        </header>
+      </ToggleLanguageContext.Provider>
 
       <main id="start">
         <section id="AboutMe">
-          <AboutMe AboutMe={AboutMeData[language]} />
+          <AboutMe AboutMe={AboutMeData[language.name]} />
         </section>
         <section id="Projects">
           <ProjectsPrograms Projects={ProjectsData} Programs={ProgramsData} />
@@ -74,4 +79,9 @@ const App: FunctionComponent = () => {
   )
 }
 
-ReactDOM.render(<App />, document.getElementById("ReactApp"))
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById("ReactApp")
+)

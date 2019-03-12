@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useContext } from "react"
 
-import { LanguageContext } from "../App"
+import { LanguageContext } from "../Helpers/Language"
 import { Project } from "../PageData/Projects"
 import { Program } from "../PageData/Programs"
 import { Book } from "../PageData/Books"
@@ -17,7 +17,7 @@ interface CardInfo {
 const CardInfoContext = React.createContext<CardInfo>(null)
 
 export const Card: FunctionComponent<CardInfo> = props => {
-  const [language] = useContext(LanguageContext)
+  const { name: language } = useContext(LanguageContext)
 
   let link: string | undefined = ""
   let coauthors: Array<string> = []
@@ -71,11 +71,9 @@ export const Card: FunctionComponent<CardInfo> = props => {
 
 const CardText: FunctionComponent<{
   text: JSX.Element
-  coauthors: string[]
+  coauthors: Array<string>
 }> = props => {
-  const [language] = useContext(LanguageContext)
-  const index = language === "English" ? 0 : 1
-
+  const { index } = useContext(LanguageContext)
   const coauthors =
     props.coauthors.length > 0 ? (
       <React.Fragment>
@@ -101,8 +99,7 @@ const CardActions: FunctionComponent<{
   type: "Book" | "Project" | "Program"
   link: string | undefined
 }> = props => {
-  const [language] = useContext(LanguageContext)
-  const index = language === "English" ? 0 : 1
+  const { index } = useContext(LanguageContext)
 
   if (props.type === "Book")
     return (
@@ -110,22 +107,21 @@ const CardActions: FunctionComponent<{
         <a className="activator" style={{ cursor: "pointer" }}>
           {["TOPICS", "TEMARIO"][index]}
         </a>
-        <a target="_blank" href={props.link}>
+        <a target="_blank" rel="noopener noreferrer" href={props.link}>
           {["READ ONLINE", "LEE EN LÍNEA"][index]}
         </a>
       </React.Fragment>
     )
   else
     return (
-      <a href={props.link} target="_blank">
+      <a href={props.link} target="_blank" rel="noopener noreferrer">
         {["Check out", "Velo tu mismo"][index]}
       </a>
     )
 }
 
 const ImageIcon: FunctionComponent = () => {
-  const [language] = useContext(LanguageContext)
-  const index = language === "English" ? 0 : 1
+  const { name: language, index } = useContext(LanguageContext)
 
   const { Element, name, type } = useContext(CardInfoContext)
   const { Color: color, LinkToProject: link, Title: title } = Element
@@ -159,6 +155,7 @@ const ImageIcon: FunctionComponent = () => {
         data-position="top"
         data-tooltip={tooltipped}
         target="_blank"
+        rel="noopener noreferrer"
       >
         <img src="Assets/Icons/githubMini.png" />
       </a>
@@ -184,7 +181,7 @@ interface Topic {
 const ListInCard: React.StatelessComponent<{
   Topics: Array<Topic>
 }> = props => {
-  const [language] = useContext(LanguageContext)
+  const { name: language } = useContext(LanguageContext)
   const index = language === "English" ? 0 : 1
 
   if (!props.Topics) return null
