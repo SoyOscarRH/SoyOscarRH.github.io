@@ -21,6 +21,9 @@
 .GridElement {
   grid-column: auto;
   height: 100%;
+  text-align: initial;
+  background-position: center;
+  background-size: 100%;
 }
 
 .Container {

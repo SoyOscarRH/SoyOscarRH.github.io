@@ -28,10 +28,10 @@ const ProjectsProgramsSection: FunctionComponent<{
 
   return (
     <div className={`center-align ${Styles.Container}`}>
-      <ShowCards title={ProjectsTitle} Elements={props.Projects} type={"Project"} />
+      <ShowCards id="Projects" title={ProjectsTitle} Elements={props.Projects} type={"Project"} />
       <br />
       <br />
-      <ShowCards title={ProgramsTitle} Elements={props.Programs} type={"Program"} />
+      <ShowCards id="Programs" title={ProgramsTitle} Elements={props.Programs} type={"Program"} />
     </div>
   )
 }
@@ -39,6 +39,7 @@ const ProjectsProgramsSection: FunctionComponent<{
 const ShowCards: FunctionComponent<{
   title: string
   type: "Book" | "Program" | "Project"
+  id: string
   Elements: ProjectsI | ProgramsI
 }> = props => (
   <React.Fragment>
@@ -47,7 +48,7 @@ const ShowCards: FunctionComponent<{
     </h4>
     <br />
 
-    <div className={Styles.Grid}>
+    <div className={Styles.Grid} id={props.id}>
       {Object.entries(props.Elements).map(([name, Element]) => (
         <Card key={name} name={name} Element={Element} type={props.type} />
       ))}

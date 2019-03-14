@@ -68,7 +68,7 @@ const App: FunctionComponent = () => {
         <section id="Links">
           <Links />
         </section>
-        <section id="Projects">
+        <section id="ProjectsAndPrograms">
           <ProjectsPrograms Projects={ProjectsData} Programs={ProgramsData} />
         </section>
         <section id="Books">

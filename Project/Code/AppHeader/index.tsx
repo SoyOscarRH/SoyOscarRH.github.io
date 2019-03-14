@@ -10,10 +10,13 @@ export const SidenavMaterialCSSContext = React.createContext<M.Sidenav | null>(n
 export const navigateTo = (element: HTMLElement | null) => {
   if (!element) return
 
-  element.scrollIntoView({
-    behavior: "smooth",
-    block: "start",
-  })
+  const pos = element.style.position
+  const top = element.style.top
+  element.style.position = "relative"
+  element.style.top = "-15rem"
+  element.scrollIntoView({ behavior: "smooth", block: "start" })
+  element.style.top = top
+  element.style.position = pos
 }
 
 const AppHeader: FunctionComponent = () => {
