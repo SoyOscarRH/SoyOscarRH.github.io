@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from "react"
 import { AboutMeI } from "./PageData/AboutMe"
+import { LinksToSocialMedia } from "./AppHeader/SideMenu"
 
 const AboutMeSection: FunctionComponent<{ AboutMe: AboutMeI }> = props => (
   <div className="teal lighten-5 z-depth-1 row">
@@ -26,6 +27,10 @@ const TextSection: FunctionComponent<{ AboutMe: AboutMeI }> = props => (
     <p className="hide-on-med-and-up" style={{ fontWeight: 400, fontSize: "1rem" }}>
       {props.AboutMe.Description}
     </p>
+
+    <div style={{ width: "12rem" }}>
+      <LinksToSocialMedia />
+    </div>
 
     <a className="btn indigo lighten-1" href="Resume.pdf" target="_blank">
       <span className="hide-on-med-and-up"> CURRICULUM </span>

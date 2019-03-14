@@ -19,7 +19,11 @@ const SideMenu: FunctionComponent = () => {
       </li>
 
       <li>
-        <LinksToSocialMedia />
+        <div className="row">
+          <div className="col s8 offset-s2">
+            <LinksToSocialMedia />
+          </div>
+        </div>
       </li>
 
       <li className="container">
@@ -56,29 +60,25 @@ const SoyOscarRHLogo: FunctionComponent<{
 
   return (
     <h5 style={SoyOscarRHLogoStyle}>
-      <b style={accentStyle}>Soy</b>Oscar<b style={accentStyle}>RH</b>
+      @<b style={accentStyle}>Soy</b>Oscar<b style={accentStyle}>RH</b>
     </h5>
   )
 }
 
-const LinksToSocialMedia: React.FunctionComponent = () => (
+export const LinksToSocialMedia: React.FunctionComponent = () => (
   <div className="row">
-    <div className="col s8 offset-s2">
-      <div className="row">
-        <a target="_blank" rel="noopener noreferrer" href="https://github.com/SoyOscarRH">
-          <img className="col s3" src="Assets/Icons/github.png" />
-        </a>
-        <a target="_blank" rel="noopener noreferrer" href="http://compilandoconocimiento.com/">
-          <img className="col s3" src="Assets/Icons/wordpress.png" />
-        </a>
-        <a target="_blank" rel="noopener noreferrer" href="http://twitter.com/SoyOscarRH">
-          <img className="col s3" src="Assets/Icons/twitter.png" />
-        </a>
-        <a target="_blank" rel="noopener noreferrer" href="https://telegram.me/SoyOscarRH">
-          <img className="col s3" src="Assets/Icons/telegram.png" />
-        </a>
-      </div>
-    </div>
+    <a target="_blank" rel="noopener noreferrer" href="https://github.com/SoyOscarRH">
+      <img className="col s3" src="Assets/Icons/github.png" />
+    </a>
+    <a target="_blank" rel="noopener noreferrer" href="http://compilandoconocimiento.com/">
+      <img className="col s3" src="Assets/Icons/wordpress.png" />
+    </a>
+    <a target="_blank" rel="noopener noreferrer" href="http://twitter.com/SoyOscarRH">
+      <img className="col s3" src="Assets/Icons/twitter.png" />
+    </a>
+    <a target="_blank" rel="noopener noreferrer" href="https://telegram.me/SoyOscarRH">
+      <img className="col s3" src="Assets/Icons/telegram.png" />
+    </a>
   </div>
 )
 
@@ -91,10 +91,10 @@ const ToggleLanguage: FunctionComponent = () => {
       <a className="subheader center">{["Language", "Lenguaje"][index]}</a>
       <div className="switch center">
         <label>
-          {["English", "Inglés"][index]}
+          {["Spanish", "Español"][index]}
           <input type="checkbox" onChange={toggle} checked={name === "English"} />
           <span className="lever" />
-          {["Spanish", "Español"][index]}
+          {["English", "Inglés"][index]}
         </label>
       </div>
     </React.Fragment>

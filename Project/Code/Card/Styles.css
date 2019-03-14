@@ -1,17 +1,30 @@
+/*
+ * ===================================================
+ * ======               GRID                 =========
+ * ===================================================
+ */
+
 .Grid {
-    display: grid;
-    grid-template-columns: 1fr; 
-    grid-column-gap: 1.25rem;
-    grid-row-gap: 1.25rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 1.25rem;
+  grid-row-gap: 1.25rem;
+}
+
+.GridLinks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 1.25rem;
+  grid-row-gap: 1.25rem;
 }
 
 .GridElement {
-    grid-column: auto;
-    height: 100%;
+  grid-column: auto;
+  height: 100%;
 }
 
 .Container {
-    padding: 1rem;
+  padding: 1rem;
 }
 
 .CardStyle {
@@ -33,29 +46,39 @@
   font-size: 0.15rem;
 }
 
-.TextStyle { 
-    padding: 0.2rem; 
-    text-align: justify;
+.TextStyle {
+  padding: 0.2rem;
+  text-align: justify;
+}
+
+@media (min-width: 550px) {
+    .GridLinks {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 @media (min-width: 750px) {
-    .Grid {
-        grid-template-columns: 1fr 1fr; 
-    }
+  .Grid {
+    grid-template-columns: 1fr 1fr;
+  }
 
-    .Container {
-        padding: 3rem;
+  .Container {
+    padding: 3rem;
+  }
+}
+
+@media (min-width: 800px) {
+    .GridLinks {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
 
 @media (min-width: 950px) {
+  .Grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 
-    .Grid {
-        grid-template-columns: 1fr 1fr 1fr; 
-    }
-
-    .Container {
-        padding: 5rem;
-    }
+  .Container {
+    padding: 5rem;
+  }
 }
-

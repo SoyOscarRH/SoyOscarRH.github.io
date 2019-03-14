@@ -12,6 +12,7 @@ import ProgramsData from "./PageData/Programs"
 import { Books as BooksData, AboutBooks as AboutBooksData } from "./PageData"
 
 import AppHeader from "./AppHeader"
+import Links from "./Links"
 import AboutMe from "./AboutMe"
 import ProjectsPrograms from "./ProjectsPrograms"
 import Books from "./Books"
@@ -63,6 +64,9 @@ const App: FunctionComponent = () => {
       <main id="start">
         <section id="AboutMe">
           <AboutMe AboutMe={AboutMeData[language.name]} />
+        </section>
+        <section id="Links">
+          <Links />
         </section>
         <section id="Projects">
           <ProjectsPrograms Projects={ProjectsData} Programs={ProgramsData} />

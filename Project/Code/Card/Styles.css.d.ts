@@ -1,5 +1,7 @@
 export const Grid: string;
 export const grid: string;
+export const GridLinks: string;
+export const gridLinks: string;
 export const GridElement: string;
 export const gridElement: string;
 export const Container: string;
