@@ -50,29 +50,78 @@ const Programs: ProgramsI = {
       Spanish: ["Matemáticas", "Bezier", "Java Swing"],
     },
   },
-  Fractals: {
+  NumericalAnalysis: {
     Title: (
       <span>
-        <b>Fractals</b>
+        <b>NumericalAnalysis</b>
       </span>
     ),
     LinkToProject:
-      "https://github.com/CompilandoConocimiento/ThingsWithPython/tree/master/Fractals",
-    Color: "yellow accent-4",
+      "https://github.com/CompilandoConocimiento/OldCode/tree/master/NumericalAnalysis",
+    Color: "blue accent-4",
     English: (
       <span>
-        This is a program in Python to graph fractals, for now is only the Sierpinkski triangle.
+        I made some really interesting programs during my numerical analysis class, like LU
+        decomposition, Cholesky Banachiewicz, like QR decomposition, House Holder, Newton Raphson,
+        the Hermite Interpolant, etc...
+        <br />
+        At the end I did a program to interpolate curves, so I draw a name using a some lists of
+        points.
       </span>
     ),
     Spanish: (
       <span>
-        Este es un programa en Python para graficar fractales, por ahora solo he implementado el
-        triangulo de Sierpinkski.
+        Hice algunos programas interesantes durante mi clase de análisis numérico como la
+        descomposición LU, Cholesky Banachiewicz, como la descomposición QR, House Holder, Newton
+        Raphson, el Hermite de interpolante, etc...
+        <br />
+        Al final hice un programa para interpolar curvas, así que dibujé un nombre usando unas
+        listas de puntos.
       </span>
     ),
     Tags: {
-      English: ["Fractals", "Sierpinkski", "Python", "Turtle"],
-      Spanish: ["Fractales", "Sierpinkski", "Python", "Turtle"],
+      English: ["Math", "Interpolant", "Spline"],
+      Spanish: ["Matematicas", "Interpolante", "Spline"],
+    },
+  },
+  LearningFlutter: {
+    Title: (
+      <span>
+        {" "}
+        <b>Learning</b>Flutter
+      </span>
+    ),
+    LinkToProject: "https://github.com/SoyOscarRH/LearningFlutter",
+    Color: "grey darken-2",
+    English: (
+      <span>
+        Simple apps that I made in a Google Development Group boot camp designed to learn the
+        Flutter SDK.
+        <br />
+        Code and text is in English.
+        <br />
+        <br />
+        The first app show an infinite random generated list of Startups made by using the most
+        commons words in English and an option to save them. Also, I made an app that show many
+        dishes in a list.
+      </span>
+    ),
+    Spanish: (
+      <span>
+        Conjunto de apps que hice durante un boot camp de un Google Development Group diseñado para
+        aprender Flutter.
+        <br />
+        En este proyecto tanto el código como el texto está en inglés.
+        <br />
+        <br />
+        La primera app muestra una lista infinita (generada aleatoriamente) de posibles nombres para
+        Startups, los nombres se generan usando las palabras más comunes del idioma inglés. Además
+        hice una app que muestra platillos en una lista.
+      </span>
+    ),
+    Tags: {
+      English: ["One night project", "Google Development Group", "Flutter", "Dart"],
+      Spanish: ["proyecto de una noche", "Google Development Group", "Flutter", "Dart"],
     },
   },
   LinearRegression: {
@@ -133,44 +182,29 @@ const Programs: ProgramsI = {
       Spanish: ["Matemáticas", "Análisis Complejo", "Python2"],
     },
   },
-  LearningFlutter: {
+  Fractals: {
     Title: (
       <span>
-        {" "}
-        <b>Learning</b>Flutter
+        <b>Fractals</b>
       </span>
     ),
-    LinkToProject: "https://github.com/SoyOscarRH/LearningFlutter",
-    Color: "grey darken-2",
+    LinkToProject:
+      "https://github.com/CompilandoConocimiento/ThingsWithPython/tree/master/Fractals",
+    Color: "yellow accent-4",
     English: (
       <span>
-        Simple apps that I made in a Google Development Group boot camp designed to learn the
-        Flutter SDK.
-        <br />
-        Code and text is in English.
-        <br />
-        <br />
-        The first app show an infinite random generated list of Startups made by using the most
-        commons words in English and an option to save them. Also, I made an app that show many
-        dishes in a list.
+        This is a program in Python to graph fractals, for now is only the Sierpinkski triangle.
       </span>
     ),
     Spanish: (
       <span>
-        Conjunto de apps que hice durante un boot camp de un Google Development Group diseñado para
-        aprender Flutter.
-        <br />
-        En este proyecto tanto el código como el texto está en inglés.
-        <br />
-        <br />
-        La primera app muestra una lista infinita (generada aleatoriamente) de posibles nombres para
-        Startups, los nombres se generan usando las palabras más comunes del idioma inglés. Además
-        hice una app que muestra platillos en una lista.
+        Este es un programa en Python para graficar fractales, por ahora solo he implementado el
+        triangulo de Sierpinkski.
       </span>
     ),
     Tags: {
-      English: ["One night project", "Google Development Group", "Flutter", "Dart"],
-      Spanish: ["proyecto de una noche", "Google Development Group", "Flutter", "Dart"],
+      English: ["Fractals", "Sierpinkski", "Python", "Turtle"],
+      Spanish: ["Fractales", "Sierpinkski", "Python", "Turtle"],
     },
   },
   AlphabetSoup: {

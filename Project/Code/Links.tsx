@@ -10,6 +10,8 @@ interface SectionLinkProps {
 }
 
 const SectionLink: FunctionComponent<SectionLinkProps> = props => {
+  const language = useContext(LanguageContext)
+  const backgroundImage = `url('${props.src + ["", "ES"][language.index] + ".png"}')`
   const handleClick =
     props.link !== ""
       ? () => window.open(props.link, "_blank")
@@ -18,30 +20,27 @@ const SectionLink: FunctionComponent<SectionLinkProps> = props => {
     <div
       onClick={handleClick}
       className={"card-panel hoverable white " + Styles.GridElement}
-      style={{ backgroundImage: `url('${props.src}')`, cursor: "pointer" }}
+      style={{ backgroundImage, cursor: "pointer" }}
     />
   )
 }
 
 const Links: FunctionComponent = () => {
-  const language = useContext(LanguageContext)
-  if (language.name !== "English") console.log("Aaaaa")
-
   return (
     <div className={`center-align ${Styles.Container}`}>
       <div className={Styles.GridLinks}>
-        <SectionLink text={"Projects"} link={""} src={"Assets/Links/LinksProjects.png"} />
-        <SectionLink text={"Programs"} link={""} src={"Assets/Links/LinksPrograms.png"} />
-        <SectionLink text={"Books"} link={""} src={"Assets/Links/LinksBooks.png"} />
+        <SectionLink text={"Projects"} link={""} src={"Assets/Links/LinksProjects"} />
+        <SectionLink text={"Programs"} link={""} src={"Assets/Links/LinksPrograms"} />
+        <SectionLink text={"Books"} link={""} src={"Assets/Links/LinksBooks"} />
         <SectionLink
           text={"Education"}
           link={"https://soyoscarrh.github.io/Resume.pdf"}
-          src={"Assets/Links/LinksEdu.png"}
+          src={"Assets/Links/LinksEdu"}
         />
         <SectionLink
           text={"Interests"}
           link={"https://twitter.com/SoyOscarRH"}
-          src={"Assets/Links/LinksInterests.png"}
+          src={"Assets/Links/LinksInterests"}
         />
       </div>
     </div>
