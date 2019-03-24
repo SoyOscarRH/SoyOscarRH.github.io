@@ -101,11 +101,50 @@ const Projects: ProjectsI = {
       Spanish: ["C++", "Programación Competitiva", "Soluciones", "Jueces en línea"],
     },
   },
+  CompilandoConocimiento: {
+    Title: (
+      <span>
+        {" "}
+        <b>Compilando</b>Conocimiento
+      </span>
+    ),
+    LinkToProject: "https://compilandoconocimiento.com/",
+    CheckOut: "https://compilandoconocimiento.com/",
+    Color: "purple",
+    English: (
+      <span>
+        Creator of a blog (in spanish) to learn about science in general, discrete math, physics,
+        vectorial analysis, simple algorithms and data structures (stacks, queues, BST, AVL trees,
+        etc), automata theory, intro to C and to object oriented programming using Java. The blog
+        has around 100 000 views since the beginning of 2018.
+        <br />
+        <br />
+        Here you can also find all the books we as an organization are writing for free.
+      </span>
+    ),
+    Spanish: (
+      <span>
+        Creador de un blog (en español) para aprender sobre ciencia en general, matemáticas
+        discretas, física, análisis vectorial, algoritmos simples y estructuras de datos (pilas,
+        colas, BST, árboles AVL, etc.), teoría de autómatas, introducción a C y programación
+        orientada a objetos utilizando Java. El blog Tiene alrededor de 100 000 visitas desde
+        principios de 2018.
+        <br />
+        <br />
+        Aquí también se puede encontrar todos los libros que, como organización, escribimos de forma
+        gratuita.
+      </span>
+    ),
+    Tags: {
+      English: ["Educational blog", "math", "algorithms"],
+      Spanish: ["Blog de educación", "mate", "algoritmos"],
+    },
+  },
   DIYCompiler: {
     Title: (
       <span>
         {" "}
-        <b>DUY</b> Compiler
+        <b>DUY</b>Compiler
       </span>
     ),
     LinkToProject: "https://github.com/SoyOscarRH/Compiler",
