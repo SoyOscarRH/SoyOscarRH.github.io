@@ -12,14 +12,15 @@ interface SectionLinkProps {
 const SectionLink: FunctionComponent<SectionLinkProps> = props => {
   const language = useContext(LanguageContext)
   const backgroundImage = `url('${props.src + ["", "ES"][language.index] + ".jpg"}')`
+
   const handleClick = (event: React.MouseEvent) => {
-    event.preventDefault()
     props.link !== ""
-      ? () => window.open(props.link, "_blank")
-      : () => navigateTo(document.getElementById(props.text))
+      ? window.open(props.link, "_blank")
+      : navigateTo(document.getElementById(props.text))
+    event.preventDefault()
   }
   return (
-    <a href={"#" + props.text}>
+    <a href={props.link !== "" ? props.link : "#" + props.text}>
       <div
         onClick={handleClick}
         className={"card-panel hoverable white " + Styles.GridElement}
