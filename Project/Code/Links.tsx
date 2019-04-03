@@ -11,17 +11,21 @@ interface SectionLinkProps {
 
 const SectionLink: FunctionComponent<SectionLinkProps> = props => {
   const language = useContext(LanguageContext)
-  const backgroundImage = `url('${props.src + ["", "ES"][language.index] + ".png"}')`
-  const handleClick =
+  const backgroundImage = `url('${props.src + ["", "ES"][language.index] + ".jpg"}')`
+  const handleClick = (event: React.MouseEvent) => {
+    event.preventDefault()
     props.link !== ""
       ? () => window.open(props.link, "_blank")
       : () => navigateTo(document.getElementById(props.text))
+  }
   return (
-    <div
-      onClick={handleClick}
-      className={"card-panel hoverable white " + Styles.GridElement}
-      style={{ backgroundImage, cursor: "pointer" }}
-    />
+    <a href={"#" + props.text}>
+      <div
+        onClick={handleClick}
+        className={"card-panel hoverable white " + Styles.GridElement}
+        style={{ backgroundImage, cursor: "pointer" }}
+      />
+    </a>
   )
 }
 
