@@ -119,14 +119,15 @@ const SideMenuSection: FunctionComponent<{
   }
 
   const SectionRows = Section.Links.map(([name, link]) => {
-    const onClick = () => {
+    const onClick = (event: React.MouseEvent) => {
+      event.preventDefault()
       closeSideMenu()
       navigateTo(document.getElementById(link))
     }
 
     return (
       <li key={name}>
-        <a className="waves-effect" onClick={onClick}>
+        <a className="waves-effect" href={"#" + link} onClick={onClick}>
           <i className={iconClasses} style={styleClass}>
             {iconName}
           </i>
