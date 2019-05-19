@@ -1,57 +1,58 @@
 {
-	"name": "soyoscarrh",
-	"version": "1.1.0",
-	"description": "A page to show my projects -Oscar RH",
-	"main": "Code/App.tsx",
-	"scripts": {
-		"build": "webpack --progress -p --config webpack.config.js",
-		"watch": "webpack --progress -d --config webpack.config.js --watch",
-		"stats": "webpack --profile     --config webpack.config.js --json > Stats.json"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/SoyOscarRH/SoyOscarRH.github.io"
-	},
-	"keywords": [
-		"react",
-		"materializecss",
-		"personal"
-	],
-	"author": "SoyOscarRH",
-	"license": "GPL-2.0-only",
-	"bugs": {
-		"url": "https://github.com/SoyOscarRH/SoyOscarRH.github.io/issues"
-	},
-	"homepage": "https://soyoscarrh.github.io/",
-	"devDependencies": {
-		"@babel/core": "^7.3.4",
-		"@babel/plugin-proposal-class-properties": "^7.3.4",
-		"@babel/plugin-syntax-typescript": "^7.3.3",
-		"@babel/preset-env": "^7.3.4",
-		"@babel/preset-react": "^7.0.0",
-		"@babel/preset-typescript": "^7.3.3",
-		"@types/materialize-css": "^1.0.6",
-		"@types/react": "^16.8.8",
-		"@types/react-dom": "^16.8.2",
-		"@typescript-eslint/eslint-plugin": "^1.4.2",
-		"@typescript-eslint/parser": "^1.4.2",
-		"babel-loader": "^8.0.5",
-		"css-loader": "^0.28.11",
-		"eslint": "^5.15.1",
-		"eslint-config-prettier": "^4.1.0",
-		"eslint-plugin-prettier": "^3.0.1",
-		"eslint-plugin-react": "^7.12.4",
-		"eslint-plugin-react-hooks": "^1.5.1",
-		"prettier": "1.16.4",
-		"style-loader": "^0.21.0",
-		"typescript": "^3.3.3333",
-		"typings-for-css-modules-loader": "^1.7.0",
-		"webpack": "^4.29.6",
-		"webpack-cli": "^3.2.3"
-	},
-	"dependencies": {
-		"materialize-css": "^1.0.0",
-		"react": "^16.8.4",
-		"react-dom": "^16.8.4"
-	}
+  "name": "soyoscarrh",
+  "version": "1.1.0",
+  "description": "A page to show projects of @Oscar RH",
+  "main": "Code/App.tsx",
+  "scripts": {
+    "build": "webpack --progress -p --config webpack.config.ts",
+    "watch": "webpack --progress -d --config webpack.config.ts --watch",
+    "stats": "webpack --profile     --config webpack.config.ts --json > Stats.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SoyOscarRH/SoyOscarRH.github.io.git"
+  },
+  "keywords": [
+    "react",
+    "materializecss",
+    "personal"
+  ],
+  "author": "SoyOscarRH",
+  "license": "GPL-2.0-only",
+  "bugs": {
+    "url": "https://github.com/SoyOscarRH/SoyOscarRH.github.io/issues"
+  },
+  "homepage": "https://soyoscarrh.github.io/",
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-proposal-optional-chaining": "^7.2.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.3.3",
+    "@types/materialize-css": "^1.0.6",
+    "@types/react": "^16.8.17",
+    "@types/react-dom": "^16.8.4",
+    "@typescript-eslint/eslint-plugin": "^1.9.0",
+    "@typescript-eslint/parser": "^1.9.0",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^2.1.1",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.13.0",
+    "eslint-plugin-react-hooks": "^1.6.0",
+    "prettier": "1.16.4",
+    "style-loader": "^0.21.0",
+    "typescript": "^3.4.5",
+    "typings-for-css-modules-loader": "^1.7.0",
+    "webpack": "^4.31.0",
+    "webpack-cli": "^3.3.2"
+  },
+  "dependencies": {
+    "materialize-css": "^1.0.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
 }
