@@ -29,7 +29,7 @@ const Configuration: Configuration = {
           {
             loader: "css-loader",
             options: {
-              camelCase: "only",
+              camelCase: true,
               localIdentName: "[name]_[local]_[hash:base64]",
               exportOnlyLocals: true,
               sourceMap: true,
