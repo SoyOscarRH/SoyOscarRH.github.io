@@ -20,6 +20,7 @@ const Configuration: Configuration = {
       {
         test: /\.css$/,
         use: [
+          { loader: 'style-loader' },
           {
             loader: "dts-css-modules-loader",
             options: {
@@ -31,7 +32,6 @@ const Configuration: Configuration = {
             options: {
               camelCase: true,
               localIdentName: "[name]_[local]_[hash:base64]",
-              exportOnlyLocals: true,
               sourceMap: true,
               modules: true,
             },
