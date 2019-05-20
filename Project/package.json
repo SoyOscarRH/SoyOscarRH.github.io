@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --progress -p --config webpack.config.ts",
     "watch": "webpack --progress -d --config webpack.config.ts --watch",
-    "stats": "webpack --profile     --config webpack.config.ts --json > Stats.json"
+    "stats": "webpack --profile     --config webpack.config.ts --json > stats.json"
   },
   "repository": {
     "type": "git",
@@ -35,6 +35,7 @@
     "@types/node": "^12.0.2",
     "@types/react": "^16.8.17",
     "@types/react-dom": "^16.8.4",
+    "@types/webpack": "^4.4.31",
     "@typescript-eslint/eslint-plugin": "^1.9.0",
     "@typescript-eslint/parser": "^1.9.0",
     "babel-loader": "^8.0.6",
@@ -44,7 +45,7 @@
     "eslint-config-prettier": "^4.3.0",
     "eslint-plugin-react": "^7.13.0",
     "eslint-plugin-react-hooks": "^1.6.0",
-    "prettier": "1.16.4",
+    "prettier": "^1.17.1",
     "ts-node": "^8.1.0",
     "typescript": "^3.4.5",
     "webpack": "^4.31.0",
