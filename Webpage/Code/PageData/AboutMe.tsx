@@ -4,7 +4,8 @@ import { LanguageOption } from "../Helpers/Language"
 export interface AboutMeI {
   SayHi: JSX.Element
   ShowMyCV: string
-  Description: JSX.Element
+  Description: JSX.Element,
+  Text: Array<string>
 }
 
 const AboutMe: LanguageOption<AboutMeI> = {
@@ -15,18 +16,17 @@ const AboutMe: LanguageOption<AboutMeI> = {
       </span>
     ),
     ShowMyCV: "SEE MY CURRICULUM",
+    Text: [
+      "Nerd.",
+      "Computer scientist, engineer, addicted to memes, becoming the better version of myself. " +
+      "Interested in competitive programming, even if I suck at it. I believe that the web is the " +
+      "platform of the future. Lover of pure mathematics, the more useless the better, economics, machine learning and philosophy.",
+      "Founder of CompilandoConocimiento.",
+      "World citizen "
+    ],
     Description: (
       <span className="blue-grey-text text-darken-4">
-        Nerd.
-        <br />
-        Computer scientist, engineer, addicted to memes, becoming the better version of myself.
-        Interested in competitive programming, even if I suck at it. I believe that the web is the
-        platform of the future. Lover of pure mathematics, the more useless the better, economics,
-        machine learning and philosophy.
-        <br />
-        Founder of CompilandoConocimiento.
-        <br />
-        World citizen.
+        <span id="movingText" />
         <br />
         <br />
         <span className="chip">Computer Science </span>
@@ -43,17 +43,17 @@ const AboutMe: LanguageOption<AboutMeI> = {
       </span>
     ),
     ShowMyCV: "VER MI CURRICULUM",
+    Text: [
+      "Nerd.",
+      "Computólogo, adicto a los memes y a la vida en la biblioteca, muy interesado en la " +
+      "programación competitiva, aunque sea un asco. Creo que la web es la plataforma del futuro." +
+      "Amante de la matemática pura, el machine learning, economía y filosofía.",
+      "Fundador de CompilandoConocimiento.",
+      "Ciudadano del mundo "
+    ],
     Description: (
       <span className="blue-grey-text text-darken-4">
-        Nerd.
-        <br />
-        Computólogo, adicto a los memes y a la vida en la biblioteca, muy interesado en la
-        programación competitiva, aunque sea un asco. Creo que la web es la plataforma del futuro.
-        Amante de la matemática pura, el machine learning, economía y filosofía.
-        <br />
-        Fundador de CompilandoConocimiento.
-        <br />
-        Ciudadano del mundo.
+        <span id="movingText" />
         <br />
         <br />
         <span className="chip">Computólogo</span>

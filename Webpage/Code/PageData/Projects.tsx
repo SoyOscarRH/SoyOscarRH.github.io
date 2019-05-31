@@ -31,7 +31,7 @@ const Projects: ProjectsI = {
         Creator of a blog (in spanish) to learn about science in general, discrete math, physics,
         vectorial analysis, simple algorithms and data structures (stacks, queues, BST, AVL trees,
         etc), automata theory, intro to C and to object oriented programming using Java. The blog
-        has around 100 000 views since the beginning of 2018.
+        has around 150,000 views since the beginning of 2018.
         <br />
         <br />
         Here you can also find all the books we as an organization are writing for free.
@@ -42,7 +42,7 @@ const Projects: ProjectsI = {
         Creador de un blog (en español) para aprender sobre ciencia en general, matemáticas
         discretas, física, análisis vectorial, algoritmos simples y estructuras de datos (pilas,
         colas, BST, árboles AVL, etc.), teoría de autómatas, introducción a C y programación
-        orientada a objetos utilizando Java. El blog Tiene alrededor de 100 000 visitas desde
+        orientada a objetos utilizando Java. El blog Tiene alrededor de 150,000 visitas desde
         principios de 2018.
         <br />
         <br />
@@ -51,8 +51,8 @@ const Projects: ProjectsI = {
       </span>
     ),
     Tags: {
-      English: ["Educational blog", "math", "algorithms"],
-      Spanish: ["Blog de educación", "mate", "algoritmos"],
+      English: ["Educational blog", "math", "algorithms", "books", "tutorials"],
+      Spanish: ["Blog de educación", "mate", "algoritmos", "libros", "tutoriales"],
     },
   },
   CompetitiveSolutions: {
@@ -112,14 +112,17 @@ const Projects: ProjectsI = {
         This was a school project for my Compiler class.
         <br />
         <br />
-        It allows you to create tokens, automatas and grammars; and with them a lexical and
+        It allows you to create tokens, finite state automatas and context free grammars; and with them a lexical and
         syntactical analyzer. This have been the most ambitious project I have participated on;
         also, I did not do this alone, but with the help of Alan Ontiveros and Laura Lopez, my
         classroom partners and friends.
         <br />
         <br />
-        All the code and documentation is in English, but all the text inside the app is in Spanish
-        (my mother tongue).
+        We did operations for automatas like: join, concatenate, closures, convert to deterministic, 
+        create basic automata, create from regular expression, lexical analysis, etc.
+        <br />
+        And for grammars operations like: LL(1), LR(0), LALR(1), LR(1) and Earley parsing, seeing step 
+        by step this process (table generation and string parsing).
       </span>
     ),
     Spanish: (
@@ -127,19 +130,23 @@ const Projects: ProjectsI = {
         Esto fue un proyecto para mi clase de Compiladores.
         <br />
         <br />
-        Permite la creación de tokens, autómatas y gramáticas; y con ellas crear un analizador
+        Permite la creación de tokens, autómatas de estados finitos y gramáticas libres de contexto; y con ellas crear un analizador
         sintáctico y semántico. Este ha sido el proyecto más ambicioso en el que he participado; eso
         si, no he hecho este proyecto solo, sino con la ayuda de Alan Ontivieros y Laura Lopez, mis
         compañeros de clase y amigos.
         <br />
         <br />
-        Todo el código fuente está en inglés, pero todo el texto interno de la aplicación está en
-        español.
+        Para los autómatas tenemos operaciones disponibles como: "join", "concatenate", "closures", 
+        "convert to deterministic", "create basic automata", "create from regular expression", 
+        "lexical analysis", etc.
+        <br />
+        Y para las gramaticas había operaciones como: LL(1), LR(0), LALR(1), LR(1) y "Earley parsing", 
+        incluso podrías ver paso a paso el proceso.
       </span>
     ),
     Tags: {
       English: ["MaterializeCSS", "React", "Typescript", "Class project", "SPA"],
-      Spanish: ["MaterializeCSS", "React", "Typescript", "proyecto de clase", "SPA"],
+      Spanish: ["MaterializeCSS", "React", "Typescript", "Proyecto de clase", "SPA"],
     },
   },
   Binary: {
@@ -183,8 +190,8 @@ const Projects: ProjectsI = {
       </span>
     ),
     Tags: {
-      English: ["MaterializeCSS", "React", "One Night project", "SPA", "One night project"],
-      Spanish: ["MaterializeCSS", "React", "proyecto de clase", "SPA", "proyecto de una noche"],
+      English: ["MaterializeCSS", "React", "One Night project", "SPA"],
+      Spanish: ["MaterializeCSS", "React", "Proyecto de clase", "SPA"],
     },
   },
   OrganizeAnEvent: {
@@ -237,6 +244,49 @@ const Projects: ProjectsI = {
         "PHP",
         "MySQL",
       ],
+    },
+  },
+  CompetitiveReference: {
+    Title: (
+      <span>
+        {" "}
+        <b>Competitive</b>Reference
+      </span>
+    ),
+    LinkToProject: "https://github.com/CompilandoConocimiento/Reference",
+    CheckOut: "https://compilandoconocimiento.github.io/Reference/",
+    Color: "blue-grey darken-3",
+    English: (
+      <span>
+        This is all my personal implementations of the most famous and useful competitive
+        programming algorithms.
+        <br />
+        <br />
+        Most of the implementations are in C++, but you can also find them in C and even in Python
+        and Java.
+        <br />
+        <br />
+        I'm also working on creating a Reference (Book & Website) so many more people can benefit
+        from it, and get further along in this awesome mind-sport.
+      </span>
+    ),
+    Spanish: (
+      <span>
+        Recopilación de mis implementaciones personales de los más famosos y útiles algoritmos de la
+        programación competitiva.
+        <br />
+        <br />
+        La mayoría de las implementaciones están en C ++, pero también puedes encontrar algunas en C
+        e incluso en Python y Java.
+        <br />
+        <br />
+        También estoy trabajando en la creación de un "Refence" (libro y sitio web) para que así más
+        personas puedan beneficiarse de esto y avanzar más en este increíble deporte mental.
+      </span>
+    ),
+    Tags: {
+      English: ["Competitive Programming", "C++", "Webapp", "React", "Typescript", "Book"],
+      Spanish: ["Programación Competitiva", "C++", "Webapp", "React", "Typescript", "Libro"],
     },
   },
   ManageYourCinema: {
@@ -419,51 +469,8 @@ const Projects: ProjectsI = {
         "MaterializeCSS",
         "DP",
         "Programación Competitiva",
-        "proyecto de una noche",
+        "Proyecto de una noche",
       ],
-    },
-  },
-  CompetitiveReference: {
-    Title: (
-      <span>
-        {" "}
-        <b>Competitive</b>Reference
-      </span>
-    ),
-    LinkToProject: "https://github.com/CompilandoConocimiento/Reference",
-    CheckOut: "https://compilandoconocimiento.github.io/Reference/",
-    Color: "blue-grey darken-3",
-    English: (
-      <span>
-        This is all my personal implementations of the most famous and useful competitive
-        programming algorithms.
-        <br />
-        <br />
-        Most of the implementations are in C++, but you can also find them in C and even in Python
-        and Java.
-        <br />
-        <br />
-        I'm also working on creating a Reference (Book & Website) so many more people can benefit
-        from it, and get further along in this awesome mind-sport.
-      </span>
-    ),
-    Spanish: (
-      <span>
-        Recopilación de mis implementaciones personales de los más famosos y útiles algoritmos de la
-        programación competitiva.
-        <br />
-        <br />
-        La mayoría de las implementaciones están en C ++, pero también puedes encontrar algunas en C
-        e incluso en Python y Java.
-        <br />
-        <br />
-        También estoy trabajando en la creación de un "Refence" (libro y sitio web) para que así más
-        personas puedan beneficiarse de esto y avanzar más en este increíble deporte mental.
-      </span>
-    ),
-    Tags: {
-      English: ["Competitive Programming", "C++", "Webapp", "React", "Typescript", "Book"],
-      Spanish: ["Programación Competitiva", "C++", "Webapp", "React", "Typescript", "Libro"],
     },
   },
 }

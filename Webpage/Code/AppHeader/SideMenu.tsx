@@ -68,16 +68,16 @@ const SoyOscarRHLogo: FunctionComponent<{
 export const LinksToSocialMedia: React.FunctionComponent = () => (
   <div className="row">
     <a target="_blank" rel="noopener noreferrer" href="https://github.com/SoyOscarRH">
-      <img className="col s3" src="Assets/Icons/github.png" />
+      <img title="GitHub" className="col s3" src="Assets/Icons/github.png" />
     </a>
     <a target="_blank" rel="noopener noreferrer" href="http://compilandoconocimiento.com/">
-      <img className="col s3" src="Assets/Icons/wordpress.png" />
+      <img title="Wordpress" className="col s3" src="Assets/Icons/wordpress.png" />
     </a>
     <a target="_blank" rel="noopener noreferrer" href="http://twitter.com/SoyOscarRH">
-      <img className="col s3" src="Assets/Icons/twitter.png" />
+      <img title="Twitter" className="col s3" src="Assets/Icons/twitter.png" />
     </a>
     <a target="_blank" rel="noopener noreferrer" href="https://telegram.me/SoyOscarRH">
-      <img className="col s3" src="Assets/Icons/telegram.png" />
+      <img title="Telegram" className="col s3" src="Assets/Icons/telegram.png" />
     </a>
   </div>
 )

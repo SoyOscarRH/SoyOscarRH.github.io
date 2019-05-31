@@ -115,7 +115,9 @@ const CardActions: FunctionComponent<{
   else
     return (
       <a href={props.link} target="_blank" rel="noopener noreferrer">
-        {["Check out", "Velo tu mismo"][index]}
+        <b>
+          {["Check out", "Velo tu mismo"][index]}
+        </b>
       </a>
     )
 }

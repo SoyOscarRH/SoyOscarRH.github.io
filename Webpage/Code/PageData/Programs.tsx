@@ -84,6 +84,41 @@ const Programs: ProgramsI = {
       Spanish: ["Matematicas", "Interpolante", "Spline"],
     },
   },
+  FastGoodCheap: {
+    Title: (
+      <span>
+        <b>FastGoodCheap</b>
+      </span>
+    ),
+    CheckOut: "https://soyoscarrh.github.io/FastGoodCheap/",
+    LinkToProject: "https://github.com/SoyOscarRH/GoodFastCheap",
+    Color: "red accent-3",
+    English: (
+      <span>
+        A few years ago I found a <b><span style={{cursor: "pointer"}} onClick={() => window.open("https://twitter.com/missingcloudltd/status/826203153934729218", "_blank")}>
+        tweet</span></b> that animated the classic idea that you can not have everything in life.
+        <br />
+        So when I had a free day, I made an application that does just that, three buttons, but
+        it's impossible to have them all turned on at the same time, you can edit the text and share your
+        creations. :D
+      </span>
+    ),
+    Spanish: (
+      <span>
+        Hace unos años encontré un 
+        <b><span style={{cursor: "pointer"}} onClick={() => window.open("https://twitter.com/missingcloudltd/status/826203153934729218", "_blank")}>
+          tweet</span></b> que animaba la clásica idea de que no puedes tenerlo todo en la vida.
+        <br />
+        Así que cuando un día tuve tiempo libre hice una aplicación que hace justo eso, tres botones, pero
+        es imposible tenerlos todos encendidos al mismo tiempo, puedes editar el texto y compartir tus
+        creaciones. :D
+      </span>
+    ),
+    Tags: {
+      English: ["React", "CSS animations", "One Night project", "Simple app"],
+      Spanish: ["React", "Animaciones con CSS", "Proyecto de clase", "Simple app"],
+    },
+  },
   LearningFlutter: {
     Title: (
       <span>
@@ -180,6 +215,38 @@ const Programs: ProgramsI = {
     Tags: {
       English: ["Math", "Complex Analysis", "Python2"],
       Spanish: ["Matemáticas", "Análisis Complejo", "Python2"],
+    },
+  },
+  Arquitectura: {
+    Title: (
+      <span>
+        <b>Arquitectura</b>
+      </span>
+    ),
+    LinkToProject:
+      "http://escolares.arq.unam.mx",
+    Color: "grey darken-2",
+    English: (
+      <span>
+        I made the design for this page, during my internship in my university, 
+        it is not my best job, it is in fact my first work in web.
+        <br />
+        <br />
+        It is not responsive and the layout is made with table, is horrible, but everyone start somewhere. 
+      </span>
+    ),
+    Spanish: (
+      <span>
+        Yo hice el diseño de esta página, durante mi primer becaria en mi universidad,
+        no es mi mejor trabajo, de hecho fue mi primer trabajo relacionado con web.
+        <br />
+        <br />
+        No es rensponsiva y la "layout" esta hecha con tables, es horrible, pero todos empiezan en algun lado.
+      </span>
+    ),
+    Tags: {
+      English: ["Web", "horrible", ":/"],
+      Spanish: ["Web", "horrible", ":/"],
     },
   },
   Fractals: {

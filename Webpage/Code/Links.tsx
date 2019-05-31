@@ -23,6 +23,7 @@ const SectionLink: FunctionComponent<SectionLinkProps> = props => {
     <a href={props.link !== "" ? props.link : "#" + props.text}>
       <div
         onClick={handleClick}
+        title={props.text}
         className={"card-panel hoverable white " + Styles.GridElement}
         style={{ backgroundImage, cursor: "pointer" }}
       />
