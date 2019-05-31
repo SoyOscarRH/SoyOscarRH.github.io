@@ -53,9 +53,24 @@
   text-align: justify;
 }
 
+
+
+
+
+
+
+
+
+.Image {
+  max-width: 18vh;
+}
+
 @media (min-width: 550px) {
     .GridLinks {
       grid-template-columns: 1fr 1fr 1fr;
+    }
+    .Image {
+      max-width: 21vh;
     }
 }
 
@@ -67,11 +82,19 @@
   .Container {
     padding: 3rem;
   }
+
+  .Image {
+    max-width: 25vh;
+  }
 }
 
 @media (min-width: 800px) {
     .GridLinks {
       grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .Image {
+      max-width: 27vh;
     }
 }
 
@@ -82,5 +105,9 @@
 
   .Container {
     padding: 5rem;
+  }
+
+  .Image {
+    max-width: 29vh;
   }
 }

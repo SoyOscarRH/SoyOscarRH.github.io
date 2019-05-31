@@ -33,7 +33,7 @@ const SectionLink: FunctionComponent<SectionLinkProps> = props => {
 
 const Links: FunctionComponent = () => {
   return (
-    <div className={`center-align ${Styles.Container}`}>
+    <div className={`center-align ${Styles.Container}`} style={{paddingBottom: 0}}>
       <div className={Styles.GridLinks}>
         <SectionLink text={"Projects"} link={""} src={"Assets/Links/LinksProjects"} />
         <SectionLink text={"Programs"} link={""} src={"Assets/Links/LinksPrograms"} />
