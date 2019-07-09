@@ -4,7 +4,9 @@
 
 This is a simple webapp to show all the projects, books and cool programs that I have made.
 
-<img 
-  src="https://raw.githubusercontent.com/SoyOscarRH/SoyOscarRH.github.io/master/Assets/Gist.png" 
-  style="max-width: 500px;"
-/>
+<a href="https://soyoscarrh.github.io/" target="_blank">
+  <img 
+    src="https://raw.githubusercontent.com/SoyOscarRH/SoyOscarRH.github.io/master/Assets/Gist.png" 
+    style="max-width: 500px;"
+  />
+</a>
