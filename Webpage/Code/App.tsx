@@ -89,3 +89,22 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById("ReactApp")
 )
+
+document.addEventListener("DOMContentLoaded", () => {
+  const lazyImages = [].slice.call(document.querySelectorAll("img.lazy"))
+
+  if ("IntersectionObserver" in window) {
+    const lazyImageObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return
+
+        const lazyImage = entry.target as HTMLImageElement
+        lazyImage.src = lazyImage.dataset.src as string
+        lazyImage.classList.remove("lazy")
+        lazyImageObserver.unobserve(lazyImage)
+      })
+    })
+
+    lazyImages.forEach(lazyImage => lazyImageObserver.observe(lazyImage))
+  }
+})

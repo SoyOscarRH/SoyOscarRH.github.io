@@ -1,58 +1,35 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <!-- Please UFT IS LOVE -->
-        <meta charset="UTF-8">
+  <head>
+    <!-- Please UFT IS LOVE -->
+    <meta charset="UTF-8">
 
-        <!-- How we should see it -->
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!-- How we should see it -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-        <!-- Color in Android Header -->
-        <meta name="theme-color" content="#37474f">
+    <!-- Color in Android Header -->
+    <meta name="theme-color" content="#37474f">
 
-        <!-- Icon of the App -->
-        <link rel="icon" href="Assets/Favicon.png">
+    <!-- Icon of the App -->
+    <link rel="icon" href="Assets/Favicon.png">
 
-        <!-- Compiled and minified CSS for Materialize CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified CSS for Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-        <!-- Google Material Fonts -->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400" rel="stylesheet">
+    <!-- Google Material Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"  />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400" />
 
-        <title>SoyOscarRH</title>
-    </head>
+    <title>SoyOscarRH</title>
+  </head>
 
-    <body>
-        <div id="ReactApp" />
-        <script src="Webpage/Distribution/bundle.js" type="text/javascript"></script>
-    </body>
+  <body>
+    <div id="ReactApp" />
+    <script src="Webpage/Distribution/bundle.js" type="text/javascript"></script>
+  </body>
 
-    <style>
-        html, body {
-            height:100%;
-        }
-    </style>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const lazyImages = [].slice.call(document.querySelectorAll("img.lazy"))
-
-            if ("IntersectionObserver" in window) {
-                const lazyImageObserver = new IntersectionObserver((entries, observer) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            const lazyImage = entry.target
-                            lazyImage.src = lazyImage.dataset.src
-                            lazyImage.classList.remove("lazy")
-                            lazyImageObserver.unobserve(lazyImage)
-                        }
-                    })
-                })
-
-                lazyImages.forEach( lazyImage =>  lazyImageObserver.observe(lazyImage))
-            }
-        })
-    </script>
+  <style>
+    html, body { height: 100%; }
+  </style>
 
 </html>
