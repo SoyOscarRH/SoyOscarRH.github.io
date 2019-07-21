@@ -8,6 +8,7 @@ export interface Project {
   Color: string
   English: JSX.Element
   Spanish: JSX.Element
+  Extension?: string
   Tags: LanguageOption<Array<string>>
 }
 
@@ -92,6 +93,7 @@ const Projects: ProjectsI = {
         la naturaleza del deporte) en este proyecto no te puedo prometer nada. Lo siento. :(
       </span>
     ),
+    Extension: "jpg",
     Tags: {
       English: ["C++", "Competitive Programming", "Solutions", "Online Judges"],
       Spanish: ["C++", "Programación Competitiva", "Soluciones", "Jueces en línea"],
@@ -112,17 +114,17 @@ const Projects: ProjectsI = {
         This was a school project for my Compiler class.
         <br />
         <br />
-        It allows you to create tokens, finite state automatas and context free grammars; and with them a lexical and
-        syntactical analyzer. This have been the most ambitious project I have participated on;
-        also, I did not do this alone, but with the help of Alan Ontiveros and Laura Lopez, my
-        classroom partners and friends.
+        It allows you to create tokens, finite state automatas and context free grammars; and with
+        them a lexical and syntactical analyzer. This have been the most ambitious project I have
+        participated on; also, I did not do this alone, but with the help of Alan Ontiveros and
+        Laura Lopez, my classroom partners and friends.
         <br />
         <br />
-        We did operations for automatas like: join, concatenate, closures, convert to deterministic, 
+        We did operations for automatas like: join, concatenate, closures, convert to deterministic,
         create basic automata, create from regular expression, lexical analysis, etc.
         <br />
-        And for grammars operations like: LL(1), LR(0), LALR(1), LR(1) and Earley parsing, seeing step 
-        by step this process (table generation and string parsing).
+        And for grammars operations like: LL(1), LR(0), LALR(1), LR(1) and Earley parsing, seeing
+        step by step this process (table generation and string parsing).
       </span>
     ),
     Spanish: (
@@ -130,18 +132,17 @@ const Projects: ProjectsI = {
         Esto fue un proyecto para mi clase de Compiladores.
         <br />
         <br />
-        Permite la creación de tokens, autómatas de estados finitos y gramáticas libres de contexto; y con ellas crear un analizador
-        sintáctico y semántico. Este ha sido el proyecto más ambicioso en el que he participado; eso
-        si, no he hecho este proyecto solo, sino con la ayuda de Alan Ontivieros y Laura Lopez, mis
-        compañeros de clase y amigos.
+        Permite la creación de tokens, autómatas de estados finitos y gramáticas libres de contexto;
+        y con ellas crear un analizador sintáctico y semántico. Este ha sido el proyecto más
+        ambicioso en el que he participado; eso si, no he hecho este proyecto solo, sino con la
+        ayuda de Alan Ontivieros y Laura Lopez, mis compañeros de clase y amigos.
         <br />
         <br />
-        Para los autómatas tenemos operaciones disponibles como: "join", "concatenate", "closures", 
-        "convert to deterministic", "create basic automata", "create from regular expression", 
+        Para los autómatas tenemos operaciones disponibles como: "join", "concatenate", "closures",
+        "convert to deterministic", "create basic automata", "create from regular expression",
         "lexical analysis", etc.
-        <br />
-        Y para las gramaticas había operaciones como: LL(1), LR(0), LALR(1), LR(1) y "Earley parsing", 
-        incluso podrías ver paso a paso el proceso.
+        <br />Y para las gramaticas había operaciones como: LL(1), LR(0), LALR(1), LR(1) y "Earley
+        parsing", incluso podrías ver paso a paso el proceso.
       </span>
     ),
     Tags: {
@@ -325,6 +326,7 @@ const Projects: ProjectsI = {
         español.
       </span>
     ),
+    Extension: "jpg",
     Tags: {
       English: ["CRUD", "MaterializeCSS", "jQuery", "PHP", "MySQL"],
       Spanish: ["Altas Bajas Cambios", "MaterializeCSS", "jQuery", "PHP", "MySQL"],
@@ -413,6 +415,7 @@ const Projects: ProjectsI = {
         \BigBrackets, \Generic Field, etc...
       </span>
     ),
+    Extension: "jpg",
     Tags: {
       English: ["LaTeX", "Math", "Reference"],
       Spanish: ["LaTeX", "Matemáticas", "Referencia"],

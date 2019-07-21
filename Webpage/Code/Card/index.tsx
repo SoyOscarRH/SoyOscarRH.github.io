@@ -115,9 +115,7 @@ const CardActions: FunctionComponent<{
   else
     return (
       <a href={props.link} target="_blank" rel="noopener noreferrer">
-        <b>
-          {["Check out", "Velo tu mismo"][index]}
-        </b>
+        <b>{["Check out", "Velo tu mismo"][index]}</b>
       </a>
     )
 }
@@ -126,7 +124,7 @@ const ImageIcon: FunctionComponent = () => {
   const { name: language, index } = useContext(LanguageContext)
 
   const { Element, name, type } = useContext(CardInfoContext)
-  const { Color: color, LinkToProject: link, Title: title } = Element
+  const { Color: color, LinkToProject: link, Title: title, Extension: extension } = Element
   const tooltipped = ["See it in Github", "Ver el proyecto en Github"][index]
 
   const folder = type === "Book" ? "Books" : "Projects"
@@ -135,12 +133,12 @@ const ImageIcon: FunctionComponent = () => {
   if (type === "Book") icon = "book"
   else if (type === "Project") icon = "dashboard"
   else if (type === "Program") icon = "description"
-
+  
   return (
     <React.Fragment>
       <img
         className="materialboxed lazy"
-        data-src={`Assets/${folder}/${name}.png`}
+        data-src={`Assets/${folder}/${name}.${extension == null ? "png" : extension}`}
         src={"Assets/Blank.png"}
       />
       <span className="card-title blue-grey-text text-darken-4 valign-wrapper">
