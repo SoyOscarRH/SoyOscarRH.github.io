@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useContext } from "react"
 import { SidenavMaterialCSSContext, navigateTo } from "../AppHeader"
-import { LanguageContext, ToggleLanguageContext } from "../Helpers/Language"
+import { LanguageContext, ToggleLanguageContext } from "../App/Language"
 
 import getSections, { Section } from "../PageData/SideMenuData"
 

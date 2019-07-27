@@ -1,7 +1,7 @@
 import { Books } from "../PageData"
 import Projects from "../PageData/Projects"
 import Programs from "../PageData/Programs"
-import { Language } from "../Helpers/Language"
+import { Language } from "../App/Language"
 
 type linkName = string
 type linkURL = string

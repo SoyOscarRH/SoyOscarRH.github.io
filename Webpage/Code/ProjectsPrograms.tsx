@@ -5,7 +5,7 @@ import { ProjectsI } from "./PageData/Projects"
 import { ProgramsI } from "./PageData/Programs"
 import Card from "./Card"
 
-import { LanguageContext } from "./Helpers/Language"
+import { LanguageContext } from "./App/Language"
 
 import * as Styles from "./Card/Styles.css"
 

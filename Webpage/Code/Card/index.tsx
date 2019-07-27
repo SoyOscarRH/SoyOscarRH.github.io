@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useContext } from "react"
 
-import { LanguageContext } from "../Helpers/Language"
+import { LanguageContext } from "../App/Language"
 import { Project } from "../PageData/Projects"
 import { Program } from "../PageData/Programs"
 import { Book } from "../PageData/Books"

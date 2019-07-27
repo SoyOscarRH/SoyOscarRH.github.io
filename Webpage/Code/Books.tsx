@@ -1,7 +1,7 @@
 import React, { FunctionComponent, useContext, useEffect } from "react"
 import M from "materialize-css"
 
-import { LanguageOption, LanguageContext } from "./Helpers/Language"
+import { LanguageOption, LanguageContext } from "./App/Language"
 import { BooksI } from "./PageData/Books"
 import Card from "./Card"
 

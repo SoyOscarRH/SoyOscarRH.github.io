@@ -1,7 +1,7 @@
 import React, { FunctionComponent, useContext, useState, useEffect } from "react"
 import M from "materialize-css"
 
-import { ToggleLanguageContext } from "../Helpers/Language"
+import { ToggleLanguageContext } from "../App/Language"
 import NavigationMenu from "./NavigationMenu"
 import SideMenu from "./SideMenu"
 

@@ -1,5 +1,5 @@
 import React from "react"
-import { LanguageOption } from "../Helpers/Language"
+import { LanguageOption } from "../App/Language"
 
 export interface Program {
   Title: JSX.Element
@@ -93,7 +93,7 @@ const Programs: ProgramsI = {
       </span>
     ),
     CheckOut: "https://soyoscarrh.github.io/FastGoodCheap/",
-    LinkToProject: "https://github.com/SoyOscarRH/GoodFastCheap",
+    LinkToProject: "https://github.com/SoyOscarRH/FastGoodCheap",
     Color: "red accent-3",
     English: (
       <span>
