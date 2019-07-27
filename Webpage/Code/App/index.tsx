@@ -1,15 +1,14 @@
 import React, { StrictMode, FunctionComponent, useEffect } from "react"
 import ReactDOM from "react-dom"
 
-import M from "materialize-css"
-
 import { useCreateLanguage, LanguageContext, ToggleLanguageContext } from "./Language"
 import lazyLoadImages from "./lazyLoadImages"
+import showToast from "./showToast"
 
 import AboutMeData from "../PageData/AboutMe"
 import ProjectsData from "../PageData/Projects"
 import ProgramsData from "../PageData/Programs"
-import { Books as BooksData, AboutBooks as AboutBooksData } from "../PageData"
+import { BooksData, AboutBooksData } from "../PageData"
 
 import AppHeader from "../AppHeader"
 import Links from "../Links"
@@ -20,23 +19,10 @@ import Footer from "../Footer"
 
 const App: FunctionComponent = () => {
   const [language, toggleLanguage] = useCreateLanguage()
-  console.log(language)
 
   useEffect(() => {
-
-    M.toast({
-      html: `
-      <button 
-        class   = "btn-flat toast-action"
-        onClick = window.changeMessage()>
-        ${["¿Cambiar idioma?", "Change language?"][language.index]}
-      </button>`,
-      displayLength: 8000,
-    })
-
-    // [WTF]! If someone know a better way tell me :c
-    window["toggleLanguage"] = toggleLanguage
-  }, [language, toggleLanguage])
+    setTimeout(() => showToast(language, toggleLanguage), 1500)
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps 
 
   return (
     <LanguageContext.Provider value={language}>
@@ -46,11 +32,8 @@ const App: FunctionComponent = () => {
         </header>
       </ToggleLanguageContext.Provider>
 
-      <main id="start">
-        <section id="AboutMe">
-          <AboutMe AboutMe={AboutMeData[language.name]} />
-        </section>
-
+      <main>
+        <AboutMe id="AboutMe" AboutMe={AboutMeData[language.name]} />
         <Links id="Links" />
 
         <section id="ProjectsAndPrograms">

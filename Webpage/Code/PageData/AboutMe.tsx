@@ -5,7 +5,7 @@ export interface AboutMeI {
   SayHi: JSX.Element
   ShowMyCV: string
   Text: Array<string>
-  Tags?: Array<string>
+  Tags: Array<string>
 }
 
 const AboutMe: LanguageOption<AboutMeI> = {

@@ -1,6 +1,6 @@
 .Links {
   padding-bottom: 0 !important;
-  padding-top: 3rem !important;
+  padding-top: 2.5rem !important;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -16,7 +16,6 @@
   cursor: pointer;
 }
 
-
 @media (min-width: 550px) {
   .Links {
     grid-template-columns: 1fr 1fr 1fr;
@@ -26,5 +25,9 @@
 @media (min-width: 800px) {
   .Links {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .Button {
+    height: 5.5rem;
   }
 }

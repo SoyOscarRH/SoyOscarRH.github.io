@@ -1,12 +1,12 @@
+const speedTyping = 70
+const speedNewLine = 600
+
 const printInDOMNode = (DOMNode: HTMLElement, Text: Array<string>) => {
-  const textToShow = Text
-  const speedTyping = 70,
-    speedNewLine = 600
-  let textPosition = 0,
-    lineSize = textToShow[0].length
-  let index = 0,
-    contents = "",
-    row = 0
+  let textPosition = 0
+  let lineSize = Text[0].length
+  let index = 0
+  let contents = ""
+  let row = 0
   let continueMessage = true
 
   const typeText = () => {
@@ -26,12 +26,12 @@ const printInDOMNode = (DOMNode: HTMLElement, Text: Array<string>) => {
       }
     } else setTimeout(typeText, speedTyping)
   }
-
   typeText()
 
-  return () => {
+  const stopWriting = () => {
     continueMessage = false
   }
+  return stopWriting
 }
 
 export default printInDOMNode

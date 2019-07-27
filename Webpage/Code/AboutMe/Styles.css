@@ -1,0 +1,39 @@
+.Tag {
+  font-size: 1.5vh;
+  display: inline;
+  padding: 0.6rem;
+}
+
+.AboutMe {
+  padding-bottom: 2.5rem !important;
+  padding-top: 1rem !important;
+  background-color: #e0f2f1;
+}
+
+.Image {
+  max-width: 18vh;
+}
+
+@media (min-width: 550px) {
+  .Image {
+    max-width: 21vh;
+  }
+}
+
+@media (min-width: 750px) {
+  .Image {
+    max-width: 25vh;
+  }
+}
+
+@media (min-width: 800px) {
+  .Image {
+    max-width: 27vh;
+  }
+}
+
+@media (min-width: 950px) {
+  .Image {
+    max-width: 29vh;
+  }
+}

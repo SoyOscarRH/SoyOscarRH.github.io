@@ -2,35 +2,32 @@ import React, { FunctionComponent, useEffect } from "react"
 import { AboutMeI } from "../PageData/AboutMe"
 import { LinksToSocialMedia } from "../AppHeader/SideMenu"
 
-import * as Styles from "../Card/Styles.css"
+import * as GeneralStyles from "../App/GeneralStyles.css"
+import * as Styles from "./Styles.css"
 
 import printInDOMNode from "./printInDOMNode"
 
-const AboutMeSection: FunctionComponent<{ AboutMe: AboutMeI }> = props => {
-  const { Text } = props.AboutMe
+const AboutMeSection: FunctionComponent<{ AboutMe: AboutMeI; id: string }> = ({ id, AboutMe }) => {
+  const { Text, SayHi, ShowMyCV, Tags } = AboutMe
+
   useEffect(() => {
     const DOMNode = document.getElementById("movingText") as HTMLElement
-    const stopWriting = printInDOMNode(DOMNode, Text)
-    return stopWriting
+    return printInDOMNode(DOMNode, Text)
   }, [Text])
 
-  const chips =
-    props.AboutMe.Tags &&
-    props.AboutMe.Tags.map(Tag => (
-      <span
-        key={Tag}
-        style={{ fontSize: "1.5vh", display: "inline", padding: "0.6rem" }}
-        className="chip"
-      >
-        {Tag}
-      </span>
-    ))
+  const chips = Tags.map(tag => (
+    <span key={tag} className={"chip " + Styles.Tag}>
+      {tag}
+    </span>
+  ))
+
+  const className = [GeneralStyles.Container, GeneralStyles.Card, Styles.AboutMe].join(" ")
 
   return (
-    <div className={"teal lighten-5 z-depth-1 blue-grey-text text-darken-4 " + Styles.Container}>
+    <div className={className} id={id}>
       <div style={{ display: "grid", gridGap: "1rem" }}>
         <h5 style={{ fontWeight: 440 }}>
-          {props.AboutMe.SayHi} <b>R</b>osas <b>H</b>ernandez
+          {SayHi} <b>R</b>osas <b>H</b>ernandez
         </h5>
 
         <div style={{ fontWeight: 300, fontSize: "2vh" }}>
@@ -44,7 +41,12 @@ const AboutMeSection: FunctionComponent<{ AboutMe: AboutMeI }> = props => {
                 </div>
               </div>
             </div>
-            <img title="Me" src="Assets/Profile.png" className={Styles.Image} style={{ padding: 0 }} />
+            <img
+              title="Me"
+              src="Assets/Profile.png"
+              className={Styles.Image}
+              style={{ padding: 0 }}
+            />
           </div>
         </div>
       </div>
@@ -55,9 +57,10 @@ const AboutMeSection: FunctionComponent<{ AboutMe: AboutMeI }> = props => {
           <LinksToSocialMedia />
         </div>
       </div>
+
       <a className="btn indigo lighten-1" href="Resume.pdf" target="_blank">
         <span className="hide-on-med-and-up"> CURRICULUM </span>
-        <span className="hide-on-small-only"> {props.AboutMe.ShowMyCV} </span>
+        <span className="hide-on-small-only"> {ShowMyCV} </span>
       </a>
     </div>
   )

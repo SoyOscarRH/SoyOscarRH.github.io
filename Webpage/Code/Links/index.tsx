@@ -10,7 +10,7 @@ const Button: FC<{ title: string; src: string; link?: string }> = ({ title, src,
   const language = useContext(LanguageContext)
   const backgroundImage = `url('${src + ["", "ES"][language.index] + ".jpg"}')`
   const href = link ? link : "#" + title
-  const className = Styles.Button + " " + GeneralStyles.Card
+  const className = [Styles.Button, GeneralStyles.Card, GeneralStyles.CardHoverable].join(" ")
 
   const handleClick = (event: React.MouseEvent) => {
     link ? window.open(link, "_blank") : navigateTo(document.getElementById(title))
@@ -23,9 +23,10 @@ const Button: FC<{ title: string; src: string; link?: string }> = ({ title, src,
 const Links: FC<{ id: string }> = ({ id }) => {
   const resume = "https://soyoscarrh.github.io/Resume.pdf"
   const myTwitter = "https://twitter.com/SoyOscarRH"
+  const className = [GeneralStyles.Container, Styles.Links].join(" ")
 
   return (
-    <section id={id} className={GeneralStyles.Container + " " + Styles.Links}>
+    <section id={id} className={className}>
       <Button title={"Projects"} src={"Assets/Links/LinksProjects"} />
       <Button title={"Programs"} src={"Assets/Links/LinksPrograms"} />
       <Button title={"Books"} src={"Assets/Links/LinksBooks"} />

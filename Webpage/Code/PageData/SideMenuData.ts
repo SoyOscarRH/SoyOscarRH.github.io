@@ -1,4 +1,4 @@
-import { Books } from "../PageData"
+import { BooksData } from "../PageData"
 import Projects from "../PageData/Projects"
 import Programs from "../PageData/Programs"
 import { Language } from "../App/Language"
@@ -20,7 +20,7 @@ export interface Sections {
 const getSections = (language: Language) => {
   const { name, index } = language
 
-  const BooksNames: Array<Link> = Object.entries(Books).map(
+  const BooksNames: Array<Link> = Object.entries(BooksData).map(
     ([nameForLink, data]) => [data.SimpleTitle[name], nameForLink] as Link
   )
 

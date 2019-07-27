@@ -105,7 +105,7 @@ const Programs: ProgramsI = {
               window.open("https://twitter.com/missingcloudltd/status/826203153934729218", "_blank")
             }
           >
-            tweet
+            {" "}tweet
           </span>
         </b>{" "}
         that animated the classic idea that you can not have everything in life.
