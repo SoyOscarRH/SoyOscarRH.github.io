@@ -14,5 +14,7 @@ export const TagsPart: string;
 export const tagsPart: string;
 export const TextStyle: string;
 export const textStyle: string;
+export const Title: string;
+export const title: string;
 export const Image: string;
 export const image: string;

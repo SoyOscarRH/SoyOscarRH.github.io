@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useEffect } from "react"
 import { AboutMeI } from "../PageData/AboutMe"
-import { LinksToSocialMedia } from "../AppHeader/SideMenu"
+import { LinksToSocialMedia } from "../Header/SideMenu"
 
 import * as GeneralStyles from "../App/GeneralStyles.css"
 import * as Styles from "./Styles.css"
@@ -30,7 +30,7 @@ const AboutMeSection: FunctionComponent<{ AboutMe: AboutMeI; id: string }> = ({ 
           {SayHi} <b>R</b>osas <b>H</b>ernandez
         </h5>
 
-        <div style={{ fontWeight: 300, fontSize: "2vh" }}>
+        <div style={{ fontWeight: 300, fontSize: "1.7vh" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr auto" }}>
             <div style={{ display: "grid", gridTemplateRows: "1fr auto" }}>
               <span id="movingText" />
@@ -43,7 +43,7 @@ const AboutMeSection: FunctionComponent<{ AboutMe: AboutMeI; id: string }> = ({ 
             </div>
             <img
               title="Me"
-              src="Assets/Profile.png"
+              src="Assets/Profile2.jpg"
               className={Styles.Image}
               style={{ padding: 0 }}
             />
@@ -58,7 +58,12 @@ const AboutMeSection: FunctionComponent<{ AboutMe: AboutMeI; id: string }> = ({ 
         </div>
       </div>
 
-      <a className="btn indigo lighten-1" href="Resume.pdf" target="_blank">
+      <a
+        className="btn indigo lighten-1"
+        href="Resume.pdf"
+        target="_blank"
+        style={{ fontWeight: 600 }}
+      >
         <span className="hide-on-med-and-up"> CURRICULUM </span>
         <span className="hide-on-small-only"> {ShowMyCV} </span>
       </a>

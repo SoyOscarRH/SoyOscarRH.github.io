@@ -59,7 +59,7 @@ export const Card: FunctionComponent<CardInfo> = props => {
           <div className={Styles.BottomPart}>
             <ShowTags tags={props.Element.Tags[language]} />
 
-            <div className="card-action" style={cardActionsStyle}>
+            <div className="card-action" style={{ ...cardActionsStyle, fontWeight: 600 }}>
               <CardActions type={props.type} link={link} />
             </div>
           </div>
@@ -115,7 +115,7 @@ const CardActions: FunctionComponent<{
   else
     return (
       <a href={props.link} target="_blank" rel="noopener noreferrer">
-        <b>{["Check out", "Velo tu mismo"][index]}</b>
+        {["Check out", "Velo tu mismo"][index]}
       </a>
     )
 }
@@ -133,7 +133,7 @@ const ImageIcon: FunctionComponent = () => {
   if (type === "Book") icon = "book"
   else if (type === "Project") icon = "dashboard"
   else if (type === "Program") icon = "description"
-  
+
   return (
     <React.Fragment>
       <img
@@ -141,7 +141,7 @@ const ImageIcon: FunctionComponent = () => {
         data-src={`Assets/${folder}/${name}.${extension == null ? "png" : extension}`}
         src={"Assets/Blank.png"}
       />
-      <span className="card-title blue-grey-text text-darken-4 valign-wrapper">
+      <span className={"card-title blue-grey-text text-darken-4 valign-wrapper " + Styles.Title}>
         <i className="material-icons" style={{ fontSize: "1.5rem" }}>
           {icon}
         </i>
@@ -188,7 +188,7 @@ const ListInCard: React.StatelessComponent<{
 
   return (
     <React.Fragment>
-      <span className="card-title grey-text text-darken-4 valign-wrapper">
+      <span className={"card-title grey-text text-darken-4 valign-wrapper " + Styles.Title}>
         {["Topics in the Book", "Temario del Libro"][index]}
         <i className="material-icons right">close</i>
       </span>

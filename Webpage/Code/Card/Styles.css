@@ -50,22 +50,28 @@
 
 .TextStyle {
   padding: 0.2rem;
+  font-size: 0.95rem !important;
   text-align: justify;
 }
 
-
+.Title {
+  font-size: 1.6rem;
+  color: rgb(38, 50, 56);
+  font-family: Raleway, -apple-system, Roboto, sans-serif;
+  overflow: hidden;
+}
 
 .Image {
   max-width: 18vh;
 }
 
 @media (min-width: 550px) {
-    .GridLinks {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-    .Image {
-      max-width: 21vh;
-    }
+  .GridLinks {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .Image {
+    max-width: 21vh;
+  }
 }
 
 @media (min-width: 750px) {
@@ -83,13 +89,13 @@
 }
 
 @media (min-width: 800px) {
-    .GridLinks {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
+  .GridLinks {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 
-    .Image {
-      max-width: 27vh;
-    }
+  .Image {
+    max-width: 27vh;
+  }
 }
 
 @media (min-width: 950px) {

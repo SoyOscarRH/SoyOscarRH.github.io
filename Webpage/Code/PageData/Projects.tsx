@@ -99,57 +99,50 @@ const Projects: ProjectsI = {
       Spanish: ["C++", "Programación Competitiva", "Soluciones", "Jueces en línea"],
     },
   },
-  DIYCompiler: {
+  CompetitiveReference: {
     Title: (
       <span>
         {" "}
-        <b>DUY</b>Compiler
+        <b>Competitive</b>Reference
       </span>
     ),
-    LinkToProject: "https://github.com/SoyOscarRH/Compiler",
-    CheckOut: "https://compilandoconocimiento.github.io/Compiler/#/grammars",
-    Color: "orange",
+    LinkToProject: "https://github.com/CompilandoConocimiento/Reference",
+    CheckOut: "https://compilandoconocimiento.github.io/Reference/",
+    Color: "blue-grey darken-3",
     English: (
       <span>
-        This was a school project for my Compiler class.
+        This is all my personal implementations of the most famous and useful competitive
+        programming algorithms.
         <br />
         <br />
-        It allows you to create tokens, finite state automatas and context free grammars; and with
-        them a lexical and syntactical analyzer. This have been the most ambitious project I have
-        participated on; also, I did not do this alone, but with the help of Alan Ontiveros and
-        Laura Lopez, my classroom partners and friends.
+        Most of the implementations are in C++, but you can also find them in C and even in Python
+        and Java.
         <br />
         <br />
-        We did operations for automatas like: join, concatenate, closures, convert to deterministic,
-        create basic automata, create from regular expression, lexical analysis, etc.
-        <br />
-        And for grammars operations like: LL(1), LR(0), LALR(1), LR(1) and Earley parsing, seeing
-        step by step this process (table generation and string parsing).
+        I'm also working on creating a Reference (Book & Website) so many more people can benefit
+        from it, and get further along in this awesome mind-sport.
       </span>
     ),
     Spanish: (
       <span>
-        Esto fue un proyecto para mi clase de Compiladores.
+        Recopilación de mis implementaciones personales de los más famosos y útiles algoritmos de la
+        programación competitiva.
         <br />
         <br />
-        Permite la creación de tokens, autómatas de estados finitos y gramáticas libres de contexto;
-        y con ellas crear un analizador sintáctico y semántico. Este ha sido el proyecto más
-        ambicioso en el que he participado; eso si, no he hecho este proyecto solo, sino con la
-        ayuda de Alan Ontivieros y Laura Lopez, mis compañeros de clase y amigos.
+        La mayoría de las implementaciones están en C ++, pero también puedes encontrar algunas en C
+        e incluso en Python y Java.
         <br />
         <br />
-        Para los autómatas tenemos operaciones disponibles como: "join", "concatenate", "closures",
-        "convert to deterministic", "create basic automata", "create from regular expression",
-        "lexical analysis", etc.
-        <br />Y para las gramaticas había operaciones como: LL(1), LR(0), LALR(1), LR(1) y "Earley
-        parsing", incluso podrías ver paso a paso el proceso.
+        También estoy trabajando en la creación de un "Refence" (libro y sitio web) para que así más
+        personas puedan beneficiarse de esto y avanzar más en este increíble deporte mental.
       </span>
     ),
     Tags: {
-      English: ["MaterializeCSS", "React", "Typescript", "Class project", "SPA"],
-      Spanish: ["MaterializeCSS", "React", "Typescript", "Proyecto de clase", "SPA"],
+      English: ["Competitive Programming", "C++", "Webapp", "React", "Typescript", "Book"],
+      Spanish: ["Programación Competitiva", "C++", "Webapp", "React", "Typescript", "Libro"],
     },
   },
+
   Binary: {
     Title: (
       <span>
@@ -247,47 +240,55 @@ const Projects: ProjectsI = {
       ],
     },
   },
-  CompetitiveReference: {
+  DIYCompiler: {
     Title: (
       <span>
         {" "}
-        <b>Competitive</b>Reference
+        <b>DUY</b>Compiler
       </span>
     ),
-    LinkToProject: "https://github.com/CompilandoConocimiento/Reference",
-    CheckOut: "https://compilandoconocimiento.github.io/Reference/",
-    Color: "blue-grey darken-3",
+    LinkToProject: "https://github.com/SoyOscarRH/Compiler",
+    CheckOut: "https://compilandoconocimiento.github.io/Compiler/#/grammars",
+    Color: "orange",
     English: (
       <span>
-        This is all my personal implementations of the most famous and useful competitive
-        programming algorithms.
+        This was a school project for my Compiler class.
         <br />
         <br />
-        Most of the implementations are in C++, but you can also find them in C and even in Python
-        and Java.
+        It allows you to create tokens, finite state automatas and context free grammars; and with
+        them a lexical and syntactical analyzer. This have been the most ambitious project I have
+        participated on; also, I did not do this alone, but with the help of Alan Ontiveros and
+        Laura Lopez, my classroom partners and friends.
         <br />
         <br />
-        I'm also working on creating a Reference (Book & Website) so many more people can benefit
-        from it, and get further along in this awesome mind-sport.
+        We did operations for automatas like: join, concatenate, closures, convert to deterministic,
+        create basic automata, create from regular expression, lexical analysis, etc.
+        <br />
+        And for grammars operations like: LL(1), LR(0), LALR(1), LR(1) and Earley parsing, seeing
+        step by step this process (table generation and string parsing).
       </span>
     ),
     Spanish: (
       <span>
-        Recopilación de mis implementaciones personales de los más famosos y útiles algoritmos de la
-        programación competitiva.
+        Esto fue un proyecto para mi clase de Compiladores.
         <br />
         <br />
-        La mayoría de las implementaciones están en C ++, pero también puedes encontrar algunas en C
-        e incluso en Python y Java.
+        Permite la creación de tokens, autómatas de estados finitos y gramáticas libres de contexto;
+        y con ellas crear un analizador sintáctico y semántico. Este ha sido el proyecto más
+        ambicioso en el que he participado; eso si, no he hecho este proyecto solo, sino con la
+        ayuda de Alan Ontivieros y Laura Lopez, mis compañeros de clase y amigos.
         <br />
         <br />
-        También estoy trabajando en la creación de un "Refence" (libro y sitio web) para que así más
-        personas puedan beneficiarse de esto y avanzar más en este increíble deporte mental.
+        Para los autómatas tenemos operaciones disponibles como: "join", "concatenate", "closures",
+        "convert to deterministic", "create basic automata", "create from regular expression",
+        "lexical analysis", etc.
+        <br />Y para las gramaticas había operaciones como: LL(1), LR(0), LALR(1), LR(1) y "Earley
+        parsing", incluso podrías ver paso a paso el proceso.
       </span>
     ),
     Tags: {
-      English: ["Competitive Programming", "C++", "Webapp", "React", "Typescript", "Book"],
-      Spanish: ["Programación Competitiva", "C++", "Webapp", "React", "Typescript", "Libro"],
+      English: ["MaterializeCSS", "React", "Typescript", "Class project", "SPA"],
+      Spanish: ["MaterializeCSS", "React", "Typescript", "Proyecto de clase", "SPA"],
     },
   },
   ManageYourCinema: {

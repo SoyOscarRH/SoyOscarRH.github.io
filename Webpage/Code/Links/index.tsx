@@ -1,6 +1,6 @@
 import React, { FunctionComponent as FC, useContext } from "react"
 
-import { navigateTo } from "../AppHeader"
+import navigateTo from "../Helpers/navigateTo"
 import { LanguageContext } from "../App/Language"
 
 import * as Styles from "./Styles.css"

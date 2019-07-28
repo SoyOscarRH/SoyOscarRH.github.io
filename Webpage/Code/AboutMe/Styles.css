@@ -12,6 +12,7 @@
 
 .Image {
   max-width: 18vh;
+  border-radius: 100%;
 }
 
 @media (min-width: 550px) {

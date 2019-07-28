@@ -1,3 +1,5 @@
+export const Root: string;
+export const root: string;
 export const Container: string;
 export const container: string;
 export const Toast: string;

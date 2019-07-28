@@ -180,6 +180,34 @@ const Programs: ProgramsI = {
       Spanish: ["proyecto de una noche", "Google Development Group", "Flutter", "Dart"],
     },
   },
+  MyBoilerplates: {
+    Title: (
+      <span>
+        <b>My</b>Boilerplates
+      </span>
+    ),
+    LinkToProject:
+      "https://github.com/SoyOscarRH/MyBoilerplates",
+    Color: "blue darken-1",
+    English: (
+      <span>
+        A set of my boilerplates for many of my projects: For front end (Babel, Prettier, eslint,
+        webpack, typescript configuration, etc...) and for C++ (clang-format) and my editors
+        (vs-code-settings)
+      </span>
+    ),
+    Spanish: (
+      <span>
+        Un conjunto de 'templates' que uso para muchos mis projects: Para frontend (Babel, Prettier,
+        eslint, webpack, la configuración de typescript, etc...)
+      </span>
+    ),
+    Extension: "jpg",
+    Tags: {
+      English: ["Templates", "Personal", "Frontend", "C++"],
+      Spanish: ["Templates", "Personal", "Frontend", "C++"],
+    },
+  },
   LinearRegression: {
     Title: (
       <span>
@@ -359,34 +387,6 @@ const Programs: ProgramsI = {
     Tags: {
       English: ["Weird project", "Sketch", "Python"],
       Spanish: ["Un proyecto raro", "Sketch", "Python"],
-    },
-  },
-  MyBoilerplates: {
-    Title: (
-      <span>
-        <b>My</b>Boilerplates
-      </span>
-    ),
-    LinkToProject:
-      "https://github.com/SoyOscarRH/MyBoilerplates",
-    Color: "blue darken-1",
-    English: (
-      <span>
-        A set of my boilerplates for many of my projects: For front end (Babel, Prettier, eslint,
-        webpack, typescript configuration, etc...) and for C++ (clang-format) and my editors
-        (vs-code-settings)
-      </span>
-    ),
-    Spanish: (
-      <span>
-        Un conjunto de 'templates' que uso para muchos mis projects: Para frontend (Babel, Prettier,
-        eslint, webpack, la configuración de typescript, etc...)
-      </span>
-    ),
-    Extension: "jpg",
-    Tags: {
-      English: ["Templates", "Personal", "Frontend", "C++"],
-      Spanish: ["Templates", "Personal", "Frontend", "C++"],
     },
   },
 }

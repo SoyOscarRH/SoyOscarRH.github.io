@@ -1,0 +1,37 @@
+.Header {
+  color: white;
+}
+
+.Nav {
+  background-color: #263238;
+  padding: 0 6vw;
+}
+
+.Icon {
+  cursor: pointer;
+  margin: 0 0 3rem 0;
+}
+
+.Home {
+  cursor: pointer;
+  height: "100%";
+  text-align: right;
+}
+
+.MyIcon {
+  width: 2.3rem;
+  vertical-align: middle;
+}
+
+.Title {
+  font-size: 1.4rem;
+  font-family: Raleway, -apple-system, Roboto, sans-serif;
+}
+
+.Logo {
+  font-family: Raleway, -apple-system, Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 2.3rem;
+  margin: 2.5rem;
+  color: #1f3c88;
+}

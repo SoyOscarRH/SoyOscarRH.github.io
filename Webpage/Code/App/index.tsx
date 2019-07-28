@@ -1,16 +1,15 @@
 import React, { StrictMode, FunctionComponent, useEffect } from "react"
 import ReactDOM from "react-dom"
 
-import { useCreateLanguage, LanguageContext, ToggleLanguageContext } from "./Language"
-import lazyLoadImages from "./lazyLoadImages"
-import showToast from "./showToast"
+import { useCreateLanguage, LanguageContext } from "./Language"
+import showToast from "../Helpers/showToast"
 
 import AboutMeData from "../PageData/AboutMe"
 import ProjectsData from "../PageData/Projects"
 import ProgramsData from "../PageData/Programs"
 import { BooksData, AboutBooksData } from "../PageData"
 
-import AppHeader from "../AppHeader"
+import Header from "../Header"
 import Links from "../Links"
 import AboutMe from "../AboutMe"
 import ProjectsPrograms from "../ProjectsPrograms"
@@ -21,18 +20,14 @@ const App: FunctionComponent = () => {
   const [language, toggleLanguage] = useCreateLanguage()
 
   useEffect(() => {
-    setTimeout(() => showToast(language, toggleLanguage), 1500)
-  }, []) // eslint-disable-line react-hooks/exhaustive-deps 
+    setTimeout(() => showToast(language, toggleLanguage), 3000)
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <LanguageContext.Provider value={language}>
-      <ToggleLanguageContext.Provider value={toggleLanguage}>
-        <header>
-          <AppHeader />
-        </header>
-      </ToggleLanguageContext.Provider>
+      <Header toggleLanguage={toggleLanguage} />
 
-      <main>
+      <main id="start">
         <AboutMe id="AboutMe" AboutMe={AboutMeData[language.name]} />
         <Links id="Links" />
 
@@ -52,6 +47,7 @@ const App: FunctionComponent = () => {
   )
 }
 
+import lazyLoadImages from "../Helpers/lazyLoadImages"
 document.addEventListener("DOMContentLoaded", lazyLoadImages)
 
 const DOM_NODE = document.getElementById("ReactApp")
