@@ -4,13 +4,13 @@
 
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-column-gap: 1.4rem;
-  grid-row-gap: 1.4rem;
+  grid-column-gap: 1.2rem;
+  grid-row-gap: 1.2rem;
 }
 
 .Button {
   grid-column: auto;
-  height: 4.5rem;
+  height: 4rem;
   background-position: center;
   background-size: 100%;
   cursor: pointer;
@@ -28,6 +28,6 @@
   }
 
   .Button {
-    height: 5.5rem;
+    height: 5rem;
   }
 }

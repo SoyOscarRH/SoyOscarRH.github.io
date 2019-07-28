@@ -4,6 +4,11 @@
   padding: 0.6rem;
 }
 
+.Text {
+  font-weight: 300;
+  font-size: 0.90rem;
+}
+
 .AboutMe {
   padding-bottom: 2.5rem !important;
   padding-top: 1rem !important;
@@ -13,17 +18,26 @@
 .Image {
   max-width: 18vh;
   border-radius: 100%;
+  margin: 1rem 1rem 0 1rem;
 }
 
 @media (min-width: 550px) {
   .Image {
     max-width: 21vh;
   }
+
+  .Text {
+    font-size: 1rem;
+  }
 }
 
 @media (min-width: 750px) {
   .Image {
     max-width: 25vh;
+    margin: 0rem 1rem 0 1rem;
+  }
+  .Text {
+    font-size: 1.1rem;
   }
 }
 
@@ -31,10 +45,16 @@
   .Image {
     max-width: 27vh;
   }
+  .Text {
+    font-size: 1.215rem;
+  }
 }
 
 @media (min-width: 950px) {
   .Image {
     max-width: 29vh;
+  }
+  .Text {
+    font-size: 1.25rem;
   }
 }

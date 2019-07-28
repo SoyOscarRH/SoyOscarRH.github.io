@@ -30,7 +30,7 @@ const AboutMeSection: FunctionComponent<{ AboutMe: AboutMeI; id: string }> = ({ 
           {SayHi} <b>R</b>osas <b>H</b>ernandez
         </h5>
 
-        <div style={{ fontWeight: 300, fontSize: "1.7vh" }}>
+        <div className={Styles.Text}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr auto" }}>
             <div style={{ display: "grid", gridTemplateRows: "1fr auto" }}>
               <span id="movingText" />

@@ -1,5 +1,7 @@
 export const Tag: string;
 export const tag: string;
+export const Text: string;
+export const text: string;
 export const AboutMe: string;
 export const aboutMe: string;
 export const Image: string;
