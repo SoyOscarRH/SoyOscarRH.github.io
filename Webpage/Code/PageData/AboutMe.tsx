@@ -18,9 +18,9 @@ const AboutMe: LanguageOption<AboutMeI> = {
     ShowMyCV: "SEE MY CURRICULUM",
     Text: [
       "Nerd.",
-      "Computer scientist, engineer, addicted to memes, working to be a better version of myself. " +
-      "Interested in competitive programming, even if I suck at it. I believe that the web is the " +
-      "platform of the future. Lover of pure mathematics, the more useless the better, economics, machine learning and philosophy.",
+      "Computer scientist, engineer, addicted to memes, working to be a better version of myself. ",
+      "Interested in competitive programming, even if I suck at it. I believe that the web is the platform of the future.",
+      "Lover of pure mathematics, the more useless the better, economics, machine learning and philosophy.",
       "Founder of CompilandoConocimiento.",
       "World citizen ",
     ],
@@ -36,8 +36,8 @@ const AboutMe: LanguageOption<AboutMeI> = {
     ShowMyCV: "VER MI CURRICULUM",
     Text: [
       "Nerd.",
-      "Computólogo, adicto a los memes y a la vida en la biblioteca, muy interesado en la " +
-      "programación competitiva, aunque sea un asco. Creo que la web es la plataforma del futuro." +
+      "Computólogo, adicto a los memes; trabajando en crear una mejor versión de mi mismo.",
+      "Muy interesado en la  programación competitiva, aunque sea un asco. Creo que la web es la plataforma del futuro.",
       "Amante de la matemática pura, el machine learning, economía y filosofía.",
       "Fundador de CompilandoConocimiento.",
       "Ciudadano del mundo ",
