@@ -1,7 +1,7 @@
 const costumeSource = "data-src"
 
 const loadImage = (image: HTMLImageElement) => {
-  image.src = image.getAttribute("data-src") as string
+  image.src = image.getAttribute(costumeSource) as string
   image.removeAttribute(costumeSource)
   image.classList.remove("lazy")
 }
