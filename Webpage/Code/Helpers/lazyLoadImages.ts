@@ -1,19 +1,28 @@
+const costumeSource = "dataset-src"
+
+const loadImage = (image: HTMLImageElement) => {
+  image.src = image[costumeSource]
+  image.removeAttribute(costumeSource)
+  image.classList.remove("lazy")
+}
+
 const lazyLoadImages = () => {
-  const lazyImages = Array.from(document.querySelectorAll("img.lazy"))
+  const DOMNodes = document.querySelectorAll("img.lazy")
+  const lazyImages = Array.from(DOMNodes) as Array<HTMLImageElement>
 
   if ("IntersectionObserver" in window) {
     const lazyImageObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return
-
-        const lazyImage = entry.target as HTMLImageElement
-        lazyImage.src = lazyImage.dataset.src as string
-        lazyImage.classList.remove("lazy")
-        lazyImageObserver.unobserve(lazyImage)
+      entries.forEach(({ isIntersecting, target }) => {
+        if (isIntersecting) {
+          loadImage(target as HTMLImageElement)
+          lazyImageObserver.unobserve(target)
+        }
       })
     })
 
     lazyImages.forEach(lazyImage => lazyImageObserver.observe(lazyImage))
+  } else {
+    lazyImages.forEach(image => loadImage(image))
   }
 }
 
