@@ -7,7 +7,6 @@ import Card from "./Card"
 
 import * as Styles from "./Card/Styles.css"
 
-console.log({Styles})
 interface BooksDataI {
   Books: BooksI
   AboutBooks: LanguageOption<JSX.Element>
