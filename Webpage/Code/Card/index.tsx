@@ -135,7 +135,7 @@ const ImageIcon: FunctionComponent = () => {
   else if (type === "Program") icon = "description"
 
   return (
-    <React.Fragment>
+    <>
       <img
         className="materialboxed lazy"
         data-src={`Assets/${folder}/${name}.${extension == null ? "png" : extension}`}
@@ -159,7 +159,7 @@ const ImageIcon: FunctionComponent = () => {
       >
         <img src="Assets/Icons/githubMini.png" />
       </a>
-    </React.Fragment>
+    </>
   )
 }
 
