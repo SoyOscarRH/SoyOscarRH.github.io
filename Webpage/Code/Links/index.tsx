@@ -32,6 +32,8 @@ const Links: FC<{ id: string }> = ({ id }) => {
       <Button title={"Books"} src={"Assets/Links/LinksBooks"} />
       <Button title={"Education"} link={resume} src={"Assets/Links/LinksEdu"} />
       <Button title={"Interests"} link={myTwitter} src={"Assets/Links/LinksInterests"} />
+      <Button title={"Awards"} link={resume} src={"Assets/Links/LinksAwards"} />
+      <Button title={"Certifications"} link={resume} src={"Assets/Links/LinksCertifications"} />
     </section>
   )
 }
