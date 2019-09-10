@@ -247,7 +247,7 @@ const Projects: ProjectsI = {
         <b>DUY</b>Compiler
       </span>
     ),
-    LinkToProject: "https://github.com/SoyOscarRH/Compiler",
+    LinkToProject: "https://github.com/CompilandoConocimiento/Compiler",
     CheckOut: "https://compilandoconocimiento.github.io/Compiler/#/grammars",
     Color: "orange",
     English: (
