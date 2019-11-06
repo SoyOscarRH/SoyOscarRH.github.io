@@ -19,6 +19,13 @@ export default function Footer() {
         <div className="container">
           Made by Oscar Andrés Rosas Hernandez. {daysSince(new Date("03/23/1998"))} days alive
         </div>
+
+        <div
+          className="container"
+          onClick={() => (window.location.href = "http://soyoscarrh.github.io/Andres_public.keys")}
+        >
+          Keys
+        </div>
       </div>
     </footer>
   )
