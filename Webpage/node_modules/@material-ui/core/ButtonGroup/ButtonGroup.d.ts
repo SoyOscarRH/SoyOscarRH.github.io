@@ -1,26 +1,31 @@
 import * as React from 'react';
 import { PropTypes } from '..';
-import { OverridableComponent, SimplifiedPropsOf } from '../OverridableComponent';
+import { OverridableComponent, OverrideProps } from '../OverridableComponent';
 
-declare const ButtonGroup: OverridableComponent<{
-  props: {
+export interface ButtonGroupTypeMap<P = {}, D extends React.ElementType = 'div'> {
+  props: P & {
     color?: PropTypes.Color;
     disabled?: boolean;
     disableFocusRipple?: boolean;
     disableRipple?: boolean;
     fullWidth?: boolean;
     size?: 'small' | 'medium' | 'large';
-    variant?: 'outlined' | 'contained';
+    variant?: 'text' | 'outlined' | 'contained';
   };
-  defaultComponent: 'div';
+  defaultComponent: D;
   classKey: ButtonGroupClassKey;
-}>;
+}
+
+declare const ButtonGroup: OverridableComponent<ButtonGroupTypeMap>;
 
 export type ButtonGroupClassKey =
   | 'root'
   | 'contained'
   | 'fullWidth'
   | 'grouped'
+  | 'groupedText'
+  | 'groupedTextPrimary'
+  | 'groupedTextSecondary'
   | 'groupedOutlined'
   | 'groupedOutlinedPrimary'
   | 'groupedOutlinedSecondary'
@@ -28,6 +33,9 @@ export type ButtonGroupClassKey =
   | 'groupedContainedPrimary'
   | 'groupedContainedSecondary';
 
-export type ButtonGroupProps = SimplifiedPropsOf<typeof ButtonGroup>;
+export type ButtonGroupProps<
+  D extends React.ElementType = ButtonGroupTypeMap['defaultComponent'],
+  P = {}
+> = OverrideProps<ButtonGroupTypeMap<P, D>, D>;
 
 export default ButtonGroup;
