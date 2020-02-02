@@ -19,7 +19,7 @@ const AboutMe: LanguageOption<AboutMeI> = {
     Text: [
       "Nerd.",
       "Computer scientist, engineer, addicted to memes, working to be a better version of myself. ",
-      "Interested in competitive programming, even if I suck at it. I believe that the web is the platform of the future.",
+      "Interested in competitive programming, even if I suck at it. I believe the web is the platform of the future.",
       "Lover of pure mathematics, the more useless the better, economics, machine learning and philosophy.",
       "Founder of CompilandoConocimiento.",
       "World citizen ",

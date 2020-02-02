@@ -5,7 +5,7 @@ const daysSince = (date: Date) => {
   const date1 = date.getTime()
   const date2 = Date.now()
 
-  return Math.round(date2 - date1 / milisecondsInADay)
+  return Math.round((date2 - date1) / milisecondsInADay)
 }
 
 const Footer = () => (
