@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <title>Resume</title>
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Resume</title>
+  </head>
 
-    <body />
+  <body />
 
-    <script type="text/javascript">
-        window.location.replace("https://SoyOscarRH.github.io/Resume.pdf");
-    </script>
+  <script type="text/javascript">
+    var current = window.location.href.toLocaleLowerCase();
+    var resume = "SoyOscarRH.github.io/Resume".toLocaleLowerCase();
 
+    if (current.indexOf("") !== -1)
+      window.location.replace("https://SoyOscarRH.github.io/Resume.pdf");
+    else window.location.replace("https://SoyOscarRH.github.io");
+  </script>
 </html>
