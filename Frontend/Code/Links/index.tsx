@@ -27,13 +27,13 @@ const Links: FC<{ id: string }> = ({ id }) => {
 
   return (
     <section id={id} className={className}>
-      <Button title={"Projects"} src={"Assets/Links/LinksProjects"} />
-      <Button title={"Programs"} src={"Assets/Links/LinksPrograms"} />
-      <Button title={"Books"} src={"Assets/Links/LinksBooks"} />
-      <Button title={"Education"} link={resume} src={"Assets/Links/LinksEdu"} />
-      <Button title={"Interests"} link={myTwitter} src={"Assets/Links/LinksInterests"} />
-      <Button title={"Awards"} link={resume} src={"Assets/Links/LinksAwards"} />
-      <Button title={"Certifications"} link={resume} src={"Assets/Links/LinksCertifications"} />
+      <Button title={"Projects"} src={"Images/Links/LinksProjects"} />
+      <Button title={"Programs"} src={"Images/Links/LinksPrograms"} />
+      <Button title={"Books"} src={"Images/Links/LinksBooks"} />
+      <Button title={"Education"} link={resume} src={"Images/Links/LinksEdu"} />
+      <Button title={"Interests"} link={myTwitter} src={"Images/Links/LinksInterests"} />
+      <Button title={"Awards"} link={resume} src={"Images/Links/LinksAwards"} />
+      <Button title={"Certifications"} link={resume} src={"Images/Links/LinksCertifications"} />
     </section>
   )
 }
