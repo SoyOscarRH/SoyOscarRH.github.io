@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useEffect } from "react"
+import React, { FunctionComponent, useEffect, useState, useCallback } from "react"
 import { AboutMeI } from "../PageData/AboutMe"
 import { LinksToSocialMedia } from "../Header/SideMenu"
 
@@ -9,6 +9,12 @@ import printInDOMNode from "./printInDOMNode"
 
 const AboutMeSection: FunctionComponent<{ AboutMe: AboutMeI; id: string }> = ({ id, AboutMe }) => {
   const { Text, SayHi, ShowMyCV, Tags } = AboutMe
+
+  const [profileID, updateProfileID] = useState(0)
+  useEffect(() => {
+    let id = setInterval(() => updateProfileID(c => (c + 1) % 4), 10000)
+    return () => clearInterval(id)
+  }, [updateProfileID])
 
   useEffect(() => {
     const DOMNode = document.getElementById("movingText") as HTMLElement
@@ -43,7 +49,7 @@ const AboutMeSection: FunctionComponent<{ AboutMe: AboutMeI; id: string }> = ({ 
             </div>
             <img
               title="Me"
-              src="Images/Profile.jpg"
+              src={`Images/Profiles/Profile${profileID}.jpg`}
               className={Styles.Image}
               style={{ padding: 0 }}
             />

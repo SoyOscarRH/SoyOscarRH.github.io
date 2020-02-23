@@ -99,6 +99,174 @@ const Projects: ProjectsI = {
       Spanish: ["C++", "Programación Competitiva", "Soluciones", "Jueces en línea"],
     },
   },
+  LearningNeuralNetworks: {
+    Title: (
+      <span>
+        {" "}
+        <b>Learning</b>Neural<b>Networks</b>
+      </span>
+    ),
+    LinkToProject: "https://github.com/SoyOscarRH/LearningNeuralNetworks",
+    CheckOut: "https://github.com/SoyOscarRH/LearningNeuralNetworks",
+    Color: "blue",
+    English: (
+      <React.Fragment>
+        <span>All the code for my experiments learning deep learning and neuronal networks:</span>
+        <ul style={{ padding: "0rem 0.8rem", textAlign: "left" }}>
+          <li style={{ listStyleType: "disc" }}>
+            <em>Surnames origins</em>: A RRN using PyTorch (+ a DIY LSTM module) that can predict
+            the origin of a surname.
+          </li>
+          <li style={{ listStyleType: "disc" }}>
+            <em>CIFAR10</em>: A RRN using PyTorch that classifies images suing the CIFAR10 dataset.
+          </li>
+          <li style={{ listStyleType: "disc" }}>
+            <em>Style transfer</em> using a convolutional nn; a Udacity's PyTorch exercise.
+          </li>
+          <li style={{ listStyleType: "disc" }}>
+            <em>MNIST using a MLP</em>: This is a classic example, a net that recognize digits.
+          </li>
+        </ul>
+      </React.Fragment>
+    ),
+    Spanish: (
+      <React.Fragment>
+        <span>
+          Aquí esta todo el código que cree cuando estuve aprendiendo sobre redes neuronales y
+          aprendizaje profundo:
+        </span>
+        <ul style={{ padding: "0rem 0.8rem", textAlign: "left" }}>
+          <li style={{ listStyleType: "disc" }}>
+            <em>Origen de los apellidos</em>: una RRN que utiliza PyTorch (+ un módulo DIY LSTM) que
+            puede predecir el origen de un apellido.
+          </li>
+          <li style={{ listStyleType: "disc" }}>
+            <em>CIFAR10</em>: una RRN que usa PyTorch para clasificar las imágenes del dataset
+            CIFAR10.
+          </li>
+          <li style={{ listStyleType: "disc" }}>
+            <em>Style transfer</em> Transferencia de estilo usando una nn convolucional; un
+            ejercicio del curso de PyTorch de Udacity.
+          </li>
+          <li style={{ listStyleType: "disc" }}>
+            <em>MNIST using a MLP</em>: Este es un ejemplo clásico, una red que reconoce dígitos.
+          </li>
+        </ul>
+      </React.Fragment>
+    ),
+    Extension: "jpg",
+    Tags: {
+      English: ["Python", "Pytorch", "Udacity", "ML"],
+      Spanish: ["Python", "Pytorch", "Udacity", "ML"],
+    },
+  },
+  Binary: {
+    Title: (
+      <span>
+        {" "}
+        <b>Binary</b>Conversions
+      </span>
+    ),
+    LinkToProject: "https://github.com/SoyOscarRH/Binary",
+    CheckOut: "https://soyoscarrh.github.io/Binary/#/FromBinarytoComplement2/",
+    Color: "green",
+    English: (
+      <span>
+        This was a project just for fun to really understand floating-point numbers / arithmetic and
+        binary conversions (complement-1 and complement 2).
+        <br />
+        <br />
+        It allows you to transform a binary number to decimal and backwards, the basic ideas for
+        represent negative integers (complement 1, complement 2 and partial representation) and IEEE
+        floating-point.
+        <br />
+        <br />
+        All the code and documentation is in English, but all the text inside the app is in Spanish
+        (my mother tongue).
+      </span>
+    ),
+    Spanish: (
+      <span>
+        Este fue un proyecto pequeño para ayudarme a comprender realmente los números de punto
+        flotante y su aritmética y las conversiones binarias (complemento 1 y complemento 2).
+        <br />
+        <br />
+        Le permite transformar un número binario a decimal y al revés, las ideas básicas para
+        representar a los negativos (complemento 1, complemento 2 y la representación parcial) y
+        sobre el punto flotante de la IEEE.
+        <br />
+        <br />
+        Todo el código fuente está en inglés, pero todo el texto interno de la aplicación está en
+        español.
+      </span>
+    ),
+    Tags: {
+      English: ["MaterializeCSS", "React", "One Night project", "SPA"],
+      Spanish: ["MaterializeCSS", "React", "Proyecto de clase", "SPA"],
+    },
+  },
+  AIWithLisp: {
+    Title: (
+      <span>
+        {" "}
+        <b>AI</b>With<b>Lisp</b>
+      </span>
+    ),
+    LinkToProject: "https://github.com/SoyOscarRH/AIWithLisp",
+    Color: "purple",
+    English: (
+      <React.Fragment>
+        <span>
+          Simple AI exercises using and learning Common Lisp during my class: "Introduction to
+          Artificial Intelligence " at the Computer Research Center CIC at my university.
+        </span>
+        <ul style={{ padding: "0rem 0.8rem", textAlign: "left" }}>
+          <li style={{ listStyleType: "disc" }}>
+            <em>Mazes</em>: This is an AI that solves any maze you throw at it, it has multiple
+            versions including 3D mazes.
+          </li>
+          <li style={{ listStyleType: "disc" }}>
+            <em>Tic-tac-toe / 4 in line (gato)</em>: This is a classic AI puzzle, to create an agent
+            that wins any tic-tac-toe match it can.
+          </li>
+          <li style={{ listStyleType: "disc" }}>
+            <em>Microworlds</em>: Created an agent that was responsible for the movements /
+            decisions of the animals of a world to archive equilibrium, using a paradigm based on
+            rules, I created rules to make the ecosystem thrive.
+          </li>
+        </ul>
+      </React.Fragment>
+    ),
+    Spanish: (
+      <React.Fragment>
+        <span>
+          Ejercicios de IA usando Common Lisp que hice durante mi clase: "Introducción a la
+          Inteligencia Artificial" en el Centro de Investigación Informática CIC en mi universidad.
+        </span>
+        <ul style={{ padding: "0rem 0.8rem", textAlign: "left" }}>
+          <li style={{ listStyleType: "disc" }}>
+            <em>Mazes</em>: Esta es una IA que resuelve cualquier laberinto que le arrojes, tiene
+            múltiples versiones que incluyen laberintos 3D.
+          </li>
+          <li style={{ listStyleType: "disc" }}>
+            <em>Tic-tac-toe / 4 in line (gato)</em>: este es un clásico juego de IA, crear un agente
+            que gane cualquier partido de tic-tac-toe que pueda.
+          </li>
+          <li style={{ listStyleType: "disc" }}>
+            <em>Microworlds</em>: creé un agente responsable de los movimientos / decisiones de los
+            animales de un mundo para lograr el equilibrio, utilizando un paradigma basado en
+            reglas, creé reglas para hacer prosperar el ecosistema.
+          </li>
+        </ul>
+      </React.Fragment>
+    ),
+    Tags: {
+      English: ["Lisp", "AI", "Mazes"],
+      Spanish: ["Lisp", "AI", "Mazes"],
+    },
+    Extension: "jpg",
+  },
+
   CompetitiveReference: {
     Title: (
       <span>
@@ -140,52 +308,6 @@ const Projects: ProjectsI = {
     Tags: {
       English: ["Competitive Programming", "C++", "Webapp", "React", "Typescript", "Book"],
       Spanish: ["Programación Competitiva", "C++", "Webapp", "React", "Typescript", "Libro"],
-    },
-  },
-
-  Binary: {
-    Title: (
-      <span>
-        {" "}
-        <b>Binary</b>Conversions
-      </span>
-    ),
-    LinkToProject: "https://github.com/CompilandoConocimiento/Binary",
-    CheckOut: "https://compilandoconocimiento.github.io/Binary/#/FromBinarytoComplement2/",
-    Color: "green",
-    English: (
-      <span>
-        This was a project just for fun to really understand floating-point numbers / arithmetic and
-        binary conversions (complement-1 and complement 2).
-        <br />
-        <br />
-        It allows you to transform a binary number to decimal and backwards, the basic ideas for
-        represent negative integers (complement 1, complement 2 and partial representation) and IEEE
-        floating-point.
-        <br />
-        <br />
-        All the code and documentation is in English, but all the text inside the app is in Spanish
-        (my mother tongue).
-      </span>
-    ),
-    Spanish: (
-      <span>
-        Este fue un proyecto pequeño para ayudarme a comprender realmente los números de punto
-        flotante y su aritmética y las conversiones binarias (complemento 1 y complemento 2).
-        <br />
-        <br />
-        Le permite transformar un número binario a decimal y al revés, las ideas básicas para
-        representar a los negativos (complemento 1, complemento 2 y la representación parcial) y
-        sobre el punto flotante de la IEEE.
-        <br />
-        <br />
-        Todo el código fuente está en inglés, pero todo el texto interno de la aplicación está en
-        español.
-      </span>
-    ),
-    Tags: {
-      English: ["MaterializeCSS", "React", "One Night project", "SPA"],
-      Spanish: ["MaterializeCSS", "React", "Proyecto de clase", "SPA"],
     },
   },
   OrganizeAnEvent: {
@@ -240,56 +362,45 @@ const Projects: ProjectsI = {
       ],
     },
   },
-  DIYCompiler: {
+  CellularAutomata: {
     Title: (
       <span>
         {" "}
-        <b>DUY</b>Compiler
+        <b>Cellular</b>Automata
       </span>
     ),
-    LinkToProject: "https://github.com/CompilandoConocimiento/Compiler",
-    CheckOut: "https://compilandoconocimiento.github.io/Compiler/#/grammars",
-    Color: "orange",
+    LinkToProject: "https://github.com/SoyOscarRH/CellularAutomata",
+    CheckOut: "https://SoyOscarRH.github.io/CellularAutomata/",
+    Color: "blue-grey darken-2",
     English: (
       <span>
-        This was a school project for my Compiler class.
+        This is webapp let you see all the elementary automata, you can edit the size of the cell,
+        how many iterations and even see an analysis. It is a one day project, so dont expect
+        anything fancy, but really beautiful images.
         <br />
         <br />
-        It allows you to create tokens, finite state automatas and context free grammars; and with
-        them a lexical and syntactical analyzer. This have been the most ambitious project I have
-        participated on; also, I did not do this alone, but with the help of Alan Ontiveros and
-        Laura Lopez, my classroom partners and friends.
-        <br />
-        <br />
-        We did operations for automatas like: join, concatenate, closures, convert to deterministic,
-        create basic automata, create from regular expression, lexical analysis, etc.
-        <br />
-        And for grammars operations like: LL(1), LR(0), LALR(1), LR(1) and Earley parsing, seeing
-        step by step this process (table generation and string parsing).
+        Really recommend to check rules: 30, 54, 60, 126, 182, 150, 57.
       </span>
     ),
     Spanish: (
       <span>
-        Esto fue un proyecto para mi clase de Compiladores.
+        Esta aplicación web te permite ver todos los autómatas elementales, puedes editar el tamaño
+        de la celda, cuántas iteraciones e incluso ver un análisis. Es un proyecto de un día, así
+        que no esperes nada elegante, pero hay realmente bellas imágenes aquí.
         <br />
         <br />
-        Permite la creación de tokens, autómatas de estados finitos y gramáticas libres de contexto;
-        y con ellas crear un analizador sintáctico y semántico. Este ha sido el proyecto más
-        ambicioso en el que he participado; eso si, no he hecho este proyecto solo, sino con la
-        ayuda de Alan Ontivieros y Laura Lopez, mis compañeros de clase y amigos.
+        La mayoría de las implementaciones están en C ++, pero también puedes encontrar algunas en C
+        e incluso en Python y Java.
         <br />
         <br />
-        Para los autómatas tenemos operaciones disponibles como: "join", "concatenate", "closures",
-        "convert to deterministic", "create basic automata", "create from regular expression",
-        "lexical analysis", etc.
-        <br />Y para las gramaticas había operaciones como: LL(1), LR(0), LALR(1), LR(1) y "Earley
-        parsing", incluso podrías ver paso a paso el proceso.
+        Realmente recomiendo checar las reglas: 30, 54, 60, 126, 182, 150, 57.
       </span>
     ),
     Tags: {
-      English: ["MaterializeCSS", "React", "Typescript", "Class project", "SPA"],
-      Spanish: ["MaterializeCSS", "React", "Typescript", "Proyecto de clase", "SPA"],
+      English: ["React", "Complex Systems", "Automatas"],
+      Spanish: ["React", "Sistemas complejos", "Automatas"],
     },
+    Extension: "jpg",
   },
   ManageYourCinema: {
     Title: (
@@ -331,6 +442,56 @@ const Projects: ProjectsI = {
     Tags: {
       English: ["CRUD", "MaterializeCSS", "jQuery", "PHP", "MySQL"],
       Spanish: ["Altas Bajas Cambios", "MaterializeCSS", "jQuery", "PHP", "MySQL"],
+    },
+  },
+  ThingsWithCryptography: {
+    Title: (
+      <span>
+        {" "}
+        <b>Things</b>With<b>Crypto</b>
+      </span>
+    ),
+    LinkToProject: "https://github.com/SoyOscarRH/ThingsWithCryptography",
+    Color: "red",
+    English: (
+      <React.Fragment>
+        <span>Proyectos que hice mientras aprendía sobre criptografía</span>
+        <ul style={{ padding: "0rem 0.8rem", textAlign: "left" }}>
+          <li style={{ listStyleType: "disc" }}>
+            <em>Hybrid app</em>: una aplicación web con diferentes tipos de servicios, como
+            confidencialidad, autentica o ambos para mensajes (inspirados en PGP), que nosotros (yo
+            y un amigo Oscar David) desarrollamos. La aplicación se cifra con AES y RSA con la firma
+            digital.
+          </li>
+          <li style={{ listStyleType: "disc" }}>
+            <em>Binary field</em>: Una clase de C++ que permite almacenar los elementos de un campo
+            finito, especialmente GF (2 ^ 8), como el que se usa en AES.
+          </li>
+          <li style={{ listStyleType: "disc" }}>
+            <em>Lenstra algorithm</em>: Una implementación del algoritmo de lenstra, utiliza curvas
+            elípticas para factorizar enteros.
+          </li>
+        </ul>
+      </React.Fragment>
+    ),
+    Spanish: (
+      <span>
+        Mini proyecto INCOMPLETO para un sistema web que puede controlar un cine (venta de dulces y
+        boletos)
+        <br />
+        <br />
+        Permite crear usuarios y administrarlos, vender dulces y palomitas, y las entradas para el
+        cine.
+        <br />
+        <br />
+        Todo el código fuente está en inglés, pero todo el texto interno de la aplicación está en
+        español.
+      </span>
+    ),
+    Extension: "jpg",
+    Tags: {
+      English: ["Python", "Cryptography"],
+      Spanish: ["Python", "Criptografia"],
     },
   },
   TdeTiendita: {
@@ -475,6 +636,57 @@ const Projects: ProjectsI = {
         "Programación Competitiva",
         "Proyecto de una noche",
       ],
+    },
+  },
+  DIYCompiler: {
+    Title: (
+      <span>
+        {" "}
+        <b>DIY</b>Compiler
+      </span>
+    ),
+    LinkToProject: "https://github.com/CompilandoConocimiento/Compiler",
+    CheckOut: "https://compilandoconocimiento.github.io/Compiler/#/grammars",
+    Color: "orange",
+    English: (
+      <span>
+        This was a school project for my Compiler class.
+        <br />
+        <br />
+        It allows you to create tokens, finite state automatas and context free grammars; and with
+        them a lexical and syntactical analyzer. This have been the most ambitious project I have
+        participated on; also, I did not do this alone, but with the help of Alan Ontiveros and
+        Laura Lopez, my classroom partners and friends.
+        <br />
+        <br />
+        We did operations for automatas like: join, concatenate, closures, convert to deterministic,
+        create basic automata, create from regular expression, lexical analysis, etc.
+        <br />
+        And for grammars operations like: LL(1), LR(0), LALR(1), LR(1) and Earley parsing, seeing
+        step by step this process (table generation and string parsing).
+      </span>
+    ),
+    Spanish: (
+      <span>
+        Esto fue un proyecto para mi clase de Compiladores.
+        <br />
+        <br />
+        Permite la creación de tokens, autómatas de estados finitos y gramáticas libres de contexto;
+        y con ellas crear un analizador sintáctico y semántico. Este ha sido el proyecto más
+        ambicioso en el que he participado; eso si, no he hecho este proyecto solo, sino con la
+        ayuda de Alan Ontivieros y Laura Lopez, mis compañeros de clase y amigos.
+        <br />
+        <br />
+        Para los autómatas tenemos operaciones disponibles como: "join", "concatenate", "closures",
+        "convert to deterministic", "create basic automata", "create from regular expression",
+        "lexical analysis", etc.
+        <br />Y para las gramaticas había operaciones como: LL(1), LR(0), LALR(1), LR(1) y "Earley
+        parsing", incluso podrías ver paso a paso el proceso.
+      </span>
+    ),
+    Tags: {
+      English: ["MaterializeCSS", "React", "Typescript", "Class project", "SPA"],
+      Spanish: ["MaterializeCSS", "React", "Typescript", "Proyecto de clase", "SPA"],
     },
   },
 }

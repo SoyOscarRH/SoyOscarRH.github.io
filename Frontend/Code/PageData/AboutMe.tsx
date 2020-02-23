@@ -12,13 +12,13 @@ const AboutMe: LanguageOption<AboutMeI> = {
   English: {
     SayHi: (
       <span>
-        Hi, Im <b>Oscar</b>
+        Hi, I'm <b>Oscar</b>
       </span>
     ),
     ShowMyCV: "SEE MY CURRICULUM",
     Text: [
       "Nerd.",
-      "Computer scientist, engineer, addicted to memes, working to be a better version of myself. ",
+      "Computer scientist, engineer, addicted to memes, working to become a better version of myself. ",
       "Interested in competitive programming, even if I suck at it. I believe the web is the platform of the future.",
       "Lover of pure mathematics, the more useless the better, economics, machine learning and philosophy.",
       "Founder of CompilandoConocimiento.",
