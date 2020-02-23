@@ -9,3 +9,4 @@ target/
 
 # dependencies
 /Frontend/node_modules
+/Webpage/node_modules
