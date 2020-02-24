@@ -3,7 +3,7 @@ import { Configuration } from "webpack"
 const Configuration: Configuration = {
   entry: __dirname + "/Code/App",
   output: {
-    path: __dirname + "/Distribution",
+    path: __dirname + "/../",
     publicPath: "/",
     filename: "bundle.js",
   },
