@@ -138,8 +138,8 @@ const ImageIcon: FunctionComponent = () => {
     <>
       <img
         className="materialboxed lazy"
-        data-src={`Assets/${folder}/${name}.${extension == null ? "png" : extension}`}
-        src={"Assets/Blank.png"}
+        data-src={`Images/${folder}/${name}.${extension == null ? "png" : extension}`}
+        src={"Images/Blank.png"}
       />
       <span className={"card-title blue-grey-text text-darken-4 valign-wrapper " + Styles.Title}>
         <i className="material-icons" style={{ fontSize: "1.5rem" }}>
@@ -157,7 +157,7 @@ const ImageIcon: FunctionComponent = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img src="Assets/Icons/githubMini.png" />
+        <img src="Images/Icons/githubMini.png" />
       </a>
     </>
   )

@@ -3,7 +3,7 @@
 This is a simple webapp to show all the projects, books and cool programs that I have made.
 
 <a href="https://soyoscarrh.github.io/" target="_blank">
-  <img  src="Assets/Gist.png"  style="max-width: 500px;"/>
+  <img  src="Images/Gist.png"  style="max-width: 500px;"/>
 </a>
 
 ```
