@@ -1,5 +1,11 @@
+#Mac OS 
 .DS_Store
 *.DS_Store
 **/.DS_Store
 
+# Dependencies
 /Webpage/node_modules
+
+# Google SPS
+target/
+.idea

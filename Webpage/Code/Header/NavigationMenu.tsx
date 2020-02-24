@@ -18,7 +18,7 @@ const NavigationMenu: FunctionComponent = () => (
         </a>
 
         <a onClick={goToTop} className={"right " + Styles.Home}>
-          <img className={Styles.myIcon} src="Assets/Icons/LogoWhite.png" />
+          <img className={Styles.myIcon} src="Images/Icons/LogoWhite.png" />
         </a>
       </div>
     </nav>

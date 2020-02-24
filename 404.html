@@ -3,17 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Resume</title>
+    <title>SoyOscarRH</title>
   </head>
 
   <body />
+
+  <style>
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      min-height: 100vh;
+      background-color: rgb(38, 50, 56);
+    }
+  </style>
 
   <script type="text/javascript">
     var current = window.location.href.toLocaleLowerCase();
     var resume = "SoyOscarRH.github.io/Resume".toLocaleLowerCase();
 
     if (current.indexOf(resume) !== -1)
-      window.location.replace("https://SoyOscarRH.github.io/Resume.pdf");
-    else window.location.replace("https://SoyOscarRH.github.io");
+      window.location.replace("/Resume.pdf");
+    else window.location.replace("/");
   </script>
 </html>
