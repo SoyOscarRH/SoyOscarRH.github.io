@@ -36,7 +36,8 @@ public class CreateCommentsServlet extends HttpServlet {
     String username = data.get("username").toString();
     String message = data.get("message").toString();
 
-    Comment.comments.add(new Comment(username, message));
+    Comment comment = new Comment(username, message);
+    comment.toDataStore();
 
     response.setContentType("application/text;");
     response.getWriter().println("{\"message\": \"OK\"}");

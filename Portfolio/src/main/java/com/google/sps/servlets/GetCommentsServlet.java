@@ -25,20 +25,32 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.google.gson.Gson;
 
+import com.google.appengine.api.datastore.Entity;
+import com.google.appengine.api.datastore.PreparedQuery;
+import com.google.appengine.api.datastore.Query;
+import com.google.appengine.api.datastore.Query.SortDirection;
+import com.google.appengine.api.datastore.DatastoreService;
+import com.google.appengine.api.datastore.DatastoreServiceFactory;
+
 @WebServlet("/get_comments")
 public class GetCommentsServlet extends HttpServlet {
 
-  @Override
-  public void init() {
-    Comment.comments = new ArrayList<Comment>();
-    Comment.comments.add(new Comment("Juan", "Coool"));
-    Comment.comments.add(new Comment("Pepe", "This is awesome"));
+  ArrayList<Comment> getComments() {
+    Query query = new Query("Comment").addSort("time", SortDirection.DESCENDING);
+    DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+    
+    ArrayList<Comment> result = new ArrayList<Comment> ();
+    for (Entity entity : datastore.prepare(query).asIterable()) {
+      result.add(new Comment(entity));
+    }
+
+    return result;
   }
 
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
     response.setContentType("application/json;");
-    String jsonResponse = new Gson().toJson(Comment.comments);
+    String jsonResponse = new Gson().toJson(getComments());
     response.getWriter().print(jsonResponse);
   }
 }
