@@ -25,16 +25,21 @@ const Comments: FC = () => {
 
   useEffect(() => {
     getComments()
-    const id = setInterval(getComments, 1000)
+    const id = setInterval(getComments, 3000)
     return () => clearInterval(id)
   }, [])
 
   const form = useRef<HTMLFormElement>(null);
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
+    const elements = form.current?.elements
+    if (!elements) return
 
-    const username = form.current?.elements["username"].value as string
-    const message = form.current?.elements["message"].value as string
+    const username = elements["username"].value as string
+    const message = elements["message"].value as string
+    elements["username"].value = ""
+    elements["message"].value = ""
+
     const body = JSON.stringify({username,  message})
 
     const response = await fetch('/create_comment', { method: 'POST', headers, body})
@@ -73,10 +78,15 @@ const Comments: FC = () => {
 
         {comments.map(comment => (
           <div className={Styles.comment} key={`${comment.time} ${comment.username}`}>
-            <div>
-              {comment.username} {new Date(comment.time).toLocaleString()}
+            <div className={Styles.userContainer}>
+              <span className={Styles.username}>
+                <b>{comment.username} </b>
+              </span>
+              <span className={Styles.time}>
+                {new Date(comment.time).toLocaleString()}
+              </span>
             </div>
-            <div>{comment.message}</div>
+            <div className={Styles.message} >{comment.message}</div>
           </div>
         ))}
       </div>
