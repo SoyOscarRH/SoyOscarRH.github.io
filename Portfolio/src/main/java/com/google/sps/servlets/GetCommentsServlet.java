@@ -49,7 +49,7 @@ public class GetCommentsServlet extends HttpServlet {
 
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    response.setContentType("application/json;");
+    response.setContentType("application/json;charset=UTF-8");
     String jsonResponse = new Gson().toJson(getComments());
     response.getWriter().print(jsonResponse);
   }

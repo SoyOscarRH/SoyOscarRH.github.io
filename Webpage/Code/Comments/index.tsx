@@ -11,7 +11,7 @@ interface Comment {
 
 const headers = {
   'Accept': 'application/json',
-  'Content-Type': 'application/json'
+  'Content-Type': 'application/json;charset=UTF-8'
 }
 
 const Comments: FC = () => {
@@ -39,6 +39,7 @@ const Comments: FC = () => {
 
     const response = await fetch('/create_comment', { method: 'POST', headers, body})
     const serverSaid = (await response.json())
+    console.log(serverSaid)
     if (serverSaid.message === "OK") getComments()
   }
 

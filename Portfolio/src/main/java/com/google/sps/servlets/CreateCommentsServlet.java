@@ -40,6 +40,6 @@ public class CreateCommentsServlet extends HttpServlet {
     comment.toDataStore();
 
     response.setContentType("application/text;");
-    response.getWriter().println("{\"message\": \"OK\"}");
+    response.getWriter().println("{\"message\": \"" + comment.message + "\"}");
   }
 }
