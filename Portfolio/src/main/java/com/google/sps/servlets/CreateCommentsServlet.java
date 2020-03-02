@@ -16,29 +16,29 @@ package com.google.sps.servlets;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Date;
+import java.util.Map;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import java.util.stream.Collectors;
 import com.google.gson.Gson;
 
-@WebServlet("/get_comments")
-public class GetCommentsServlet extends HttpServlet {
-
-  @Override
-  public void init() {
-    Comment.comments = new ArrayList<Comment>();
-    Comment.comments.add(new Comment("Juan", "Coool"));
-    Comment.comments.add(new Comment("Pepe", "This is awesome"));
-  }
+@WebServlet("/create_comment")
+public class CreateCommentsServlet extends HttpServlet {
 
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    response.setContentType("application/json;");
-    String jsonResponse = new Gson().toJson(Comment.comments);
-    response.getWriter().print(jsonResponse);
+    String body = request.getReader().lines().collect(Collectors.joining());
+    Map data = new Gson().fromJson(body, Map.class);
+    String username = data.get("username").toString();
+    String message = data.get("message").toString();
+
+    Comment.comments.add(new Comment(username, message));
+
+    response.setContentType("application/text;");
+    response.getWriter().println("{\"message\": \"OK\"}");
   }
 }
