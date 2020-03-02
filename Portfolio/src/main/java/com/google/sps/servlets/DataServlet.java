@@ -15,18 +15,40 @@
 package com.google.sps.servlets;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Date;
+
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/** Servlet that returns some example content. TODO: modify this file to handle comments data */
-@WebServlet("/data")
+import com.google.gson.Gson;
+
+class Comment {
+  final String username;
+  final String message;
+  final long time;
+
+  Comment(String username, String message) {
+    this.username = username;
+    this.message = message;
+    this.time = new Date().getTime();
+  }
+}
+
+@WebServlet("/get_comments")
 public class DataServlet extends HttpServlet {
 
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    response.setContentType("text/html;");
-    response.getWriter().println("<h1>Hello world!</h1>");
+    response.setContentType("application/json;");
+
+    ArrayList<Comment> messages = new ArrayList<Comment>();
+    messages.add(new Comment("Juan", "Coool"));
+    messages.add(new Comment("Pepe", "This is awesome"));
+
+    String jsonResponse = new Gson().toJson(messages);
+    response.getWriter().print(jsonResponse);
   }
 }
