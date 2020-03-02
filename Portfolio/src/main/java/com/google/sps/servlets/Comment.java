@@ -12,6 +12,6 @@ public class Comment {
   Comment(String username, String message) {
     this.username = username;
     this.message = message;
-    this.time = new Date().getTime();
+    this.time = System.currentTimeMillis();
   }
 }
