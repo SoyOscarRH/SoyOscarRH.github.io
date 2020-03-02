@@ -1,0 +1,47 @@
+.commentsContainer {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media (min-width: 550px) {
+  .commentsContainer {
+    width: 70%;
+  }
+}
+
+@media (min-width: 950px) {
+  .commentsContainer {
+    width: 50%;
+  }
+}
+
+.comment {
+  background-color: rgb(223, 223, 223);
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  padding: 1rem 1.6rem;
+  text-align: initial;
+  font-size: 1.1rem;
+}
+
+.newComment {
+  padding-bottom: 2rem;
+}
+
+.userContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.username {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.time {
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+.message {
+  font-size: 1.2rem;
+}
