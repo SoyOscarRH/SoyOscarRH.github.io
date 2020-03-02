@@ -38,7 +38,7 @@ class Comment {
 }
 
 @WebServlet("/get_comments")
-public class DataServlet extends HttpServlet {
+public class GetCommentsServlet extends HttpServlet {
 
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
