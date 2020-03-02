@@ -13,7 +13,7 @@ const Comments: FC = () => {
   const [comments, updateComments] = useState([] as Array<Comment>)
 
   async function getComments() {
-    const response = await fetch("/get_comments")
+    const response = await fetch("/get_comments", { method: "POST" })
     const comments = (await response.json()) as Array<Comment>
     updateComments(comments)
   }
@@ -33,8 +33,7 @@ const Comments: FC = () => {
         {comments.map(comment => (
           <div className={Styles.comment} key={`${comment.time} ${comment.username}`}>
             <div>
-              {comment.username} {" "}
-              {new Date(comment.time).toLocaleString()}
+              {comment.username} {new Date(comment.time).toLocaleString()}
             </div>
             <div>{comment.message}</div>
           </div>
