@@ -18,7 +18,7 @@ const Comments: FC = () => {
   const [comments, updateComments] = useState([] as Array<Comment>)
 
   async function getComments() {
-    const response = await fetch("/get_comments", { method: "POST" })
+    const response = await fetch("/comment", { method: "GET", headers })
     const comments = (await response.json()) as Array<Comment>
     updateComments(comments)
   }
@@ -42,9 +42,8 @@ const Comments: FC = () => {
 
     const body = JSON.stringify({username,  message})
 
-    const response = await fetch('/create_comment', { method: 'POST', headers, body})
-    const serverSaid = (await response.json())
-    console.log(serverSaid)
+    const response = await fetch('/comment', { method: 'POST', headers, body})
+    const serverSaid = await response.json()
     if (serverSaid.message === "OK") getComments()
   }
 
