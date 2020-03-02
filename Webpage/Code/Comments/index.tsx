@@ -9,6 +9,11 @@ interface Comment {
   time: number
 }
 
+const headers = {
+  'Accept': 'application/json',
+  'Content-Type': 'application/json'
+}
+
 const Comments: FC = () => {
   const [comments, updateComments] = useState([] as Array<Comment>)
 
@@ -20,16 +25,21 @@ const Comments: FC = () => {
 
   useEffect(() => {
     getComments()
+    const id = setInterval(getComments, 1000)
+    return () => clearInterval(id)
   }, [])
 
-
   const form = useRef<HTMLFormElement>(null);
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+
     const username = form.current?.elements["username"].value as string
     const message = form.current?.elements["message"].value as string
+    const body = JSON.stringify({username,  message})
 
-    console.log({username,  message})
-    event.preventDefault()
+    const response = await fetch('/create_comment', { method: 'POST', headers, body})
+    const serverSaid = (await response.json())
+    if (serverSaid.message === "OK") getComments()
   }
 
   return (
