@@ -1,0 +1,20 @@
+.maps {
+  height: 40vh;
+  border-radius: 0.2rem;
+}
+
+.container {
+  padding: 0rem;
+}
+
+@media (min-width: 550px) {
+  .container {
+    padding: 3rem;
+  }
+}
+
+@media (min-width: 950px) {
+  .container {
+    padding: 6rem;
+  }
+}
