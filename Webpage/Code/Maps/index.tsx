@@ -125,7 +125,6 @@ function panTo(map: any, newLat: number, newLng: number) {
 const places = [
   { position: { lat: 37.422, lng: -122.084 }, title: "Googleplex" },
   { position: { lat: 19.6923, lng: -98.8435 }, title: "Piramid of the Sun" },
-  { position: { lat: 19.6923, lng: -98.8435 }, title: "Piramid of the Sun" },
   { position: { lat: 40.4169, lng: -3.7035 }, title: "Door of the Sun" },
   { position: { lat: 41.8902, lng: 12.4922 }, title: "Colosseum" },
   { position: { lat: -20.2824, lng: 149.0389 }, title: "Whitehaven Beach" },
