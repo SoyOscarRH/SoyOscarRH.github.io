@@ -85,6 +85,42 @@ const darkModeStyles = [
   },
 ]
 
+function panTo(map: any, newLat: number, newLng: number) {
+  const panPath = [] as Array<[number, number]>
+  const panQueue = [] as Array<[number, number]>
+  const STEPS = 20
+
+  function doPan() {
+    var next = panPath.shift()
+    if (next != null) {
+      map.panTo(new googleMaps.LatLng(next[0], next[1]))
+      setTimeout(doPan, 20)
+    } else {
+      var queued = panQueue.shift()
+      if (queued != null) {
+        googleMaps
+        panTo(map, queued[0], queued[1])
+      }
+    }
+  }
+
+  if (panPath.length > 0) {
+    panQueue.push([newLat, newLng])
+  } else {
+    panPath.push([0, 0])
+    var curLat = map.getCenter().lat()
+    var curLng = map.getCenter().lng()
+    var dLat = (newLat - curLat) / STEPS
+    var dLng = (newLng - curLng) / STEPS
+
+    for (var i = 0; i < STEPS; i++) {
+      panPath.push([curLat + dLat * i, curLng + dLng * i])
+    }
+    panPath.push([newLat, newLng])
+    panPath.shift()
+    setTimeout(doPan, 20)
+  }
+}
 
 const places = [
   { position: { lat: 37.422, lng: -122.084 }, title: "Googleplex" },
@@ -92,24 +128,33 @@ const places = [
 ]
 
 const Maps: React.FC = () => {
-  const mapRef = useRef<HTMLDivElement>(null)
-  const [current, update] = useReducer((actual: number, action: "next" | "prev") => {
+  const mapDOMNode = useRef<HTMLDivElement>(null)
+  const mapRef = useRef(null)
+
+  const [_, update] = useReducer((actual: number, action: "next" | "prev") => {
     const n = places.length - 1
+    let future = actual
 
-    if (action === "next") return actual === n ? 0 : actual + 1
-    if (action === "prev") return actual === 0 ? n : actual - 1
+    if (action === "next") future = actual === n ? 0 : actual + 1
+    if (action === "prev") future = actual === 0 ? n : actual - 1
 
-    return actual
+    const { lat, lng } = places[future].position
+
+    panTo(mapRef.current, lat, lng)
+
+    return future
   }, 0)
 
   useEffect(() => {
-    const DOM_NODE = mapRef.current
+    const DOM_NODE = mapDOMNode.current
 
     const map = new googleMaps.Map(DOM_NODE, {
       center: { lat: 37.422, lng: -122.084 },
-      zoom: 16,
+      zoom: 5,
       darkModeStyles,
     })
+
+    mapRef.current = map
 
     places.forEach(({ position, title }) => {
       new googleMaps.Marker({ position, map, title })
@@ -123,7 +168,7 @@ const Maps: React.FC = () => {
       </h4>
       <br />
 
-      <div className={`${Styles.maps} z-depth-1`} ref={mapRef} />
+      <div className={`${Styles.maps} z-depth-1`} ref={mapDOMNode} />
       <div className={Styles.buttons}>
         <button onClick={() => update("prev")} className="btn waves-effect waves-light">
           Previous place
