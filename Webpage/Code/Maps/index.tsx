@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react"
+import React, { useEffect, useRef, useReducer } from "react"
 import * as Styles from "./Styles.css"
 
 // @ts-ignore
@@ -85,15 +85,34 @@ const darkModeStyles = [
   },
 ]
 
+
+const places = [
+  { position: { lat: 37.422, lng: -122.084 }, title: "Googleplex" },
+  { position: { lat: 0, lng: 0 }, title: "Ocean" },
+]
+
 const Maps: React.FC = () => {
   const mapRef = useRef<HTMLDivElement>(null)
+  const [current, update] = useReducer((actual: number, action: "next" | "prev") => {
+    const n = places.length - 1
+
+    if (action === "next") return actual === n ? 0 : actual + 1
+    if (action === "prev") return actual === 0 ? n : actual - 1
+
+    return actual
+  }, 0)
 
   useEffect(() => {
     const DOM_NODE = mapRef.current
-    new googleMaps.Map(DOM_NODE, {
+
+    const map = new googleMaps.Map(DOM_NODE, {
       center: { lat: 37.422, lng: -122.084 },
       zoom: 16,
       darkModeStyles,
+    })
+
+    places.forEach(({ position, title }) => {
+      new googleMaps.Marker({ position, map, title })
     })
   }, [])
 
@@ -105,9 +124,13 @@ const Maps: React.FC = () => {
       <br />
 
       <div className={`${Styles.maps} z-depth-1`} ref={mapRef} />
-      <div  className={Styles.buttons}>
-        <button className="btn waves-effect waves-light">Previous place</button>
-        <button className="btn waves-effect waves-light">Next place</button>
+      <div className={Styles.buttons}>
+        <button onClick={() => update("prev")} className="btn waves-effect waves-light">
+          Previous place
+        </button>
+        <button onClick={() => update("next")} className="btn waves-effect waves-light">
+          Next place
+        </button>
       </div>
     </section>
   )
