@@ -124,7 +124,13 @@ function panTo(map: any, newLat: number, newLng: number) {
 
 const places = [
   { position: { lat: 37.422, lng: -122.084 }, title: "Googleplex" },
-  { position: { lat: 0, lng: 0 }, title: "Ocean" },
+  { position: { lat: 19.6923, lng: -98.8435 }, title: "Piramid of the Sun" },
+  { position: { lat: 19.6923, lng: -98.8435 }, title: "Piramid of the Sun" },
+  { position: { lat: 40.4169, lng: -3.7035 }, title: "Door of the Sun" },
+  { position: { lat: 41.8902, lng: 12.4922 }, title: "Colosseum" },
+  { position: { lat: -20.2824, lng: 149.0389 }, title: "Whitehaven Beach" },
+  { position: { lat: 52.9715, lng: -9.4309 }, title: "Cliffs of Moher" },
+  { position: { lat: 25.6872, lng: 32.6396 }, title: "Luxor" },
 ]
 
 const Maps: React.FC = () => {
@@ -157,7 +163,19 @@ const Maps: React.FC = () => {
     mapRef.current = map
 
     places.forEach(({ position, title }) => {
-      new googleMaps.Marker({ position, map, title })
+      const marker = new googleMaps.Marker({
+        position,
+        map,
+        label: {
+          color: "#454545",
+          fontWeight: "bold",
+          text: title,
+        },
+      })
+      marker.addListener("click", function() {
+        map.setZoom(14)
+        map.setCenter(marker.getPosition())
+      })
     })
   }, [])
 
