@@ -7,14 +7,27 @@
   padding: 0rem;
 }
 
+.buttons {
+  display: grid;
+  grid-auto-flow: column;
+  padding: 1.5rem 2rem;
+  grid-gap: 4rem;
+}
+
 @media (min-width: 550px) {
   .container {
     padding: 3rem;
+  }
+  .buttons {
+    padding: 1.5rem 0;
   }
 }
 
 @media (min-width: 950px) {
   .container {
     padding: 6rem;
+  }
+  .buttons {
+    padding: 1.5rem 0;
   }
 }

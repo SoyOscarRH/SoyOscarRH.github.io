@@ -105,6 +105,10 @@ const Maps: React.FC = () => {
       <br />
 
       <div className={`${Styles.maps} z-depth-1`} ref={mapRef} />
+      <div  className={Styles.buttons}>
+        <button className="btn waves-effect waves-light">Previous place</button>
+        <button className="btn waves-effect waves-light">Next place</button>
+      </div>
     </section>
   )
 }
