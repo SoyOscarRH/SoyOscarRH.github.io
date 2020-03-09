@@ -181,7 +181,7 @@ const Maps: React.FC = () => {
   return (
     <section className={`${Styles.container} center-align blue-grey-text text-darken-3`}>
       <h4>
-        <b>Places I needed to go before I die</b>
+        <b>Places I need to go before I die</b>
       </h4>
       <br />
 
