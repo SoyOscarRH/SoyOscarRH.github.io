@@ -157,7 +157,7 @@ const Maps: React.FC = () => {
     const map = new googleMaps.Map(DOM_NODE, {
       center: { lat: 37.422, lng: -122.084 },
       zoom: 5,
-      darkModeStyles,
+      styles: darkModeStyles,
     })
 
     mapRef.current = map
@@ -167,7 +167,7 @@ const Maps: React.FC = () => {
         position,
         map,
         label: {
-          color: "#454545",
+          color: "white",
           fontWeight: "bold",
           text: title,
         },
