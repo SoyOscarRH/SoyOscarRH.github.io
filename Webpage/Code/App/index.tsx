@@ -41,6 +41,9 @@ const App: FunctionComponent = () => {
           <Books Books={BooksData} AboutBooks={AboutBooksData} />
         </section>
 
+        <section id="Comments">
+          <Comments/>
+        </section>
 
         <section id="Maps">
           <Maps/>
