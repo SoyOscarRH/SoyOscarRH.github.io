@@ -6,41 +6,28 @@ import * as Styles from "./Styles.css"
 // @ts-ignore
 const googleMaps = google.maps
 
-function panTo(map: any, newLat: number, newLng: number) {
-  const panPath = [] as Array<[number, number]>
-  const panQueue = [] as Array<[number, number]>
-  const STEPS = 20
+const panTo = (map, latitude: number, longitude: number, steps = 20, msDuration = 20) => {
+  const panPath = [] as Array<[number, number]> // points we will "see" during the animation
 
-  function doPan() {
-    var next = panPath.shift()
-    if (next != null) {
+  function moveToNextPointAndWait() {
+    const next = panPath.shift()
+    if (next) {
       map.panTo(new googleMaps.LatLng(next[0], next[1]))
-      setTimeout(doPan, 20)
-    } else {
-      var queued = panQueue.shift()
-      if (queued != null) {
-        googleMaps
-        panTo(map, queued[0], queued[1])
-      }
+      setTimeout(moveToNextPointAndWait, msDuration)
     }
   }
 
-  if (panPath.length > 0) {
-    panQueue.push([newLat, newLng])
-  } else {
-    panPath.push([0, 0])
-    var curLat = map.getCenter().lat()
-    var curLng = map.getCenter().lng()
-    var dLat = (newLat - curLat) / STEPS
-    var dLng = (newLng - curLng) / STEPS
+  const curLat = map.getCenter().lat() // current coordinates in the map now
+  const curLng = map.getCenter().lng() // current coordinates in the map now
 
-    for (var i = 0; i < STEPS; i++) {
-      panPath.push([curLat + dLat * i, curLng + dLng * i])
-    }
-    panPath.push([newLat, newLng])
-    panPath.shift()
-    setTimeout(doPan, 20)
-  }
+  const dLat = (latitude - curLat) / steps // delta
+  const dLng = (longitude - curLng) / steps // delta
+
+  for (var i = 0; i < steps; ++i) panPath.push([curLat + dLat * i, curLng + dLng * i])
+
+  panPath.push([latitude, longitude])
+  panPath.shift()
+  setTimeout(moveToNextPointAndWait, msDuration)
 }
 
 const places = [
@@ -65,7 +52,6 @@ const Maps: React.FC = () => {
     if (action === "prev") future = actual === 0 ? n : actual - 1
 
     const { lat, lng } = places[future].position
-
     panTo(mapRef.current, lat, lng)
 
     return future
@@ -86,13 +72,10 @@ const Maps: React.FC = () => {
       const marker = new googleMaps.Marker({
         position,
         map,
-        label: {
-          color: "white",
-          fontWeight: "bold",
-          text: title,
-        },
+        label: { color: "white", fontWeight: "bold", text: title },
       })
-      marker.addListener("click", function() {
+
+      marker.addListener("click", () => {
         map.setZoom(14)
         map.setCenter(marker.getPosition())
       })
