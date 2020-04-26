@@ -63,8 +63,8 @@ const Projects: ProjectsI = {
         <b>Competitive</b>Solutions
       </span>
     ),
-    LinkToProject: "https://github.com/CompilandoConocimiento/CompetitiveSolutions",
-    CheckOut: "https://github.com/CompilandoConocimiento/CompetitiveSolutions",
+    LinkToProject: "https://github.com/SoyOscarRH/CompetitiveSolutions",
+    CheckOut: "https://github.com/SoyOscarRH/CompetitiveSolutions",
     Color: "red",
     English: (
       <span>
