@@ -14,8 +14,6 @@ import Links from "../Links"
 import AboutMe from "../AboutMe"
 import ProjectsPrograms from "../ProjectsPrograms"
 import Books from "../Books"
-import Comments from "../Comments"
-import Maps from "../Maps"
 import Footer from "../Footer"
 
 const App: FunctionComponent = () => {
@@ -40,15 +38,6 @@ const App: FunctionComponent = () => {
         <section id="Books">
           <Books Books={BooksData} AboutBooks={AboutBooksData} />
         </section>
-
-        <section id="Comments">
-          <Comments/>
-        </section>
-
-        <section id="Maps">
-          <Maps/>
-        </section>
-        
       </main>
 
       <footer>

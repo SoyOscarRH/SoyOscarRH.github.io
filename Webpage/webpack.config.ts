@@ -1,7 +1,6 @@
 import { Configuration } from "webpack"
 
-//const bundlePath = "/../"; // GitHubPageBundle
-const bundlePath = "/../Portfolio/src/main/webapp" //AppEngineBundle
+const bundlePath = "/../"; // GitHubPageBundle
 
 const Configuration: Configuration = {
   entry: __dirname + "/Code/App",

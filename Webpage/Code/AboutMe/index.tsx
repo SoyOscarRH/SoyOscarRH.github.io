@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useEffect, useState, useCallback } from "react"
+import React, { FunctionComponent, useEffect, useState } from "react"
 import { AboutMeI } from "../PageData/AboutMe"
 import { LinksToSocialMedia } from "../Header/SideMenu"
 
@@ -12,7 +12,7 @@ const AboutMeSection: FunctionComponent<{ AboutMe: AboutMeI; id: string }> = ({ 
 
   const [profileID, updateProfileID] = useState(0)
   useEffect(() => {
-    let id = setInterval(() => updateProfileID(c => (c + 1) % 4), 10000)
+    let id = setInterval(() => updateProfileID(c => (c + 1) % 7), 4000)
     return () => clearInterval(id)
   }, [updateProfileID])
 
