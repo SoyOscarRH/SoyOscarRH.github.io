@@ -68,11 +68,12 @@ const AboutMeSection: FunctionComponent<{ AboutMe: AboutMeI; id: string }> = ({ 
         className="btn indigo lighten-1"
         href="Resume.pdf"
         target="_blank"
-        style={{ fontWeight: 600 }}
+        style={{ fontWeight: 600, fontSize: "110%" }}
       >
         <span className="hide-on-med-and-up"> CURRICULUM </span>
         <span className="hide-on-small-only"> {ShowMyCV} </span>
       </a>
+
     </div>
   )
 }
