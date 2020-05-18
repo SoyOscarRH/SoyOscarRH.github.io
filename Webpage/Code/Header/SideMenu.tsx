@@ -8,7 +8,6 @@ import getSections, { Section } from "../PageData/SideMenuData"
 import * as Styles from "./Styles.css"
 import * as GeneralStyles from "../App/GeneralStyles.css"
 
-
 const SideMenu: FunctionComponent<{ toggleLanguage: () => void }> = ({ toggleLanguage }) => {
   const language = useContext(LanguageContext)
   const Sections = getSections(language)
@@ -80,17 +79,17 @@ const SoyOscarRHLogo: FunctionComponent<{ accentColor: string }> = ({ accentColo
 
 export const LinksToSocialMedia: React.FunctionComponent = () => (
   <div className="row">
-    <a target="_blank" rel="noopener noreferrer" href="https://github.com/SoyOscarRH">
+    <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/soyoscarrh/">
+      <img title="LinkedIn" className="col s3" src="Images/Icons/linkedin.png" />
+    </a>
+    <a target="_blank" rel="noopener noreferrer" href="https://www.github.com/SoyOscarRH">
       <img title="GitHub" className="col s3" src="Images/Icons/github.png" />
     </a>
-    <a target="_blank" rel="noopener noreferrer" href="http://compilandoconocimiento.com/">
-      <img title="Wordpress" className="col s3" src="Images/Icons/wordpress.png" />
-    </a>
-    <a target="_blank" rel="noopener noreferrer" href="http://twitter.com/SoyOscarRH">
+    <a target="_blank" rel="noopener noreferrer" href="http://www.twitter.com/SoyOscarRH">
       <img title="Twitter" className="col s3" src="Images/Icons/twitter.png" />
     </a>
-    <a target="_blank" rel="noopener noreferrer" href="https://telegram.me/SoyOscarRH">
-      <img title="Telegram" className="col s3" src="Images/Icons/telegram.png" />
+    <a target="_blank" rel="noopener noreferrer" href="http://www.compilandoconocimiento.com/">
+      <img title="Wordpress" className="col s3" src="Images/Icons/wordpress.png" />
     </a>
   </div>
 )
