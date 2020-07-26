@@ -12,7 +12,7 @@ const AboutMeSection: FunctionComponent<{ AboutMe: AboutMeI; id: string }> = ({ 
 
   const [profileID, updateProfileID] = useState(0)
   useEffect(() => {
-    let id = setInterval(() => updateProfileID(c => (c + 1) % 7), 4000)
+    const id = setInterval(() => updateProfileID(c => (c + 1) % 8), 4000)
     return () => clearInterval(id)
   }, [updateProfileID])
 
@@ -66,14 +66,13 @@ const AboutMeSection: FunctionComponent<{ AboutMe: AboutMeI; id: string }> = ({ 
 
       <a
         className="btn indigo lighten-1"
-        href="Resume.pdf"
+        href="OscarRosasResume.pdf"
         target="_blank"
         style={{ fontWeight: 600, fontSize: "105%" }}
       >
         <span className="hide-on-med-and-up"> CURRICULUM </span>
         <span className="hide-on-small-only"> {ShowMyCV} </span>
       </a>
-
     </div>
   )
 }

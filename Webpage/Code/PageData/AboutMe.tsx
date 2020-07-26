@@ -15,7 +15,7 @@ const AboutMe: LanguageOption<AboutMeI> = {
         Hi, I'm <b>Oscar</b>
       </span>
     ),
-    ShowMyCV: "SEE MY CURRICULUM",
+    ShowMyCV: "CHECK MY RESUME",
     Text: [
       "Nerd.",
       "Computer scientist, software engineer; working to become a better version of myself.",
@@ -31,7 +31,7 @@ const AboutMe: LanguageOption<AboutMeI> = {
         Hola, <b>Soy Oscar</b>{" "}
       </span>
     ),
-    ShowMyCV: "VER MI CURRICULUM",
+    ShowMyCV: "CHECA MI CURRICULUM",
     Text: [
       "Nerd.",
       "Computólogo e ingeniero de software, trabajando en crear una mejor versión de mi mismo.",
