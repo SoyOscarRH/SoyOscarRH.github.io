@@ -20,10 +20,14 @@
 
   <script type="text/javascript">
     var current = window.location.href.toLocaleLowerCase();
-    var resume = "SoyOscarRH.github.io/Resume".toLocaleLowerCase();
 
-    if (current.indexOf(resume) !== -1)
-      window.location.replace("/Resume.pdf");
-    else window.location.replace("/");
+    var resume = "SoyOscarRH.github.io/Resume".toLocaleLowerCase();
+    var projects = "SoyOscarRH.github.io/projects".toLocaleLowerCase();
+
+    if (current.indexOf(resume) !== -1) {
+      window.location.replace("/OscarRosasResume.pdf");
+    } else if (current.indexOf(projects) !== -1) {
+      window.location.replace("/#Projects");
+    } else window.location.replace("/");
   </script>
 </html>
