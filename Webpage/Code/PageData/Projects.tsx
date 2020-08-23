@@ -31,11 +31,12 @@ const Projects: ProjectsI = {
       <span>
         Creator of a blog (in spanish) to learn about science in general, discrete math, physics,
         vectorial analysis, simple algorithms and data structures (stacks, queues, BST, AVL trees,
-        etc), automata theory, intro to C and to object oriented programming using Java. The blog
-        has around 150,000 views since the beginning of 2018.
+        etc), automata theory, intro to C and to object oriented programming using Java.
+        <br />
+        The blog has around 350,000 views since the beginning of 2018.
         <br />
         <br />
-        Here you can also find all the books we as an organization are writing for free.
+        Here you can also find all the books my organization are writing for free.
       </span>
     ),
     Spanish: (
@@ -43,8 +44,9 @@ const Projects: ProjectsI = {
         Creador de un blog (en español) para aprender sobre ciencia en general, matemáticas
         discretas, física, análisis vectorial, algoritmos simples y estructuras de datos (pilas,
         colas, BST, árboles AVL, etc.), teoría de autómatas, introducción a C y programación
-        orientada a objetos utilizando Java. El blog Tiene alrededor de 150,000 visitas desde
-        principios de 2018.
+        orientada a objetos utilizando Java.
+        <br />
+        El blog Tiene alrededor de 350,000 visitas desde principios de 2018.
         <br />
         <br />
         Aquí también se puede encontrar todos los libros que, como organización, escribimos de forma
@@ -70,27 +72,29 @@ const Projects: ProjectsI = {
       <span>
         This is a repository to store all the solutions for competitive programming problems on
         Judges online like OmegaUp, Codeforces, SPOJ, UVa and many more.
+        Also here I store all my submissions on interview problems 
+        (+200 problems in <u><a style={{color: "inherit"}} href="https://leetcode.com/soyoscarrh/">Leetcode</a></u>).
         <br />
         <br />
         Most of the solutions are in C++, because sincerely solving problems of this kind in this
         language is awesome.
         <br />
-        <br />I work to keep my solutions as readable and clear as possible, but (do to the nature
-        of this sport) in this project I can't promise anything. I am sorry. :(
+        <br />I work to keep my solutions as readable and clear as possible n.n
       </span>
     ),
     Spanish: (
       <span>
         Este es un repositorio para guardar todas las soluciones para los problemas de programación
         competitiva en jueces en línea como OmegaUp, Codeforces, SPOJ, UVa y muchos más.
+        También ahi guardo todo lo relacionado con los problema que hago de entrevistas 
+        (+200 problemas en <a href="https://leetcode.com/soyoscarrh/">Leetcode</a>).
         <br />
         <br />
         La mayoría de las soluciones están en C++, porque resolver esa clase de problemas en este
         lenguaje es increíble.
         <br />
         <br />
-        Trabajo para mantener mis soluciones tan legibles y claras como sea posible, pero (debido a
-        la naturaleza del deporte) en este proyecto no te puedo prometer nada. Lo siento. :(
+        Trabajo para mantener mis soluciones tan legibles y claras como sea posible n.n
       </span>
     ),
     Extension: "jpg",
