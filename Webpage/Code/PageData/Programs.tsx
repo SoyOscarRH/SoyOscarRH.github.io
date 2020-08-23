@@ -28,11 +28,11 @@ const Programs: ProgramsI = {
     Color: "orange darken-3",
     English: (
       <span>
-        A function that draws Bezier curves and some example of how to use it, and the results you
-        get by changing the paramaters.
+        A function that draws Bezier curves and some examples of how to use it, and the results you
+        get by changing the parameters.
         <br />
         <br />
-        Also I have examples of many figures that you can create using this curves, I assure you,
+        Also, I have examples of many figures that you can create using these curves, I assure you,
         they are beautiful.
       </span>
     ),
@@ -67,7 +67,8 @@ const Programs: ProgramsI = {
         decomposition, Cholesky Banachiewicz, like QR decomposition, House Holder, Newton Raphson,
         the Hermite Interpolant, etc...
         <br />
-        At the end I did a program to interpolate curves, so I draw a name using a some lists of
+        <br />
+        In the end, I did a program to interpolate curves, so I draw a name using some lists of
         points.
       </span>
     ),
@@ -105,7 +106,8 @@ const Programs: ProgramsI = {
               window.open("https://twitter.com/missingcloudltd/status/826203153934729218", "_blank")
             }
           >
-            {" "}tweet
+            {" "}
+            tweet
           </span>
         </b>{" "}
         that animated the classic idea that you can not have everything in life.
@@ -154,12 +156,12 @@ const Programs: ProgramsI = {
         Simple apps that I made in a Google Development Group boot camp designed to learn the
         Flutter SDK.
         <br />
-        Code and text is in English.
+        The code and text are in English.
         <br />
         <br />
         The first app show an infinite random generated list of Startups made by using the most
-        commons words in English and an option to save them. Also, I made an app that show many
-        dishes in a list.
+        commons words in English and an option to save them. Also, I made an app that shows many
+        dishes on a list.
       </span>
     ),
     Spanish: (
@@ -186,8 +188,7 @@ const Programs: ProgramsI = {
         <b>My</b>Boilerplates
       </span>
     ),
-    LinkToProject:
-      "https://github.com/SoyOscarRH/MyBoilerplates",
+    LinkToProject: "https://github.com/SoyOscarRH/MyBoilerplates",
     Color: "blue darken-1",
     English: (
       <span>
@@ -221,7 +222,7 @@ const Programs: ProgramsI = {
     English: (
       <span>
         This is a program in Python using Matplotlib to calculate and graph the linear regression
-        over a data set. It also give you the Pearson Coefficient.
+        over a data set. It also gives you the Pearson Coefficient.
       </span>
     ),
     Spanish: (
@@ -276,11 +277,11 @@ const Programs: ProgramsI = {
     Color: "grey darken-2",
     English: (
       <span>
-        I made the design for this page, during my internship in my university, it is not my best
-        job, it is in fact my first work in web.
+        I made the design for this page, during my internship at my university, it is not my best
+        job, it is, in fact, my first work in web.
         <br />
         <br />
-        It is not responsive and the layout is made with table, is horrible, but everyone start
+        It is not responsive and the layout is made with table, is horrible, but everyone starts
         somewhere.
       </span>
     ),
@@ -310,7 +311,7 @@ const Programs: ProgramsI = {
     Color: "yellow accent-4",
     English: (
       <span>
-        This is a program in Python to graph fractals, for now is only the Sierpinkski triangle.
+        This is a program in Python to graph fractals, for now, is only the Sierpinski triangle.
       </span>
     ),
     Spanish: (
@@ -336,13 +337,13 @@ const Programs: ProgramsI = {
     Color: "pink lighten-1",
     English: (
       <span>
-        Game made to learn React, this game is just to make people happy. Just for fun.
+        A game made to learn React, this game is just to make people happy. Just for fun.
         <br />
         As in many projects, code is in english and text is in spanish.
         <br />
         <br />
-        You can choose beetwen many categories, see a visual help of the words that you have not
-        found yet, you can change the grid size and even activate hints to find the words.
+        You can choose between many categories, see the visual help of the words that you have not
+        found yet, you can change the grid size, and even activate hints to find the words.
       </span>
     ),
     Spanish: (
@@ -374,7 +375,7 @@ const Programs: ProgramsI = {
     Color: "indigo lighten-1",
     English: (
       <span>
-        This is a program in Python to "play poker", well, sort of, because I have never play
+        This is a program in Python to "play poker", well, sort of, because I have never played
         poker... Is just a weird school exercise.
       </span>
     ),

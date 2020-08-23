@@ -383,19 +383,18 @@ const Projects: ProjectsI = {
         <ul style={{ padding: "0rem 0.8rem", textAlign: "left" }}>
           <li style={{ listStyleType: "disc" }}>
             <em>Hybrid app</em>: A web application with different types of services, such as
-             confidentiality, authenticate, or both for messages (inspired by PGP), that we (I
-             and a friend Oscar David) developed. The application uses AES and RSA with signature
-             digital.
+            confidentiality, authenticate, or both for messages (inspired by PGP), that we (I and a
+            friend Oscar David) developed. The application uses AES and RSA with signature digital.
           </li>
           <br />
           <li style={{ listStyleType: "disc" }}>
             <em>Binary field</em>: A C ++ class that allows you to store the elements of a field
-             finite, especially GF (2 ^ 8), like the one used in AES.
+            finite, especially GF (2 ^ 8), like the one used in AES.
           </li>
           <br />
           <li style={{ listStyleType: "disc" }}>
             <em>Lenstra algorithm</em>: An implementation of the lenstra algorithm, it uses curves
-             ellipticals to factor integers.
+            ellipticals to factor integers.
           </li>
         </ul>
       </React.Fragment>
@@ -499,10 +498,10 @@ const Projects: ProjectsI = {
         It allows us to pass assistance using bar codes and QR inside the web app. Also, it allows
         us to get the statistics of the event (in PDF) and to send the invitations through email.
         <br />
-        It allow to have differents types fo users (normal and admins).
+        It allow to have different types of users (normal and admins).
         <br />
         <br />
-        All the code and documentation is in english, but all the text inside the app is in spanish
+        All the code and documentation are in english, but all the text inside the app is in spanish
         (my mother tongue).
       </span>
     ),
@@ -587,12 +586,12 @@ const Projects: ProjectsI = {
     Color: "blue",
     English: (
       <span>
-        This is a webapp that can simulate the solution of the famous problem of the Longest Common
-        Subsequence of any 2 strings step by step. This is solve using DP (dynamic programming)
-        using a bottom-up aproach table.
+        This is a web app that can simulate the solution of the famous problem of the Longest Common
+        Subsequence of any 2 strings step by step. This is solved using DP (dynamic programming)
+        using a bottom-up approach table.
         <br />
         <br />
-        All the code and documentation is in english, but all the text inside the app is in spanish
+        All the code and documentation are in english, but all the text inside the app is in spanish
         (my mother tongue).
       </span>
     ),
@@ -637,7 +636,7 @@ const Projects: ProjectsI = {
     Color: "blue-grey darken-3",
     English: (
       <span>
-        This is all my personal implementations of the most famous and useful competitive
+        These are all my personal implementations of the most famous and useful competitive
         programming algorithms.
         <br />
         <br />
@@ -679,14 +678,14 @@ const Projects: ProjectsI = {
     Color: "teal",
     English: (
       <span>
-        This is a UNFINISHED mini project for a web system that can control a cinema (candy shop and
-        tickets)
+        This is an UNFINISHED mini project for a web system that can control a cinema (candy shop
+        and tickets)
         <br />
         <br />
-        It allows to create users and manage them, sell candy and popcorn, an the movie tickets.
+        It allows to create users and manage them, sell candy and popcorn, the movie tickets.
         <br />
         <br />
-        All the code and documentation is in english, but all the text inside the app is in spanish
+        All the code and documentation are in english, but all the text inside the app is in spanish
         (my mother tongue).
       </span>
     ),
@@ -708,6 +707,49 @@ const Projects: ProjectsI = {
     Tags: {
       English: ["CRUD", "MaterializeCSS", "jQuery", "PHP", "MySQL"],
       Spanish: ["Altas Bajas Cambios", "MaterializeCSS", "jQuery", "PHP", "MySQL"],
+    },
+  },
+  FudgeRatio: {
+    Title: (
+      <span>
+        <b>Fudge</b>Ratio
+      </span>
+    ),
+    LinkToProject: "https://github.com/gilemos/FudgeRatio",
+    CheckOut: "https://fudgeratio-274623.uc.r.appspot.com",
+    Color: "blue lighten-3",
+    English: (
+      <span>
+        During the Spring of 2020, I created with my SPS team at fudge ratio calculator web app.
+        <br />
+        Your Fudge Ratio is the ratio of estimated time against actual time it takes for you to
+        complete a task.
+        <br />
+        <br />
+        SPS or Google Software Product Sprint is virtual, invite only program that brings together
+        top university students across North America and Googlers for 11 weeks to design and build
+        web apps, gain applied data structure and algorithms skills, and receive tailored career
+        development resources
+      </span>
+    ),
+    Spanish: (
+      <span>
+        Durante la primavera del 2020, creé con mi equipo de SPS en la aplicación web que te
+        permitia calcular tu "fudge ratio".
+        <br />
+        El "fudge ratio" es la relación entre el tiempo estimado y el tiempo real que le lleva
+        completar una tarea.
+        <br />
+        <br />
+        SPS o Google Software Product Sprint es un programa virtual, que reúne a los mejores
+        estudiantes universitarios de Norteamérica y Googlers durante 11 semanas para diseñar y
+        construir aplicaciones web y recibimos recursos para mejorar nuestra carrera.
+      </span>
+    ),
+    Extension: "jpg",
+    Tags: {
+      English: ["Google SPS", "Vanilla JS", "Google Cloud"],
+      Spanish: ["Google SPS", "Vanilla JS", "Google Cloud"],
     },
   },
 }

@@ -34,20 +34,20 @@ export const AboutBooksData: LanguageOption<JSX.Element> = {
 
       <span>
         First of all, I have to admit that many of these texts have been written together with a lot
-        of people, people who without them I could not have gotten that far, thanks Alan, Laura,
-        Abbi, Leilan and all my teachers.
+        of people, people who without them I could not have gotten that far, thanks to Alan, Laura,
+        Abii, Leilan, and all my teachers.
         <br />
         <br />
         <b> So... What the hell are these texts? </b>
         <br />
         <br />
         The most immediate answer is that these texts (or "Compilados" as I like to tell them) Are a
-        compilation of theorems, ideas, examples and important concepts that we learned throughout
-        of time on each of the topics.
+        compilation of theorems, ideas, examples, and important concepts that we learned throughout
+        time on each of the topics.
         <br />
         <br />
-        On a regular basis we will be updating these texts with everything new that we learn trying
-        to deepen in all these topics and close possible doubts in these pages. These "Compilados"
+        On a regular basis, we will be updating these texts with everything new that we learn trying
+        to deepen in all these topics and close possible doubts on these pages. These "Compilados"
         try to be as strict as possible, although we are human (and students) and it is possible
         (and even probable) that we make small mistakes from time to time. I hope you take these
         pages as a gift created by imperfect beings with hopes to make the world a better place.
@@ -111,7 +111,7 @@ export const BooksData: BooksI = {
     Intro: {
       English: (
         <span>
-          When I was a little boy the only topics I dislike in math where the ones that have
+          When I was a little boy the only topics I dislike in math were the ones that have
           something to do with probability. But then I decided to make this book, with this book I
           learned all the amazing things about this topic.
           <br />
@@ -318,7 +318,7 @@ export const BooksData: BooksI = {
     Intro: {
       English: (
         <span>
-          This is the book contains the bases of the entire branch of mathematics called linear
+          This is the book that contains the bases of the entire branch of mathematics called linear
           algebra. We will first see the idea of matrices and the operations that we can do with
           them without giving much sense to what are the matrices.
           <br />
@@ -335,7 +335,7 @@ export const BooksData: BooksI = {
           We will talk about how to solve Ax = b using LU decomposition, and Cholesky decomposition.
           <br />
           Also, we will try to approximate the solution using the Least Squares, and QR
-          Decomposition (HouseHolder, Gram-Schimidt, Givens).
+          Decomposition (HouseHolder, Gram-Schmidt, Givens).
           <br />
           <br />
           This book is in Spanish only. Sorry :(
@@ -609,7 +609,7 @@ export const BooksData: BooksI = {
           <br />
           <br />
           We Finally, see Fourier, how to make his series, how to make his transform and how it is
-          that with solve differential equations is the simplest thing in the world.
+          that with solving differential equations is the simplest thing in the world.
           <br />
           <br />
           This book is in Spanish only. Sorry :(
