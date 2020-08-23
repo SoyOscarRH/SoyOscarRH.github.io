@@ -270,102 +270,6 @@ const Projects: ProjectsI = {
     },
     Extension: "jpg",
   },
-
-  CompetitiveReference: {
-    Title: (
-      <span>
-        {" "}
-        <b>Competitive</b>Reference
-      </span>
-    ),
-    LinkToProject: "https://github.com/CompilandoConocimiento/Reference",
-    CheckOut: "https://compilandoconocimiento.github.io/Reference/",
-    Color: "blue-grey darken-3",
-    English: (
-      <span>
-        This is all my personal implementations of the most famous and useful competitive
-        programming algorithms.
-        <br />
-        <br />
-        Most of the implementations are in C++, but you can also find them in C and even in Python
-        and Java.
-        <br />
-        <br />
-        I'm also working on creating a Reference (Book & Website) so many more people can benefit
-        from it, and get further along in this awesome mind-sport.
-      </span>
-    ),
-    Spanish: (
-      <span>
-        Recopilación de mis implementaciones personales de los más famosos y útiles algoritmos de la
-        programación competitiva.
-        <br />
-        <br />
-        La mayoría de las implementaciones están en C ++, pero también puedes encontrar algunas en C
-        e incluso en Python y Java.
-        <br />
-        <br />
-        También estoy trabajando en la creación de un "Refence" (libro y sitio web) para que así más
-        personas puedan beneficiarse de esto y avanzar más en este increíble deporte mental.
-      </span>
-    ),
-    Tags: {
-      English: ["Competitive Programming", "C++", "Webapp", "React", "Typescript", "Book"],
-      Spanish: ["Programación Competitiva", "C++", "Webapp", "React", "Typescript", "Libro"],
-    },
-  },
-  OrganizeAnEvent: {
-    Title: (
-      <span>
-        {" "}
-        <b>Organize</b>An<b>Event</b>
-      </span>
-    ),
-    LinkToProject: "https://github.com/SoyOscarRH/OrganizeAnEvent",
-    Color: "yellow darken-2",
-    English: (
-      <span>
-        This is a minimum viable product for a web system to control assistance and documents to an
-        academic ceremony.
-        <br />
-        <br />
-        It allows us to pass assistance using bar codes and QR inside the web app. Also, it allows
-        us to get the statistics of the event (in PDF) and to send the invitations through email.
-        <br />
-        It allow to have differents types fo users (normal and admins).
-        <br />
-        <br />
-        All the code and documentation is in english, but all the text inside the app is in spanish
-        (my mother tongue).
-      </span>
-    ),
-    Spanish: (
-      <span>
-        Este es el mínimo producto viable para un sistema web que pueda controlar una ceremonia
-        académica.
-        <br />
-        <br />
-        Permite pasar asistencia usando códigos de barras y QR dentro de la aplicación. También nos
-        permite crear PDF con las estadísticas del evento y enviar las invitaciones por email.
-        <br />
-        <br />
-        Todo el código fuente está en inglés, pero todo el texto interno de la aplicación está en
-        español.
-      </span>
-    ),
-    Tags: {
-      English: ["MVP", "CRUD", "MaterializeCSS", "React", "Typescript", "PHP", "MySQL"],
-      Spanish: [
-        "MVP",
-        "Altas Bajas Cambios",
-        "MaterializeCSS",
-        "React",
-        "Typescript",
-        "PHP",
-        "MySQL",
-      ],
-    },
-  },
   CellularAutomata: {
     Title: (
       <span>
@@ -406,46 +310,55 @@ const Projects: ProjectsI = {
     },
     Extension: "jpg",
   },
-  ManageYourCinema: {
+  DIYCompiler: {
     Title: (
       <span>
         {" "}
-        <b>Manage</b>Your<b>Cinema</b>{" "}
+        <b>DIY</b>Compiler
       </span>
     ),
-    LinkToProject: "https://github.com/SoyOscarRH/ManageYourCinema",
-    Color: "teal",
+    LinkToProject: "https://github.com/CompilandoConocimiento/Compiler",
+    CheckOut: "https://compilandoconocimiento.github.io/Compiler/#/grammars",
+    Color: "orange",
     English: (
       <span>
-        This is a UNFINISHED mini project for a web system that can control a cinema (candy shop and
-        tickets)
+        This was a school project for my Compiler class.
         <br />
         <br />
-        It allows to create users and manage them, sell candy and popcorn, an the movie tickets.
+        It allows you to create tokens, finite state automatas and context free grammars; and with
+        them a lexical and syntactical analyzer. This have been the most ambitious project I have
+        participated on; also, I did not do this alone, but with the help of Alan Ontiveros and
+        Laura Lopez, my classroom partners and friends.
         <br />
         <br />
-        All the code and documentation is in english, but all the text inside the app is in spanish
-        (my mother tongue).
+        We did operations for automatas like: join, concatenate, closures, convert to deterministic,
+        create basic automata, create from regular expression, lexical analysis, etc.
+        <br />
+        And for grammars operations like: LL(1), LR(0), LALR(1), LR(1) and Earley parsing, seeing
+        step by step this process (table generation and string parsing).
       </span>
     ),
     Spanish: (
       <span>
-        Mini proyecto INCOMPLETO para un sistema web que puede controlar un cine (venta de dulces y
-        boletos)
+        Esto fue un proyecto para mi clase de Compiladores.
         <br />
         <br />
-        Permite crear usuarios y administrarlos, vender dulces y palomitas, y las entradas para el
-        cine.
+        Permite la creación de tokens, autómatas de estados finitos y gramáticas libres de contexto;
+        y con ellas crear un analizador sintáctico y semántico. Este ha sido el proyecto más
+        ambicioso en el que he participado; eso si, no he hecho este proyecto solo, sino con la
+        ayuda de Alan Ontivieros y Laura Lopez, mis compañeros de clase y amigos.
         <br />
         <br />
-        Todo el código fuente está en inglés, pero todo el texto interno de la aplicación está en
-        español.
+        Para los autómatas tenemos operaciones disponibles como: "join", "concatenate", "closures",
+        "convert to deterministic", "create basic automata", "create from regular expression",
+        "lexical analysis", etc.
+        <br />Y para las gramaticas había operaciones como: LL(1), LR(0), LALR(1), LR(1) y "Earley
+        parsing", incluso podrías ver paso a paso el proceso.
       </span>
     ),
-    Extension: "jpg",
     Tags: {
-      English: ["CRUD", "MaterializeCSS", "jQuery", "PHP", "MySQL"],
-      Spanish: ["Altas Bajas Cambios", "MaterializeCSS", "jQuery", "PHP", "MySQL"],
+      English: ["MaterializeCSS", "React", "Typescript", "Class project", "SPA"],
+      Spanish: ["MaterializeCSS", "React", "Typescript", "Proyecto de clase", "SPA"],
     },
   },
   ThingsWithCryptography: {
@@ -550,6 +463,58 @@ const Projects: ProjectsI = {
       ],
     },
   },
+  OrganizeAnEvent: {
+    Title: (
+      <span>
+        {" "}
+        <b>Organize</b>An<b>Event</b>
+      </span>
+    ),
+    LinkToProject: "https://github.com/SoyOscarRH/OrganizeAnEvent",
+    Color: "yellow darken-2",
+    English: (
+      <span>
+        This is a minimum viable product for a web system to control assistance and documents to an
+        academic ceremony.
+        <br />
+        <br />
+        It allows us to pass assistance using bar codes and QR inside the web app. Also, it allows
+        us to get the statistics of the event (in PDF) and to send the invitations through email.
+        <br />
+        It allow to have differents types fo users (normal and admins).
+        <br />
+        <br />
+        All the code and documentation is in english, but all the text inside the app is in spanish
+        (my mother tongue).
+      </span>
+    ),
+    Spanish: (
+      <span>
+        Este es el mínimo producto viable para un sistema web que pueda controlar una ceremonia
+        académica.
+        <br />
+        <br />
+        Permite pasar asistencia usando códigos de barras y QR dentro de la aplicación. También nos
+        permite crear PDF con las estadísticas del evento y enviar las invitaciones por email.
+        <br />
+        <br />
+        Todo el código fuente está en inglés, pero todo el texto interno de la aplicación está en
+        español.
+      </span>
+    ),
+    Tags: {
+      English: ["MVP", "CRUD", "MaterializeCSS", "React", "Typescript", "PHP", "MySQL"],
+      Spanish: [
+        "MVP",
+        "Altas Bajas Cambios",
+        "MaterializeCSS",
+        "React",
+        "Typescript",
+        "PHP",
+        "MySQL",
+      ],
+    },
+  },
   CreatingWithLaTeX: {
     Title: (
       <span>
@@ -642,55 +607,89 @@ const Projects: ProjectsI = {
       ],
     },
   },
-  DIYCompiler: {
+  CompetitiveReference: {
     Title: (
       <span>
         {" "}
-        <b>DIY</b>Compiler
+        <b>Competitive</b>Reference
       </span>
     ),
-    LinkToProject: "https://github.com/CompilandoConocimiento/Compiler",
-    CheckOut: "https://compilandoconocimiento.github.io/Compiler/#/grammars",
-    Color: "orange",
+    LinkToProject: "https://github.com/CompilandoConocimiento/Reference",
+    CheckOut: "https://compilandoconocimiento.github.io/Reference/",
+    Color: "blue-grey darken-3",
     English: (
       <span>
-        This was a school project for my Compiler class.
+        This is all my personal implementations of the most famous and useful competitive
+        programming algorithms.
         <br />
         <br />
-        It allows you to create tokens, finite state automatas and context free grammars; and with
-        them a lexical and syntactical analyzer. This have been the most ambitious project I have
-        participated on; also, I did not do this alone, but with the help of Alan Ontiveros and
-        Laura Lopez, my classroom partners and friends.
+        Most of the implementations are in C++, but you can also find them in C and even in Python
+        and Java.
         <br />
         <br />
-        We did operations for automatas like: join, concatenate, closures, convert to deterministic,
-        create basic automata, create from regular expression, lexical analysis, etc.
-        <br />
-        And for grammars operations like: LL(1), LR(0), LALR(1), LR(1) and Earley parsing, seeing
-        step by step this process (table generation and string parsing).
+        I'm also working on creating a Reference (Book & Website) so many more people can benefit
+        from it, and get further along in this awesome mind-sport.
       </span>
     ),
     Spanish: (
       <span>
-        Esto fue un proyecto para mi clase de Compiladores.
+        Recopilación de mis implementaciones personales de los más famosos y útiles algoritmos de la
+        programación competitiva.
         <br />
         <br />
-        Permite la creación de tokens, autómatas de estados finitos y gramáticas libres de contexto;
-        y con ellas crear un analizador sintáctico y semántico. Este ha sido el proyecto más
-        ambicioso en el que he participado; eso si, no he hecho este proyecto solo, sino con la
-        ayuda de Alan Ontivieros y Laura Lopez, mis compañeros de clase y amigos.
+        La mayoría de las implementaciones están en C ++, pero también puedes encontrar algunas en C
+        e incluso en Python y Java.
         <br />
         <br />
-        Para los autómatas tenemos operaciones disponibles como: "join", "concatenate", "closures",
-        "convert to deterministic", "create basic automata", "create from regular expression",
-        "lexical analysis", etc.
-        <br />Y para las gramaticas había operaciones como: LL(1), LR(0), LALR(1), LR(1) y "Earley
-        parsing", incluso podrías ver paso a paso el proceso.
+        También estoy trabajando en la creación de un "Refence" (libro y sitio web) para que así más
+        personas puedan beneficiarse de esto y avanzar más en este increíble deporte mental.
       </span>
     ),
     Tags: {
-      English: ["MaterializeCSS", "React", "Typescript", "Class project", "SPA"],
-      Spanish: ["MaterializeCSS", "React", "Typescript", "Proyecto de clase", "SPA"],
+      English: ["Competitive Programming", "C++", "Webapp", "React", "Typescript", "Book"],
+      Spanish: ["Programación Competitiva", "C++", "Webapp", "React", "Typescript", "Libro"],
+    },
+  },
+  ManageYourCinema: {
+    Title: (
+      <span>
+        {" "}
+        <b>Manage</b>Your<b>Cinema</b>{" "}
+      </span>
+    ),
+    LinkToProject: "https://github.com/SoyOscarRH/ManageYourCinema",
+    Color: "teal",
+    English: (
+      <span>
+        This is a UNFINISHED mini project for a web system that can control a cinema (candy shop and
+        tickets)
+        <br />
+        <br />
+        It allows to create users and manage them, sell candy and popcorn, an the movie tickets.
+        <br />
+        <br />
+        All the code and documentation is in english, but all the text inside the app is in spanish
+        (my mother tongue).
+      </span>
+    ),
+    Spanish: (
+      <span>
+        Mini proyecto INCOMPLETO para un sistema web que puede controlar un cine (venta de dulces y
+        boletos)
+        <br />
+        <br />
+        Permite crear usuarios y administrarlos, vender dulces y palomitas, y las entradas para el
+        cine.
+        <br />
+        <br />
+        Todo el código fuente está en inglés, pero todo el texto interno de la aplicación está en
+        español.
+      </span>
+    ),
+    Extension: "jpg",
+    Tags: {
+      English: ["CRUD", "MaterializeCSS", "jQuery", "PHP", "MySQL"],
+      Spanish: ["Altas Bajas Cambios", "MaterializeCSS", "jQuery", "PHP", "MySQL"],
     },
   },
 }
