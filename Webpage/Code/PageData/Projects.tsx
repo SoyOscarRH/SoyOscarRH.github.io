@@ -778,7 +778,6 @@ const Projects: ProjectsI = {
       Spanish: ["Altas Bajas Cambios", "MaterializeCSS", "jQuery", "PHP", "MySQL"],
     },
   },
-
   CreatingWithLaTeX: {
     Title: (
       <span>
@@ -814,6 +813,40 @@ const Projects: ProjectsI = {
     Tags: {
       English: ["LaTeX", "Math", "Reference"],
       Spanish: ["LaTeX", "Matemáticas", "Referencia"],
+    },
+  },
+  SIRModel: {
+    Title: (
+      <span>
+        <b>SIR</b>Model
+      </span>
+    ),
+    LinkToProject: "https://github.com/QApolo/CS/tree/master/05_CovidProj/web/sir_covid",
+    CheckOut: "https://qapolo.github.io/sir_model/",
+    Color: "yellow accent-4",
+    English: (
+      <span>
+        As a final project in my complex class I created a small webapp that shows the evolution of
+        an epidemic in Mexico using the classical model SIR.
+        <br />
+        <br />
+        Model developed using cellular automaton over graph theory and running in a webapp.
+      </span>
+    ),
+    Spanish: (
+      <span>
+        Como proyecto final de mi clase de sistemas complejos creé una pequeña aplicación web que
+        muestra la evolución de una epidemia en México utilizando el modelo clásico SIR.
+        <br />
+        <br />
+        Modelo desarrollado utilizando autómata celulares sobre teoría de grafos y ejecutándose en
+        una aplicación web.
+      </span>
+    ),
+    Extension: "jpg",
+    Tags: {
+      English: ["Complex Systems", "SIR"],
+      Spanish: ["LaTeX", "SIR"],
     },
   },
 }
