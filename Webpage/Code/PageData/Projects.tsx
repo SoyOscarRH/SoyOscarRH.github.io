@@ -428,6 +428,53 @@ const Projects: ProjectsI = {
       Spanish: ["Python", "Criptografia"],
     },
   },
+  GameOfLife: {
+    Title: (
+      <span>
+        <b>Game</b>of<b>Life</b>
+      </span>
+    ),
+    LinkToProject: "https://github.com/SoyOscarRH/GameOfLife",
+    CheckOut: "https://soyoscarrh.github.io/GameOfLife/",
+    Color: "pink lighten-3",
+    English: (
+      <span>
+        During my time in a Complex System class I created the classical Game of Life simulator.
+        <br />
+        The Game of Life is a cellular automaton devised by great the mathematician John Horton
+        Conway. It is a zero-player game, meaning that its evolution is determined by its initial
+        state, requiring no further input. One interacts with it by creating an initial
+        configuration and observing how it evolves.
+        <br />
+        <br />I created a perfomant webapp using the core game engine in Rust, and then using WASM I
+        connected it to a SPA webapp.
+        <br />
+        It also has the opportunity the save and load states and show some basic analytics of the
+        universe.
+      </span>
+    ),
+    Spanish: (
+      <span>
+        Durante mi clase de Sistemas Complejo, creé el simulador clásico de "Game of Life".
+        <br />
+        El juego de la vida es un autómata celular ideado por el gran matemático John Horton Conway.
+        Es un juego de cero jugadores, lo que significa que su evolución está determinada por su
+        estado, no requiriendo más entrada. Uno interactúa con él creando una inicial configuración
+        y observando cómo evoluciona.
+        <br />
+        <br /> Creé una aplicación web eficaz usando el motor de juego principal en Rust y luego
+        usando WASM y lo conecté a una aplicación web.
+        <br />
+        También tiene la oportunidad de guardar y cargar estados y mostrar algunos análisis básicos
+        del universo.
+      </span>
+    ),
+    Extension: "jpg",
+    Tags: {
+      English: ["WASM", "Rust", "React"],
+      Spanish: ["WASM", "Rust", "React"],
+    },
+  },
   TdeTiendita: {
     Title: (
       <span>
@@ -532,41 +579,47 @@ const Projects: ProjectsI = {
       ],
     },
   },
-  CreatingWithLaTeX: {
+  FudgeRatio: {
     Title: (
       <span>
-        {" "}
-        <b>Creating</b>With<b>LaTeX</b>
+        <b>Fudge</b>Ratio
       </span>
     ),
-    LinkToProject: "https://github.com/CompilandoConocimiento/CreatingWithLatex/",
-    Color: "cyan accent-3",
+    LinkToProject: "https://github.com/gilemos/FudgeRatio",
+    CheckOut: "https://fudgeratio-274623.uc.r.appspot.com",
+    Color: "blue lighten-2",
     English: (
       <span>
-        This is where I put all the things that I need when working with LaTeX: code to insert an
-        image, make covers, insert tables.
+        During the Spring of 2020, I created with my SPS team at fudge ratio calculator web app.
+        <br />
+        Your Fudge Ratio is the ratio of estimated time against actual time it takes for you to
+        complete a task.
         <br />
         <br />
-        Also, here I save a the header I use in almost all my files, which have many math commands
-        for easier and higher level equations as \Cis, \UpperDerivate, \BigBrackets, \GenericField,
-        etc...
+        SPS or Google Software Product Sprint is virtual, invite only program that brings together
+        top university students across North America and Googlers for 11 weeks to design and build
+        web apps, gain applied data structure and algorithms skills, and receive tailored career
+        development resources
       </span>
     ),
     Spanish: (
       <span>
-        Aquí es donde pongo todas las cosas que necesito cuando trabajo con LaTeX: código para
-        insertar una imagen, hacer cubiertas, insertar tablas.
+        Durante la primavera del 2020, creé con mi equipo de SPS en la aplicación web que te
+        permitia calcular tu "fudge ratio".
+        <br />
+        El "fudge ratio" es la relación entre el tiempo estimado y el tiempo real que le lleva
+        completar una tarea.
         <br />
         <br />
-        Además, aquí guardo el encabezado que uso en casi todos mis archivos, que tienen muchos
-        comandos matemáticos para un manejo más fácil y de mayor nivel como: \Cis, \UpperDerivate,
-        \BigBrackets, \Generic Field, etc...
+        SPS o Google Software Product Sprint es un programa virtual, que reúne a los mejores
+        estudiantes universitarios de Norteamérica y Googlers durante 11 semanas para diseñar y
+        construir aplicaciones web y recibimos recursos para mejorar nuestra carrera.
       </span>
     ),
     Extension: "jpg",
     Tags: {
-      English: ["LaTeX", "Math", "Reference"],
-      Spanish: ["LaTeX", "Matemáticas", "Referencia"],
+      English: ["Google SPS", "Vanilla JS", "Google Cloud"],
+      Spanish: ["Google SPS", "Vanilla JS", "Google Cloud"],
     },
   },
   LCS: {
@@ -709,47 +762,42 @@ const Projects: ProjectsI = {
       Spanish: ["Altas Bajas Cambios", "MaterializeCSS", "jQuery", "PHP", "MySQL"],
     },
   },
-  FudgeRatio: {
+
+  CreatingWithLaTeX: {
     Title: (
       <span>
-        <b>Fudge</b>Ratio
+        {" "}
+        <b>Creating</b>With<b>LaTeX</b>
       </span>
     ),
-    LinkToProject: "https://github.com/gilemos/FudgeRatio",
-    CheckOut: "https://fudgeratio-274623.uc.r.appspot.com",
-    Color: "blue lighten-3",
+    LinkToProject: "https://github.com/CompilandoConocimiento/CreatingWithLatex/",
+    Color: "cyan accent-3",
     English: (
       <span>
-        During the Spring of 2020, I created with my SPS team at fudge ratio calculator web app.
-        <br />
-        Your Fudge Ratio is the ratio of estimated time against actual time it takes for you to
-        complete a task.
+        This is where I put all the things that I need when working with LaTeX: code to insert an
+        image, make covers, insert tables.
         <br />
         <br />
-        SPS or Google Software Product Sprint is virtual, invite only program that brings together
-        top university students across North America and Googlers for 11 weeks to design and build
-        web apps, gain applied data structure and algorithms skills, and receive tailored career
-        development resources
+        Also, here I save a the header I use in almost all my files, which have many math commands
+        for easier and higher level equations as \Cis, \UpperDerivate, \BigBrackets, \GenericField,
+        etc...
       </span>
     ),
     Spanish: (
       <span>
-        Durante la primavera del 2020, creé con mi equipo de SPS en la aplicación web que te
-        permitia calcular tu "fudge ratio".
-        <br />
-        El "fudge ratio" es la relación entre el tiempo estimado y el tiempo real que le lleva
-        completar una tarea.
+        Aquí es donde pongo todas las cosas que necesito cuando trabajo con LaTeX: código para
+        insertar una imagen, hacer cubiertas, insertar tablas.
         <br />
         <br />
-        SPS o Google Software Product Sprint es un programa virtual, que reúne a los mejores
-        estudiantes universitarios de Norteamérica y Googlers durante 11 semanas para diseñar y
-        construir aplicaciones web y recibimos recursos para mejorar nuestra carrera.
+        Además, aquí guardo el encabezado que uso en casi todos mis archivos, que tienen muchos
+        comandos matemáticos para un manejo más fácil y de mayor nivel como: \Cis, \UpperDerivate,
+        \BigBrackets, \Generic Field, etc...
       </span>
     ),
     Extension: "jpg",
     Tags: {
-      English: ["Google SPS", "Vanilla JS", "Google Cloud"],
-      Spanish: ["Google SPS", "Vanilla JS", "Google Cloud"],
+      English: ["LaTeX", "Math", "Reference"],
+      Spanish: ["LaTeX", "Matemáticas", "Referencia"],
     },
   },
 }
