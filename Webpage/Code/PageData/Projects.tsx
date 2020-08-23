@@ -382,19 +382,30 @@ const Projects: ProjectsI = {
         <span>Projects I did while I started learning about cryptography</span>
         <ul style={{ padding: "0rem 0.8rem", textAlign: "left" }}>
           <li style={{ listStyleType: "disc" }}>
-            <em>Hybrid app</em>: A web application with different types of services, such as
-            confidentiality, authenticate, or both for messages (inspired by PGP), that we (I and a
-            friend Oscar David) developed. The application uses AES and RSA with signature digital.
+            <em>Hybrid app</em>: A web application with different types of services: such as
+            confidentiality, authenticate, of both for messages (inspired by PGP), that I developed.
+            The application uses AES and RSA with signature digital.
           </li>
           <br />
           <li style={{ listStyleType: "disc" }}>
-            <em>Binary field</em>: A C ++ class that allows you to store the elements of a field
-            finite, especially GF (2 ^ 8), like the one used in AES.
+            <a
+              style={{ color: "inherit" }}
+              href="https://crypto.stackexchange.com/questions/59311/how-is-multiplication-in-field-gf28-done"
+            >
+              <em>Binary field</em>
+            </a>
+            : A C ++ class that allows you to store the elements of a field finite, especially GF (2
+            ^ 8), like the one used in AES.
           </li>
           <br />
           <li style={{ listStyleType: "disc" }}>
             <em>Lenstra algorithm</em>: An implementation of the lenstra algorithm, it uses curves
             ellipticals to factor integers.
+          </li>
+          <br />
+          <li style={{ listStyleType: "disc" }}>
+            <em>Operation Modes</em>: App to show how evene using the same algorithms but different
+            operation modes can lead to a vastly different output.
           </li>
         </ul>
       </React.Fragment>
@@ -405,9 +416,8 @@ const Projects: ProjectsI = {
         <ul style={{ padding: "0rem 0.8rem", textAlign: "left" }}>
           <li style={{ listStyleType: "disc" }}>
             <em>Hybrid app</em>: una aplicación web con diferentes tipos de servicios, como
-            confidencialidad, autentica o ambos para mensajes (inspirados en PGP), que nosotros (yo
-            y un amigo Oscar David) desarrollamos. La aplicación se cifra con AES y RSA con la firma
-            digital.
+            confidencialidad, autentica de ambos para mensajes (inspirados en PGP), yo desarrollé.
+            La aplicación se cifra con AES y RSA con la firma digital.
           </li>
           <br />
           <li style={{ listStyleType: "disc" }}>
@@ -418,6 +428,12 @@ const Projects: ProjectsI = {
           <li style={{ listStyleType: "disc" }}>
             <em>Lenstra algorithm</em>: Una implementación del algoritmo de lenstra, utiliza curvas
             elípticas para factorizar enteros.
+          </li>
+          <br />
+          <li style={{ listStyleType: "disc" }}>
+            <em> Modos de Operación </em>: Creé una aplicación para mostrar cómo incluso usando el
+            mismo algoritmo pero usando diferentes modos de operación pueden conseguir a una salida
+            muy diferente.
           </li>
         </ul>
       </React.Fragment>
