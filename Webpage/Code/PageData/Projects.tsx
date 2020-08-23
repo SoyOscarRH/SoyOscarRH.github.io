@@ -126,14 +126,18 @@ const Projects: ProjectsI = {
             <em>Surnames origins</em>: A RRN using PyTorch (+ a DIY LSTM module) that can predict
             the origin of a surname.
           </li>
+          <br />
+          <li style={{ listStyleType: "disc" }}>
+            <em>Style transfer</em>: Using a CNN (VGG-19); a Udacity's PyTorch exercise.
+          </li>
+          <br />
+          <li style={{ listStyleType: "disc" }}>
+            <em>Sign Language</em>: A CNN using TensorFlow that can recognize the american sign
+            language.
+          </li>
+          <br />
           <li style={{ listStyleType: "disc" }}>
             <em>CIFAR10</em>: A RRN using PyTorch that classifies images suing the CIFAR10 dataset.
-          </li>
-          <li style={{ listStyleType: "disc" }}>
-            <em>Style transfer</em> using a convolutional nn; a Udacity's PyTorch exercise.
-          </li>
-          <li style={{ listStyleType: "disc" }}>
-            <em>MNIST using a MLP</em>: This is a classic example, a net that recognizes digits.
           </li>
         </ul>
       </React.Fragment>
@@ -149,24 +153,28 @@ const Projects: ProjectsI = {
             <em>Origen de los apellidos</em>: una RRN que utiliza PyTorch (+ un módulo DIY LSTM) que
             puede predecir el origen de un apellido.
           </li>
-          <li style={{ listStyleType: "disc" }}>
-            <em>CIFAR10</em>: una RRN que usa PyTorch para clasificar las imágenes del dataset
-            CIFAR10.
-          </li>
+          <br />
           <li style={{ listStyleType: "disc" }}>
             <em>Style transfer</em> Transferencia de estilo usando una nn convolucional; un
             ejercicio del curso de PyTorch de Udacity.
           </li>
+          <br />
           <li style={{ listStyleType: "disc" }}>
-            <em>MNIST using a MLP</em>: Este es un ejemplo clásico, una red que reconoce dígitos.
+            <em>Lenguaje de Señas</em>: Una CNN creada con Tensorflow que es capaz de entender
+            lenguaje de señas americano.
+          </li>
+          <br />
+          <li style={{ listStyleType: "disc" }}>
+            <em>CIFAR10</em>: una RRN que usa PyTorch para clasificar las imágenes del dataset
+            CIFAR10.
           </li>
         </ul>
       </React.Fragment>
     ),
     Extension: "jpg",
     Tags: {
-      English: ["Python", "Pytorch", "Udacity", "ML"],
-      Spanish: ["Python", "Pytorch", "Udacity", "ML"],
+      English: ["Python", "Pytorch", "TensorFlow", "Udacity", "ML"],
+      Spanish: ["Python", "Pytorch", "TensorFlow", "Udacity", "ML"],
     },
   },
   Binary: {
