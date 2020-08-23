@@ -857,6 +857,60 @@ const Projects: ProjectsI = {
       Spanish: ["LaTeX", "SIR"],
     },
   },
+  LearningMachineLearning: {
+    Title: (
+      <span>
+        <b>Learning</b>Machine <b>Learning</b>
+      </span>
+    ),
+    LinkToProject: "https://github.com/SoyOscarRH/LearningMachineLearning",
+    Color: "orange accent-4",
+    English: (
+      <React.Fragment>
+        <span>
+          Documents and codes I created while learning about machine learning (except NN as I have a
+          repo for them).
+        </span>
+        <ul style={{ padding: "0rem 0.8rem", textAlign: "left" }}>
+          <li style={{ listStyleType: "disc" }}>
+            <em>Clusters and costumers</em>: A general analysis of consumer data using cluster
+            analysis (k means and DBSCAN) to propose consumer groups.
+          </li>
+
+          <br />
+          <li style={{ listStyleType: "disc" }}>
+            <em>Doc importance</em>: The problem chosen was to predict the urgency of a message
+            given in its content, being more specific try to classify the urgency of a "support
+            ticket". To solve it I used a decision tree using Weka's Java API.
+          </li>
+        </ul>
+      </React.Fragment>
+    ),
+    Spanish: (
+      <span>
+        Documentos y códigos que creé mientras aprendía sobre aprendizaje automático (excepto NN, ya
+        que tengo un repositorio para ellos).
+        <ul style={{ padding: "0rem 0.8rem", textAlign: "left" }}>
+          <li style={{ listStyleType: "disc" }}>
+            <em> Clústeres y clientes </em>: un análisis general de los datos de los consumidores
+            mediante clústeres análisis (k medias y DBSCAN) para proponer grupos de consumidores.
+          </li>
+          <br />
+          <li style={{ listStyleType: "disc" }}>
+            <em> Importancia de un documento </em>: el problema elegido fue predecir la urgencia de
+            un mensaje dado en su contenido, siendo más específico intentar clasificar la urgencia
+            de un "apoyo ticket ". Para resolverlo utilicé un árbol de decisiones usando la API de
+            Java de Weka.
+          </li>
+        </ul>
+      </span>
+    ),
+    Extension: "jpg",
+    Tags: {
+      English: ["Complex Systems", "SIR"],
+      Spanish: ["LaTeX", "SIR"],
+    },
+  },
 }
 
 export default Projects
