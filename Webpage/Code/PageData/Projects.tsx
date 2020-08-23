@@ -30,13 +30,13 @@ const Projects: ProjectsI = {
     English: (
       <span>
         Creator of a blog (in spanish) to learn about science in general, discrete math, physics,
-        vectorial analysis, simple algorithms and data structures (stacks, queues, BST, AVL trees,
-        etc), automata theory, intro to C and to object oriented programming using Java.
+        vectorial analysis, simple algorithms, and data structures (stacks, queues, BST, AVL trees,
+        etc), automata theory, intro to C and to object-oriented programming using Java.
         <br />
         The blog has around 350,000 views since the beginning of 2018.
         <br />
         <br />
-        Here you can also find all the books my organization are writing for free.
+        Here you can also find all the books my organization is writing for free.
       </span>
     ),
     Spanish: (
@@ -71,9 +71,14 @@ const Projects: ProjectsI = {
     English: (
       <span>
         This is a repository to store all the solutions for competitive programming problems on
-        Judges online like OmegaUp, Codeforces, SPOJ, UVa and many more.
-        Also here I store all my submissions on interview problems 
-        (+200 problems in <u><a style={{color: "inherit"}} href="https://leetcode.com/soyoscarrh/">Leetcode</a></u>).
+        Judges online like OmegaUp, Codeforces, SPOJ, UVa, and many more. Also here I store all my
+        submissions on interview problems (+200 problems in{" "}
+        <u>
+          <a style={{ color: "inherit" }} href="https://leetcode.com/soyoscarrh/">
+            Leetcode
+          </a>
+        </u>
+        ).
         <br />
         <br />
         Most of the solutions are in C++, because sincerely solving problems of this kind in this
@@ -85,9 +90,9 @@ const Projects: ProjectsI = {
     Spanish: (
       <span>
         Este es un repositorio para guardar todas las soluciones para los problemas de programación
-        competitiva en jueces en línea como OmegaUp, Codeforces, SPOJ, UVa y muchos más.
-        También ahi guardo todo lo relacionado con los problema que hago de entrevistas 
-        (+200 problemas en <a href="https://leetcode.com/soyoscarrh/">Leetcode</a>).
+        competitiva en jueces en línea como OmegaUp, Codeforces, SPOJ, UVa y muchos más. También ahi
+        guardo todo lo relacionado con los problema que hago de entrevistas (+200 problemas en{" "}
+        <a href="https://leetcode.com/soyoscarrh/">Leetcode</a>).
         <br />
         <br />
         La mayoría de las soluciones están en C++, porque resolver esa clase de problemas en este
@@ -128,7 +133,7 @@ const Projects: ProjectsI = {
             <em>Style transfer</em> using a convolutional nn; a Udacity's PyTorch exercise.
           </li>
           <li style={{ listStyleType: "disc" }}>
-            <em>MNIST using a MLP</em>: This is a classic example, a net that recognize digits.
+            <em>MNIST using a MLP</em>: This is a classic example, a net that recognizes digits.
           </li>
         </ul>
       </React.Fragment>
@@ -176,13 +181,13 @@ const Projects: ProjectsI = {
     Color: "green",
     English: (
       <span>
-        This was a project just for fun to really understand floating-point numbers / arithmetic and
+        This was a project just for fun to deeply understand floating-point numbers / arithmetic and
         binary conversions (complement-1 and complement 2).
         <br />
         <br />
         It allows you to transform a binary number to decimal and backwards, the basic ideas for
-        represent negative integers (complement 1, complement 2 and partial representation) and IEEE
-        floating-point.
+        representing negative integers (complement 1, complement 2 and partial representation) and
+        IEEE floating-point.
         <br />
         <br />
         All the code and documentation is in English, but all the text inside the app is in Spanish
@@ -282,19 +287,22 @@ const Projects: ProjectsI = {
     Color: "blue-grey darken-2",
     English: (
       <span>
-        This is webapp let you see all the elementary automata, you can edit the size of the cell,
-        how many iterations and even see an analysis. It is a one day project, so dont expect
-        anything fancy, but really beautiful images.
+        This is webapp let you see all the elementary cellular automata (elementary cellular
+        automata have two possible values for each cell (0 or 1), and rules that depend only on
+        nearest neighbor values), you can edit the size of the cell, how many iterations and even
+        see an analysis. It is a one day project, so don't expect anything fancy inside the code,
+        but the automatas create really beautiful images.
         <br />
         <br />
-        Really recommend to check rules: 30, 54, 60, 126, 182, 150, 57.
+        <br />
+        Really recommend to check rules: 30, 54, 60, 126, 182, 150, 57. They are beautiful n.n
       </span>
     ),
     Spanish: (
       <span>
-        Esta aplicación web te permite ver todos los autómatas elementales, puedes editar el tamaño
-        de la celda, cuántas iteraciones e incluso ver un análisis. Es un proyecto de un día, así
-        que no esperes nada elegante, pero hay realmente bellas imágenes aquí.
+        Esta aplicación web te permite ver todos los autómatas celulares elementales, puedes editar
+        el tamaño de la celda, cuántas iteraciones e incluso ver un análisis. Es un proyecto de un
+        día, así que no esperes nada elegante, pero hay realmente bellas imágenes aquí.
         <br />
         <br />
         La mayoría de las implementaciones están en C ++, pero también puedes encontrar algunas en C
@@ -325,10 +333,9 @@ const Projects: ProjectsI = {
         This was a school project for my Compiler class.
         <br />
         <br />
-        It allows you to create tokens, finite state automatas and context free grammars; and with
-        them a lexical and syntactical analyzer. This have been the most ambitious project I have
-        participated on; also, I did not do this alone, but with the help of Alan Ontiveros and
-        Laura Lopez, my classroom partners and friends.
+        It allows you to create tokens, finite state automatas and context-free grammars; and with
+        them a lexical and syntactical analyzer. I did it with the help of Alan Ontiveros and Laura
+        Lopez, my classroom partners and friends.
         <br />
         <br />
         We did operations for automatas like: join, concatenate, closures, convert to deterministic,
@@ -345,8 +352,8 @@ const Projects: ProjectsI = {
         <br />
         Permite la creación de tokens, autómatas de estados finitos y gramáticas libres de contexto;
         y con ellas crear un analizador sintáctico y semántico. Este ha sido el proyecto más
-        ambicioso en el que he participado; eso si, no he hecho este proyecto solo, sino con la
-        ayuda de Alan Ontivieros y Laura Lopez, mis compañeros de clase y amigos.
+        ambicioso en el que he participado, hecho gracias a la ayuda de Alan Ontivieros y Laura
+        Lopez, mis compañeros de clase y amigos.
         <br />
         <br />
         Para los autómatas tenemos operaciones disponibles como: "join", "concatenate", "closures",
@@ -357,8 +364,8 @@ const Projects: ProjectsI = {
       </span>
     ),
     Tags: {
-      English: ["MaterializeCSS", "React", "Typescript", "Class project", "SPA"],
-      Spanish: ["MaterializeCSS", "React", "Typescript", "Proyecto de clase", "SPA"],
+      English: ["MaterializeCSS", "React", "Typescript", "Class project"],
+      Spanish: ["MaterializeCSS", "React", "Typescript", "Proyecto de clase"],
     },
   },
   ThingsWithCryptography: {
@@ -372,6 +379,29 @@ const Projects: ProjectsI = {
     Color: "red",
     English: (
       <React.Fragment>
+        <span>Projects I did while I started learning about cryptography</span>
+        <ul style={{ padding: "0rem 0.8rem", textAlign: "left" }}>
+          <li style={{ listStyleType: "disc" }}>
+            <em>Hybrid app</em>: A web application with different types of services, such as
+             confidentiality, authenticate, or both for messages (inspired by PGP), that we (I
+             and a friend Oscar David) developed. The application uses AES and RSA with signature
+             digital.
+          </li>
+          <br />
+          <li style={{ listStyleType: "disc" }}>
+            <em>Binary field</em>: A C ++ class that allows you to store the elements of a field
+             finite, especially GF (2 ^ 8), like the one used in AES.
+          </li>
+          <br />
+          <li style={{ listStyleType: "disc" }}>
+            <em>Lenstra algorithm</em>: An implementation of the lenstra algorithm, it uses curves
+             ellipticals to factor integers.
+          </li>
+        </ul>
+      </React.Fragment>
+    ),
+    Spanish: (
+      <React.Fragment>
         <span>Proyectos que hice mientras aprendía sobre criptografía</span>
         <ul style={{ padding: "0rem 0.8rem", textAlign: "left" }}>
           <li style={{ listStyleType: "disc" }}>
@@ -380,30 +410,18 @@ const Projects: ProjectsI = {
             y un amigo Oscar David) desarrollamos. La aplicación se cifra con AES y RSA con la firma
             digital.
           </li>
+          <br />
           <li style={{ listStyleType: "disc" }}>
             <em>Binary field</em>: Una clase de C++ que permite almacenar los elementos de un campo
             finito, especialmente GF (2 ^ 8), como el que se usa en AES.
           </li>
+          <br />
           <li style={{ listStyleType: "disc" }}>
             <em>Lenstra algorithm</em>: Una implementación del algoritmo de lenstra, utiliza curvas
             elípticas para factorizar enteros.
           </li>
         </ul>
       </React.Fragment>
-    ),
-    Spanish: (
-      <span>
-        Mini proyecto INCOMPLETO para un sistema web que puede controlar un cine (venta de dulces y
-        boletos)
-        <br />
-        <br />
-        Permite crear usuarios y administrarlos, vender dulces y palomitas, y las entradas para el
-        cine.
-        <br />
-        <br />
-        Todo el código fuente está en inglés, pero todo el texto interno de la aplicación está en
-        español.
-      </span>
     ),
     Extension: "jpg",
     Tags: {
