@@ -860,7 +860,7 @@ const Projects: ProjectsI = {
   LearningMachineLearning: {
     Title: (
       <span>
-        <b>Learning</b>Machine <b>Learning</b>
+        <b>Learning</b>Machine<b>Learning</b>
       </span>
     ),
     LinkToProject: "https://github.com/SoyOscarRH/LearningMachineLearning",
