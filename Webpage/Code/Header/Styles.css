@@ -16,6 +16,7 @@
   cursor: pointer;
   height: "100%";
   text-align: right;
+  max-width: 3rem;
 }
 
 .MyIcon {
