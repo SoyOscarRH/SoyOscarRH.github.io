@@ -1,4 +1,4 @@
-import { BooksData } from "."
+import { BooksData } from "./Books"
 import Projects from "./Projects"
 import Programs from "./Programs"
 import { Language } from "../code/App/Language"
