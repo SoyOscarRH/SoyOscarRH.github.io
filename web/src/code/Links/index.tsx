@@ -3,8 +3,8 @@ import React, { FunctionComponent as FC, useContext } from "react"
 import navigateTo from "../Helpers/navigateTo"
 import { LanguageContext } from "../App/Language"
 
-import * as Styles from "./Styles.css"
-import * as GeneralStyles from "../App/GeneralStyles.css"
+import Styles from "./Styles.module.css"
+import GeneralStyles from "../App/GeneralStyles.module.css"
 
 const Button: FC<{ title: string; src: string; link?: string }> = ({ title, src, link }) => {
   const language = useContext(LanguageContext)

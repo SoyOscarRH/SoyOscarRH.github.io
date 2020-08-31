@@ -2,10 +2,10 @@ import React, { FunctionComponent, useContext, useEffect } from "react"
 import M from "materialize-css"
 
 import { LanguageOption, LanguageContext } from "./App/Language"
-import { BooksI } from "./PageData/Books"
+import { BooksI } from "../data/Books"
 import Card from "./Card"
 
-import * as Styles from "./Card/Styles.css"
+import Styles from "./Card/Styles.module.css"
 
 interface BooksDataI {
   Books: BooksI

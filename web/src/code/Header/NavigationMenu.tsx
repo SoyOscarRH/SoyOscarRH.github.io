@@ -1,9 +1,10 @@
 import React, { FunctionComponent } from "react"
 import navigateTo from "../Helpers/navigateTo"
 
+import Styles from "./Styles.module.css"
+
 const goToTop = () => navigateTo(document.getElementById("start"))
 
-import * as Styles from "./Styles.css"
 
 const NavigationMenu: FunctionComponent = () => (
   <div className={"navbar-fixed " + Styles.Header}>
@@ -18,7 +19,7 @@ const NavigationMenu: FunctionComponent = () => (
         </a>
 
         <a onClick={goToTop} className={"right " + Styles.Home}>
-          <img className={Styles.myIcon} src="Images/Icons/LogoWhite.png" />
+          <img className={Styles.MyIcon} src="Images/Icons/LogoWhite.png" />
         </a>
       </div>
     </nav>

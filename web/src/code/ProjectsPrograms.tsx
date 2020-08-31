@@ -1,13 +1,13 @@
 import React, { FunctionComponent, useContext, useEffect } from "react"
 import M from "materialize-css"
 
-import { ProjectsI } from "./PageData/Projects"
-import { ProgramsI } from "./PageData/Programs"
+import { ProjectsI } from "../data/Projects"
+import { ProgramsI } from "../data/Programs"
 import Card from "./Card"
 
 import { LanguageContext } from "./App/Language"
 
-import * as Styles from "./Card/Styles.css"
+import Styles from "./Card/Styles.module.css"
 
 const ProjectsProgramsSection: FunctionComponent<{
   Projects: ProjectsI

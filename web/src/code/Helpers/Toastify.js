@@ -11,7 +11,7 @@ function containsClass(elem, yourClass) {
     return false
   } else if (
     elem.className &&
-    elem.className
+    elem.classNamescreen
       .trim()
       .split(/\s+/gi)
       .indexOf(yourClass) > -1
@@ -156,7 +156,7 @@ Toastify.lib = Toastify.prototype = {
       }
 
       //Calculating screen width
-      let width = window.innerWidth > 0 ? window.innerWidth : screen.width
+      let width = window.innerWidth > 0 ? window.innerWidth : window.screen.width
 
       // Adding the close icon to the toast element
       // Display on the right if screen width is less than or equal to 360px
@@ -304,7 +304,7 @@ Toastify.reposition = function() {
     // Spacing between toasts
     let offset = 15
 
-    let width = window.innerWidth > 0 ? window.innerWidth : screen.width
+    let width = window.innerWidth > 0 ? window.innerWidth : window.screen.width
 
     // Show toast in center if screen with less than or qual to 360px
     if (width <= 360) {

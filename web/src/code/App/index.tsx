@@ -1,27 +1,30 @@
-import React, { StrictMode, FunctionComponent, useEffect } from "react"
-import ReactDOM from "react-dom"
+import React, {  FunctionComponent, useEffect } from "react";
 
-import { useCreateLanguage, LanguageContext } from "./Language"
-import showToast from "../Helpers/showToast"
+import { useCreateLanguage, LanguageContext } from "./Language";
 
-import AboutMeData from "../../data/AboutMe"
-import ProjectsData from "../../data/Projects"
-import ProgramsData from "../../data/Programs"
-import { BooksData, AboutBooksData } from "../../data"
+import AboutMeData from "../../data/AboutMe";
+import ProjectsData from "../../data/Projects";
+import ProgramsData from "../../data/Programs";
+import { BooksData, AboutBooksData } from "../../data";
 
-import Header from "../Header"
-import Links from "../Links"
-import AboutMe from "../AboutMe"
-import ProjectsPrograms from "../ProjectsPrograms"
-import Books from "../Books"
-import Footer from "../Footer"
+import Header from "../Header";
+import Links from "../Links";
+import AboutMe from "../AboutMe";
+import ProjectsPrograms from "../ProjectsPrograms";
+import Books from "../Books";
+import Footer from "../Footer";
+
+import lazyLoadImages from "../Helpers/lazyLoadImages";
+
+
+document.addEventListener("DOMContentLoaded", lazyLoadImages);
 
 const App: FunctionComponent = () => {
-  const [language, toggleLanguage] = useCreateLanguage()
+  const [language, toggleLanguage] = useCreateLanguage();
 
   useEffect(() => {
-    setTimeout(() => showToast(language, toggleLanguage), 3000)
-  }, []) // eslint-disable-line react-hooks/exhaustive-deps
+    //setTimeout(() => showToast(language, toggleLanguage), 3000);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <LanguageContext.Provider value={language}>
@@ -44,16 +47,9 @@ const App: FunctionComponent = () => {
         <Footer />
       </footer>
     </LanguageContext.Provider>
-  )
-}
+  );
+};
 
-import lazyLoadImages from "../Helpers/lazyLoadImages"
-document.addEventListener("DOMContentLoaded", lazyLoadImages)
+export default App;
 
-const DOM_NODE = document.getElementById("ReactApp")
-ReactDOM.render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-  DOM_NODE
-)
+

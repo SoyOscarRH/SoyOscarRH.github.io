@@ -5,7 +5,7 @@ import { LanguageContext } from "../App/Language"
 
 import getSections, { Section } from "../../data/SideMenuData"
 
-import * as Styles from "./Styles.css"
+import Styles from "./Styles.module.css"
 
 const SideMenu: FunctionComponent<{ toggleLanguage: () => void }> = ({ toggleLanguage }) => {
   const language = useContext(LanguageContext)

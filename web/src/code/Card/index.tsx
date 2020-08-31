@@ -1,11 +1,11 @@
 import React, { FunctionComponent, useContext } from "react"
 
 import { LanguageContext } from "../App/Language"
-import { Project } from "../PageData/Projects"
-import { Program } from "../PageData/Programs"
-import { Book } from "../PageData/Books"
+import { Project } from "../../data/Projects"
+import { Program } from "../../data/Programs"
+import { Book } from "../../data/Books"
 
-import * as Styles from "./Styles.css"
+import Styles from "./Styles.module.css"
 
 interface CardInfo {
   name: string
@@ -87,7 +87,7 @@ const CardText: FunctionComponent<{
     ) : null
 
   return (
-    <div className={"blue-grey-text text-darken-3 " + Styles.textStyle}>
+    <div className={"blue-grey-text text-darken-3 " + Styles.TextStyle}>
       <br />
       <p>{props.text}</p>
       {coauthors}
@@ -164,7 +164,7 @@ const ImageIcon: FunctionComponent = () => {
 }
 
 const ShowTags: FunctionComponent<{ tags: Array<string> }> = ({ tags }) => (
-  <div className={Styles.tagsPart}>
+  <div className={Styles.TagsPart}>
     {tags.map(tag => (
       <div key={tag} className="chip" style={{ fontSize: "0.8rem" }}>
         {tag}

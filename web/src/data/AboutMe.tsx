@@ -1,5 +1,5 @@
 import React from "react"
-import { LanguageOption } from "../App/Language"
+import { LanguageOption } from "../code/App/Language"
 
 export interface AboutMeI {
   SayHi: JSX.Element

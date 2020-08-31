@@ -14,13 +14,13 @@
 
 .Home {
   cursor: pointer;
-  height: "100%";
+  max-height: 100%;
   text-align: right;
   max-width: 3rem;
 }
 
 .MyIcon {
-  width: 2.3rem;
+  max-width: 2.3rem;
   vertical-align: middle;
 }
 

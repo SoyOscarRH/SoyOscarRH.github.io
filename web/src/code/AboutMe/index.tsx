@@ -1,9 +1,9 @@
 import React, { FunctionComponent, useEffect, useState } from "react"
-import { AboutMeI } from "../PageData/AboutMe"
+import { AboutMeI } from "../../data/AboutMe"
 import { LinksToSocialMedia } from "../Header/SideMenu"
 
-import * as GeneralStyles from "../App/GeneralStyles.css"
-import * as Styles from "./Styles.css"
+import GeneralStyles from "../App/GeneralStyles.module.css"
+import Styles from "./Styles.module.css"
 
 import printInDOMNode from "./printInDOMNode"
 

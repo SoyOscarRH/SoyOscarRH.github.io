@@ -1,6 +1,6 @@
-import { BooksData } from "../data"
-import Projects from "../data/Projects"
-import Programs from "../data/Programs"
+import { BooksData } from "."
+import Projects from "./Projects"
+import Programs from "./Programs"
 import { Language } from "../code/App/Language"
 
 type linkName = string
