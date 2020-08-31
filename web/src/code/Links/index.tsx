@@ -17,18 +17,21 @@ const Button: FC<{ title: string; src: string; link?: string }> = ({ title, src,
     event.preventDefault()
   }
 
-  return <a href={href} onClick={handleClick} className={className} style={{ backgroundImage, color: "transparent" }}>
-    {src}
+  const style = { backgroundImage, color: "transparent" }
+  return (
+    <a href={href} onClick={handleClick} className={className} style={style}>
+      {src}
     </a>
+  )
 }
 
-const Links: FC<{ id: string }> = ({ id }) => {
+const Links: FC = () => {
   const resume = "https://soyoscarrh.github.io/Resume.pdf"
   const myTwitter = "https://twitter.com/SoyOscarRH"
   const className = [GeneralStyles.Container, Styles.Links].join(" ")
 
   return (
-    <section id={id} className={className}>
+    <section id="Links" className={className}>
       <Button title={"Projects"} src={"Images/Links/LinksProjects"} />
       <Button title={"Programs"} src={"Images/Links/LinksPrograms"} />
       <Button title={"Books"} src={"Images/Links/LinksBooks"} />

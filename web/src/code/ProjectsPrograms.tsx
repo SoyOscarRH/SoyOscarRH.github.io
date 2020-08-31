@@ -3,16 +3,16 @@ import M from "materialize-css"
 
 import { ProjectsI } from "../data/Projects"
 import { ProgramsI } from "../data/Programs"
+import ProjectsData from "../data/Projects"
+import ProgramsData from "../data/Programs"
+
 import Card from "./Card"
 
 import { useCurrentLanguage } from "./App/Language"
 
 import Styles from "./Card/Styles.module.css"
 
-const ProjectsProgramsSection: FunctionComponent<{
-  Projects: ProjectsI
-  Programs: ProgramsI
-}> = props => {
+const ProjectsProgramsSection = () => {
   const language = useCurrentLanguage()
 
   useEffect(() => {
@@ -27,12 +27,12 @@ const ProjectsProgramsSection: FunctionComponent<{
   const ProgramsTitle = language === "english" ? "Cool Programs" : "Ideas Interesantes"
 
   return (
-    <div className={`center-align ${Styles.Container}`}>
-      <ShowCards id="Projects" title={ProjectsTitle} Elements={props.Projects} type={"Project"} />
+    <section id="ProjectsAndPrograms" className={`center-align ${Styles.Container}`}>
+      <ShowCards id="Projects" title={ProjectsTitle} Elements={ProjectsData} type={"Project"} />
       <br />
       <br />
-      <ShowCards id="Programs" title={ProgramsTitle} Elements={props.Programs} type={"Program"} />
-    </div>
+      <ShowCards id="Programs" title={ProgramsTitle} Elements={ProgramsData} type={"Program"} />
+    </section>
   )
 }
 

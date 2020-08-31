@@ -3,12 +3,11 @@ import navigateTo from "../Helpers/navigateTo"
 
 import Styles from "./Styles.module.css"
 
-const goToTop = () => navigateTo(document.getElementById("start"))
-
+const goToTop = () => navigateTo(document.body)
 
 const NavigationMenu: FunctionComponent = () => (
   <div className={"navbar-fixed " + Styles.Header}>
-    <nav className={Styles.Nav} style={{backgroundColor: "#263238"}}>
+    <nav className={Styles.Nav} style={{ backgroundColor: "#263238" }}>
       <div className="nav-wrapper">
         <span className={Styles.Title}>
           <b>Soy</b>Oscar<b>RH</b>

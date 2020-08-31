@@ -1,5 +1,6 @@
 import React, { FunctionComponent, useEffect, useState } from "react"
-import { AboutMeI } from "../../data/AboutMe"
+import { useCurrentLanguage } from "../App/Language"
+import AboutMeData from "../../data/AboutMe"
 import { LinksToSocialMedia } from "../Header/SideMenu"
 
 import GeneralStyles from "../App/GeneralStyles.module.css"
@@ -7,8 +8,9 @@ import Styles from "./Styles.module.css"
 
 import printInDOMNode from "./printInDOMNode"
 
-const AboutMeSection: FunctionComponent<{ AboutMe: AboutMeI; id: string }> = ({ id, AboutMe }) => {
-  const { Text, SayHi, ShowMyCV, Tags } = AboutMe
+const AboutMeSection: FunctionComponent = () => {
+  const language = useCurrentLanguage()
+  const { Text, SayHi, ShowMyCV, Tags } = AboutMeData[language]
 
   const [profileID, updateProfileID] = useState(0)
   useEffect(() => {
@@ -30,7 +32,7 @@ const AboutMeSection: FunctionComponent<{ AboutMe: AboutMeI; id: string }> = ({ 
   const className = [GeneralStyles.Container, GeneralStyles.Card, Styles.AboutMe].join(" ")
 
   return (
-    <div className={className} id={id}>
+    <div className={className} id="AboutMe">
       <div style={{ display: "grid", gridGap: "1rem" }}>
         <h5 style={{ fontWeight: 440 }}>
           {SayHi} <b>R</b>osas <b>H</b>ernandez

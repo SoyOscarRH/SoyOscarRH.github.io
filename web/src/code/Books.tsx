@@ -1,18 +1,13 @@
 import React, { FunctionComponent, useEffect } from "react"
 import M from "materialize-css"
 
-import { useCurrentLanguage, LanguageOption } from "./App/Language"
-import { BooksI } from "../data/Books"
+import { useCurrentLanguage } from "./App/Language"
+import { BooksData, AboutBooksData } from "../data"
 import Card from "./Card"
 
 import Styles from "./Card/Styles.module.css"
 
-interface BooksDataI {
-  Books: BooksI
-  AboutBooks: LanguageOption<JSX.Element>
-}
-
-const Books: FunctionComponent<BooksDataI> = ({ Books, AboutBooks }) => {
+const Books: FunctionComponent = () => {
   const language = useCurrentLanguage()
 
   useEffect(() => {
@@ -25,24 +20,24 @@ const Books: FunctionComponent<BooksDataI> = ({ Books, AboutBooks }) => {
     M.Collapsible.init(Collapsibles, { inDuration: 150 })
   }, [])
 
-  const BooksTitle = language === "english" ? "Books": "Libros";
+  const BooksTitle = language === "english" ? "Books" : "Libros"
 
-  const BooksCards = Object.entries(Books).map(([name, Element]) => (
+  const BooksCards = Object.entries(BooksData).map(([name, Element]) => (
     <Card key={name} name={name} Element={Element} type={"Book"} />
   ))
 
   return (
-    <div className={`center-align ${Styles.Container}`}>
+    <section id="Books" className={`center-align ${Styles.Container}`}>
       <h4 className="blue-grey-text text-darken-3">
         <b>{BooksTitle}</b>
       </h4>
-      <div>{AboutBooks[language]}</div>
+      <div>{AboutBooksData[language]}</div>
 
       <br />
       <br />
 
       <div className={Styles.Grid}>{BooksCards}</div>
-    </div>
+    </section>
   )
 }
 
