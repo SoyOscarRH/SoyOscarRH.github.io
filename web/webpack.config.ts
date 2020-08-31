@@ -3,7 +3,7 @@ import { Configuration } from "webpack"
 const bundlePath = "/../"; // GitHubPageBundle
 
 const Configuration: Configuration = {
-  entry: __dirname + "/Code/App",
+  entry: __dirname + "/src/code/App",
   output: {
     path: __dirname + bundlePath,
     publicPath: "/",

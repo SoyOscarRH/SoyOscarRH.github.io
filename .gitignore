@@ -4,7 +4,7 @@
 **/.DS_Store
 
 # Dependencies
-/Webpage/node_modules
+node_modules/
 
 # Google SPS
 target/

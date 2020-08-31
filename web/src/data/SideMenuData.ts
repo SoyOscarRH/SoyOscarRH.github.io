@@ -1,7 +1,7 @@
-import { BooksData } from "../PageData"
-import Projects from "../PageData/Projects"
-import Programs from "../PageData/Programs"
-import { Language } from "../App/Language"
+import { BooksData } from "../data"
+import Projects from "../data/Projects"
+import Programs from "../data/Programs"
+import { Language } from "../code/App/Language"
 
 type linkName = string
 type linkURL = string

@@ -3,10 +3,9 @@ import navigateTo from "../Helpers/navigateTo"
 
 import { LanguageContext } from "../App/Language"
 
-import getSections, { Section } from "../PageData/SideMenuData"
+import getSections, { Section } from "../../data/SideMenuData"
 
 import * as Styles from "./Styles.css"
-import * as GeneralStyles from "../App/GeneralStyles.css"
 
 const SideMenu: FunctionComponent<{ toggleLanguage: () => void }> = ({ toggleLanguage }) => {
   const language = useContext(LanguageContext)
