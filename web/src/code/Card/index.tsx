@@ -151,7 +151,6 @@ const ImageIcon: FunctionComponent = () => {
         // @ts-ignore
         type === "Book" ? title[language] : title
         }
-        {language === "english" ? "Topics in the Book" : "Temario del Libro"}
       </span>
       <a
         className={"tooltipped btn-floating btn-large halfway-fab " + color}
