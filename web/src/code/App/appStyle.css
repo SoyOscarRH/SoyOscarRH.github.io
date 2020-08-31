@@ -1,0 +1,8 @@
+.languageToast {
+  padding: 0.6rem 0.8rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+}

@@ -15,13 +15,18 @@ import Books from "../Books"
 import Footer from "../Footer"
 
 import lazyLoadImages from "../Helpers/lazyLoadImages"
-import useShowToast from "../Helpers/Toast"
+import showLanguageToast from "../Helpers/showLanguageToast"
+
+import "./appStyle.css";
 
 const App: FunctionComponent = () => {
   const { language, toggle } = useCreateLanguageStore()
 
   useEffect(lazyLoadImages, [])
-  useShowToast(language)
+  useEffect(() => {
+    setTimeout(() => showLanguageToast(language), 3000)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
     <LanguageContext.Provider value={language}>

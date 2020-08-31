@@ -7,14 +7,6 @@
   padding: 1rem;
 }
 
-.Toast {
-  padding: 1rem 1.2rem;
-  font-family: Raleway, -apple-system, Roboto, sans-serif;
-  color: #ffeb3b !important;
-  border-radius: 0.8rem;
-  cursor: pointer;
-}
-
 .Card {
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -33,20 +25,10 @@
   .Container {
     padding: 3rem;
   }
-
-  .Toast {
-    font-size: 1.2rem;
-    padding: 1.2rem 1.4rem;
-  }
 }
 
 @media (min-width: 950px) {
   .Container {
     padding: 5rem;
-  }
-
-  .Toast {
-    font-size: 1.3rem;
-    padding: 1.4rem 1.8rem;
   }
 }
