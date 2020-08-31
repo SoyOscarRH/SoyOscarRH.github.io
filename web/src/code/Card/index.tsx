@@ -89,7 +89,7 @@ const CardText: FunctionComponent<{
   return (
     <div className={"blue-grey-text text-darken-3 " + Styles.TextStyle}>
       <br />
-      <p>{props.text}</p>
+      <div>{props.text}</div>
       {coauthors}
     </div>
   )

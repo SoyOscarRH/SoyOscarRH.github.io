@@ -17,7 +17,7 @@ const Button: FC<{ title: string; src: string; link?: string }> = ({ title, src,
     event.preventDefault()
   }
 
-  return <a href={href} onClick={handleClick} className={className} style={{ backgroundImage, color: "tra" }}>
+  return <a href={href} onClick={handleClick} className={className} style={{ backgroundImage, color: "transparent" }}>
     {src}
     </a>
 }
