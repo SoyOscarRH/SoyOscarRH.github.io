@@ -27,7 +27,7 @@ const App: FunctionComponent = () => {
     <LanguageContext.Provider value={language}>
       <Header toggleLanguage={toggle} />
 
-      <main id="start">
+      <main id="start" style={{backgroundColor: "white"}}>
         <AboutMe id="AboutMe" AboutMe={AboutMeData[language]} />
         <Links id="Links" />
 
