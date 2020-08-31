@@ -1,11 +1,11 @@
-import React, { FunctionComponent, useContext, useEffect } from "react"
+import React, { FunctionComponent, useEffect } from "react"
 import M from "materialize-css"
 
 import { ProjectsI } from "../data/Projects"
 import { ProgramsI } from "../data/Programs"
 import Card from "./Card"
 
-import { LanguageContext } from "./App/Language"
+import { useCurrentLanguage } from "./App/Language"
 
 import Styles from "./Card/Styles.module.css"
 
@@ -13,7 +13,7 @@ const ProjectsProgramsSection: FunctionComponent<{
   Projects: ProjectsI
   Programs: ProgramsI
 }> = props => {
-  const { index } = useContext(LanguageContext)
+  const language = useCurrentLanguage()
 
   useEffect(() => {
     const materialBoxes = document.querySelectorAll(".materialboxed")
@@ -23,8 +23,8 @@ const ProjectsProgramsSection: FunctionComponent<{
     M.Tooltip.init(elementsToolTips, {})
   }, [])
 
-  const ProjectsTitle = ["Projects", "Proyectos"][index]
-  const ProgramsTitle = ["Cool Programs", "Ideas Interesantes"][index]
+  const ProjectsTitle = language === "english" ? "Projects" : "Proyectos"
+  const ProgramsTitle = language === "english" ? "Cool Programs" : "Ideas Interesantes"
 
   return (
     <div className={`center-align ${Styles.Container}`}>

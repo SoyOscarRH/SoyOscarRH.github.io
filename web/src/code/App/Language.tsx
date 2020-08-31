@@ -1,36 +1,30 @@
-import React, { useReducer, useCallback } from "react"
+import { useReducer, createContext, useContext } from "react"
 
-export type languageName = "Spanish" | "English"
-export type languageIndex = 0 | 1
+export type languageName = "spanish" | "english"
 
-export type LanguageOption<T> = { [key in languageName]: T }
+const defaultLanguage = "english"
+const LanguageContext = createContext<languageName>(defaultLanguage)
 
-export interface Language {
-  name: languageName
-  index: languageIndex
-}
-
-const defaultLanguage: Language = { name: "English", index: 0 }
-const LanguageContext = React.createContext(defaultLanguage)
-
-const reducer = (language: Language, action: "toggle"): Language => {
-  if (action !== "toggle") console.warn("Error")
-  switch (language.name) {
-    case "English":
-      return { name: "Spanish", index: 1 }
-    default:
-      return { name: "English", index: 0 }
+const reducer = (language: languageName): languageName => {
+  switch (language) {
+    case "english":
+      return "spanish"
+    case "spanish":
+      return "english"
   }
 }
 
-const useCreateLanguage = () => {
-  const [language, changeLanguage] = useReducer(reducer, defaultLanguage)
-  const toggle = useCallback(() => changeLanguage("toggle"), [])
-  
-  // @ts-ignore
-  window.toggleLanguage = toggle;
+const useCreateLanguageStore = () => {
+  const [language, toggle] = useReducer(reducer, defaultLanguage)
 
-  return [language, toggle] as [Language, () => void]
+  // @ts-ignore
+  window.toggleLanguage = toggle
+
+  return { language, toggle }
 }
 
-export { defaultLanguage, LanguageContext, useCreateLanguage }
+const useCurrentLanguage = () => useContext(LanguageContext)
+
+export type LanguageOption<T> = { [key in languageName]: T }
+
+export { defaultLanguage, LanguageContext, useCreateLanguageStore, useCurrentLanguage }

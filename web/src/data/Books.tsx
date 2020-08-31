@@ -16,7 +16,8 @@ export interface Book {
   Tags: LanguageOption<Array<string>>
   CoAuthors: Array<string>
   LinkToReadOnline: string
-  LinkToDownload: string
+  LinkToDownload: string,
+  Extension?: string
 }
 
 export interface BooksI {
@@ -24,7 +25,7 @@ export interface BooksI {
 }
 
 export const AboutBooksData: LanguageOption<JSX.Element> = {
-  English: (
+  english: (
     <div className="blue-grey-text text-darken-3" style={{ textAlign: "justify" }}>
       <br />
       <h6 style={{ textAlign: "center" }}>
@@ -54,7 +55,7 @@ export const AboutBooksData: LanguageOption<JSX.Element> = {
       </span>
     </div>
   ),
-  Spanish: (
+  spanish: (
     <div className="blue-grey-text text-darken-3" style={{ textAlign: "justify" }}>
       <br />
       <h6 style={{ textAlign: "center" }}>
@@ -91,25 +92,25 @@ export const AboutBooksData: LanguageOption<JSX.Element> = {
 export const BooksData: BooksI = {
   LibroProbabilidad: {
     Title: {
-      English: (
+      english: (
         <span>
           <b>Probability</b> and Statistics
         </span>
       ),
-      Spanish: (
+      spanish: (
         <span>
           <b>Probabilidad</b> y Estadística
         </span>
       ),
     },
     SimpleTitle: {
-      English: "Probability",
-      Spanish: "Probabilidad",
+      english: "Probability",
+      spanish: "Probabilidad",
     },
     LinkToProject: "https://github.com/CompilandoConocimiento/LibroProbabilidad",
     Color: "orange lighten-1",
     Intro: {
-      English: (
+      english: (
         <span>
           When I was a little boy the only topics I dislike in math were the ones that have
           something to do with probability. But then I decided to make this book, with this book I
@@ -131,7 +132,7 @@ export const BooksData: BooksI = {
           This book is in Spanish only. Sorry :(
         </span>
       ),
-      Spanish: (
+      spanish: (
         <span>
           Cuando era pequeño, los únicos temas que no me gustaban en matemáticas eran los que tienen
           algo que ver con probabilidad. Pero luego decidí hacer este libro, con este libro aprendí
@@ -153,7 +154,7 @@ export const BooksData: BooksI = {
       ),
     },
     Topics: {
-      Spanish: [
+      spanish: [
         {
           Name: "Notación",
           SubTopics: ["Experimentos, espacios muestrales y eventos"],
@@ -219,7 +220,7 @@ export const BooksData: BooksI = {
           ],
         },
       ],
-      English: [
+      english: [
         {
           Name: "Notation",
           SubTopics: ["Experiments, sample spaces and events"],
@@ -287,8 +288,8 @@ export const BooksData: BooksI = {
       ],
     },
     Tags: {
-      English: ["Probability", "Distributions", "Proofs"],
-      Spanish: ["Probabilidad", "Distribuciones", "Demostraciones"],
+      english: ["Probability", "Distributions", "Proofs"],
+      spanish: ["Probabilidad", "Distribuciones", "Demostraciones"],
     },
     CoAuthors: ["Leticia Cañedo"],
     LinkToReadOnline:
@@ -298,25 +299,25 @@ export const BooksData: BooksI = {
   },
   LibroAlgebraLineal: {
     Title: {
-      English: (
+      english: (
         <span>
           <b>Lineal</b> Algebra and <b>Numeric</b> Analysis{" "}
         </span>
       ),
-      Spanish: (
+      spanish: (
         <span>
           <b>Álgebra</b> Lineal y <b>Análisis</b> Numérico
         </span>
       ),
     },
     SimpleTitle: {
-      English: "Lineal Algebra",
-      Spanish: "Álgebra Lineal",
+      english: "Lineal Algebra",
+      spanish: "Álgebra Lineal",
     },
     LinkToProject: "https://github.com/CompilandoConocimiento/LibroAlgebraLineal",
     Color: "purple lighten-1",
     Intro: {
-      English: (
+      english: (
         <span>
           This is the book that contains the bases of the entire branch of mathematics called linear
           algebra. We will first see the idea of matrices and the operations that we can do with
@@ -341,7 +342,7 @@ export const BooksData: BooksI = {
           This book is in Spanish only. Sorry :(
         </span>
       ),
-      Spanish: (
+      spanish: (
         <span>
           Este es libro contiene las bases de toda la rama de las matemáticas denominada álgebra
           lineal. Veremos primero la idea de las matrices y de las operaciones que podemos hacer con
@@ -366,7 +367,7 @@ export const BooksData: BooksI = {
       ),
     },
     Topics: {
-      Spanish: [
+      spanish: [
         {
           Name: "Intro a Matrices",
           SubTopics: ["Definición", "Simbología", "Clasificación", "Matrices Diagonales"],
@@ -464,7 +465,7 @@ export const BooksData: BooksI = {
           ],
         },
       ],
-      English: [
+      english: [
         {
           Name: "Introduction to Matrices",
           SubTopics: ["Definition", "Symbology", "Classification", "Diagonal Matrices"],
@@ -562,8 +563,8 @@ export const BooksData: BooksI = {
       ],
     },
     Tags: {
-      English: ["Matrixs", "Vectorial Spaces", "Lineal Transformations", "Numerical Analysis"],
-      Spanish: [
+      english: ["Matrixs", "Vectorial Spaces", "Lineal Transformations", "Numerical Analysis"],
+      spanish: [
         "Matrices",
         "Espacios Vectoriales",
         "Transformaciones Lineales",
@@ -578,25 +579,25 @@ export const BooksData: BooksI = {
   },
   LibroAnalisisComplejo: {
     Title: {
-      English: (
+      english: (
         <span>
           <b>Complex</b> Analysis
         </span>
       ),
-      Spanish: (
+      spanish: (
         <span>
           <b>Análisis</b> Complejo
         </span>
       ),
     },
     SimpleTitle: {
-      English: "Complex Analysis",
-      Spanish: "Análisis Complejo",
+      english: "Complex Analysis",
+      spanish: "Análisis Complejo",
     },
     LinkToProject: "https://github.com/CompilandoConocimiento/LibroAnalisisComplejo",
     Color: "red lighten-1",
     Intro: {
-      English: (
+      english: (
         <span>
           This is the book contains the bases of all the mathematics necessary for complex analysis,
           we talk about complex numbers, how to operate with them and the various forms that we have
@@ -615,7 +616,7 @@ export const BooksData: BooksI = {
           This book is in Spanish only. Sorry :(
         </span>
       ),
-      Spanish: (
+      spanish: (
         <span>
           Este es libro contiene las bases de toda la matemática necesaria para el análisis
           complejo, hablaremos sobre los números complejos, como operar con ellos y las diversas
@@ -633,7 +634,7 @@ export const BooksData: BooksI = {
       ),
     },
     Topics: {
-      Spanish: [
+      spanish: [
         {
           Name: "Números Complejos",
           SubTopics: [
@@ -725,7 +726,7 @@ export const BooksData: BooksI = {
           ],
         },
       ],
-      English: [
+      english: [
         {
           Name: "Complex Numbers",
           SubTopics: [
@@ -819,8 +820,8 @@ export const BooksData: BooksI = {
       ],
     },
     Tags: {
-      English: ["Complex Analysis and Calculus", "Fourier", "Complex Numbers"],
-      Spanish: ["Análisis y Cálculo Complejo", "Fourier", "Números Complejos"],
+      english: ["Complex Analysis and Calculus", "Fourier", "Complex Numbers"],
+      spanish: ["Análisis y Cálculo Complejo", "Fourier", "Números Complejos"],
     },
     CoAuthors: ["Ángel López Manríquez"],
     LinkToReadOnline:
@@ -830,25 +831,25 @@ export const BooksData: BooksI = {
   },
   LibroTeoriaDeNumeros: {
     Title: {
-      English: (
+      english: (
         <span>
           <b>Number</b> Theory
         </span>
       ),
-      Spanish: (
+      spanish: (
         <span>
           <b>Teoría</b> de Números
         </span>
       ),
     },
     SimpleTitle: {
-      English: "Number Theory",
-      Spanish: "Teoría de Números",
+      english: "Number Theory",
+      spanish: "Teoría de Números",
     },
     LinkToProject: "https://github.com/CompilandoConocimiento/LibroTeoriaDeNumeros",
     Color: "green lighten-1",
     Intro: {
-      English: (
+      english: (
         <span>
           Come on, you have to admit that this book has the coolest name in the world, Here you will
           learn everything about the integers, their cousins and their mysteries.
@@ -870,7 +871,7 @@ export const BooksData: BooksI = {
           This book is in Spanish only. Sorry :(
         </span>
       ),
-      Spanish: (
+      spanish: (
         <span>
           Vamos, tienes que admitir que esta materia tiene el nombre más genial del mundo, Aquí
           aprenderas todo sobre los enteros, los primos y sus misterios.
@@ -892,7 +893,7 @@ export const BooksData: BooksI = {
       ),
     },
     Topics: {
-      Spanish: [
+      spanish: [
         {
           Name: "Enteros",
           SubTopics: ["Construcción de los Enteros", "Operaciones con los Enteros"],
@@ -934,7 +935,7 @@ export const BooksData: BooksI = {
           SubTopics: ["Cosas Básicas"],
         },
       ],
-      English: [
+      english: [
         {
           Name: "Integers",
           SubTopics: ["Construction of the Integers", "Operations with the Integers"],
@@ -978,8 +979,8 @@ export const BooksData: BooksI = {
       ],
     },
     Tags: {
-      English: ["Number Theory", "Divisibility", "Congruences"],
-      Spanish: ["Teoría de Números", "Divisibilidad", "Congruencias"],
+      english: ["Number Theory", "Divisibility", "Congruences"],
+      spanish: ["Teoría de Números", "Divisibilidad", "Congruencias"],
     },
     CoAuthors: [],
     LinkToReadOnline:
@@ -989,25 +990,25 @@ export const BooksData: BooksI = {
   },
   LibroMatematicasDiscretas: {
     Title: {
-      English: (
+      english: (
         <span>
           <b>Discrete</b> Math
         </span>
       ),
-      Spanish: (
+      spanish: (
         <span>
           <b>Matemáticas</b> Discretas
         </span>
       ),
     },
     SimpleTitle: {
-      English: "Discrete Math",
-      Spanish: "Matemáticas Discretas",
+      english: "Discrete Math",
+      spanish: "Matemáticas Discretas",
     },
     LinkToProject: "https://github.com/CompilandoConocimiento/LibroMatematicasDiscretas",
     Color: "blue lighten-1",
     Intro: {
-      English: (
+      english: (
         <span>
           This book contains the bases of all the mathematics, at least a small introduction,
           starting with Logic, induction and inferences.
@@ -1023,7 +1024,7 @@ export const BooksData: BooksI = {
           This book is in Spanish only. Sorry :(
         </span>
       ),
-      Spanish: (
+      spanish: (
         <span>
           Este libro contiene las bases de todas las matemáticas, al menos una pequeña introducción,
           comenzando con la Lógica. Inducción e inferencias.
@@ -1038,7 +1039,7 @@ export const BooksData: BooksI = {
       ),
     },
     Topics: {
-      Spanish: [
+      spanish: [
         {
           Name: "Lógica Matemática",
           SubTopics: [
@@ -1111,7 +1112,7 @@ export const BooksData: BooksI = {
           SubTopics: ["Inducción", "Grupos", "Anillos", "Campos"],
         },
       ],
-      English: [
+      english: [
         {
           Name: "Mathematical Logic",
           SubTopics: [
@@ -1186,8 +1187,8 @@ export const BooksData: BooksI = {
       ],
     },
     Tags: {
-      English: ["Math", "Sets", "Functions", "Logics"],
-      Spanish: ["Matemáticas", "Conjuntos", "Funciones", "Lógica"],
+      english: ["Math", "Sets", "Functions", "Logics"],
+      spanish: ["Matemáticas", "Conjuntos", "Funciones", "Lógica"],
     },
     CoAuthors: [],
     LinkToReadOnline:
@@ -1197,25 +1198,25 @@ export const BooksData: BooksI = {
   },
   LibroAnalisisNumerico: {
     Title: {
-      English: (
+      english: (
         <span>
           <b>Numerical</b> Analysis
         </span>
       ),
-      Spanish: (
+      spanish: (
         <span>
           <b>Análisis</b> Numérico
         </span>
       ),
     },
     SimpleTitle: {
-      English: "Numerical Analysis",
-      Spanish: "Análisis Numérico",
+      english: "Numerical Analysis",
+      spanish: "Análisis Numérico",
     },
     LinkToProject: "https://github.com/CompilandoConocimiento/LibroAnalisisNumerico",
     Color: "grey darken-1",
     Intro: {
-      English: (
+      english: (
         <span>
           This book contains some topics of Numerical Analysis. I have separated this topic into 2
           books, all the theory that includes Linear Algebra are in the book in Linear Algebra, all
@@ -1233,7 +1234,7 @@ export const BooksData: BooksI = {
           This book is in Spanish only. Sorry :(
         </span>
       ),
-      Spanish: (
+      spanish: (
         <span>
           Este libro contiene algunos temas de Análisis Numérico. He separado este tema en dos
           partes, todo lo que tiene que ver con Álgebra Lineal está en su libro, todo lo demás está
@@ -1250,7 +1251,7 @@ export const BooksData: BooksI = {
       ),
     },
     Topics: {
-      Spanish: [
+      spanish: [
         {
           Name: "Raíces de Funciones",
           SubTopics: ["Tolerancia", "Bisección", "Punto Fijo", "Newton", "Secante", "Regla Falsa"],
@@ -1274,7 +1275,7 @@ export const BooksData: BooksI = {
           SubTopics: ["Ideas generales"],
         },
       ],
-      English: [
+      english: [
         {
           Name: "Roots of Functions",
           SubTopics: ["Tolerance", "Bisection", "Fixed Point", "Newton", "Drying", "False Rule"],
@@ -1300,8 +1301,8 @@ export const BooksData: BooksI = {
       ],
     },
     Tags: {
-      English: ["Math", "Roots", "Newton", "Interpolants", "Optimization"],
-      Spanish: ["Matemáticas", "Raíces", "Newton", "Interpolantes", "Optimización"],
+      english: ["Math", "Roots", "Newton", "Interpolants", "Optimization"],
+      spanish: ["Matemáticas", "Raíces", "Newton", "Interpolantes", "Optimización"],
     },
     CoAuthors: [],
     LinkToReadOnline:
@@ -1311,25 +1312,25 @@ export const BooksData: BooksI = {
   },
   LibroBasesDeDatos: {
     Title: {
-      English: (
+      english: (
         <span>
           <b>Data</b> Bases
         </span>
       ),
-      Spanish: (
+      spanish: (
         <span>
           <b>Bases </b>de Datos
         </span>
       ),
     },
     SimpleTitle: {
-      English: "Data Bases",
-      Spanish: "Bases de Datos",
+      english: "Data Bases",
+      spanish: "Bases de Datos",
     },
     LinkToProject: "https://github.com/CompilandoConocimiento/LibroBasesDeDatos",
     Color: "yellow darken-2",
     Intro: {
-      English: (
+      english: (
         <span>
           This book talks about databases, from several formal definitions, management systems and
           the operation and basic parts of the architecture of a database.
@@ -1346,7 +1347,7 @@ export const BooksData: BooksI = {
           This book is in Spanish only. Sorry :(
         </span>
       ),
-      Spanish: (
+      spanish: (
         <span>
           Este libro habla de bases de datos, desde varias definiciones formales, sistemas gestores
           y el funcionamiento y partes básicas de la arquitectura de una base de datos.
@@ -1362,7 +1363,7 @@ export const BooksData: BooksI = {
       ),
     },
     Topics: {
-      Spanish: [
+      spanish: [
         {
           Name: "Definición",
           SubTopics: [
@@ -1393,7 +1394,7 @@ export const BooksData: BooksI = {
           SubTopics: ["Queries", "Views", "Procedimientos", "Locks", "Insertar información"],
         },
       ],
-      English: [
+      english: [
         {
           Name: "Definition",
           SubTopics: [
@@ -1426,8 +1427,8 @@ export const BooksData: BooksI = {
       ],
     },
     Tags: {
-      English: ["BD", "Entity-Relationship", "Relational", "MySQL"],
-      Spanish: ["Entidad Relación", "Relacional", "MySQL"],
+      english: ["BD", "Entity-Relationship", "Relational", "MySQL"],
+      spanish: ["Entidad Relación", "Relacional", "MySQL"],
     },
     CoAuthors: [],
     LinkToReadOnline:

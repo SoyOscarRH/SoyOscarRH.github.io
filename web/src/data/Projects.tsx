@@ -1,16 +1,14 @@
 import React from "react"
 import { LanguageOption } from "../code/App/Language"
 
-export interface Project {
+export type Project = {
   Title: JSX.Element
   LinkToProject: string
   CheckOut?: string
   Color: string
-  English: JSX.Element
-  Spanish: JSX.Element
   Extension?: string
   Tags: LanguageOption<Array<string>>
-}
+} & LanguageOption<JSX.Element>;
 
 export interface ProjectsI {
   [key: string]: Project
@@ -27,7 +25,7 @@ const Projects: ProjectsI = {
     LinkToProject: "https://compilandoconocimiento.com/",
     CheckOut: "https://compilandoconocimiento.com/",
     Color: "purple",
-    English: (
+    english: (
       <span>
         Creator of a blog (in spanish) to learn about science in general, discrete math, physics,
         vectorial analysis, simple algorithms, and data structures (stacks, queues, BST, AVL trees,
@@ -39,7 +37,7 @@ const Projects: ProjectsI = {
         Here you can also find all the books my organization is writing for free.
       </span>
     ),
-    Spanish: (
+    spanish: (
       <span>
         Creador de un blog (en español) para aprender sobre ciencia en general, matemáticas
         discretas, física, análisis vectorial, algoritmos simples y estructuras de datos (pilas,
@@ -54,8 +52,8 @@ const Projects: ProjectsI = {
       </span>
     ),
     Tags: {
-      English: ["Educational blog", "math", "algorithms", "books", "tutorials"],
-      Spanish: ["Blog de educación", "mate", "algoritmos", "libros", "tutoriales"],
+      english: ["Educational blog", "math", "algorithms", "books", "tutorials"],
+      spanish: ["Blog de educación", "mate", "algoritmos", "libros", "tutoriales"],
     },
   },
   CompetitiveSolutions: {
@@ -68,7 +66,7 @@ const Projects: ProjectsI = {
     LinkToProject: "https://github.com/SoyOscarRH/CompetitiveSolutions",
     CheckOut: "https://github.com/SoyOscarRH/CompetitiveSolutions",
     Color: "red",
-    English: (
+    english: (
       <span>
         This is a repository to store all the solutions for competitive programming problems on
         Judges online like OmegaUp, Codeforces, SPOJ, UVa, and many more. Also here I store all my
@@ -87,7 +85,7 @@ const Projects: ProjectsI = {
         <br />I work to keep my solutions as readable and clear as possible n.n
       </span>
     ),
-    Spanish: (
+    spanish: (
       <span>
         Este es un repositorio para guardar todas las soluciones para los problemas de programación
         competitiva en jueces en línea como OmegaUp, Codeforces, SPOJ, UVa y muchos más. También ahi
@@ -104,8 +102,8 @@ const Projects: ProjectsI = {
     ),
     Extension: "jpg",
     Tags: {
-      English: ["C++", "Competitive Programming", "Solutions", "Online Judges"],
-      Spanish: ["C++", "Programación Competitiva", "Soluciones", "Jueces en línea"],
+      english: ["C++", "Competitive Programming", "Solutions", "Online Judges"],
+      spanish: ["C++", "Programación Competitiva", "Soluciones", "Jueces en línea"],
     },
   },
   LearningNeuralNetworks: {
@@ -118,7 +116,7 @@ const Projects: ProjectsI = {
     LinkToProject: "https://github.com/SoyOscarRH/LearningNeuralNetworks",
     CheckOut: "https://github.com/SoyOscarRH/LearningNeuralNetworks",
     Color: "blue",
-    English: (
+    english: (
       <React.Fragment>
         <span>All the code for my experiments learning deep learning and neuronal networks:</span>
         <ul style={{ padding: "0rem 0.8rem", textAlign: "left" }}>
@@ -142,7 +140,7 @@ const Projects: ProjectsI = {
         </ul>
       </React.Fragment>
     ),
-    Spanish: (
+    spanish: (
       <React.Fragment>
         <span>
           Aquí esta todo el código que cree cuando estuve aprendiendo sobre redes neuronales y
@@ -173,8 +171,8 @@ const Projects: ProjectsI = {
     ),
     Extension: "jpg",
     Tags: {
-      English: ["Python", "Pytorch", "TensorFlow", "Udacity", "ML"],
-      Spanish: ["Python", "Pytorch", "TensorFlow", "Udacity", "ML"],
+      english: ["Python", "Pytorch", "TensorFlow", "Udacity", "ML"],
+      spanish: ["Python", "Pytorch", "TensorFlow", "Udacity", "ML"],
     },
   },
   Binary: {
@@ -187,7 +185,7 @@ const Projects: ProjectsI = {
     LinkToProject: "https://github.com/SoyOscarRH/Binary",
     CheckOut: "https://soyoscarrh.github.io/Binary/#/FromBinarytoComplement2/",
     Color: "green",
-    English: (
+    english: (
       <span>
         This was a project just for fun to deeply understand floating-point numbers / arithmetic and
         binary conversions (complement-1 and complement 2).
@@ -202,7 +200,7 @@ const Projects: ProjectsI = {
         (my mother tongue).
       </span>
     ),
-    Spanish: (
+    spanish: (
       <span>
         Este fue un proyecto pequeño para ayudarme a comprender realmente los números de punto
         flotante y su aritmética y las conversiones binarias (complemento 1 y complemento 2).
@@ -218,8 +216,8 @@ const Projects: ProjectsI = {
       </span>
     ),
     Tags: {
-      English: ["MaterializeCSS", "React", "One Night project", "SPA"],
-      Spanish: ["MaterializeCSS", "React", "Proyecto de clase", "SPA"],
+      english: ["MaterializeCSS", "React", "One Night project", "SPA"],
+      spanish: ["MaterializeCSS", "React", "Proyecto de clase", "SPA"],
     },
   },
   AIWithLisp: {
@@ -231,7 +229,7 @@ const Projects: ProjectsI = {
     ),
     LinkToProject: "https://github.com/SoyOscarRH/AIWithLisp",
     Color: "purple",
-    English: (
+    english: (
       <React.Fragment>
         <span>
           Simple AI exercises using and learning Common Lisp during my class: "Introduction to
@@ -254,7 +252,7 @@ const Projects: ProjectsI = {
         </ul>
       </React.Fragment>
     ),
-    Spanish: (
+    spanish: (
       <React.Fragment>
         <span>
           Ejercicios de IA usando Common Lisp que hice durante mi clase: "Introducción a la
@@ -278,8 +276,8 @@ const Projects: ProjectsI = {
       </React.Fragment>
     ),
     Tags: {
-      English: ["Lisp", "AI", "Mazes"],
-      Spanish: ["Lisp", "AI", "Mazes"],
+      english: ["Lisp", "AI", "Mazes"],
+      spanish: ["Lisp", "AI", "Mazes"],
     },
     Extension: "jpg",
   },
@@ -293,7 +291,7 @@ const Projects: ProjectsI = {
     LinkToProject: "https://github.com/SoyOscarRH/CellularAutomata",
     CheckOut: "https://SoyOscarRH.github.io/CellularAutomata/",
     Color: "blue-grey darken-2",
-    English: (
+    english: (
       <span>
         This is webapp let you see all the elementary cellular automata (elementary cellular
         automata have two possible values for each cell (0 or 1), and rules that depend only on
@@ -306,7 +304,7 @@ const Projects: ProjectsI = {
         Really recommend to check rules: 30, 54, 60, 126, 182, 150, 57. They are beautiful n.n
       </span>
     ),
-    Spanish: (
+    spanish: (
       <span>
         Esta aplicación web te permite ver todos los autómatas celulares elementales, puedes editar
         el tamaño de la celda, cuántas iteraciones e incluso ver un análisis. Es un proyecto de un
@@ -321,8 +319,8 @@ const Projects: ProjectsI = {
       </span>
     ),
     Tags: {
-      English: ["React", "Complex Systems", "Automatas"],
-      Spanish: ["React", "Sistemas complejos", "Automatas"],
+      english: ["React", "Complex Systems", "Automatas"],
+      spanish: ["React", "Sistemas complejos", "Automatas"],
     },
     Extension: "jpg",
   },
@@ -336,7 +334,7 @@ const Projects: ProjectsI = {
     LinkToProject: "https://github.com/CompilandoConocimiento/Compiler",
     CheckOut: "https://compilandoconocimiento.github.io/Compiler/#/grammars",
     Color: "orange",
-    English: (
+    english: (
       <span>
         This was a school project for my Compiler class.
         <br />
@@ -353,7 +351,7 @@ const Projects: ProjectsI = {
         step by step this process (table generation and string parsing).
       </span>
     ),
-    Spanish: (
+    spanish: (
       <span>
         Esto fue un proyecto para mi clase de Compiladores.
         <br />
@@ -372,8 +370,8 @@ const Projects: ProjectsI = {
       </span>
     ),
     Tags: {
-      English: ["MaterializeCSS", "React", "Typescript", "Class project"],
-      Spanish: ["MaterializeCSS", "React", "Typescript", "Proyecto de clase"],
+      english: ["MaterializeCSS", "React", "Typescript", "Class project"],
+      spanish: ["MaterializeCSS", "React", "Typescript", "Proyecto de clase"],
     },
   },
   ThingsWithCryptography: {
@@ -385,7 +383,7 @@ const Projects: ProjectsI = {
     ),
     LinkToProject: "https://github.com/SoyOscarRH/ThingsWithCryptography",
     Color: "red",
-    English: (
+    english: (
       <React.Fragment>
         <span>Projects I did while I started learning about cryptography</span>
         <ul style={{ padding: "0rem 0.8rem", textAlign: "left" }}>
@@ -418,7 +416,7 @@ const Projects: ProjectsI = {
         </ul>
       </React.Fragment>
     ),
-    Spanish: (
+    spanish: (
       <React.Fragment>
         <span>Proyectos que hice mientras aprendía sobre criptografía</span>
         <ul style={{ padding: "0rem 0.8rem", textAlign: "left" }}>
@@ -448,8 +446,8 @@ const Projects: ProjectsI = {
     ),
     Extension: "jpg",
     Tags: {
-      English: ["Python", "Cryptography"],
-      Spanish: ["Python", "Criptografia"],
+      english: ["Python", "Cryptography"],
+      spanish: ["Python", "Criptografia"],
     },
   },
   GameOfLife: {
@@ -461,7 +459,7 @@ const Projects: ProjectsI = {
     LinkToProject: "https://github.com/SoyOscarRH/GameOfLife",
     CheckOut: "https://soyoscarrh.github.io/GameOfLife/",
     Color: "pink lighten-3",
-    English: (
+    english: (
       <span>
         During my time in a Complex System class I created the classical Game of Life simulator.
         <br />
@@ -477,7 +475,7 @@ const Projects: ProjectsI = {
         universe.
       </span>
     ),
-    Spanish: (
+    spanish: (
       <span>
         Durante mi clase de Sistemas Complejo, creé el simulador clásico de "Game of Life".
         <br />
@@ -495,8 +493,8 @@ const Projects: ProjectsI = {
     ),
     Extension: "jpg",
     Tags: {
-      English: ["WASM", "Rust", "React"],
-      Spanish: ["WASM", "Rust", "React"],
+      english: ["WASM", "Rust", "React"],
+      spanish: ["WASM", "Rust", "React"],
     },
   },
   TdeTiendita: {
@@ -508,7 +506,7 @@ const Projects: ProjectsI = {
     ),
     LinkToProject: "https://github.com/SoyOscarRH/TdeTiendita",
     Color: "deep-purple lighten-1",
-    English: (
+    english: (
       <span>
         This is a minimum viable product for a web system that can control the local store of my
         family.
@@ -524,7 +522,7 @@ const Projects: ProjectsI = {
         (my mother tongue).
       </span>
     ),
-    Spanish: (
+    spanish: (
       <span>
         Este es el mínimo producto viable para un sistema web que puede controlar la tienda de
         abarrotes de mi familia.
@@ -539,8 +537,8 @@ const Projects: ProjectsI = {
       </span>
     ),
     Tags: {
-      English: ["SPA", "MVP", "CRUD", "MaterializeCSS", "React", "Python-Flask", "MySQL"],
-      Spanish: [
+      english: ["SPA", "MVP", "CRUD", "MaterializeCSS", "React", "Python-Flask", "MySQL"],
+      spanish: [
         "SPA",
         "MVP",
         "Altas Bajas Cambios",
@@ -560,7 +558,7 @@ const Projects: ProjectsI = {
     ),
     LinkToProject: "https://github.com/SoyOscarRH/OrganizeAnEvent",
     Color: "yellow darken-2",
-    English: (
+    english: (
       <span>
         This is a minimum viable product for a web system to control assistance and documents to an
         academic ceremony.
@@ -576,7 +574,7 @@ const Projects: ProjectsI = {
         (my mother tongue).
       </span>
     ),
-    Spanish: (
+    spanish: (
       <span>
         Este es el mínimo producto viable para un sistema web que pueda controlar una ceremonia
         académica.
@@ -591,8 +589,8 @@ const Projects: ProjectsI = {
       </span>
     ),
     Tags: {
-      English: ["MVP", "CRUD", "MaterializeCSS", "React", "Typescript", "PHP", "MySQL"],
-      Spanish: [
+      english: ["MVP", "CRUD", "MaterializeCSS", "React", "Typescript", "PHP", "MySQL"],
+      spanish: [
         "MVP",
         "Altas Bajas Cambios",
         "MaterializeCSS",
@@ -612,7 +610,7 @@ const Projects: ProjectsI = {
     LinkToProject: "https://github.com/gilemos/FudgeRatio",
     CheckOut: "https://fudgeratio-274623.uc.r.appspot.com",
     Color: "blue lighten-2",
-    English: (
+    english: (
       <span>
         During the Spring of 2020, I created with my SPS team at fudge ratio calculator web app.
         <br />
@@ -626,7 +624,7 @@ const Projects: ProjectsI = {
         development resources
       </span>
     ),
-    Spanish: (
+    spanish: (
       <span>
         Durante la primavera del 2020, creé con mi equipo de SPS en la aplicación web que te
         permitia calcular tu "fudge ratio".
@@ -642,8 +640,8 @@ const Projects: ProjectsI = {
     ),
     Extension: "jpg",
     Tags: {
-      English: ["Google SPS", "Vanilla JS", "Google Cloud"],
-      Spanish: ["Google SPS", "Vanilla JS", "Google Cloud"],
+      english: ["Google SPS", "Vanilla JS", "Google Cloud"],
+      spanish: ["Google SPS", "Vanilla JS", "Google Cloud"],
     },
   },
   LCS: {
@@ -661,7 +659,7 @@ const Projects: ProjectsI = {
     LinkToProject: "https://github.com/SoyOscarRH/LCS",
     CheckOut: "https://soyoscarrh.github.io/LCS/",
     Color: "blue",
-    English: (
+    english: (
       <span>
         This is a web app that can simulate the solution of the famous problem of the Longest Common
         Subsequence of any 2 strings step by step. This is solved using DP (dynamic programming)
@@ -672,7 +670,7 @@ const Projects: ProjectsI = {
         (my mother tongue).
       </span>
     ),
-    Spanish: (
+    spanish: (
       <span>
         Una aplicación web para aprender React, este juego puede simular la solución del famoso
         problema de la Subsecuencia común más larga de cualquiera 2 cadenas paso por paso.
@@ -683,7 +681,7 @@ const Projects: ProjectsI = {
       </span>
     ),
     Tags: {
-      English: [
+      english: [
         "Javascript",
         "React",
         "MaterializeCSS",
@@ -691,7 +689,7 @@ const Projects: ProjectsI = {
         "Competitive Programming",
         "One night project",
       ],
-      Spanish: [
+      spanish: [
         "Javascript",
         "React",
         "MaterializeCSS",
@@ -711,7 +709,7 @@ const Projects: ProjectsI = {
     LinkToProject: "https://github.com/CompilandoConocimiento/Reference",
     CheckOut: "https://compilandoconocimiento.github.io/Reference/",
     Color: "blue-grey darken-3",
-    English: (
+    english: (
       <span>
         These are all my personal implementations of the most famous and useful competitive
         programming algorithms.
@@ -725,7 +723,7 @@ const Projects: ProjectsI = {
         from it, and get further along in this awesome mind-sport.
       </span>
     ),
-    Spanish: (
+    spanish: (
       <span>
         Recopilación de mis implementaciones personales de los más famosos y útiles algoritmos de la
         programación competitiva.
@@ -740,8 +738,8 @@ const Projects: ProjectsI = {
       </span>
     ),
     Tags: {
-      English: ["Competitive Programming", "C++", "Webapp", "React", "Typescript", "Book"],
-      Spanish: ["Programación Competitiva", "C++", "Webapp", "React", "Typescript", "Libro"],
+      english: ["Competitive Programming", "C++", "Webapp", "React", "Typescript", "Book"],
+      spanish: ["Programación Competitiva", "C++", "Webapp", "React", "Typescript", "Libro"],
     },
   },
   ManageYourCinema: {
@@ -753,7 +751,7 @@ const Projects: ProjectsI = {
     ),
     LinkToProject: "https://github.com/SoyOscarRH/ManageYourCinema",
     Color: "teal",
-    English: (
+    english: (
       <span>
         This is an UNFINISHED mini project for a web system that can control a cinema (candy shop
         and tickets)
@@ -766,7 +764,7 @@ const Projects: ProjectsI = {
         (my mother tongue).
       </span>
     ),
-    Spanish: (
+    spanish: (
       <span>
         Mini proyecto INCOMPLETO para un sistema web que puede controlar un cine (venta de dulces y
         boletos)
@@ -782,8 +780,8 @@ const Projects: ProjectsI = {
     ),
     Extension: "jpg",
     Tags: {
-      English: ["CRUD", "MaterializeCSS", "jQuery", "PHP", "MySQL"],
-      Spanish: ["Altas Bajas Cambios", "MaterializeCSS", "jQuery", "PHP", "MySQL"],
+      english: ["CRUD", "MaterializeCSS", "jQuery", "PHP", "MySQL"],
+      spanish: ["Altas Bajas Cambios", "MaterializeCSS", "jQuery", "PHP", "MySQL"],
     },
   },
   CreatingWithLaTeX: {
@@ -795,7 +793,7 @@ const Projects: ProjectsI = {
     ),
     LinkToProject: "https://github.com/CompilandoConocimiento/CreatingWithLatex/",
     Color: "cyan accent-3",
-    English: (
+    english: (
       <span>
         This is where I put all the things that I need when working with LaTeX: code to insert an
         image, make covers, insert tables.
@@ -806,7 +804,7 @@ const Projects: ProjectsI = {
         etc...
       </span>
     ),
-    Spanish: (
+    spanish: (
       <span>
         Aquí es donde pongo todas las cosas que necesito cuando trabajo con LaTeX: código para
         insertar una imagen, hacer cubiertas, insertar tablas.
@@ -819,8 +817,8 @@ const Projects: ProjectsI = {
     ),
     Extension: "jpg",
     Tags: {
-      English: ["LaTeX", "Math", "Reference"],
-      Spanish: ["LaTeX", "Matemáticas", "Referencia"],
+      english: ["LaTeX", "Math", "Reference"],
+      spanish: ["LaTeX", "Matemáticas", "Referencia"],
     },
   },
   SIRModel: {
@@ -832,7 +830,7 @@ const Projects: ProjectsI = {
     LinkToProject: "https://github.com/QApolo/CS/tree/master/05_CovidProj/web/sir_covid",
     CheckOut: "https://qapolo.github.io/sir_model/",
     Color: "yellow accent-4",
-    English: (
+    english: (
       <span>
         As a final project in my complex class I created a small webapp that shows the evolution of
         an epidemic in Mexico using the classical model SIR.
@@ -841,7 +839,7 @@ const Projects: ProjectsI = {
         Model developed using cellular automaton over graph theory and running in a webapp.
       </span>
     ),
-    Spanish: (
+    spanish: (
       <span>
         Como proyecto final de mi clase de sistemas complejos creé una pequeña aplicación web que
         muestra la evolución de una epidemia en México utilizando el modelo clásico SIR.
@@ -853,8 +851,8 @@ const Projects: ProjectsI = {
     ),
     Extension: "jpg",
     Tags: {
-      English: ["Complex Systems", "SIR"],
-      Spanish: ["LaTeX", "SIR"],
+      english: ["Complex Systems", "SIR"],
+      spanish: ["LaTeX", "SIR"],
     },
   },
   LearningMachineLearning: {
@@ -865,7 +863,7 @@ const Projects: ProjectsI = {
     ),
     LinkToProject: "https://github.com/SoyOscarRH/LearningMachineLearning",
     Color: "orange accent-4",
-    English: (
+    english: (
       <React.Fragment>
         <span>
           Documents and codes I created while learning about machine learning (except NN as I have a
@@ -886,7 +884,7 @@ const Projects: ProjectsI = {
         </ul>
       </React.Fragment>
     ),
-    Spanish: (
+    spanish: (
       <span>
         Documentos y códigos que creé mientras aprendía sobre aprendizaje automático (excepto NN, ya
         que tengo un repositorio para ellos).
@@ -907,8 +905,8 @@ const Projects: ProjectsI = {
     ),
     Extension: "jpg",
     Tags: {
-      English: ["Complex Systems", "SIR"],
-      Spanish: ["LaTeX", "SIR"],
+      english: ["Complex Systems", "SIR"],
+      spanish: ["LaTeX", "SIR"],
     },
   },
 }

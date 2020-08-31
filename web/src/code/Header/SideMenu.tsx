@@ -1,14 +1,14 @@
-import React, { FunctionComponent, useContext, useState, useEffect, useCallback } from "react"
+import React, { FunctionComponent, useState, useEffect, useCallback } from "react"
 import navigateTo from "../Helpers/navigateTo"
 
-import { LanguageContext } from "../App/Language"
+import { useCurrentLanguage } from "../App/Language"
 
 import getSections, { Section } from "../../data/SideMenuData"
 
 import Styles from "./Styles.module.css"
 
 const SideMenu: FunctionComponent<{ toggleLanguage: () => void }> = ({ toggleLanguage }) => {
-  const language = useContext(LanguageContext)
+  const language = useCurrentLanguage()
   const Sections = getSections(language)
 
   const [Sidenav, setSideNav] = useState<M.Sidenav | null>(null)
@@ -94,17 +94,17 @@ export const LinksToSocialMedia: React.FunctionComponent = () => (
 )
 
 const ToggleLanguage: FunctionComponent<{ toggleLanguage: () => void }> = ({ toggleLanguage }) => {
-  const { name, index } = useContext(LanguageContext)
+  const language = useCurrentLanguage()
 
   return (
     <React.Fragment>
-      <div className="subheader center">{["Language", "Lenguaje"][index]}</div>
+      <div className="subheader center">{language === "english" ? "Language" : "Lenguaje"}</div>
       <div className="switch center">
         <label>
-          {["Spanish", "Español"][index]}
-          <input type="checkbox" onChange={toggleLanguage} checked={name === "English"} />
+          {language === "english" ? "Spanish" : "Español"}
+          <input type="checkbox" onChange={toggleLanguage} checked={language === "english"} />
           <span className="lever" />
-          {["English", "Inglés"][index]}
+          {language === "english" ? "English" : "Inglés"}
         </label>
       </div>
     </React.Fragment>

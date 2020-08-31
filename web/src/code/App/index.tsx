@@ -1,34 +1,34 @@
-import React, {  FunctionComponent, useEffect } from "react";
+import React, { FunctionComponent, useEffect } from "react"
 
-import { useCreateLanguage, LanguageContext } from "./Language";
+import { LanguageContext, useCreateLanguageStore } from "./Language"
 
-import AboutMeData from "../../data/AboutMe";
-import ProjectsData from "../../data/Projects";
-import ProgramsData from "../../data/Programs";
-import { BooksData, AboutBooksData } from "../../data";
+import AboutMeData from "../../data/AboutMe"
+import ProjectsData from "../../data/Projects"
+import ProgramsData from "../../data/Programs"
+import { BooksData, AboutBooksData } from "../../data"
 
-import Header from "../Header";
-import Links from "../Links";
-import AboutMe from "../AboutMe";
-import ProjectsPrograms from "../ProjectsPrograms";
-import Books from "../Books";
-import Footer from "../Footer";
+import Header from "../Header"
+import AboutMe from "../AboutMe"
+import Links from "../Links"
+import ProjectsPrograms from "../ProjectsPrograms"
+import Books from "../Books"
+import Footer from "../Footer"
 
-import lazyLoadImages from "../Helpers/lazyLoadImages";
-import useShowToast from "../useShowToast"
+import lazyLoadImages from "../Helpers/lazyLoadImages"
+import useShowToast from "../Helpers/Toast"
 
 const App: FunctionComponent = () => {
-  const [language, toggleLanguage] = useCreateLanguage();
+  const { language, toggle } = useCreateLanguageStore()
 
-  useEffect(lazyLoadImages, []);
-  useShowToast(language);
+  useEffect(lazyLoadImages, [])
+  useShowToast(language)
 
   return (
     <LanguageContext.Provider value={language}>
-      <Header toggleLanguage={toggleLanguage} />
+      <Header toggleLanguage={toggle} />
 
       <main id="start">
-        <AboutMe id="AboutMe" AboutMe={AboutMeData[language.name]} />
+        <AboutMe id="AboutMe" AboutMe={AboutMeData[language]} />
         <Links id="Links" />
 
         <section id="ProjectsAndPrograms">
@@ -44,9 +44,7 @@ const App: FunctionComponent = () => {
         <Footer />
       </footer>
     </LanguageContext.Provider>
-  );
-};
+  )
+}
 
-export default App;
-
-
+export default App

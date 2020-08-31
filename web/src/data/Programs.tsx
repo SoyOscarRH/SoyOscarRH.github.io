@@ -1,16 +1,14 @@
 import React from "react"
 import { LanguageOption } from "../code/App/Language"
 
-export interface Program {
+export type Program = {
   Title: JSX.Element
   LinkToProject: string
   CheckOut?: string
   Color: string
-  English: JSX.Element
-  Spanish: JSX.Element
   Extension?: string
   Tags: LanguageOption<Array<string>>
-}
+} & LanguageOption<JSX.Element>
 
 export interface ProgramsI {
   [key: string]: Program
@@ -26,7 +24,7 @@ const Programs: ProgramsI = {
     ),
     LinkToProject: "https://github.com/SoyOscarRH/LearningJava/tree/master/ArtWithLines",
     Color: "orange darken-3",
-    English: (
+    english: (
       <span>
         A function that draws Bezier curves and some examples of how to use it, and the results you
         get by changing the parameters.
@@ -36,7 +34,7 @@ const Programs: ProgramsI = {
         they are beautiful.
       </span>
     ),
-    Spanish: (
+    spanish: (
       <span>
         Una función que dibuja las curvas de Bezier y algunos ejemplos de cómo usarlo, y los
         resultados que obtienes al cambiar los parámetros.
@@ -48,8 +46,8 @@ const Programs: ProgramsI = {
     ),
     Extension: "jpg",
     Tags: {
-      English: ["Math", "Bezier", "Java Swing"],
-      Spanish: ["Matemáticas", "Bezier", "Java Swing"],
+      english: ["Math", "Bezier", "Java Swing"],
+      spanish: ["Matemáticas", "Bezier", "Java Swing"],
     },
   },
   NumericalAnalysis: {
@@ -61,7 +59,7 @@ const Programs: ProgramsI = {
     LinkToProject:
       "https://github.com/CompilandoConocimiento/OldCode/tree/master/NumericalAnalysis",
     Color: "blue accent-4",
-    English: (
+    english: (
       <span>
         I made some really interesting programs during my numerical analysis class, like LU
         decomposition, Cholesky Banachiewicz, like QR decomposition, House Holder, Newton Raphson,
@@ -72,7 +70,7 @@ const Programs: ProgramsI = {
         points.
       </span>
     ),
-    Spanish: (
+    spanish: (
       <span>
         Hice algunos programas interesantes durante mi clase de análisis numérico como la
         descomposición LU, Cholesky Banachiewicz, como la descomposición QR, House Holder, Newton
@@ -83,8 +81,8 @@ const Programs: ProgramsI = {
       </span>
     ),
     Tags: {
-      English: ["Math", "Interpolant", "Spline"],
-      Spanish: ["Matematicas", "Interpolante", "Spline"],
+      english: ["Math", "Interpolant", "Spline"],
+      spanish: ["Matematicas", "Interpolante", "Spline"],
     },
   },
   FastGoodCheap: {
@@ -96,7 +94,7 @@ const Programs: ProgramsI = {
     CheckOut: "https://soyoscarrh.github.io/FastGoodCheap/",
     LinkToProject: "https://github.com/SoyOscarRH/FastGoodCheap",
     Color: "red accent-3",
-    English: (
+    english: (
       <span>
         A few years ago I found a{" "}
         <b>
@@ -117,7 +115,7 @@ const Programs: ProgramsI = {
         creations. :D
       </span>
     ),
-    Spanish: (
+    spanish: (
       <span>
         Hace unos años encontré un
         <b>
@@ -138,8 +136,8 @@ const Programs: ProgramsI = {
       </span>
     ),
     Tags: {
-      English: ["React", "CSS animations", "One Night project", "Simple app"],
-      Spanish: ["React", "Animaciones con CSS", "Proyecto de clase", "Simple app"],
+      english: ["React", "CSS animations", "One Night project", "Simple app"],
+      spanish: ["React", "Animaciones con CSS", "Proyecto de clase", "Simple app"],
     },
   },
   LearningFlutter: {
@@ -151,7 +149,7 @@ const Programs: ProgramsI = {
     ),
     LinkToProject: "https://github.com/SoyOscarRH/LearningFlutter",
     Color: "grey darken-2",
-    English: (
+    english: (
       <span>
         Simple apps that I made in a Google Development Group boot camp designed to learn the
         Flutter SDK.
@@ -164,7 +162,7 @@ const Programs: ProgramsI = {
         dishes on a list.
       </span>
     ),
-    Spanish: (
+    spanish: (
       <span>
         Conjunto de apps que hice durante un boot camp de un Google Development Group diseñado para
         aprender Flutter.
@@ -178,8 +176,8 @@ const Programs: ProgramsI = {
       </span>
     ),
     Tags: {
-      English: ["One night project", "Google Development Group", "Flutter", "Dart"],
-      Spanish: ["proyecto de una noche", "Google Development Group", "Flutter", "Dart"],
+      english: ["One night project", "Google Development Group", "Flutter", "Dart"],
+      spanish: ["proyecto de una noche", "Google Development Group", "Flutter", "Dart"],
     },
   },
   MyBoilerplates: {
@@ -190,14 +188,14 @@ const Programs: ProgramsI = {
     ),
     LinkToProject: "https://github.com/SoyOscarRH/MyBoilerplates",
     Color: "blue darken-1",
-    English: (
+    english: (
       <span>
         A set of my boilerplates for many of my projects: For front end (Babel, Prettier, eslint,
         webpack, typescript configuration, etc...) and for C++ (clang-format) and my editors
         (vs-code-settings)
       </span>
     ),
-    Spanish: (
+    spanish: (
       <span>
         Un conjunto de 'templates' que uso para muchos mis projects: Para frontend (Babel, Prettier,
         eslint, webpack, la configuración de typescript, etc...)
@@ -205,8 +203,8 @@ const Programs: ProgramsI = {
     ),
     Extension: "jpg",
     Tags: {
-      English: ["Templates", "Personal", "Frontend", "C++"],
-      Spanish: ["Templates", "Personal", "Frontend", "C++"],
+      english: ["Templates", "Personal", "Frontend", "C++"],
+      spanish: ["Templates", "Personal", "Frontend", "C++"],
     },
   },
   LinearRegression: {
@@ -219,21 +217,21 @@ const Programs: ProgramsI = {
     LinkToProject:
       "https://github.com/CompilandoConocimiento/ThingsWithPython/tree/master/LinearRegression",
     Color: "green lighten-1",
-    English: (
+    english: (
       <span>
         This is a program in Python using Matplotlib to calculate and graph the linear regression
         over a data set. It also gives you the Pearson Coefficient.
       </span>
     ),
-    Spanish: (
+    spanish: (
       <span>
         Este es un programa en Python usando Matplotlib para calcular y gráfica la regresión lineal
         sobre un conjunto de datos. También te da el coeficiente de Pearson.
       </span>
     ),
     Tags: {
-      English: ["LinearRegression", "Statistics", "Python2", "Matplotlib"],
-      Spanish: ["Regresión Lineal", "estádística", "Python2", "Matplotlib"],
+      english: ["LinearRegression", "Statistics", "Python2", "Matplotlib"],
+      spanish: ["Regresión Lineal", "estádística", "Python2", "Matplotlib"],
     },
   },
   RootFinder: {
@@ -246,7 +244,7 @@ const Programs: ProgramsI = {
     LinkToProject:
       "https://github.com/CompilandoConocimiento/ThingsWithPython/tree/master/RootFinder",
     Color: "pink lighten-2",
-    English: (
+    english: (
       <span>
         This is a simple program in Python to find the n-roots of a complex number.
         <br />
@@ -254,7 +252,7 @@ const Programs: ProgramsI = {
         It works, but is ugly and ... it is on Python 2.
       </span>
     ),
-    Spanish: (
+    spanish: (
       <span>
         Este es un programa en Python para encontrar las n-raíces de un número complejo.
         <br />
@@ -263,8 +261,8 @@ const Programs: ProgramsI = {
       </span>
     ),
     Tags: {
-      English: ["Math", "Complex Analysis", "Python2"],
-      Spanish: ["Matemáticas", "Análisis Complejo", "Python2"],
+      english: ["Math", "Complex Analysis", "Python2"],
+      spanish: ["Matemáticas", "Análisis Complejo", "Python2"],
     },
   },
   Arquitectura: {
@@ -275,7 +273,7 @@ const Programs: ProgramsI = {
     ),
     LinkToProject: "http://escolares.arq.unam.mx",
     Color: "grey darken-2",
-    English: (
+    english: (
       <span>
         I made the design for this page, during my internship at my university, it is not my best
         job, it is, in fact, my first work in web.
@@ -285,7 +283,7 @@ const Programs: ProgramsI = {
         somewhere.
       </span>
     ),
-    Spanish: (
+    spanish: (
       <span>
         Yo hice el diseño de esta página, durante mi primer becaria en mi universidad, no es mi
         mejor trabajo, de hecho fue mi primer trabajo relacionado con web.
@@ -296,8 +294,8 @@ const Programs: ProgramsI = {
       </span>
     ),
     Tags: {
-      English: ["Web", "horrible", ":/"],
-      Spanish: ["Web", "horrible", ":/"],
+      english: ["Web", "horrible", ":/"],
+      spanish: ["Web", "horrible", ":/"],
     },
   },
   Fractals: {
@@ -309,20 +307,20 @@ const Programs: ProgramsI = {
     LinkToProject:
       "https://github.com/CompilandoConocimiento/ThingsWithPython/tree/master/Fractals",
     Color: "yellow accent-4",
-    English: (
+    english: (
       <span>
         This is a program in Python to graph fractals, for now, is only the Sierpinski triangle.
       </span>
     ),
-    Spanish: (
+    spanish: (
       <span>
         Este es un programa en Python para graficar fractales, por ahora solo he implementado el
         triangulo de Sierpinkski.
       </span>
     ),
     Tags: {
-      English: ["Fractals", "Sierpinkski", "Python", "Turtle"],
-      Spanish: ["Fractales", "Sierpinkski", "Python", "Turtle"],
+      english: ["Fractals", "Sierpinkski", "Python", "Turtle"],
+      spanish: ["Fractales", "Sierpinkski", "Python", "Turtle"],
     },
   },
   AlphabetSoup: {
@@ -335,7 +333,7 @@ const Programs: ProgramsI = {
     LinkToProject: "https://github.com/SoyOscarRH/AlphabetSoup",
     CheckOut: "https://soyoscarrh.github.io/AlphabetSoup/",
     Color: "pink lighten-1",
-    English: (
+    english: (
       <span>
         A game made to learn React, this game is just to make people happy. Just for fun.
         <br />
@@ -346,7 +344,7 @@ const Programs: ProgramsI = {
         found yet, you can change the grid size, and even activate hints to find the words.
       </span>
     ),
-    Spanish: (
+    spanish: (
       <span>
         Una sopa de letras hecho con React para hacer a la gente feliz, solo está hecho por
         diversión.
@@ -360,8 +358,8 @@ const Programs: ProgramsI = {
       </span>
     ),
     Tags: {
-      English: ["Javascript", "React", "MaterializeCSS", "One night project"],
-      Spanish: ["Javascript", "React", "MaterializeCSS", "proyecto de una noche"],
+      english: ["Javascript", "React", "MaterializeCSS", "One night project"],
+      spanish: ["Javascript", "React", "MaterializeCSS", "proyecto de una noche"],
     },
   },
   PlayPoker: {
@@ -373,21 +371,21 @@ const Programs: ProgramsI = {
     LinkToProject:
       "https://github.com/CompilandoConocimiento/ThingsWithPython/tree/master/PlayPoker",
     Color: "indigo lighten-1",
-    English: (
+    english: (
       <span>
         This is a program in Python to "play poker", well, sort of, because I have never played
         poker... Is just a weird school exercise.
       </span>
     ),
-    Spanish: (
+    spanish: (
       <span>
         Este es un programa en Python para "jugar al póquer", bueno, más o menos, porque nunca he
         jugado al póquer ... Es solo un ejercicio escolar extraño.
       </span>
     ),
     Tags: {
-      English: ["Weird project", "Sketch", "Python"],
-      Spanish: ["Un proyecto raro", "Sketch", "Python"],
+      english: ["Weird project", "Sketch", "Python"],
+      spanish: ["Un proyecto raro", "Sketch", "Python"],
     },
   },
 }

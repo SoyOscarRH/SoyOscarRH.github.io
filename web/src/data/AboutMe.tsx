@@ -9,7 +9,7 @@ export interface AboutMeI {
 }
 
 const AboutMe: LanguageOption<AboutMeI> = {
-  English: {
+  english: {
     SayHi: (
       <span>
         Hi, I'm <b>Oscar</b>
@@ -24,7 +24,7 @@ const AboutMe: LanguageOption<AboutMeI> = {
     ],
     Tags: ["Computer Science", "Math enthusiast", "Learner"],
   },
-  Spanish: {
+  spanish: {
     SayHi: (
       <span>
         {" "}

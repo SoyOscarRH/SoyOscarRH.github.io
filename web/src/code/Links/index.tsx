@@ -1,14 +1,14 @@
-import React, { FunctionComponent as FC, useContext } from "react"
+import React, { FunctionComponent as FC } from "react"
 
 import navigateTo from "../Helpers/navigateTo"
-import { LanguageContext } from "../App/Language"
+import { useCurrentLanguage } from "../App/Language"
 
 import Styles from "./Styles.module.css"
 import GeneralStyles from "../App/GeneralStyles.module.css"
 
 const Button: FC<{ title: string; src: string; link?: string }> = ({ title, src, link }) => {
-  const language = useContext(LanguageContext)
-  const backgroundImage = `url('${src + ["", "ES"][language.index] + ".jpg"}')`
+  const language = useCurrentLanguage()
+  const backgroundImage = `url('${src + (language === "english" ? "" : "ES") + ".jpg"}')`
   const href = link ? link : "#" + title
   const className = [Styles.Button, GeneralStyles.Card, GeneralStyles.CardHoverable].join(" ")
 

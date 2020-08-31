@@ -1,7 +1,7 @@
-import React, { FunctionComponent, useContext, useEffect } from "react"
+import React, { FunctionComponent, useEffect } from "react"
 import M from "materialize-css"
 
-import { LanguageOption, LanguageContext } from "./App/Language"
+import { useCurrentLanguage, LanguageOption } from "./App/Language"
 import { BooksI } from "../data/Books"
 import Card from "./Card"
 
@@ -13,7 +13,7 @@ interface BooksDataI {
 }
 
 const Books: FunctionComponent<BooksDataI> = ({ Books, AboutBooks }) => {
-  const { name, index } = useContext(LanguageContext)
+  const language = useCurrentLanguage()
 
   useEffect(() => {
     const ElementsBoxes = document.querySelectorAll(".materialboxed")
@@ -25,7 +25,7 @@ const Books: FunctionComponent<BooksDataI> = ({ Books, AboutBooks }) => {
     M.Collapsible.init(Collapsibles, { inDuration: 150 })
   }, [])
 
-  const BooksTitle = ["Books", "Libros"][index]
+  const BooksTitle = language === "english" ? "Books": "Libros";
 
   const BooksCards = Object.entries(Books).map(([name, Element]) => (
     <Card key={name} name={name} Element={Element} type={"Book"} />
@@ -36,7 +36,7 @@ const Books: FunctionComponent<BooksDataI> = ({ Books, AboutBooks }) => {
       <h4 className="blue-grey-text text-darken-3">
         <b>{BooksTitle}</b>
       </h4>
-      <div>{AboutBooks[name]}</div>
+      <div>{AboutBooks[language]}</div>
 
       <br />
       <br />

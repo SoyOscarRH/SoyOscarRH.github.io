@@ -1,7 +1,7 @@
 import { BooksData } from "./Books"
 import Projects from "./Projects"
 import Programs from "./Programs"
-import { Language } from "../code/App/Language"
+import { languageName } from "../code/App/Language"
 
 type linkName = string
 type linkURL = string
@@ -17,11 +17,9 @@ export interface Sections {
   [key: string]: Section
 }
 
-const getSections = (language: Language) => {
-  const { name, index } = language
-
+const getSections = (language: languageName) => {
   const BooksNames: Array<Link> = Object.entries(BooksData).map(
-    ([nameForLink, data]) => [data.SimpleTitle[name], nameForLink] as Link
+    ([nameForLink, data]) => [data.SimpleTitle[language], nameForLink] as Link
   )
 
   const ProjectsNames: Array<Link> = Object.keys(Projects).map(
@@ -36,20 +34,23 @@ const getSections = (language: Language) => {
     AboutMe: {
       Title: "Personal",
       Icon: ["account_circle", "grey"],
-      Links: [[["About Me", "Sobre Mi"][index], "AboutMe"], ["Curriculum", "AboutMe"]],
+      Links: [
+        [language === "english" ? "About Me" : "Sobre Mi", "About Me"],
+        [language === "english" ? "Curriculum" : "AboutMe", "AboutMe"],
+      ],
     },
     Projects: {
-      Title: ["Projects", "Proyectos"][index],
+      Title: language === "english" ? "Projects" : "Proyectos",
       Links: ProjectsNames,
       Icon: ["dashboard", "green"],
     },
     Programs: {
-      Title: ["Cool Ideas", "Ideas Interesantes"][index],
+      Title: language === "english" ? "Cool Ideas" : "Ideas Interesantes",
       Links: ProgramsNames,
       Icon: ["description", "teal"],
     },
     Books: {
-      Title: ["Books", "Libros"][index],
+      Title: language === "english" ? "Books" : "Libros",
       Links: BooksNames,
       Icon: ["book", "purple"],
     },
