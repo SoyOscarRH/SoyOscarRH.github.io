@@ -14,13 +14,13 @@ const NavigationMenu: FunctionComponent = () => (
           <b>Soy</b>Oscar<b>RH</b>
         </span>
 
-        <a data-target="SideBarID" className={"sidenav-trigger show-on-large " + Styles.Icon}>
+        <span data-target="SideBarID" className={"sidenav-trigger show-on-large " + Styles.Icon}>
           <i className="material-icons white-text">menu</i>
-        </a>
+        </span>
 
-        <a onClick={goToTop} className={"right " + Styles.Home}>
-          <img className={Styles.MyIcon} src="Images/Icons/LogoWhite.png" />
-        </a>
+        <span onClick={goToTop} className={"right " + Styles.Home}>
+          <img alt="go-home" className={Styles.MyIcon} src="Images/Icons/LogoWhite.png" />
+        </span>
       </div>
     </nav>
   </div>

@@ -17,10 +17,10 @@ const printInDOMNode = (DOMNode: HTMLElement, Text: Array<string>) => {
     while (row < index) contents += Text[row++] + "\r\n"
     DOMNode.innerText = contents + Text[index].substring(0, textPosition) + "_"
 
-    if (textPosition++ == lineSize) {
+    if (textPosition++ === lineSize) {
       textPosition = 0
       index++
-      if (index != Text.length) {
+      if (index !== Text.length) {
         lineSize = Text[index].length
         setTimeout(typeText, speedNewLine)
       }

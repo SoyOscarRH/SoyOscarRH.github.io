@@ -17,7 +17,9 @@ const Button: FC<{ title: string; src: string; link?: string }> = ({ title, src,
     event.preventDefault()
   }
 
-  return <a onClick={handleClick} href={href} className={className} style={{ backgroundImage }} />
+  return <a href={href} onClick={handleClick} className={className} style={{ backgroundImage, color: "tra" }}>
+    {src}
+    </a>
 }
 
 const Links: FC<{ id: string }> = ({ id }) => {

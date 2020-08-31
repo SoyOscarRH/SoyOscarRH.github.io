@@ -104,9 +104,9 @@ const CardActions: FunctionComponent<{
   if (props.type === "Book")
     return (
       <React.Fragment>
-        <a className="activator" style={{ cursor: "pointer" }}>
+        <span className="activator orange-text text-accent-2" style={{ cursor: "pointer", paddingRight: "1.5rem" }}>
           {["TOPICS", "TEMARIO"][index]}
-        </a>
+        </span>
         <a target="_blank" rel="noopener noreferrer" href={props.link}>
           {["READ ONLINE", "LEE EN LÍNEA"][index]}
         </a>
@@ -138,6 +138,7 @@ const ImageIcon: FunctionComponent = () => {
     <>
       <img
         className="materialboxed lazy"
+        alt={name}
         data-src={`Images/${folder}/${name}.${extension == null ? "png" : extension}`}
         src={"Images/Blank.png"}
       />
@@ -157,7 +158,7 @@ const ImageIcon: FunctionComponent = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img src="Images/Icons/githubMini.png" />
+        <img alt="github-icon"src="Images/Icons/githubMini.png" />
       </a>
     </>
   )

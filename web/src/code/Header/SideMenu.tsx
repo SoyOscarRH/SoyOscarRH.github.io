@@ -79,16 +79,16 @@ const SoyOscarRHLogo: FunctionComponent<{ accentColor: string }> = ({ accentColo
 export const LinksToSocialMedia: React.FunctionComponent = () => (
   <div className="row">
     <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/soyoscarrh/">
-      <img title="LinkedIn" className="col s3" src="Images/Icons/linkedin.png" />
+      <img alt="LinkedIn" title="LinkedIn" className="col s3" src="Images/Icons/linkedin.png" />
     </a>
     <a target="_blank" rel="noopener noreferrer" href="https://www.github.com/SoyOscarRH">
-      <img title="GitHub" className="col s3" src="Images/Icons/github.png" />
+      <img alt="GitHub" title="GitHub" className="col s3" src="Images/Icons/github.png" />
     </a>
     <a target="_blank" rel="noopener noreferrer" href="http://www.twitter.com/SoyOscarRH">
-      <img title="Twitter" className="col s3" src="Images/Icons/twitter.png" />
+      <img alt="Twitter" title="Twitter" className="col s3" src="Images/Icons/twitter.png" />
     </a>
     <a target="_blank" rel="noopener noreferrer" href="http://www.compilandoconocimiento.com/">
-      <img title="Wordpress" className="col s3" src="Images/Icons/wordpress.png" />
+      <img alt="Wordpress" title="Wordpress" className="col s3" src="Images/Icons/wordpress.png" />
     </a>
   </div>
 )
@@ -98,7 +98,7 @@ const ToggleLanguage: FunctionComponent<{ toggleLanguage: () => void }> = ({ tog
 
   return (
     <React.Fragment>
-      <a className="subheader center">{["Language", "Lenguaje"][index]}</a>
+      <div className="subheader center">{["Language", "Lenguaje"][index]}</div>
       <div className="switch center">
         <label>
           {["Spanish", "Español"][index]}
@@ -149,7 +149,7 @@ const SideMenuSection: FunctionComponent<{
   return (
     <React.Fragment key={`Type ${sectionName}`}>
       <li>
-        <a className="subheader">{Section.Title}</a>
+        <a href={Section.Title} className="subheader">{Section.Title}</a>
       </li>
       {SectionRows}
     </React.Fragment>

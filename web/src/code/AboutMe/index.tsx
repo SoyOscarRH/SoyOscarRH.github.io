@@ -49,6 +49,7 @@ const AboutMeSection: FunctionComponent<{ AboutMe: AboutMeI; id: string }> = ({ 
             </div>
             <img
               title="Me"
+              alt="Me"
               src={`Images/Profiles/Profile${profileID}.jpg`}
               className={Styles.Image}
               style={{ padding: 0 }}
