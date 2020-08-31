@@ -9,12 +9,10 @@
 
 .Toast {
   padding: 1rem 1.2rem;
-  margin-top: 5rem;
-  font-size: 1rem;
   font-family: Raleway, -apple-system, Roboto, sans-serif;
-  color: #ffeb3b;
+  color: #ffeb3b !important;
   border-radius: 0.8rem;
-  user-select: none;
+  cursor: pointer;
 }
 
 .Card {

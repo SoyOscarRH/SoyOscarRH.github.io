@@ -15,16 +15,13 @@ import Books from "../Books";
 import Footer from "../Footer";
 
 import lazyLoadImages from "../Helpers/lazyLoadImages";
-
-
-document.addEventListener("DOMContentLoaded", lazyLoadImages);
+import useShowToast from "../useShowToast"
 
 const App: FunctionComponent = () => {
   const [language, toggleLanguage] = useCreateLanguage();
 
-  useEffect(() => {
-    //setTimeout(() => showToast(language, toggleLanguage), 3000);
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(lazyLoadImages, []);
+  useShowToast(language);
 
   return (
     <LanguageContext.Provider value={language}>

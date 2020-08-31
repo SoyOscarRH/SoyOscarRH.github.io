@@ -26,6 +26,9 @@ const reducer = (language: Language, action: "toggle"): Language => {
 const useCreateLanguage = () => {
   const [language, changeLanguage] = useReducer(reducer, defaultLanguage)
   const toggle = useCallback(() => changeLanguage("toggle"), [])
+  
+  // @ts-ignore
+  window.toggleLanguage = toggle;
 
   return [language, toggle] as [Language, () => void]
 }
