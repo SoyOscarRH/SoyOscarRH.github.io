@@ -12,7 +12,7 @@ const AboutMeSection: FunctionComponent<{ AboutMe: AboutMeI; id: string }> = ({ 
 
   const [profileID, updateProfileID] = useState(0)
   useEffect(() => {
-    const id = setInterval(() => updateProfileID(c => (c + 1) % 8), 4000)
+    const id = setInterval(() => updateProfileID(c => (c + 1) % 8), 3000)
     return () => clearInterval(id)
   }, [updateProfileID])
 
