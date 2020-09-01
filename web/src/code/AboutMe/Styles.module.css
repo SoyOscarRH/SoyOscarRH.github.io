@@ -6,19 +6,30 @@
 
 .Text {
   font-weight: 300;
-  font-size: 0.90rem;
+  font-size: 0.9rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
 }
 
 .AboutMe {
   padding-bottom: 2.5rem !important;
   padding-top: 1rem !important;
   background-color: #e0f2f1;
+  display: grid; 
+  grid-gap: 0.9rem;
+}
+
+.resumeButton {
+  font-weight: 700;
+  max-width: 13rem;
+  font-size: 1rem;
 }
 
 .Image {
   max-width: 18vh;
   border-radius: 100%;
   margin: 1rem 1rem 0 1rem;
+  padding: 0;
 }
 
 @media (min-width: 550px) {

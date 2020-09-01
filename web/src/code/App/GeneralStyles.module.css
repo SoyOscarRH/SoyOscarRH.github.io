@@ -1,6 +1,5 @@
-.Root {
-  display: flex;
-  min-height: 100vh;
+main {
+  background-color: white;
 }
 
 .Container {

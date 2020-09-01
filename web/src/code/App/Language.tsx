@@ -16,15 +16,10 @@ const reducer = (language: languageName): languageName => {
 
 const useCreateLanguageStore = () => {
   const [language, toggle] = useReducer(reducer, defaultLanguage)
-
-  // @ts-ignore
-  window.toggleLanguage = toggle
-
   return { language, toggle }
 }
 
 const useCurrentLanguage = () => useContext(LanguageContext)
 
 export type LanguageOption<T> = { [key in languageName]: T }
-
 export { defaultLanguage, LanguageContext, useCreateLanguageStore, useCurrentLanguage }

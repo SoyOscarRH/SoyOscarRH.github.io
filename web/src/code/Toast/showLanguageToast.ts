@@ -1,6 +1,8 @@
 import M from "materialize-css"
 import { languageName } from "../App/Language"
 
+import "./toast.css"
+
 const action = "toggleLanguage(); M.Toast.dismissAll();"
 const colorText = "amber-text text-accent-2"
 const classes = `languageToast ${colorText}`

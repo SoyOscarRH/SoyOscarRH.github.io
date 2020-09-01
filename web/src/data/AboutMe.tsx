@@ -1,14 +1,6 @@
 import React from "react"
-import { LanguageOption } from "../code/App/Language"
 
-export interface AboutMeI {
-  SayHi: JSX.Element
-  ShowMyCV: string
-  Text: Array<string>
-  Tags: Array<string>
-}
-
-const AboutMe: LanguageOption<AboutMeI> = {
+const AboutMe = {
   english: {
     SayHi: (
       <span>
@@ -20,15 +12,14 @@ const AboutMe: LanguageOption<AboutMeI> = {
       "Nerd.",
       "Computer scientist, software engineer; working to become a better version of myself.",
       "I think the web is the platform of the future. Lover of pure mathematics, programming languages, type systems, machine learning, and systems programming. Competitive programming freak.",
-      "I never want to stop learning ... and teaching, that's why I founded CompilandoConocimiento",
+      "I never want to stop learning ... and teaching, that's why I founded CompilandoConocimiento.",
     ],
     Tags: ["Computer Science", "Math enthusiast", "Learner"],
   },
   spanish: {
     SayHi: (
       <span>
-        {" "}
-        Hola, <b>Soy Oscar</b>{" "}
+        Hola, <b>Soy Oscar</b>
       </span>
     ),
     ShowMyCV: "CHECA MI CURRICULUM",
