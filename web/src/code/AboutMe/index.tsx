@@ -3,7 +3,7 @@ import { useCurrentLanguage } from "../App/Language"
 import { LinksToSocialMedia } from "../Header/SideMenu"
 
 import general from "../App/GeneralStyles.module.css"
-import style from "./Styles.module.css"
+import style from "./styles.module.css"
 
 import AboutMeData from "../../data/AboutMe"
 
@@ -18,7 +18,7 @@ const ProfilePhoto: FunctionComponent = () => {
   }, [updateProfileID])
 
   const source = `Images/Profiles/Profile${profileID}.jpg`
-  return <img title="me" alt="me" src={source} className={style.Image} />
+  return <img title="me" alt="me" src={source} className={style.image} />
 }
 
 const AboutMeSection: FunctionComponent = () => {
@@ -30,6 +30,7 @@ const AboutMeSection: FunctionComponent = () => {
     return printInDOMNode(DOMNode, text)
   }, [text])
 
+  const myTags = tags.map(tag => <span key={tag} className={"chip " + style.tag}>{tag}</span>)
   const resumeClasses = "btn indigo lighten-1 " + style.resumeButton
 
   return (
@@ -40,18 +41,13 @@ const AboutMeSection: FunctionComponent = () => {
         {sayHi} <b>R</b>osas <b>H</b>ernandez
       </h5>
 
-      <span className={style.text} id="movingText" />
-      <div style={{ paddingTop: "1rem" }}>
-        {tags.map(tag => (
-          <span key={tag} className={"chip " + style.tag}>
-            {tag}
-          </span>
-        ))}
+      <div className={style.text} id="movingText" />
+      <div style={{ paddingTop: "1.5rem" }}>
+        {myTags}
       </div>
 
-      <div style={{ maxWidth: "12rem", paddingTop: "1rem" }}>
-        <LinksToSocialMedia />
-      </div>
+      <LinksToSocialMedia classes={style.icons} />
+
       <a href="OscarRosasResume.pdf" target="_blank" className={resumeClasses}>
         <span>{checkResume}</span>
       </a>

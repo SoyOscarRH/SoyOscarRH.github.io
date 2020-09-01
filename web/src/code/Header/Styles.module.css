@@ -36,3 +36,13 @@
   margin: 2.5rem;
   color: #1f3c88;
 }
+
+.Icons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1.7rem;
+}
+
+.Icons img {
+  max-width: 100%;
+}

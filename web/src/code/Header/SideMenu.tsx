@@ -76,19 +76,19 @@ const SoyOscarRHLogo: FunctionComponent<{ accentColor: string }> = ({ accentColo
   )
 }
 
-export const LinksToSocialMedia: React.FunctionComponent = () => (
-  <div className="row">
+export const LinksToSocialMedia: React.FunctionComponent<{classes?: string}> = ({classes}) => (
+  <div className={Styles.Icons + " " + classes ?? ""}>
     <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/soyoscarrh/">
-      <img alt="LinkedIn" title="LinkedIn" className="col s3" src="Images/Icons/linkedin.png" />
+      <img alt="LinkedIn" title="LinkedIn" src="Images/Icons/linkedin.png" />
     </a>
     <a target="_blank" rel="noopener noreferrer" href="https://www.github.com/SoyOscarRH">
-      <img alt="GitHub" title="GitHub" className="col s3" src="Images/Icons/github.png" />
+      <img alt="GitHub" title="GitHub" src="Images/Icons/github.png" />
     </a>
     <a target="_blank" rel="noopener noreferrer" href="http://www.twitter.com/SoyOscarRH">
-      <img alt="Twitter" title="Twitter" className="col s3" src="Images/Icons/twitter.png" />
+      <img alt="Twitter" title="Twitter" src="Images/Icons/twitter.png" />
     </a>
     <a target="_blank" rel="noopener noreferrer" href="http://www.compilandoconocimiento.com/">
-      <img alt="Wordpress" title="Wordpress" className="col s3" src="Images/Icons/wordpress.png" />
+      <img alt="Wordpress" title="Wordpress"src="Images/Icons/wordpress.png" />
     </a>
   </div>
 )

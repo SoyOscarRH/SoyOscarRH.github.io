@@ -13,17 +13,21 @@
 .text {
   font-weight: 300;
   font-size: 0.9rem;
-  display: grid;
-  grid-template-columns: 1fr auto;
+  min-height: 8rem;
+}
+
+.icons {
+  max-width: 13rem;
+  padding: 1rem 0; 
 }
 
 .resumeButton {
   font-weight: 700;
-  max-width: 13rem;
+  width: 13rem !important;
   font-size: 1rem;
 }
 
-.Image {
+.image {
   max-width: 18vh;
   border-radius: 100%;
   margin: 2rem 0 1rem 1.4rem;
@@ -32,38 +36,22 @@
 }
 
 @media (min-width: 550px) {
-  .Image {
-    max-width: 20vh;
-  }
-
-  .text {
-    font-size: 1rem;
-  }
+  .image { max-width: 20vh; }
+  .text { font-size: 1rem; }
 }
 
 @media (min-width: 750px) {
-  .Image {
-    max-width: 25vh;
-  }
-  .Text {
-    font-size: 1.1rem;
-  }
-}
-
-@media (min-width: 800px) {
-  .Image {
-    max-width: 26vh;
-  }
+  .image { max-width: 25vh; }
   .text {
-    font-size: 1.22rem;
+    font-size: 1.15rem;
+    min-height: 8rem;
   }
 }
 
 @media (min-width: 950px) {
-  .Image {
-    max-width: 30vh;
-  }
+  .image {  max-width: 30vh; }
   .text {
     font-size: 1.25rem;
+    min-height: 10rem;
   }
 }
