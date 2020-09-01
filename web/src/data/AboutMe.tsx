@@ -2,34 +2,34 @@ import React from "react"
 
 const AboutMe = {
   english: {
-    SayHi: (
+    sayHi: (
       <span>
         Hi, I'm <b>Oscar</b>
       </span>
     ),
-    ShowMyCV: "CHECK MY RESUME",
-    Text: [
+    checkResume: "CHECK MY RESUME",
+    text: [
       "Nerd.",
       "Computer scientist, software engineer; working to become a better version of myself.",
       "I think the web is the platform of the future. Lover of pure mathematics, programming languages, type systems, machine learning, and systems programming. Competitive programming freak.",
       "I never want to stop learning ... and teaching, that's why I founded CompilandoConocimiento.",
     ],
-    Tags: ["Computer Science", "Math enthusiast", "Learner"],
+    tags: ["Computer Science", "Math enthusiast", "Learner"],
   },
   spanish: {
-    SayHi: (
+    sayHi: (
       <span>
         Hola, <b>Soy Oscar</b>
       </span>
     ),
-    ShowMyCV: "CHECA MI CURRICULUM",
-    Text: [
+    checkResume: "CHECA MI RESUME",
+    text: [
       "Nerd.",
       "Computólogo e ingeniero de software, trabajando en crear una mejor versión de mi mismo.",
       "Creo que la web es la plataforma del futuro. Amante de las matemáticas puras, los lenguajes de programación, sistemas de tipado, machine learning. Apasionado de la programación competitiva. ",
       "Nunca quiero dejar de aprender ... y de enseñar, por eso fundé CompilandoConocimiento.",
     ],
-    Tags: ["Computólogo", "Siempre aprendiendo", "Amante de las matemáticas"],
+    tags: ["Computólogo", "Siempre aprendiendo", "Amante de las matemáticas"],
   },
 }
 

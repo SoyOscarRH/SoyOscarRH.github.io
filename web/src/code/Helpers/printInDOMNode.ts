@@ -1,4 +1,4 @@
-const speedTyping = 10
+const speedTyping = 30
 const speedNewLine = 600
 
 const printInDOMNode = (DOMNode: HTMLElement, Text: Array<string>) => {

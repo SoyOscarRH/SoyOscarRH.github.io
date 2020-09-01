@@ -2,8 +2,8 @@ import React, { FunctionComponent, useEffect, useState } from "react"
 import { useCurrentLanguage } from "../App/Language"
 import { LinksToSocialMedia } from "../Header/SideMenu"
 
-import GeneralStyles from "../App/GeneralStyles.module.css"
-import Styles from "./Styles.module.css"
+import general from "../App/GeneralStyles.module.css"
+import style from "./Styles.module.css"
 
 import AboutMeData from "../../data/AboutMe"
 
@@ -18,59 +18,42 @@ const ProfilePhoto: FunctionComponent = () => {
   }, [updateProfileID])
 
   const source = `Images/Profiles/Profile${profileID}.jpg`
-  return <img title="me" alt="me" src={source} className={Styles.Image} />
+  return <img title="me" alt="me" src={source} className={style.Image} />
 }
-
-const Links: FunctionComponent<{ tags: Array<string> }> = ({ tags }) => (
-  <>
-    <div style={{ paddingTop: "1rem" }}>
-      {tags.map(tag => (
-        <span key={tag} className={"chip " + Styles.Tag}>
-          {tag}
-        </span>
-      ))}
-    </div>
-
-    <div style={{ maxWidth: "12rem", paddingTop: "1rem" }}>
-      <LinksToSocialMedia />
-    </div>
-  </>
-)
 
 const AboutMeSection: FunctionComponent = () => {
   const language = useCurrentLanguage()
-  const { Text, SayHi, ShowMyCV, Tags } = AboutMeData[language]
+  const { text, sayHi, checkResume, tags } = AboutMeData[language]
 
   useEffect(() => {
     const DOMNode = document.getElementById("movingText") as HTMLElement
-    return printInDOMNode(DOMNode, Text)
-  }, [Text])
+    return printInDOMNode(DOMNode, text)
+  }, [text])
 
-  const className = [GeneralStyles.Container, GeneralStyles.Card, Styles.AboutMe].join(" ")
-  const resumeClasses = "btn indigo lighten-1 " + Styles.resumeButton
+  const resumeClasses = "btn indigo lighten-1 " + style.resumeButton
 
   return (
-    <div className={className} id="AboutMe">
+    <div className={[general.Container, general.Card, style.aboutMe].join(" ")} id="AboutMe">
+      <ProfilePhoto />
+
       <h5 style={{ fontWeight: 500 }}>
-        {SayHi} <b>R</b>osas <b>H</b>ernandez
+        {sayHi} <b>R</b>osas <b>H</b>ernandez
       </h5>
 
-      <div className={Styles.Text}>
-        <div style={{ display: "grid", gridTemplateRows: "1fr auto" }}>
-          <span className={Styles.movingText} id="movingText" />
-          <div style={{ paddingTop: "0.8rem" }} className="hide-on-small-only">
-            <Links tags={Tags} />
-          </div>
-        </div>
-        <ProfilePhoto />
+      <span className={style.text} id="movingText" />
+      <div style={{ paddingTop: "1rem" }}>
+        {tags.map(tag => (
+          <span key={tag} className={"chip " + style.tag}>
+            {tag}
+          </span>
+        ))}
       </div>
 
-      <div className="hide-on-med-and-up">
-        <Links tags={Tags} />
+      <div style={{ maxWidth: "12rem", paddingTop: "1rem" }}>
+        <LinksToSocialMedia />
       </div>
-
       <a href="OscarRosasResume.pdf" target="_blank" className={resumeClasses}>
-        <span>{ShowMyCV}</span>
+        <span>{checkResume}</span>
       </a>
     </div>
   )

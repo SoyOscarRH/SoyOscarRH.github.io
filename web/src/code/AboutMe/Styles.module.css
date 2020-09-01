@@ -1,22 +1,20 @@
-.Tag {
-  font-size: 1.5vh;
-  display: inline;
-  padding: 0.6rem;
+.aboutMe {
+  padding-bottom: 2.5rem !important;
+  padding-top: 1rem !important;
+  background-color: #e0f2f1;
 }
 
-.Text {
+.tag {
+  font-size: 1.5vh;
+  display: inline;
+  padding: 0.4rem 0.8rem;
+}
+
+.text {
   font-weight: 300;
   font-size: 0.9rem;
   display: grid;
   grid-template-columns: 1fr auto;
-}
-
-.AboutMe {
-  padding-bottom: 2.5rem !important;
-  padding-top: 1rem !important;
-  background-color: #e0f2f1;
-  display: grid; 
-  grid-gap: 0.9rem;
 }
 
 .resumeButton {
@@ -28,16 +26,17 @@
 .Image {
   max-width: 18vh;
   border-radius: 100%;
-  margin: 1rem 1rem 0 1rem;
+  margin: 2rem 0 1rem 1.4rem;
   padding: 0;
+  float: right;
 }
 
 @media (min-width: 550px) {
   .Image {
-    max-width: 21vh;
+    max-width: 20vh;
   }
 
-  .Text {
+  .text {
     font-size: 1rem;
   }
 }
@@ -45,7 +44,6 @@
 @media (min-width: 750px) {
   .Image {
     max-width: 25vh;
-    margin: 0rem 1rem 0 1rem;
   }
   .Text {
     font-size: 1.1rem;
@@ -54,18 +52,18 @@
 
 @media (min-width: 800px) {
   .Image {
-    max-width: 27vh;
+    max-width: 26vh;
   }
-  .Text {
-    font-size: 1.215rem;
+  .text {
+    font-size: 1.22rem;
   }
 }
 
 @media (min-width: 950px) {
   .Image {
-    max-width: 29vh;
+    max-width: 30vh;
   }
-  .Text {
+  .text {
     font-size: 1.25rem;
   }
 }
