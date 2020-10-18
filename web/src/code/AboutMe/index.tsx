@@ -12,12 +12,12 @@ import printInDOMNode from "../Helpers/printInDOMNode"
 const ProfilePhoto: FunctionComponent = () => {
   const [profileID, updateProfileID] = useState(0)
   useEffect(() => {
-    const updateMod8 = () => updateProfileID(c => (c + 1) % 8)
+    const updateMod8 = () => updateProfileID(c => (c + 1) % 7)
     const id = setInterval(updateMod8, 3000)
     return () => clearInterval(id)
   }, [updateProfileID])
 
-  const source = `Images/Profiles/Profile${profileID}.jpg`
+  const source = `Images/Profiles/profile${profileID}.jpg`
   return <img title="me" alt="me" src={source} className={style.image} />
 }
 
