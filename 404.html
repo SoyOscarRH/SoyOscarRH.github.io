@@ -23,11 +23,14 @@
 
     var resume = "SoyOscarRH.github.io/Resume".toLocaleLowerCase();
     var projects = "SoyOscarRH.github.io/projects".toLocaleLowerCase();
+    var code_reference = "SoyOscarRH.github.io/code-reference".toLocaleLowerCase();
 
     if (current.indexOf(resume) !== -1) {
       window.location.replace("/OscarRosasResume.pdf");
     } else if (current.indexOf(projects) !== -1) {
       window.location.replace("/#Projects");
+    } else if (current.indexOf(code_reference) !== -1) {
+      window.location.replace("https://www.notion.so/soyoscarrh/References-1502358d76b24565997a9c74c2c2c5f7");
     } else window.location.replace("/");
   </script>
 </html>
