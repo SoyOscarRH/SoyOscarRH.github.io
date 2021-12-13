@@ -3,7 +3,7 @@ import { useCurrentLanguage } from "../App/Language"
 import { LinksToSocialMedia } from "../Header/SideMenu"
 
 import general from "../App/GeneralStyles.module.css"
-import style from "./styles.module.css"
+import style from "./Styles.module.css"
 
 import AboutMeData from "../../data/AboutMe"
 
@@ -17,7 +17,7 @@ const ProfilePhoto: FunctionComponent = () => {
     return () => clearInterval(id)
   }, [updateProfileID])
 
-  const source = `Images/Profiles/profile${profileID}.jpg`
+  const source = `Images/Profiles/Profile${profileID}.jpg`
   return <img title="me" alt="me" src={source} className={style.image} />
 }
 
